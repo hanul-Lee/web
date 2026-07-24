@@ -15,8 +15,7 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 박스 크기 계산 기준 통일 */
+  box-sizing: border-box; /* 박스 크기 계산 기준 통일 */
 }
 
 html {
@@ -45,12 +44,8 @@ button {
    ========================================== */
 /* 브랜드 로고 영역 */
 .brand {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 9px;
   font-size: 20px;
   font-weight: 800;
@@ -82,17 +77,12 @@ button {
 /* 스크롤 시 등장하는 인터랙션 클래스 */
 .reveal {
   opacity: 0;
-  -webkit-transform: translateY(28px);
-          transform: translateY(28px);
-  -webkit-transition: opacity 0.75s ease, -webkit-transform 0.75s ease;
-  transition: opacity 0.75s ease, -webkit-transform 0.75s ease;
+  transform: translateY(28px);
   transition: opacity 0.75s ease, transform 0.75s ease;
-  transition: opacity 0.75s ease, transform 0.75s ease, -webkit-transform 0.75s ease;
 }
 .reveal.visible {
   opacity: 1;
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
 }
 
 /* ==========================================
@@ -101,15 +91,9 @@ button {
 .site-header {
   height: 84px;
   padding: 0 max(7.8vw, 34px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   z-index: 10;
   width: 100%;
@@ -118,14 +102,11 @@ button {
   /* 내비게이션 메뉴 */
 }
 .site-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 38px;
   margin-left: 10%;
 }
 .site-header nav a {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .site-header nav a:hover {
@@ -139,13 +120,11 @@ button {
   color: #fff;
   border-radius: 24px;
   padding: 12px 22px;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .site-header .header-link:hover {
   color: #fff;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 .site-header {
   /* 모바일용 메뉴 버튼 (기본 숨김) */
@@ -173,12 +152,8 @@ button {
   position: absolute;
   inset: -1.5%;
   background: url("assets/hero-3d.png") center/cover no-repeat;
-  -webkit-transform: translate3d(var(--mx), var(--my), 0) scale(1.025);
-          transform: translate3d(var(--mx), var(--my), 0) scale(1.025);
-  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-  transition: -webkit-transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: translate3d(var(--mx), var(--my), 0) scale(1.025);
   transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), -webkit-transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
   will-change: transform;
 }
 .hero {
@@ -192,12 +167,8 @@ button {
   z-index: 2;
   pointer-events: none;
   overflow: visible;
-  -webkit-transform: translate3d(var(--mx), var(--my), 0);
-          transform: translate3d(var(--mx), var(--my), 0);
-  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-  transition: -webkit-transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: translate3d(var(--mx), var(--my), 0);
   transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), -webkit-transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
   will-change: transform;
 }
 .hero .hero-motion .route-guide use {
@@ -209,8 +180,7 @@ button {
   opacity: 0.13;
 }
 .hero .hero-motion .motion-ball {
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  transform-origin: center;
 }
 .hero .hero-motion {
   /* 점멸 및 노드 파동 효과 */
@@ -220,15 +190,12 @@ button {
   fill: none;
   stroke-width: 3;
   transform-box: fill-box;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: signalPulse 3.6s ease-out infinite;
-          animation: signalPulse 3.6s ease-out infinite;
+  transform-origin: center;
+  animation: signalPulse 3.6s ease-out infinite;
 }
 .hero .hero-motion .node-pulse circle:nth-child(2),
 .hero .hero-motion .cursor-signal circle:nth-child(2) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 .hero .hero-motion .node-pulse-blue circle {
   stroke: #4d8fff;
@@ -238,8 +205,7 @@ button {
 }
 .hero .hero-motion .cursor-signal circle {
   stroke: #fff;
-  -webkit-animation-duration: 2.8s;
-          animation-duration: 2.8s;
+  animation-duration: 2.8s;
 }
 .hero {
   /* 히어로 카피 텍스트 영역 */
@@ -248,8 +214,7 @@ button {
   position: absolute;
   left: max(11.8vw, 60px);
   top: 50%;
-  -webkit-transform: translateY(-45%);
-          transform: translateY(-45%);
+  transform: translateY(-45%);
   z-index: 3;
   max-width: 620px;
 }
@@ -258,7 +223,7 @@ button {
   margin: 0 0 24px;
 }
 .hero .hero-copy h1 {
-  font-size: clamp(48px, 5vw, 72px);
+  font-size: clamp(48px, 4.4vw, 74px);
   line-height: 1.04;
   letter-spacing: -0.065em;
   margin: 0 0 28px;
@@ -278,12 +243,8 @@ button {
   /* 플로우 키워드 및 대시선 모션 */
 }
 .hero .hero-copy .flow-keywords {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 10px;
   margin: 0 0 30px;
   font-size: 9px;
@@ -292,15 +253,11 @@ button {
   color: #9ca5b3;
 }
 .hero .hero-copy .flow-keywords span {
-  -webkit-transition: color 0.35s, -webkit-transform 0.35s;
-  transition: color 0.35s, -webkit-transform 0.35s;
   transition: color 0.35s, transform 0.35s;
-  transition: color 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 .hero .hero-copy .flow-keywords span.active {
   color: var(--blue);
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 .hero .hero-copy .flow-keywords {
   /* 흐르는 라인 효과 */
@@ -318,34 +275,24 @@ button {
   position: absolute;
   inset: 0;
   background: var(--blue);
-  -webkit-transform: translateX(-105%);
-          transform: translateX(-105%);
-  -webkit-animation: flowLine 1.8s ease-in-out infinite;
-          animation: flowLine 1.8s ease-in-out infinite;
+  transform: translateX(-105%);
+  animation: flowLine 1.8s ease-in-out infinite;
 }
 .hero .hero-copy .flow-keywords i:nth-of-type(2):after {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .hero .hero-copy .flow-keywords i:nth-of-type(3):after {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 .hero .hero-copy {
   /* 히어로 버튼 그룹 */
 }
 .hero .hero-copy .hero-actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 25px;
 }
 .hero .hero-copy .hero-actions .button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 15px 27px;
   border-radius: 28px;
@@ -355,24 +302,16 @@ button {
 .hero .hero-copy .hero-actions .button.button-primary {
   background: var(--blue);
   color: white;
-  -webkit-box-shadow: 0 8px 20px rgba(8, 117, 245, 0.1843137255);
-          box-shadow: 0 8px 20px rgba(8, 117, 245, 0.1843137255);
-  -webkit-transition: 0.25s;
+  box-shadow: 0 8px 20px rgba(8, 117, 245, 0.1843137255);
   transition: 0.25s;
 }
 .hero .hero-copy .hero-actions .button.button-primary:hover {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-  -webkit-box-shadow: 0 12px 26px rgba(8, 117, 245, 0.2784313725);
-          box-shadow: 0 12px 26px rgba(8, 117, 245, 0.2784313725);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(8, 117, 245, 0.2784313725);
 }
 .hero .hero-copy .hero-actions .text-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 9px;
   font-size: 14px;
   font-weight: 700;
@@ -392,132 +331,63 @@ button {
   position: absolute;
   bottom: 27px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 3;
   font-size: 9px;
   letter-spacing: 0.19em;
   font-weight: 800;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 9px;
 }
 .hero .scroll-label i {
   height: 26px;
   width: 1px;
   background: var(--ink);
-  -webkit-animation: scrollLine 1.6s ease-in-out infinite;
-          animation: scrollLine 1.6s ease-in-out infinite;
+  animation: scrollLine 1.6s ease-in-out infinite;
 }
 
 /* ==========================================
    5. 키프레임 애니메이션 정의 (Keyframes)
    ========================================== */
 /* 원형 파동 애니메이션 */
-@-webkit-keyframes signalPulse {
-  0% {
-    opacity: 0.7;
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  70%, 100% {
-    opacity: 0;
-    -webkit-transform: scale(2.2);
-            transform: scale(2.2);
-  }
-}
 @keyframes signalPulse {
   0% {
     opacity: 0.7;
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
+    transform: scale(0.2);
   }
   70%, 100% {
     opacity: 0;
-    -webkit-transform: scale(2.2);
-            transform: scale(2.2);
+    transform: scale(2.2);
   }
 }
 /* 라인 흐름 애니메이션 */
-@-webkit-keyframes flowLine {
-  0% {
-    -webkit-transform: translateX(-105%);
-            transform: translateX(-105%);
-  }
-  55%, 100% {
-    -webkit-transform: translateX(105%);
-            transform: translateX(105%);
-  }
-}
 @keyframes flowLine {
   0% {
-    -webkit-transform: translateX(-105%);
-            transform: translateX(-105%);
+    transform: translateX(-105%);
   }
   55%, 100% {
-    -webkit-transform: translateX(105%);
-            transform: translateX(105%);
+    transform: translateX(105%);
   }
 }
 /* 스크롤 안내 라인 애니메이션 */
-@-webkit-keyframes scrollLine {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-  }
-  45% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-  }
-  55% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
 @keyframes scrollLine {
   0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: top;
-            transform-origin: top;
+    transform: scaleY(0);
+    transform-origin: top;
   }
   45% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: top;
-            transform-origin: top;
+    transform: scaleY(1);
+    transform-origin: top;
   }
   55% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
+    transform: scaleY(1);
+    transform-origin: bottom;
   }
   100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
+    transform: scaleY(0);
+    transform-origin: bottom;
   }
 }
 /* ==========================================
@@ -549,15 +419,9 @@ button {
   padding-top: 32px;
 }
 .intro .intro-stats div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: baseline;
+  justify-content: center;
   gap: 13px;
   border-right: 1px solid var(--line);
 }
@@ -593,16 +457,9 @@ button {
 }
 .work .project-featured .project-info {
   padding: 76px 6vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .work .project-featured .project-info .project-number {
   font-size: 12px;
@@ -630,12 +487,9 @@ button {
   max-width: 440px;
 }
 .work .project-featured .project-info .tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 7px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 20px 0 46px;
 }
 .work .project-featured .project-info .tags span {
@@ -679,8 +533,7 @@ button {
   background: #f8fafc;
   color: #121826;
   border-radius: 12px;
-  -webkit-box-shadow: 0 25px 45px rgba(3, 38, 96, 0.3176470588);
-          box-shadow: 0 25px 45px rgba(3, 38, 96, 0.3176470588);
+  box-shadow: 0 25px 45px rgba(3, 38, 96, 0.3176470588);
 }
 .work .project-featured .browser-main {
   position: absolute;
@@ -688,19 +541,14 @@ button {
   height: 67%;
   left: 8%;
   top: 17%;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
+  transform: rotate(-2deg);
   overflow: hidden;
 }
 .work .project-featured .browser-main .browser-bar {
   height: 25px;
   background: #edf0f4;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 4px;
   padding-left: 10px;
 }
@@ -712,12 +560,8 @@ button {
 }
 .work .project-featured .browser-main .mock-nav {
   height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 25px;
   padding: 0 5%;
   font-size: 9px;
@@ -729,7 +573,6 @@ button {
 .work .project-featured .browser-main .mock-title {
   height: 58%;
   padding: 8% 8%;
-  background: -webkit-gradient(linear, left top, right top, color-stop(0, #eef4ff), color-stop(52%, #d6e5ff));
   background: linear-gradient(90deg, #eef4ff 0 52%, #d6e5ff 52%);
 }
 .work .project-featured .browser-main .mock-title small {
@@ -771,8 +614,7 @@ button {
   right: 2%;
   bottom: 8%;
   padding: 18px;
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 .work .project-featured .browser-float .mini-chart {
   height: 55px;
@@ -815,8 +657,7 @@ button {
   border-radius: 30px;
   background: #fff;
   border: 7px solid #162436;
-  -webkit-box-shadow: 0 22px 45px rgba(64, 122, 165, 0.2);
-          box-shadow: 0 22px 45px rgba(64, 122, 165, 0.2);
+  box-shadow: 0 22px 45px rgba(64, 122, 165, 0.2);
   padding: 33px 18px 16px;
   position: relative;
 }
@@ -825,8 +666,7 @@ button {
   position: absolute;
   top: 7px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 54px;
   height: 12px;
   border-radius: 8px;
@@ -876,8 +716,7 @@ button {
   padding: 13px 16px;
   font-size: 10px;
   font-weight: 700;
-  -webkit-box-shadow: 0 10px 30px rgba(46, 108, 156, 0.1411764706);
-          box-shadow: 0 10px 30px rgba(46, 108, 156, 0.1411764706);
+  box-shadow: 0 10px 30px rgba(46, 108, 156, 0.1411764706);
 }
 .work .project-grid .project-small {
   /* 칸반 보드 UI 목업 디자인 */
@@ -892,15 +731,9 @@ button {
   color: white;
   border-radius: 10px 10px 0 0;
   padding: 0 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   font-size: 12px;
 }
 .work .project-grid .project-small .kanban-ui .kanban-head span {
@@ -914,17 +747,11 @@ button {
   gap: 10px;
   padding: 18px;
   border-radius: 0 0 10px 10px;
-  -webkit-box-shadow: 0 20px 35px rgba(67, 59, 112, 0.2509803922);
-          box-shadow: 0 20px 35px rgba(67, 59, 112, 0.2509803922);
+  box-shadow: 0 20px 35px rgba(67, 59, 112, 0.2509803922);
 }
 .work .project-grid .project-small .kanban-ui .kanban-cols div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
 }
 .work .project-grid .project-small .kanban-ui .kanban-cols div:nth-child(2) i:first-of-type {
@@ -945,16 +772,11 @@ button {
   background: white;
   border: 1px solid #e5e2eb;
   border-radius: 6px;
-  -webkit-box-shadow: 0 3px 8px rgba(66, 60, 89, 0.062745098);
-          box-shadow: 0 3px 8px rgba(66, 60, 89, 0.062745098);
+  box-shadow: 0 3px 8px rgba(66, 60, 89, 0.062745098);
 }
 .work .project-grid .project-small .small-meta {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   color: #7d8490;
   font-size: 10px;
   font-weight: 700;
@@ -986,11 +808,9 @@ button {
   /* 좌측 스티키 타이틀 */
 }
 .process .process-heading {
-  position: -webkit-sticky;
   position: sticky;
   top: 90px;
-  -ms-flex-item-align: start;
-      align-self: start;
+  align-self: start;
 }
 .process .process-heading h2 {
   font-size: clamp(40px, 4vw, 59px);
@@ -1032,9 +852,7 @@ button {
   min-height: 690px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 8vw;
   padding: 100px max(9vw, 50px);
   overflow: hidden;
@@ -1052,10 +870,8 @@ button {
   width: 220px;
   height: 220px;
   border-radius: 45px;
-  -webkit-transform: rotate(-12deg);
-          transform: rotate(-12deg);
-  -webkit-box-shadow: 0 30px 45px rgba(113, 131, 159, 0.1607843137);
-          box-shadow: 0 30px 45px rgba(113, 131, 159, 0.1607843137);
+  transform: rotate(-12deg);
+  box-shadow: 0 30px 45px rgba(113, 131, 159, 0.1607843137);
 }
 .about .about-art .blue-tile {
   background: #176bea;
@@ -1078,12 +894,10 @@ button {
   height: 42px;
   border-radius: 25px;
   background: var(--yellow);
-  -webkit-transform: rotate(37deg);
-          transform: rotate(37deg);
+  transform: rotate(37deg);
   left: 11%;
   top: 67%;
-  -webkit-box-shadow: 0 15px 22px rgba(181, 147, 48, 0.2196078431);
-          box-shadow: 0 15px 22px rgba(181, 147, 48, 0.2196078431);
+  box-shadow: 0 15px 22px rgba(181, 147, 48, 0.2196078431);
 }
 .about {
   /* 우측 자기소개 & 보유 역량 태그 */
@@ -1102,11 +916,8 @@ button {
 }
 .about .about-copy .capabilities {
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .about .about-copy .capabilities span {
@@ -1171,16 +982,14 @@ button {
   height: 420px;
   right: 2%;
   top: -50px;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  transform: rotate(30deg);
 }
 .contact .contact-shape i:nth-child(2) {
   width: 230px;
   height: 230px;
   left: 5%;
   bottom: -40px;
-  -webkit-transform: rotate(-17deg);
-          transform: rotate(-17deg);
+  transform: rotate(-17deg);
 }
 .contact .contact-shape i:nth-child(3) {
   width: 85px;
@@ -1198,15 +1007,9 @@ button {
 footer {
   height: 100px;
   padding: 0 max(7.5vw, 38px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   font-size: 11px;
   color: #656d79;
 }
@@ -1231,16 +1034,11 @@ footer > a:last-child {
     display: none;
   }
   .site-header nav.mobile-open {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: 66px;
     right: 24px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 0;
     margin: 0;
     width: 180px;
@@ -1248,8 +1046,7 @@ footer > a:last-child {
     background: #fff;
     border: 1px solid #e2e6ec;
     border-radius: 10px;
-    -webkit-box-shadow: 0 16px 35px rgba(28, 45, 69, 0.1450980392);
-            box-shadow: 0 16px 35px rgba(28, 45, 69, 0.1450980392);
+    box-shadow: 0 16px 35px rgba(28, 45, 69, 0.1450980392);
   }
   .site-header nav.mobile-open a {
     padding: 12px 14px;
@@ -1291,7 +1088,6 @@ footer > a:last-child {
     content: "";
     position: absolute;
     inset: 0;
-    background: -webkit-gradient(linear, left top, right top, color-stop(5%, #eef2f7), color-stop(45%, rgba(238, 242, 247, 0.8745098039)), color-stop(90%, transparent));
     background: linear-gradient(90deg, #eef2f7 5%, rgba(238, 242, 247, 0.8745098039) 45%, transparent 90%);
     z-index: 2;
   }
@@ -1355,7 +1151,6 @@ footer > a:last-child {
     background-position: 61% center;
   }
   .hero:after {
-    background: -webkit-gradient(linear, left top, right top, from(#eef2f7), color-stop(55%, rgba(238, 242, 247, 0.9411764706)), to(rgba(238, 242, 247, 0.2784313725)));
     background: linear-gradient(90deg, #eef2f7 0%, rgba(238, 242, 247, 0.9411764706) 55%, rgba(238, 242, 247, 0.2784313725) 100%);
   }
   .hero .hero-copy {
@@ -1425,9 +1220,7 @@ footer > a:last-child {
   }
   .about .about-art {
     height: 330px;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
   .about .about-art .blue-tile,
   .about .about-art .white-tile {
@@ -1456,13 +1249,10 @@ footer > a:last-child {
     height: auto;
     padding: 34px 24px;
     gap: 25px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   footer p {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
     width: 100%;
   }
 }
@@ -1476,18 +1266,14 @@ footer > a:last-child {
   }
   .reveal {
     opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-    -webkit-transition: none;
+    transform: none;
     transition: none;
   }
   .hero .hero-motion {
     display: none;
   }
   .hero .hero-image {
-    -webkit-transform: none;
-            transform: none;
-    -webkit-transition: none;
+    transform: none;
     transition: none;
   }
   .hero {
@@ -1497,7 +1283,6 @@ footer > a:last-child {
   .hero .scroll-label i,
   .hero .node-pulse circle,
   .hero .cursor-signal circle {
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
   }
 }/*# sourceMappingURL=styles.css.map */
