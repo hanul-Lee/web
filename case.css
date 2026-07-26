@@ -1661,6 +1661,56 @@
   transform: translateX(-25%);
 }
 
+.outcomes {
+  margin-bottom: 0;
+}
+
+.outcome-basis {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0 120px;
+  color: #8b95a1;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.outcome-basis b {
+  flex: 0 0 auto;
+  color: #4e5968;
+}
+
+.strategy-list small {
+  display: block;
+  margin: 22px 0 7px;
+  color: #8b95a1;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+body[data-project=dashboard] .evidence-grid {
+  grid-template-columns: 1fr;
+}
+body[data-project=dashboard] .evidence-grid > div {
+  display: grid;
+  grid-template-columns: 56px minmax(180px, 0.55fr) 1fr;
+  gap: 20px;
+  align-items: baseline;
+}
+
+body[data-project=pet] .reframe-flow .reframed {
+  background: #f5ead4;
+}
+body[data-project=pet] .reframe-flow .reframed small {
+  color: #81643a;
+}
+
+body[data-project=tbm] .comparison-image {
+  background: #f5f7fb;
+}
+body[data-project=tbm] .strategy-list {
+  border-top-color: #cad5f4;
+}
+
 .case-progress {
   position: fixed;
   z-index: 8;
@@ -1738,6 +1788,17 @@
   .comparison-image {
     height: min(100vw, 400px);
     max-height: 400px;
+  }
+  .outcome-basis {
+    display: grid;
+    gap: 4px;
+    margin-bottom: 88px;
+  }
+  body[data-project=dashboard] .evidence-grid > div {
+    grid-template-columns: 42px 1fr;
+  }
+  body[data-project=dashboard] .evidence-grid > div p {
+    grid-column: 2;
   }
   .reframe-flow > span {
     justify-self: center;

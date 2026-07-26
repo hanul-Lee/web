@@ -3,31 +3,31 @@ const projects = {
     no:'04', type:'B2B SAAS · MOBILE WORKFLOW', title:'모바일 업무 포털 예약 UX 개선', domain:'Hanmac Mobile Intranet', lead:'PC 중심으로 운영되던 사내 업무 중 자주 사용하는 결재와 예약 기능을 모바일에서도 빠르게 완료하도록 핵심 흐름과 정보 우선순위를 재설계했습니다.',
     period:'2023.01 — 2023.06', role:'UX 전략 · 정보구조 · UI 디자인', contribution:'100%', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#e7eeec', ink:'#172322', accent:'#315f5d', muted:'#516461',
     problem:'핵심은 모바일에서도 볼 수 있는 것이 아니라, 모바일에서 바로 처리할 수 있는 구조였습니다.', detail:'기존 모바일 화면은 PC 기능을 축소해 보여주는 데 그쳤습니다. 자주 사용하는 전자결재와 예약 업무를 중심으로 진입 경로와 정보 우선순위를 다시 정리했습니다.',
-    outcomes:[['43% 증가','전자결재·예약 사용'],['2.1배','모바일 사용'],['4.6 / 5.0','사용자 만족도']], images:6, next:['tbm','현장 기록의 모바일 전환 UX']
+    outcomes:[['43% 증가','전자결재·예약 사용'],['2.1배','모바일 사용'],['4.6 / 5.0','사용자 만족도']], outcomeBasis:'도입 전후 사용량과 기존 사용자 15명 대상 설문조사 기준', images:6, next:['tbm','현장 기록의 모바일 전환 UX']
   },
   dashboard: {
     no:'01', type:'B2B DASHBOARD · DECISION SUPPORT', title:'실시간 운영 의사결정 대시보드', domain:'Project Cost & Workforce Analysis Dashboard', lead:'프로젝트 데이터를 단순히 조회하는 화면이 아니라, 역할별로 필요한 정보를 빠르게 판단하고 위험 신호를 먼저 발견할 수 있는 대시보드로 재구성했습니다.',
     period:'2025.12 — 2026.03', role:'데이터 UX · UI 디자인 · 퍼블리싱', contribution:'100%', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#151d35', ink:'#fff', accent:'#8fa9ff', muted:'#c0c7da',
     problem:'데이터는 충분했습니다. 문제는 그 데이터가 의사결정에 닿지 못한다는 것이었습니다.', detail:'엑셀과 수기 장부로 흩어진 원가·인원 데이터를 하나로 통합하고, 사용자 역할에 따라 필요한 판단 기준을 다른 뷰로 제공했습니다. 색상은 의미 전달에만 쓰고 카드·테이블·차트의 상태 규칙을 시스템화했습니다.',
-    outcomes:[['한 화면','핵심 현황 통합'],['역할 기반','사용자별 화면'],['UI 시스템','일관된 상태 규칙']], images:6, next:['platform','멀티 유저 B2B 플랫폼']
+    outcomes:[['한 화면','핵심 현황 통합'],['역할 기반','사용자별 화면'],['UI 시스템','일관된 상태 규칙']], outcomeBasis:'프로젝트 원가·공수 데이터 구조와 역할별 핵심 과업 분석 기준', images:6, next:['platform','멀티 유저 B2B 플랫폼']
   },
   platform: {
     no:'02', type:'B2B PLATFORM · INFORMATION ARCHITECTURE', title:'멀티 유저 B2B 플랫폼 정보구조 재설계', domain:'Construction Integrated Platform · 약 60억 규모 R&D 프로젝트', lead:'현장 관리자, 본사 담당자, 외부 사용자가 하나의 시스템을 사용하는 환경에서 각자의 목적에 맞게 정보를 빠르게 탐색하고 판단하도록 정보구조와 핵심 사용자 흐름을 재설계했습니다.',
     period:'2023.01 — 2023.12', role:'UX 전략 · 정보구조 · UI · 디자인 시스템', contribution:'90%', team:'기획 · UX/UI · 프론트엔드 · 백엔드 · BIM', cover:1, bg:'#1d2024', ink:'#fff', accent:'#ff8b44', muted:'#c7c8ca',
     problem:'문제는 정보가 부족한 것이 아니라, 사용자마다 필요한 정보와 탐색 목적이 다르다는 것이었습니다.', detail:'서로 다른 역할의 사용자가 동일한 메뉴 구조를 사용하면서 필요한 정보에 도달하기까지 불필요한 탐색과 화면 이동이 반복되고 있었습니다.',
-    outcomes:[['5.4 → 2','대표 과업 기준 평균 탐색 단계'],['25% 감소','적용 이후 이탈률'],['30% 향상','적용 이후 전환율']], images:8, next:['pet','기록을 습관으로 만드는 반려동물 건강관리 UX']
+    outcomes:[['5.4 → 2','대표 과업 기준 평균 탐색 단계'],['25% 감소','적용 이후 이탈률'],['30% 향상','적용 이후 전환율']], outcomeBasis:'대표 탐색 과업과 적용 전후 서비스 지표 기준', images:8, next:['pet','기록을 습관으로 만드는 반려동물 건강관리 UX']
   },
   tbm: {
     no:'05', type:'MOBILE WORKFLOW · DIGITAL TRANSFORMATION', title:'현장 기록의 모바일 전환 UX', domain:'TBM Safety Record System', lead:'종이 작성에서 사무실 입력으로 이어지던 업무를 현장에서 작성과 확인까지 완료할 수 있는 모바일 경험으로 전환했습니다.',
     period:'2025.11 — 2026.04', role:'현장 조사 · 모바일 UX/UI', contribution:'UX/UI 전담', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#16171b', ink:'#fff', accent:'#7692ff', muted:'#c9cbd2',
     problem:'종이 서류에서 디지털로, 현장에서 체감하는 안전관리로.', detail:'수기 기록의 반복 입력, 현장·사무실 간 단절, 긴 점검 절차를 개선했습니다. 엄지손가락 도달 범위와 큰 터치 타깃을 기준으로 모바일 흐름을 설계하고, 서명과 확인 절차를 짧게 연결해 업무 효율과 확장성을 높였습니다.',
-    outcomes:[['Paper → Mobile','작성 방식'],['PC Only → Field Ready','업무 환경'],['1st → 2nd Company','확장 적용']], images:6, next:['dashboard','실시간 운영 의사결정 대시보드']
+    outcomes:[['Paper → Mobile','작성 방식'],['PC Only → Field Ready','업무 환경'],['1st → 2nd Company','확장 적용']], outcomeBasis:'현장 기록 프로세스와 두 번째 자회사 적용 범위 기준', images:6, next:['dashboard','실시간 운영 의사결정 대시보드']
   },
   pet: {
     no:'03', type:'B2C · HABIT UX', title:'기록을 습관으로 만드는 반려동물 건강관리 UX', domain:'Dangnyangsilrok · Personal Product Project', lead:'해야 하지만 쉽게 미뤄지는 반려동물 건강 기록을 빠른 입력과 즉각적인 보상으로 반복 가능한 행동 경험으로 설계했습니다.',
     period:'2026.02 — 진행중', role:'UX 전략 · 브랜딩 · UI 디자인', contribution:'100%', team:'개인 프로젝트', cover:1, bg:'#eee8da', ink:'#20201f', accent:'#81643a', muted:'#665f54',
     problem:'기록은 중요하지만 사용자에게는 번거로운 일입니다.', detail:'“기록해야 한다”는 압박을 “오늘의 실록을 남긴다”는 감성적 보상으로 바꿨습니다. 기록 행동을 최소 단계로 줄이고 캐릭터·문체·시각 언어를 일관되게 설계해, 사용자가 부담 없이 반복할 수 있는 습관 형성 UX를 만들었습니다.',
-    outcomes:[['62.4%','기존 서비스 사용자 이탈 지점 분석'],['45.8초','프로토타입 평균 기록 소요'],['2단계','개선한 핵심 기록 플로우']], images:8, next:['intranet','모바일 업무 포털과 예약 플로우']
+    outcomes:[['62.4%','기존 서비스 사용자 이탈 지점 분석'],['45.8초','프로토타입 평균 기록 소요'],['2단계','개선한 핵심 기록 플로우']], outcomeBasis:'경쟁 서비스 분석과 2명 대상 프로토타입 과업 테스트 기준', images:8, next:['intranet','모바일 업무 포털과 예약 플로우']
   }
 };
 
@@ -73,11 +73,13 @@ const caseStudies = {
     context:[['사용자','현장 작업자 · 안전 관리자'],['환경','야외 현장 · 모바일 · 사무실 PC'],['제약','장갑 착용 · 강한 햇빛 · 사진과 서명 입력']],
     pains:[['수기 서류 반복','매일 종이를 작성하고 다시 취합하면서 분실과 보고 지연이 발생했습니다.'],['현장·사무실 단절','사진과 서명 전달이 늦어 사고 발생 시 즉시 대응하기 어려웠습니다.'],['낮은 접근성','PC 웹만 존재해 야외 현장 작업자의 활용률이 낮았습니다.'],['다중 현장 확장','회사와 현장이 늘어나도 같은 규칙으로 운영할 구조가 필요했습니다.']],
     strategies:[['01','큰 터치 영역','장갑을 낀 현장에서도 주요 기능을 빠르게 조작할 수 있도록 설계했습니다.'],['02','고명암 시각 체계','야외 환경에서도 상태와 핵심 정보를 명확히 구분하도록 했습니다.'],['03','짧은 기록 흐름','확인에서 입력과 완료까지 최소 단계로 연결했습니다.']],
+    reframe:{request:'기존 종이 양식을 모바일 화면으로 전환', observed:'입력 화면만 옮기면 장갑·햇빛·서명·현장과 사무실의 단절은 그대로 남았습니다.', result:'문서 디지털화가 아니라 현장에서 기록을 끝내는 연속적인 업무 경험으로 정의했습니다.'},
     iteration:{initial:'종이 양식에 직접 작성하고 사무실에서 다시 취합하는 흐름', feedback:'현장에서는 기록 도구보다 장갑을 낀 상태에서도 바로 완료할 수 있는 큰 조작 영역이 필요했습니다.', final:'현장에서 확인·작성·보고를 완료하는 모바일 흐름', initialImage:'assets/cases/before-tbm.png', finalImage:'assets/cases/after-tbm.png'},
     ui:'phone', uiTitle:'야외 환경에서도 즉시 기록하는 안전관리', uiText:'작성일, 출역 인원과 결재 상태를 한 화면에서 확인하고 바로 기록합니다.',
     finalVisual:['assets/cases/tbm-7.png','현장 안전관리 최종 화면','장갑 착용과 야외 시인성을 고려해 주요 현장 업무를 큰 터치 영역으로 구성했습니다.','portrait'],
     visuals:[['assets/cases/tbm-3.jpg','Paper to Mobile','종이 기록을 큰 터치 영역의 모바일 홈으로 전환한 비교'],['assets/cases/tbm-5.jpg','현장 완결형 서명','별도 스캔 없이 모바일에서 서명과 완료 확인을 끝내는 흐름']],
-    impact:{type:'workflow', label:'업무 환경 변화', title:'사무실로 돌아가 기록하던 업무를 현장에서 바로 완료합니다.', before:'종이 · PC', after:'현장 모바일', note:'Paper → Mobile · PC Only → Field Ready · 1st → 2nd Company'}
+    impact:{type:'workflow', label:'업무 환경 변화', title:'사무실로 돌아가 기록하던 업무를 현장에서 바로 완료합니다.', before:'종이 · PC', after:'현장 모바일', note:'Paper → Mobile · PC Only → Field Ready · 1st → 2nd Company'},
+    reflection:{learned:'종이를 화면으로 옮기는 것보다 기록이 시작되고 끝나는 장소를 먼저 이해해야 했습니다. 야외에서는 작은 효율 차이가 실제 사용 여부를 바꿨습니다.', next:'다시 진행한다면 장갑 착용 상태의 과업 시간과 강한 햇빛 아래 오입력률을 현장에서 더 체계적으로 측정하겠습니다.'}
   },
   intranet: {
     label:'모바일 업무 흐름',
@@ -87,10 +89,12 @@ const caseStudies = {
     context:[['사용자','사내 임직원 · 결재 담당자'],['환경','PC 인트라넷 · 모바일'],['제약','기존 업무 시스템과 작은 모바일 화면']],
     pains:[['PC 로그인 의존','긴급한 전자결재도 PC 버전에 로그인해야 했습니다.'],['정보 접근 제약','이동 중에는 결재 상태와 회의실 현황 확인이 어려웠습니다.'],['작은 화면 피로','기존 화면을 축소해서 제공해 확대와 이동을 반복해야 했습니다.']],
     strategies:[['01','과업 중심 홈','자주 사용하는 결재와 예약 업무를 첫 화면에서 바로 시작하도록 구성했습니다.'],['02','한 화면 예약','위치, 날짜, 시간을 하나의 흐름 안에서 선택하도록 단순화했습니다.'],['03','모바일 우선 정보','긴 문서보다 사용자의 다음 행동에 필요한 정보를 먼저 노출했습니다.']],
+    reframe:{request:'PC 인트라넷의 주요 기능을 모바일에서도 제공', observed:'기능은 보였지만 결재와 예약을 끝내려면 확대·이동하거나 PC로 돌아가야 했습니다.', result:'모바일 열람이 아니라 이동 중에도 핵심 업무를 완료하는 제품으로 정의했습니다.'},
     iteration:{initial:'PC 화면을 축소한 목록·입력 중심 예약 구조', feedback:'사용자는 상세 목록보다 예약 가능한 장소와 시간을 한 화면에서 먼저 확인하고 싶어 했습니다.', final:'위치·날짜·시간과 예약 행동을 한 화면에 연결한 구조', initialImage:'assets/cases/before-intranet.png', finalImage:'assets/cases/after-intranet.png', initialCrop:'left', finalCrop:'right'},
     ui:'booking', uiTitle:'생각하지 않아도 다음 행동이 보이는 예약', uiText:'회의실 현황과 날짜·시간을 한 화면에서 확인하고 최소 단계로 예약합니다.',
     finalVisual:['assets/cases/intranet-7.png','모바일 업무 포털 최종 화면','결재·공지·회의실 등 자주 쓰는 업무를 홈에서 바로 확인하도록 재구성했습니다.','portrait'],
-    visuals:[['assets/cases/intranet-4.jpg','회의실 예약 Before & After','분리된 PC 화면을 위치·날짜·시간이 연결된 모바일 예약 흐름으로 재구성'],['assets/cases/intranet-5.jpg','전자결재 Before & After','작성자 중심 문서 구조를 결재자가 빠르게 처리하는 모바일 화면으로 전환']]
+    visuals:[['assets/cases/intranet-4.jpg','회의실 예약 Before & After','분리된 PC 화면을 위치·날짜·시간이 연결된 모바일 예약 흐름으로 재구성'],['assets/cases/intranet-5.jpg','전자결재 Before & After','작성자 중심 문서 구조를 결재자가 빠르게 처리하는 모바일 화면으로 전환']],
+    reflection:{learned:'모바일 전환의 기준은 기능 수가 아니라 사용자가 작은 화면에서 업무를 끝낼 수 있는지였습니다. 특히 예약은 정보 조회와 행동을 한 화면에 연결했을 때 가치가 분명해졌습니다.', next:'다음에는 결재와 예약 완료까지의 실제 소요 시간을 기능별로 나눠, 홈의 우선순위를 사용 빈도와 긴급도로 함께 검증하고 싶습니다.'}
   },
   pet: {
     label:'습관 형성 UX',
@@ -100,11 +104,13 @@ const caseStudies = {
     context:[['사용자','반려동물 보호자'],['환경','개인 모바일 서비스'],['검증 범위','기존 서비스 분석 · 프로토타입 테스트']],
     pains:[['깊은 메뉴 구조','기록 기능이 여러 단계 안쪽에 있어 진입 자체가 어려웠습니다.'],['입력 피로','많은 입력 단계와 수동 기록이 반복 사용을 막았습니다.'],['보상 경험 부족','기록 후 즉각적인 피드백이나 변화의 시각화가 없었습니다.'],['사용자 이탈','마찰이 누적되며 기존 서비스 이탈률이 62.4%에 달했습니다.']],
     strategies:[['01','오늘의 기록 요약','사용자가 해야 할 행동과 현재 상태를 한눈에 파악하도록 했습니다.'],['02','한 번 누르는 기록','자주 사용하는 기록은 최소 입력으로 완료하도록 단순화했습니다.'],['03','업적과 리포트','기록이 쌓이는 과정을 보상과 변화로 보여주며 다시 사용할 이유를 만들었습니다.']],
+    reframe:{request:'반려동물 건강 기록 기능을 더 편리하게 개선', observed:'단계만 줄여도 기록을 귀찮은 의무로 느끼는 감정은 바뀌지 않았습니다.', result:'입력 기능이 아니라 오늘의 돌봄을 짧게 완료하고 보상받는 습관 경험으로 정의했습니다.'},
     iteration:{initial:'캐릭터와 기록 결과를 중심으로 한 정보 밀도가 낮은 홈', feedback:'사용자는 기록 결과보다 오늘 해야 할 행동과 빠른 입력 진입점을 먼저 찾았습니다.', final:'진행률·빠른 기록·오늘의 일정을 우선 배치한 행동 중심 홈', initialImage:'assets/cases/before-pet.png', finalImage:'assets/cases/after-pet.png'},
     ui:'pet', uiTitle:'기록을 의무가 아닌 일상의 보상으로', uiText:'오늘의 돌봄 진행률과 빠른 기록을 홈에 모아 반복 행동의 부담을 낮췄습니다.',
     finalVisual:['assets/cases/pet-9.png','오늘의 돌봄 최종 화면','진행률·빠른 기록·오늘의 일정을 홈에 모아 반복 기록의 부담을 낮췄습니다.','portrait'],
     visuals:[['assets/cases/pet-4.jpg','핵심 화면 구성','오늘의 기록·빠른 입력·일정·리포트로 정리한 제품 구조'],['assets/cases/pet-6.jpg','Visual System','브랜드 컬러와 카드 레이아웃을 적용한 주요 모바일 UI']],
-    impact:{type:'prototype', label:'설계 결과', title:'길었던 기록 흐름을 두 단계로 줄였습니다.', before:'3+ 단계', after:'2단계', note:'프로토타입 기준 · 정식 사용성 검증 예정'}
+    impact:{type:'prototype', label:'설계 결과', title:'길었던 기록 흐름을 두 단계로 줄였습니다.', before:'3+ 단계', after:'2단계', note:'프로토타입 과업 테스트 기준 · 참여자 2명 · 정식 사용성 검증 예정'},
+    reflection:{learned:'기능을 추가하는 것보다 기록을 시작하기 싫은 감정을 낮추는 일이 먼저였습니다. 빠른 완료와 캐릭터 피드백을 함께 보여줬을 때 다시 써보고 싶다는 반응이 나왔습니다.', next:'현재 테스트 인원이 적어 방향성 확인에 가깝습니다. 다음 단계에서는 1~2주 반복 사용 데이터를 통해 보상이 실제 재방문으로 이어지는지 검증하겠습니다.'}
   }
 };
 
@@ -175,7 +181,7 @@ const renderStudy = (study) => `
   ${renderReframe(study.reframe)}
   <article class="story-section strategy" id="decision">
     <header><p>${study.reframe ? '04' : '03'} 설계 결정</p><h3>${study.strategyHeadline}</h3></header>
-    <div class="strategy-list">${study.strategies.map(x=>`<div><b>${x[0]}</b><h4>${x[1]}</h4><p>${x[2]}</p></div>`).join('')}</div>
+    <div class="strategy-list">${study.strategies.map(x=>`<div><b>${x[0]}</b><h4>${x[1]}</h4><small>선택 이유</small><p>${x[2]}</p></div>`).join('')}</div>
   </article>
   ${renderIteration(study.iteration, study.reframe ? '05' : '04')}
   <article class="story-section solution" id="solution">
@@ -220,9 +226,10 @@ if (p) {
   document.querySelector('.detail').textContent=p.detail;
   document.querySelector('.context-facts').innerHTML=caseStudies[slug].context.map(x=>`<div><small>${x[0]}</small><span>${x[1]}</span></div>`).join('');
   document.querySelector('.outcomes').innerHTML=p.outcomes.map(x=>`<div class="outcome"><strong>${x[0]}</strong><span>${x[1]}</span></div>`).join('');
+  if (p.outcomeBasis) document.querySelector('.outcomes').insertAdjacentHTML('afterend',`<p class="outcome-basis"><b>측정 기준</b>${p.outcomeBasis}</p>`);
   document.querySelector('.gallery').innerHTML=renderStudy(caseStudies[slug]);
   if (caseStudies[slug].reframe) {
-    document.querySelector('.case-main').insertAdjacentHTML('beforeend',`<nav class="case-progress" aria-label="사례 진행 순서"><a href="#overview">개요</a><a href="#context">배경</a><a href="#evidence">근거</a><a href="#reframe">재정의</a><a href="#decision">결정</a>${caseStudies[slug].iteration ? '<a href="#iteration">조정</a>' : ''}<a href="#solution">경험</a><a href="#impact">성과</a><a href="#reflection">회고</a></nav>`);
+    document.querySelector('.case-main').insertAdjacentHTML('beforeend',`<nav class="case-progress" aria-label="사례 진행 순서"><a href="#overview">개요</a><a href="#context">배경</a><a href="#evidence">근거</a><a href="#reframe">재정의</a><a href="#decision">결정</a>${caseStudies[slug].iteration ? '<a href="#iteration">조정</a>' : ''}<a href="#solution">경험</a>${caseStudies[slug].impact ? '<a href="#impact">성과</a>' : ''}${caseStudies[slug].reflection ? '<a href="#reflection">회고</a>' : ''}</nav>`);
     const progressLinks = [...document.querySelectorAll('.case-progress a')];
     const progressSections = progressLinks
       .map(link => document.querySelector(link.getAttribute('href')))
