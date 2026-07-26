@@ -1034,4 +1034,10 @@ body {
 .proof span{font-size:14px}
 .contact>div a{padding-bottom:3px;border-bottom:1px solid rgba(255,255,255,.55)}
 @media(max-width:800px){.hero-text{font-size:17px;line-height:1.75}.about{grid-template-columns:1fr}.proof div{min-height:138px}}
+/* IT/SaaS 중심 프로젝트 재배치 */
+.dashboard-primary .project-image{background:linear-gradient(145deg,#dce5f5,#edf2fb)}
+.thumb.platform{background:#e4ebe7}
+.thumb.sand{background:#eee8da}
+.mini-project.field{background:#e5eaf6}
+.card-copy small{display:block;margin-top:18px;color:#8b95a1;font-size:12px;line-height:1.5}
 /*# sourceMappingURL=portfolio.css.map */
