@@ -1,0 +1,1365 @@
+/* ==========================================
+   1. 글로벌 변수 및 리셋 (Global Variables & Reset)
+   ========================================== */
+:root {
+  --ink: #090b10;       /* 메인 텍스트 및 어두운 요소 색상 */
+  --muted: #545b69;     /* 보조 텍스트 색상 */
+  --blue: #0875f5;      /* 브랜드 포인트 블루 */
+  --blue2: #1668e8;     /* 진한 블루 */
+  --bg: #eef2f7;        /* 영역 배경색 */
+  --line: #dce1e8;      /* 경계선 색상 */
+  --white: #fff;        /* 흰색 */
+  --yellow: #ffc936;    /* 포인트 노란색 */
+  --orange: #ff9418;    /* 포인트 오렌지색 */
+}
+
+* {
+  box-sizing: border-box; /* 박스 크기 계산 기준 통일 */
+}
+
+html {
+  scroll-behavior: smooth; /* 앵커 이동 시 부드러운 스크롤 */
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: Manrope, "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased; /* 폰트 렌더링 부드럽게 최적화 */
+}
+
+a {
+  color: inherit;
+  text-decoration: none; /* 링크 기본 밑줄 제거 */
+}
+
+button {
+  font: inherit; /* 버튼에 기본 폰트 상속 */
+}
+
+/* ==========================================
+   2. 공통 컴포넌트 및 유틸리티 (Common Components)
+   ========================================== */
+
+/* 브랜드 로고 영역 */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -.7px;
+
+  svg {
+    width: 31px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 4.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+/* 라벨 / 카테고리 강조 텍스트 */
+.eyebrow,
+.section-index,
+.project-type {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.section-index {
+  color: #707786;
+  margin: 0 0 30px;
+}
+
+/* 스크롤 시 등장하는 인터랙션 클래스 */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .75s ease, transform .75s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================
+   3. 헤더 영역 (Header Section)
+   ========================================== */
+.site-header {
+  height: 84px;
+  padding: 0 max(7.8vw, 34px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+
+  /* 내비게이션 메뉴 */
+  nav {
+    display: flex;
+    gap: 38px;
+    margin-left: 10%;
+
+    a {
+      transition: .2s;
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+
+  /* 헤더 우측 CTA 버튼 */
+  .header-link {
+    background: var(--blue);
+    color: #fff;
+    border-radius: 24px;
+    padding: 12px 22px;
+    transition: .2s;
+
+    &:hover {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+
+  /* 모바일용 메뉴 버튼 (기본 숨김) */
+  .menu-button {
+    display: none;
+    border: 0;
+    background: none;
+  }
+}
+
+/* ==========================================
+   4. 히어로 섹션 (Hero Section)
+   ========================================== */
+.hero {
+  --mx: 0px; /* 마우스 인터랙션 좌표 변수 */
+  --my: 0px;
+  height: min(100vh, 790px);
+  min-height: 680px;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+
+  /* 히어로 3D 입체 배경 이미지 */
+  .hero-image {
+    position: absolute;
+    inset: -1.5%;
+    background: url("assets/hero-3d.png") center / cover no-repeat;
+    transform: translate3d(var(--mx), var(--my), 0) scale(1.025);
+    transition: transform .8s cubic-bezier(.2, .7, .2, 1);
+    will-change: transform;
+  }
+
+  /* SVG 모션 인터랙션 레이어 */
+  .hero-motion {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    overflow: visible;
+    transform: translate3d(var(--mx), var(--my), 0);
+    transition: transform .8s cubic-bezier(.2, .7, .2, 1);
+    will-change: transform;
+
+    .route-guide {
+      use {
+        fill: none;
+        stroke: #4f8ff5;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-dasharray: 2 16;
+        opacity: .13;
+      }
+    }
+
+    .motion-ball {
+      transform-origin: center;
+    }
+
+    /* 점멸 및 노드 파동 효과 */
+    .node-pulse,
+    .cursor-signal {
+      circle {
+        fill: none;
+        stroke-width: 3;
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: signalPulse 3.6s ease-out infinite;
+
+        &:nth-child(2) {
+          animation-delay: 1.8s;
+        }
+      }
+    }
+
+    .node-pulse-blue circle { stroke: #4d8fff; }
+    .node-pulse-orange circle { stroke: #ff9d1d; }
+
+    .cursor-signal circle {
+      stroke: #fff;
+      animation-duration: 2.8s;
+    }
+  }
+
+  /* 히어로 카피 텍스트 영역 */
+  .hero-copy {
+    position: absolute;
+    left: max(11.8vw, 60px);
+    top: 50%;
+    transform: translateY(-45%);
+    z-index: 3;
+    max-width: 620px;
+
+    .eyebrow {
+      color: var(--blue);
+      margin: 0 0 24px;
+    }
+
+    h1 {
+        font-size: clamp(46px, 4.4vw, 79px);
+    line-height: 1.35;
+    letter-spacing: -.065em;
+    margin: 0 0 30px;
+    max-width: 970px;
+
+      span {
+        color: var(--blue);
+      }
+    }
+
+    .hero-description {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #303746;
+      margin: 0 0 22px;
+      font-weight: 500;
+    }
+
+    /* 플로우 키워드 및 대시선 모션 */
+    .flow-keywords {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 30px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      color: #9ca5b3;
+
+      span {
+        transition: color .35s, transform .35s;
+
+        &.active {
+          color: var(--blue);
+          transform: translateY(-2px);
+        }
+      }
+
+      /* 흐르는 라인 효과 */
+      i {
+        display: block;
+        width: 20px;
+        height: 1px;
+        background: #cbd2dc;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: var(--blue);
+          transform: translateX(-105%);
+          animation: flowLine 1.8s ease-in-out infinite;
+        }
+
+        &:nth-of-type(2):after { animation-delay: .6s; }
+        &:nth-of-type(3):after { animation-delay: 1.2s; }
+      }
+    }
+
+    /* 히어로 버튼 그룹 */
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      .button {
+        display: inline-flex;
+        padding: 15px 27px;
+        border-radius: 28px;
+        font-size: 14px;
+        font-weight: 700;
+
+        &.button-primary {
+          background: var(--blue);
+          color: white;
+          box-shadow: 0 8px 20px #0875f52f;
+          transition: .25s;
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 26px #0875f547;
+          }
+        }
+      }
+
+      .text-link {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 14px;
+        font-weight: 700;
+
+        .round-arrow {
+          width: 31px;
+          height: 31px;
+          border: 1.5px solid #afb7c3;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+        }
+      }
+    }
+  }
+
+  /* 하단 스크롤 안내 라벨 */
+  .scroll-label {
+    position: absolute;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-size: 9px;
+    letter-spacing: .19em;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+
+    i {
+      height: 26px;
+      width: 1px;
+      background: var(--ink);
+      animation: scrollLine 1.6s ease-in-out infinite;
+    }
+  }
+}
+
+/* ==========================================
+   5. 키프레임 애니메이션 정의 (Keyframes)
+   ========================================== */
+
+/* 원형 파동 애니메이션 */
+@keyframes signalPulse {
+  0% {
+    opacity: .7;
+    transform: scale(.2);
+  }
+  70%, 100% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}
+
+/* 라인 흐름 애니메이션 */
+@keyframes flowLine {
+  0% { transform: translateX(-105%); }
+  55%, 100% { transform: translateX(105%); }
+}
+
+/* 스크롤 안내 라인 애니메이션 */
+@keyframes scrollLine {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+/* ==========================================
+   6. 소개 및 통계 영역 (Intro & Stats)
+   ========================================== */
+.intro {
+  padding: 112px max(9vw, 50px) 106px;
+  text-align: center;
+
+  h2 {
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 1.28;
+    letter-spacing: -.055em;
+    margin: 0 auto 70px;
+    max-width: 930px;
+
+    span { color: var(--blue); }
+  }
+
+  /* 수치 통계 그리드 */
+  .intro-stats {
+    border-top: 1px solid var(--line);
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 32px;
+
+    div {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 13px;
+      border-right: 1px solid var(--line);
+
+      &:last-child { border: 0; }
+    }
+
+    strong {
+      font-size: 31px;
+      letter-spacing: -.05em;
+    }
+
+    span {
+      font-size: 11px;
+      color: #6c7380;
+    }
+  }
+}
+
+/* ==========================================
+   7. 프로젝트 포트폴리오 영역 (Work / Projects)
+   ========================================== */
+.work {
+  padding: 0 max(7.5vw, 38px) 140px;
+  max-width: 1600px;
+  margin: auto;
+
+  /* 대표 메인 프로젝트 카드 */
+  .project-featured {
+    min-height: 630px;
+    border-radius: 8px;
+    background: #0e1c31;
+    color: white;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    overflow: hidden;
+
+    .project-info {
+      padding: 76px 6vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .project-number {
+        font-size: 12px;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #ffffff4d;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin-bottom: 70px;
+      }
+
+      .project-type {
+        color: #8dbdff;
+        margin: 0 0 15px;
+      }
+
+      h3 {
+        font-size: clamp(35px, 3.5vw, 52px);
+        letter-spacing: -.055em;
+        margin: 0 0 21px;
+      }
+
+      > p {
+        font-size: 14px;
+        color: #bec8d6;
+        line-height: 1.8;
+        max-width: 440px;
+      }
+
+      .tags {
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+        margin: 20px 0 46px;
+
+        span {
+          border: 1px solid #ffffff29;
+          border-radius: 18px;
+          padding: 7px 12px;
+          font-size: 10px;
+          color: #d4dde8;
+        }
+      }
+
+      .case-link {
+        font-size: 13px;
+        font-weight: 700;
+        border-bottom: 1px solid #8390a1;
+        padding-bottom: 6px;
+
+        span { margin-left: 16px; }
+      }
+    }
+
+    /* 메인 프로젝트 비주얼 (브라우저 목업) */
+    .project-visual {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .platform-ui {
+      background: linear-gradient(145deg, #3975e2, #054cc5);
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 530px;
+        height: 530px;
+        border-radius: 50%;
+        background: #6fa0fb;
+        right: -200px;
+        top: -190px;
+        opacity: .55;
+      }
+    }
+
+    .browser-card {
+      background: #f8fafc;
+      color: #121826;
+      border-radius: 12px;
+      box-shadow: 0 25px 45px #03266051;
+    }
+
+    .browser-main {
+      position: absolute;
+      width: 88%;
+      height: 67%;
+      left: 8%;
+      top: 17%;
+      transform: rotate(-2deg);
+      overflow: hidden;
+
+      .browser-bar {
+        height: 25px;
+        background: #edf0f4;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding-left: 10px;
+
+        i {
+          width: 5px;
+          height: 5px;
+          background: #aab2be;
+          border-radius: 50%;
+        }
+      }
+
+      .mock-nav {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        padding: 0 5%;
+        font-size: 9px;
+
+        b {
+          margin-right: auto;
+          color: #1555ce;
+        }
+      }
+
+      .mock-title {
+        height: 58%;
+        padding: 8% 8%;
+        background: linear-gradient(90deg, #eef4ff 0 52%, #d6e5ff 52%);
+
+        small {
+          font-size: 6px;
+          color: #3872dd;
+        }
+
+        strong {
+          display: block;
+          font-size: 29px;
+          line-height: 1.08;
+          margin: 8px 0 18px;
+        }
+
+        button {
+          font-size: 7px;
+          color: white;
+          border: 0;
+          background: #1268e9;
+          padding: 8px 12px;
+          border-radius: 2px;
+        }
+      }
+
+      .mock-panels {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 12px;
+
+        i {
+          height: 65px;
+          border-radius: 4px;
+          background: #e6eaf0;
+        }
+      }
+    }
+
+    /* 플로팅 미니 차트 카드 */
+    .browser-float {
+      position: absolute;
+      width: 180px;
+      height: 135px;
+      right: 2%;
+      bottom: 8%;
+      padding: 18px;
+      transform: rotate(5deg);
+
+      .mini-chart {
+        height: 55px;
+        background: linear-gradient(150deg, transparent 45%, #176be7 46% 49%, transparent 50%);
+        border-bottom: 1px solid #d9dee6;
+      }
+
+      strong {
+        font-size: 11px;
+        display: block;
+      }
+
+      small { color: #1268e9; }
+    }
+  }
+
+  /* 보조 프로젝트 그리드 (2열) */
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin-top: 26px;
+
+    .project-small {
+      .small-visual {
+        height: 500px;
+        border-radius: 7px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* 모바일 UI 목업 디자인 (TBM) */
+      .tbm-ui {
+        background: #e8f4ff;
+        display: grid;
+        place-items: center;
+
+        .phone {
+          width: 220px;
+          height: 410px;
+          border-radius: 30px;
+          background: #fff;
+          border: 7px solid #162436;
+          box-shadow: 0 22px 45px #407aa533;
+          padding: 33px 18px 16px;
+          position: relative;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 54px;
+            height: 12px;
+            border-radius: 8px;
+            background: #162436;
+          }
+
+          .phone-head {
+            font-size: 12px;
+            font-weight: 800;
+          }
+
+          .safety-score {
+            font-size: 50px;
+            text-align: center;
+            font-weight: 800;
+            color: #1476ef;
+            margin: 28px 0 18px;
+
+            small { font-size: 13px; }
+          }
+
+          .phone-list {
+            display: grid;
+            gap: 9px;
+
+            i {
+              height: 35px;
+              background: #eff3f7;
+              border-radius: 6px;
+            }
+          }
+
+          button {
+            position: absolute;
+            bottom: 18px;
+            left: 18px;
+            right: 18px;
+            background: #1476ef;
+            color: #fff;
+            border: 0;
+            border-radius: 8px;
+            padding: 11px;
+            font-size: 11px;
+          }
+        }
+
+        .float-badge {
+          position: absolute;
+          right: 10%;
+          top: 28%;
+          background: white;
+          border-radius: 8px;
+          padding: 13px 16px;
+          font-size: 10px;
+          font-weight: 700;
+          box-shadow: 0 10px 30px #2e6c9c24;
+        }
+      }
+
+      /* 칸반 보드 UI 목업 디자인 */
+      .kanban-ui {
+        background: #f0eeff;
+        padding: 13% 8%;
+
+        .kanban-head {
+          height: 60px;
+          background: #22212a;
+          color: white;
+          border-radius: 10px 10px 0 0;
+          padding: 0 25px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 12px;
+
+          span { color: #797585; }
+        }
+
+        .kanban-cols {
+          height: 310px;
+          background: #fbfaff;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+          padding: 18px;
+          border-radius: 0 0 10px 10px;
+          box-shadow: 0 20px 35px #433b7040;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &:nth-child(2) i:first-of-type {
+              border-top: 3px solid #655de8;
+            }
+
+            &:nth-child(3) i {
+              border-top: 3px solid #34ba82;
+            }
+          }
+
+          b { font-size: 9px; }
+
+          em {
+            font-style: normal;
+            color: #9691a2;
+          }
+
+          i {
+            height: 90px;
+            background: white;
+            border: 1px solid #e5e2eb;
+            border-radius: 6px;
+            box-shadow: 0 3px 8px #423c5910;
+          }
+        }
+      }
+
+      .small-meta {
+        display: flex;
+        justify-content: space-between;
+        color: #7d8490;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .1em;
+        margin: 24px 0 10px;
+      }
+
+      h3 {
+        font-size: 27px;
+        letter-spacing: -.04em;
+        margin: 0 0 11px;
+      }
+
+      > p {
+        font-size: 13px;
+        line-height: 1.7;
+        color: #626976;
+        margin: 0;
+        max-width: 520px;
+      }
+    }
+  }
+}
+
+/* ==========================================
+   8. 작업 프로세스 영역 (Process Section)
+   ========================================== */
+.process {
+  background: #f4f6f9;
+  padding: 135px max(9vw, 50px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9vw;
+
+  /* 좌측 스티키 타이틀 */
+  .process-heading {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+
+    h2 {
+      font-size: clamp(40px, 4vw, 59px);
+      line-height: 1.15;
+      letter-spacing: -.06em;
+      margin: 0;
+    }
+  }
+
+  /* 우측 프로세스 단계 리스트 */
+  .process-list {
+    article {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      border-top: 1px solid #cbd1da;
+      padding: 31px 0 45px;
+
+      > span {
+        font-size: 11px;
+        color: var(--blue);
+        font-weight: 800;
+      }
+
+      h3 {
+        font-size: 27px;
+        margin: 0 0 13px;
+        letter-spacing: -.04em;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 1.75;
+        color: #626976;
+        margin: 0;
+        max-width: 430px;
+      }
+    }
+  }
+}
+
+/* ==========================================
+   9. 소개 및 역량 영역 (About Section)
+   ========================================== */
+.about {
+  min-height: 690px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8vw;
+  padding: 100px max(9vw, 50px);
+  overflow: hidden;
+
+  /* 좌측 그래픽 타일 장식 */
+  .about-art {
+    height: 480px;
+    background: #eef2f8;
+    border-radius: 6px;
+    position: relative;
+
+    .blue-tile,
+    .white-tile {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 45px;
+      transform: rotate(-12deg);
+      box-shadow: 0 30px 45px #71839f29;
+    }
+
+    .blue-tile {
+      background: #176bea;
+      color: #fff;
+      font-size: 80px;
+      display: grid;
+      place-items: center;
+      left: 25%;
+      top: 18%;
+      font-weight: 200;
+    }
+
+    .white-tile {
+      background: #fff;
+      left: 42%;
+      top: 44%;
+    }
+
+    .yellow-pin {
+      position: absolute;
+      width: 150px;
+      height: 42px;
+      border-radius: 25px;
+      background: var(--yellow);
+      transform: rotate(37deg);
+      left: 11%;
+      top: 67%;
+      box-shadow: 0 15px 22px #b5933038;
+    }
+  }
+
+  /* 우측 자기소개 & 보유 역량 태그 */
+  .about-copy {
+    h2 {
+      font-size: clamp(38px, 4vw, 57px);
+      line-height: 1.25;
+      letter-spacing: -.06em;
+      margin: 0 0 25px;
+    }
+
+    > p:not(.section-index) {
+      font-size: 14px;
+      color: #626976;
+      line-height: 1.85;
+      max-width: 510px;
+    }
+
+    .capabilities {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      span {
+        font-size: 11px;
+        font-weight: 700;
+        border: 1px solid #d6dbe2;
+        border-radius: 20px;
+        padding: 9px 13px;
+      }
+    }
+  }
+}
+
+/* ==========================================
+   10. 컨택트 섹션 (Contact Section)
+   ========================================== */
+.contact {
+  background: #0875f5;
+  color: white;
+  min-height: 590px;
+  padding: 115px max(10vw, 55px);
+  position: relative;
+  overflow: hidden;
+
+  .section-index { color: #c6ddff; }
+
+  h2 {
+    font-size: clamp(60px, 8vw, 112px);
+    line-height: .95;
+    letter-spacing: -.07em;
+    margin: 0 0 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .contact-mail {
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid #ffffff8f;
+    padding-bottom: 8px;
+    position: relative;
+    z-index: 2;
+
+    span { margin-left: 25px; }
+  }
+
+  /* 우측 배경 도형 장식 */
+  .contact-shape {
+    position: absolute;
+    right: 4%;
+    top: 5%;
+    width: 43%;
+    height: 95%;
+
+    i {
+      position: absolute;
+      border: 34px solid #fff;
+      border-radius: 55px;
+      opacity: .18;
+
+      &:nth-child(1) {
+        width: 270px;
+        height: 420px;
+        right: 2%;
+        top: -50px;
+        transform: rotate(30deg);
+      }
+
+      &:nth-child(2) {
+        width: 230px;
+        height: 230px;
+        left: 5%;
+        bottom: -40px;
+        transform: rotate(-17deg);
+      }
+
+      &:nth-child(3) {
+        width: 85px;
+        height: 85px;
+        border-color: var(--yellow);
+        opacity: 1;
+        right: 30%;
+        top: 42%;
+        border-width: 26px;
+      }
+    }
+  }
+}
+
+/* ==========================================
+   11. 푸터 영역 (Footer)
+   ========================================== */
+footer {
+  height: 100px;
+  padding: 0 max(7.5vw, 38px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #656d79;
+
+  .brand { color: var(--ink); }
+
+  > a:last-child {
+    font-weight: 700;
+    color: var(--ink);
+  }
+}
+
+/* ==========================================
+   12. 미디어 쿼리 - 태블릿 이하 (<= 900px)
+   ========================================== */
+@media (max-width: 900px) {
+  /* 태블릿 모바일 내비게이션 드롭다운 전환 */
+  .site-header {
+    padding: 0 24px;
+
+    nav,
+    .header-link {
+      display: none;
+    }
+
+    nav.mobile-open {
+      display: flex;
+      position: absolute;
+      top: 66px;
+      right: 24px;
+      flex-direction: column;
+      gap: 0;
+      margin: 0;
+      width: 180px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #e2e6ec;
+      border-radius: 10px;
+      box-shadow: 0 16px 35px #1c2d4525;
+
+      a {
+        padding: 12px 14px;
+        border-radius: 6px;
+
+        &:hover { background: #f0f4f9; }
+      }
+    }
+
+    /* 햄버거 메뉴 버튼 노출 */
+    .menu-button {
+      display: block;
+      width: 32px;
+      height: 32px;
+
+      span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--ink);
+        margin: 6px;
+      }
+    }
+  }
+
+  .hero {
+    height: 760px;
+    min-height: 0;
+
+    .hero-image {
+      background-position: 58% center;
+      opacity: .72;
+    }
+
+    .hero-motion { display: none; }
+
+    /* 모바일용 그라데이션 오버레이 */
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #eef2f7 5%, #eef2f7df 45%, transparent 90%);
+      z-index: 2;
+    }
+
+    .hero-copy {
+      left: 28px;
+      right: 28px;
+      top: 49%;
+      max-width: 590px;
+      z-index: 4;
+    }
+
+    h1 { font-size: 46px; }
+  }
+
+  /* 프로젝트 영역 1열 전환 */
+  .work {
+    .project-featured {
+      grid-template-columns: 1fr;
+
+      .project-info {
+        padding: 55px 38px;
+
+        .project-number { margin-bottom: 35px; }
+      }
+
+      .project-visual { min-height: 430px; }
+    }
+
+    .project-grid { grid-template-columns: 1fr; }
+  }
+
+  .process {
+    grid-template-columns: 1fr;
+
+    .process-heading { position: static; }
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+
+    .about-art { height: 400px; }
+  }
+
+  .contact {
+    .contact-shape {
+      opacity: .55;
+      width: 55%;
+    }
+  }
+}
+
+/* ==========================================
+   13. 미디어 쿼리 - 모바일 (<= 560px)
+   ========================================== */
+@media (max-width: 560px) {
+  .site-header { height: 70px; }
+  .brand { font-size: 18px; }
+
+  .hero {
+    height: 720px;
+
+    .hero-image { background-position: 61% center; }
+
+    &:after {
+      background: linear-gradient(90deg, #eef2f7 0%, #eef2f7f0 55%, #eef2f747 100%);
+    }
+
+    .hero-copy {
+      top: 46%;
+
+      .eyebrow { margin-bottom: 17px; }
+
+      h1 {
+        font-size: 40px;
+        line-height: 1.08;
+      }
+
+      .hero-description {
+        font-size: 13px;
+
+        br { display: none; }
+      }
+    }
+
+    .scroll-label { display: none; }
+  }
+
+  .intro {
+    padding: 80px 24px;
+
+    /* 통계 영역 수직 세로 정렬 */
+    .intro-stats {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      div {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 20px;
+
+        &:last-child { border: 0; }
+      }
+    }
+  }
+
+  .work {
+    padding: 0 16px 90px;
+
+    .project-featured {
+      min-height: 0;
+
+      .project-info {
+        padding: 42px 25px;
+
+        h3 { font-size: 34px; }
+      }
+
+      .project-visual { min-height: 310px; }
+      .browser-float { display: none; }
+    }
+
+    .project-grid {
+      gap: 50px;
+
+      .project-small {
+        .small-visual { height: 390px; }
+      }
+    }
+  }
+
+  .process { padding: 85px 25px; }
+
+  .about {
+    padding: 75px 24px;
+
+    .about-art {
+      height: 330px;
+      order: 2;
+
+      .blue-tile,
+      .white-tile {
+        width: 150px;
+        height: 150px;
+        border-radius: 30px;
+      }
+
+      .blue-tile { left: 18%; }
+      .white-tile { left: 44%; }
+    }
+  }
+
+  .contact {
+    min-height: 520px;
+    padding: 90px 25px;
+
+    h2 { font-size: 58px; }
+
+    .contact-shape {
+      width: 90%;
+      right: -34%;
+    }
+  }
+
+  footer {
+    height: auto;
+    padding: 34px 24px;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    p {
+      order: 3;
+      width: 100%;
+    }
+  }
+}
+
+/* ==========================================
+   14. 접근성 지원 (Reduced Motion)
+   - 애니메이션/모션 줄이기 설정을 한 사용자 대상
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero {
+    .hero-motion { display: none; }
+
+    .hero-image {
+      transform: none;
+      transition: none;
+    }
+
+    /* 모든 반복 애니메이션 정지 */
+    .flow-keywords i:after,
+    .scroll-label i,
+    .node-pulse circle,
+    .cursor-signal circle {
+      animation: none;
+    }
+  }
+}
