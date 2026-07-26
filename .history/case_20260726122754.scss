@@ -844,8 +844,8 @@
 .comparison-image {
   display: grid;
   place-items: center;
-  //height: 400px;
-  //max-height: 400px;
+  height: 400px;
+  max-height: 400px;
   margin-top: 24px;
   overflow: hidden;
   //background: #eef1f5;
@@ -862,7 +862,7 @@
   &.split-left,
   &.split-right {
     img {
-      //width: 200%;
+      width: 200%;
       max-width: none;
       object-fit: cover;
     }

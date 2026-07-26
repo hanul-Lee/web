@@ -59,6 +59,7 @@ const caseStudies = {
     strategies:[['01','역할별 관점','경영진과 실무자가 서로 다른 판단 기준으로 핵심 지표를 확인하도록 구성했습니다.'],['02','상태 규칙 통합','흩어진 상태값을 동일한 규칙으로 정리해 데이터의 의미를 빠르게 이해하도록 했습니다.'],['03','위험 신호 강조','변화가 필요한 항목은 사용자가 먼저 찾지 않아도 화면에서 드러나도록 설계했습니다.']],
     ui:'dashboard', uiTitle:'나열이 아니라 리스크의 패턴을 읽는 화면', uiText:'원가, 공수, 진행률을 한 화면에 연결하고 위험 상태에만 색을 사용했습니다.',
     reframe:{request:'흩어진 원가와 공수 데이터를 한 화면에 표시', observed:'데이터를 모아도 모든 수치가 같은 우선순위로 나열되어 위험을 다시 찾아야 했습니다.', result:'데이터 조회 화면이 아니라 역할별 판단과 이상 징후 발견을 지원하는 제품으로 정의했습니다.'},
+    iteration:{initial:'모든 지표를 동일한 우선순위로 배치한 나열형 화면', feedback:'실무자는 상세 수치보다 먼저 위험 프로젝트와 변화 원인을 확인했습니다.', final:'위험 신호를 상단에 두고 세부 지표를 단계적으로 여는 구조', initialImage:'assets/cases/dashboard-5.jpg', finalImage:'assets/cases/dashboard-5.jpg', initialCrop:'left', finalCrop:'right'},
     solutionSteps:[['01 발견','임계값을 벗어난 프로젝트를 먼저 확인'],['02 판단','같은 기간의 원가율·공수율·진행률을 비교'],['03 행동','프로젝트 상세로 이동해 변화 원인을 확인']],
     finalVisual:['assets/cases/dashboard-7.png','운영 의사결정 대시보드 최종 화면','원가·공수·프로젝트 위험 상태를 한 화면에서 비교하도록 구성했습니다.','landscape'],
     visuals:[['assets/cases/dashboard-3.jpg','역할 기반 정보구조','경영진·프로젝트 관리자·실무자 관점으로 분리한 대시보드 IA'],['assets/cases/dashboard-5.jpg','Before & After','수작업 원장 조회에서 실시간 리스크 탐지 화면으로 바뀐 결과']],
@@ -150,9 +151,9 @@ const renderIteration = (item, number) => item ? `
     </div>
   </article>` : '';
 
-const renderReflection = (item, number = '08') => item ? `
+const renderReflection = (item) => item ? `
   <article class="story-section reflection" id="reflection">
-    <header><p>${number} 회고</p><h3>이 프로젝트에서 배운 것과 다음에 검증할 것</h3></header>
+    <header><p>08 회고</p><h3>이 프로젝트에서 배운 것과 다음에 검증할 것</h3></header>
     <div class="reflection-grid"><div><small>배운 점</small><p>${item.learned}</p></div><div><small>다시 한다면</small><p>${item.next}</p></div></div>
   </article>` : '';
 
@@ -179,12 +180,12 @@ const renderStudy = (study) => `
   </article>
   ${renderIteration(study.iteration, study.reframe ? '05' : '04')}
   <article class="story-section solution" id="solution">
-    <div class="solution-copy"><p>${study.reframe ? study.iteration ? '06' : '05' : study.iteration ? '05' : '04'} 최종 경험</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map(x=>`<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join('')}</ol>` : ''}</div>
+    <div class="solution-copy"><p>${study.reframe ? '06' : study.iteration ? '05' : '04'} 최종 경험</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map(x=>`<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join('')}</ol>` : ''}</div>
     <div class="ui-stage">${renderMockup(study.ui, study.finalVisual)}</div>
   </article>
   ${renderVisuals(study.visuals)}
-  ${study.impact ? renderImpact(study.impact, study.reframe ? study.iteration ? '07' : '06' : study.iteration ? '06' : '05') : ''}
-  ${renderReflection(study.reflection, study.reframe ? study.iteration ? '08' : study.impact ? '07' : '06' : '08')}`;
+  ${study.impact ? renderImpact(study.impact, study.reframe ? '07' : study.iteration ? '06' : '05') : ''}
+  ${renderReflection(study.reflection)}`;
 
 const renderImpact = (impact, number) => `
   <article class="story-section impact impact-${impact.type}" id="impact">
@@ -222,7 +223,7 @@ if (p) {
   document.querySelector('.outcomes').innerHTML=p.outcomes.map(x=>`<div class="outcome"><strong>${x[0]}</strong><span>${x[1]}</span></div>`).join('');
   document.querySelector('.gallery').innerHTML=renderStudy(caseStudies[slug]);
   if (caseStudies[slug].reframe) {
-    document.querySelector('.case-main').insertAdjacentHTML('beforeend',`<nav class="case-progress" aria-label="사례 진행 순서"><a href="#overview">개요</a><a href="#context">배경</a><a href="#evidence">근거</a><a href="#reframe">재정의</a><a href="#decision">결정</a>${caseStudies[slug].iteration ? '<a href="#iteration">조정</a>' : ''}<a href="#solution">경험</a><a href="#impact">성과</a><a href="#reflection">회고</a></nav>`);
+    document.querySelector('.case-main').insertAdjacentHTML('beforeend',`<nav class="case-progress" aria-label="사례 진행 순서"><a href="#overview">개요</a><a href="#context">배경</a><a href="#evidence">근거</a><a href="#reframe">재정의</a><a href="#decision">결정</a><a href="#iteration">조정</a><a href="#solution">경험</a><a href="#impact">성과</a><a href="#reflection">회고</a></nav>`);
     const progressLinks = [...document.querySelectorAll('.case-progress a')];
     const progressSections = progressLinks
       .map(link => document.querySelector(link.getAttribute('href')))
