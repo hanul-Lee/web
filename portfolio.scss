@@ -153,7 +153,7 @@ img {
     margin: 0 0 30px;
     font-size: var(--type-display);
     line-height: 1.08;
-    letter-spacing: -.045em;
+    letter-spacing: -0.045em;
 
     em {
       color: var(--blue);
@@ -165,7 +165,7 @@ img {
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, rgba(237, 241, 247, .2), transparent 55%),
+      linear-gradient(90deg, rgba(237, 241, 247, 0.2), transparent 55%),
       url("assets/hero-data-flow-v2.png") center/cover no-repeat;
     transform: scale(1.01);
   }
@@ -222,7 +222,7 @@ img {
       color: #747c89;
       font-size: 10px;
       font-weight: 800;
-      letter-spacing: .11em;
+      letter-spacing: 0.11em;
     }
   }
 
@@ -238,13 +238,13 @@ img {
     max-width: calc(100% - 48px);
     padding: 10px 14px;
     color: #6e7786;
-    background: rgba(255, 255, 255, .62);
-    border: 1px solid rgba(110, 119, 134, .22);
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(110, 119, 134, 0.22);
     border-radius: 999px;
     backdrop-filter: blur(10px);
     font-size: 9px;
     font-weight: 800;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     white-space: nowrap;
 
     span {
@@ -380,7 +380,9 @@ img {
   align-items: flex-start;
   padding: 72px clamp(38px, 5vw, 78px);
 
-  > span { color: #8fb3ff; }
+  > span {
+    color: #8fb3ff;
+  }
 
   .project-tags {
     margin: 14px 0 0;
@@ -462,14 +464,20 @@ img {
   height: 420px;
   padding: 8%;
 
-  &.navy { background: #dce3f4; }
-  &.blue { background: #dfe9ff; }
+  &.navy {
+    background: #dce3f4;
+  }
+  &.blue {
+    background: #dfe9ff;
+  }
 }
 
 .card-copy {
   padding: 36px 38px 42px;
 
-  span { color: var(--blue); }
+  span {
+    color: var(--blue);
+  }
 
   h3 {
     margin: 20px 0 14px;
@@ -500,7 +508,9 @@ img {
   background: #e7eeea;
   border-radius: 14px;
 
-  &.sand { background: #eee8da; }
+  &.sand {
+    background: #eee8da;
+  }
 
   h3 {
     margin: 24px 0 8px;
@@ -519,7 +529,9 @@ img {
     transition: 0.4s;
   }
 
-  &:hover img { transform: scale(1.02); }
+  &:hover img {
+    transform: scale(1.02);
+  }
 }
 
 /* 9. 소개 */
@@ -581,7 +593,9 @@ img {
   }
 
   strong,
-  span { display: block; }
+  span {
+    display: block;
+  }
 
   strong {
     margin-bottom: 28px;
@@ -608,7 +622,9 @@ img {
     line-height: 1.4;
     letter-spacing: -0.045em;
 
-    a { border-bottom: 4px solid rgba(255, 255, 255, 0.5019607843); }
+    a {
+      border-bottom: 4px solid rgba(255, 255, 255, 0.5019607843);
+    }
   }
 
   > div {
@@ -1063,8 +1079,8 @@ body {
   margin: 12px 0 0;
   padding: 16px 0;
   color: #dce4f2 !important;
-  border-top: 1px solid rgba(255, 255, 255, .12);
-  border-bottom: 1px solid rgba(255, 255, 255, .12);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
   strong {
     color: #fff;
@@ -1095,7 +1111,7 @@ body {
 
 .contact > div a {
   padding-bottom: 3px;
-  border-bottom: 1px solid rgba(255, 255, 255, .55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
 }
 
 @media (max-width: 800px) {
