@@ -1571,6 +1571,17 @@
      object-fit: cover;
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
+.project-visuals figure.long {
+  grid-column: 1 / -1;
+}
+.project-visuals .visual-frame.long {
+  aspect-ratio: auto;
+  max-height: none;
+}
+.project-visuals .visual-frame.long img {
+  height: auto;
+  object-fit: contain;
+}
 .project-visuals figure:hover img {
   transform: scale(1.015);
 }

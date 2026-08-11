@@ -467,6 +467,12 @@ img {
   background: #e7eeea;
   border-radius: 14px;
 }
+.mini-project.web-renewal {
+  background: #dcefff;
+}
+.mini-project.psc {
+  background: #dcebf0;
+}
 .mini-project.sand {
   background: #eee8da;
 }
