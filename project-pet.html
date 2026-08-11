@@ -1,106 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>댕냥실록 반려동물 건강관리 앱 | Case Study</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-  <style>
-    :root {
-      --bg-color: #0f1117;
-      --card-bg: #181c24;
-      --card-border: #2a2f3d;
-      --text-main: #f3f4f6;
-      --text-sub: #9ca3af;
-      --accent-color: #ff6b35;
-      --highlight-bg: #212838;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Pretendard", sans-serif; }
-    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 0 20px; }
-    .case-container { max-width: 900px; margin: 0 auto; padding: 50px 0 80px 0; }
-    .nav-bar { margin-bottom: 40px; }
-    .back-link { color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-    .case-header { border-bottom: 1px solid var(--card-border); padding-bottom: 30px; margin-bottom: 40px; }
-    .category { color: var(--accent-color); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; }
-    h1 { font-size: 2rem; font-weight: 700; margin: 12px 0 20px 0; line-height: 1.35; word-break: keep-all; }
-    .overview { color: var(--text-sub); font-size: 1rem; margin-bottom: 24px; word-break: keep-all; }
-    .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 12px; font-size: 0.88rem; color: var(--text-sub); }
-    .meta-grid strong { color: var(--text-main); }
-    .case-content h2 { font-size: 1.4rem; font-weight: 700; margin: 40px 0 16px 0; color: var(--text-main); }
-    .case-content p { color: var(--text-sub); font-size: 0.98rem; margin-bottom: 20px; word-break: keep-all; }
-    .highlight-box { background: var(--highlight-bg); border: 1px solid var(--card-border); border-left: 4px solid var(--accent-color); padding: 20px; border-radius: 8px; margin-bottom: 30px; }
-    .highlight-box ul { list-style: none; }
-    .highlight-box li { margin-bottom: 10px; font-size: 0.93rem; color: var(--text-main); }
-    .highlight-box li:last-child { margin-bottom: 0; }
-    .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
-    .info-card { background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 12px; }
-    .info-card h3 { font-size: 1.1rem; color: var(--accent-color); margin-bottom: 10px; }
-    .info-card p { font-size: 0.9rem; color: var(--text-sub); margin-bottom: 0; }
-    .metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
-    .metric-card { background: var(--card-bg); border: 1px solid var(--card-border); padding: 24px; border-radius: 12px; text-align: center; }
-    .metric-card .number { display: block; font-size: 2.2rem; font-weight: 800; color: var(--accent-color); margin-bottom: 6px; }
-    .metric-card .label { font-size: 0.88rem; color: var(--text-sub); }
-    @media (max-width: 600px) { .grid-2col, .metrics-grid { grid-template-columns: 1fr; } h1 { font-size: 1.5rem; } }
-  </style>
-</head>
-<body>
-  <div class="case-container">
-    <nav class="nav-bar">
-      <a href="index.html" class="back-link">← 포트폴리오 홈으로</a>
-    </nav>
-
-    <header class="case-header">
-      <span class="category">PROJECT 02 · B2C Mobile / Habit UX</span>
-      <h1>반려동물은 왕, 나는 사관(史官)입니다<br>반복하기 어려운 기록을 일상 관리 습관으로 전환한 앱</h1>
-      <p class="overview">
-        기존 반려동물 건강 앱의 지루하고 단순한 기록 구조에서 벗어나, 조선시대 실록 콘셉트의 브랜딩과 진입 단계를 대폭 줄인 1탭 빠른 기록 UX를 적용하여 지속적인 케어 습관을 형성하도록 설계했습니다.
-      </p>
-      <div class="meta-grid">
-        <div><strong>기간</strong> 2026.02 - 진행중</div>
-        <div><strong>역할</strong> UX 기획, 서비스 컨셉, 모바일 UI 디자인 (100%)</div>
-        <div><strong>플랫폼</strong> Mobile App (iOS / Android)</div>
-      </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="기록을 습관으로 만드는 반려동물 건강관리 UX 사례">
+    <title>반려동물 건강관리 UX — 이한울</title>
+    <link rel="stylesheet" href="case.css">
+  </head>
+  <body data-project="pet">
+    <header class="nav case-nav">
+      <a class="logo" href="index.html">HANUL<span>●</span></a>
+      <nav><a href="index.html#work">프로젝트</a><a href="index.html#about">소개</a></nav>
+      <a class="nav-cta" href="assets/portfolio.pdf">이력서 PDF ↗</a>
     </header>
-
-    <section class="case-content">
-      <h2>01. 문제 정의 (Problem Statement)</h2>
-      <p>반려동물 건강 관리의 필요성은 높으나, 기존 서비스들은 반복 입력 피로도와 성취 피드백 부족으로 꾸준한 사용을 방해하고 있었습니다.</p>
-      <div class="highlight-box">
-        <ul>
-          <li><strong>깊은 서비스 구조:</strong> 원하는 기록 기능 도달까지 3단계 이상의 화면 진입 필요 (접근 부담)</li>
-          <li><strong>반복 입력 피로:</strong> 식사, 산책 등 비슷한 정보의 매번 반복 입력으로 평균 45.8초의 긴 기록 시간 소요</li>
-          <li><strong>성취 피드백 부족:</strong> 기록 후 즉각적인 시각적 보상이 없어 사용 동기가 쉽게 약화됨</li>
-        </ul>
-      </div>
-
-      <h2>02. 해결 방향 & 브랜드 컨셉 (Concept)</h2>
-      <p>기록을 '귀찮게 해야 하는 숙제'에서 반려동물과의 일상을 남기는 '남기고 싶은 가치 있는 경험'으로 전환했습니다.</p>
-      <div class="grid-2col">
-        <div class="info-card">
-          <h3>01. 조선 시대 '실록' 스토리텔링</h3>
-          <p>반려동물을 '전하', 보호자를 '사관'으로 설정하여 식사(수라), 배변(매화), 복약/케어(소임) 등 감성적 브랜딩 언어로 기록의 가치를 높였습니다.</p>
+    <main class="case-main">
+      <section class="case-hero" id="overview">
+        <div>
+          <p class="case-eyebrow"></p><p class="case-domain"></p>
+          <h1 class="case-title"></h1><p class="case-lead"></p>
+          <div class="case-meta" aria-label="프로젝트 참여 정보">
+            <div><span>MY ROLE</span><b class="role"></b></div>
+            <div><span>DESIGN OWNERSHIP</span><b class="contribution"></b></div>
+            <div><span>TEAM</span><b class="team"></b></div>
+            <div><span>DURATION</span><b class="period"></b></div>
+          </div>
         </div>
-        <div class="info-card">
-          <h3>02. 최소 단계 UX Flow (1-Tap)</h3>
-          <p>홈 진입 후 3초 이내에 핵심 상태를 확인하고, 자주 쓰는 항목은 1탭으로 즉시 기록 후 타임라인에 반영되도록 단계를 단순화했습니다.</p>
+        <div class="case-cover" aria-label="프로젝트 핵심 화면 미리보기"></div>
+      </section>
+      <section class="case-body">
+        <div class="case-summary" id="context">
+          <div><p class="case-section-label">01 프로젝트 배경</p><h2 class="problem"></h2></div>
+          <div><p class="detail"></p><div class="context-facts"></div></div>
         </div>
-      </div>
-
-      <h2>03. 초기 사용성 탐색 테스트 결과</h2>
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <span class="number">20초</span>
-          <span class="label">기록 완료 평균 시간 단축 (45.8초 → 20초)</span>
+        <div class="outcomes" style="border-top:none;border-bottom:none"></div>
+        <div class="gallery"></div>
+        <div class="next">
+          <a><span>다음 프로젝트</span><h3></h3></a>
+          <a class="back" href="index.html#work">전체 프로젝트 ↑</a>
         </div>
-        <div class="metric-card">
-          <span class="number">100%</span>
-          <span class="label">테스트 참여자 자발적 재사용 의향 표시 (N=3)</span>
-        </div>
-      </div>
-
-      <h2>04. 회고 및 향후 계획</h2>
-      <p>감성적인 브랜딩 컨셉이 장식에 그치지 않고 반복적인 기록 행동을 유도하는 강력한 동기부여 장치가 될 수 있음을 확인했습니다. 다음 단계에서는 반려인 5~8명을 대상으로 7일 재방문율과 기록 빈도를 추가 검증할 계획입니다.</p>
-    </section>
-  </div>
-</body>
+      </section>
+    </main>
+    <footer class="case-footer"><a class="logo" href="index.html">HANUL<span>●</span></a><p>© 2026 이한울</p></footer>
+    <script src="case.js"></script>
+  </body>
 </html>
