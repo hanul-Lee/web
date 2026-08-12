@@ -467,12 +467,6 @@ img {
   background: #e7eeea;
   border-radius: 14px;
 }
-.mini-project.web-renewal {
-  background: #dcefff;
-}
-.mini-project.psc {
-  background: #dcebf0;
-}
 .mini-project.sand {
   background: #eee8da;
 }
@@ -492,6 +486,14 @@ img {
 }
 .mini-project:hover img {
   transform: scale(1.02);
+}
+
+.mini-project.web-renewal {
+  background: #dcefff;
+}
+
+.mini-project.psc {
+  background: #dcebf0;
 }
 
 /* 9. 소개 */
