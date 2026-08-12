@@ -20,7 +20,7 @@
   padding: 110px clamp(24px, 8vw, 140px);
 }
 .case-main .case-hero .case-eyebrow {
-  color: var(--case-accent, #8db5ff);
+  color: var(--case-text-accent, #5e86a6);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -201,7 +201,7 @@
 
 .story-section header > p, .solution-copy > p {
   margin: 0 0 18px;
-  color: var(--case-accent);
+  color: var(--case-text-accent, #3b389f);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -233,7 +233,7 @@
   width: 42px;
   height: 42px;
   margin-bottom: 32px;
-  color: var(--case-accent);
+color: var(--case-text-accent, #3b389f);
   background: #fff;
   border-radius: 10px;
 }
@@ -285,7 +285,7 @@
 }
 
 .strategy-list b {
-  color: var(--case-accent);
+color: var(--case-text-accent, #3b389f);
   font-size: 11px;
 }
 
@@ -549,7 +549,7 @@
 .chart i {
   width: 9%;
   height: var(--h);
-  background: #7788d8;
+  background: var(--case-accent, #3b389f);
   border-radius: 5px 5px 0 0;
 }
 
@@ -585,15 +585,15 @@
   margin: 20px -16px 16px;
   padding: 24px 20px;
   color: #fff;
-  background: #435bd7;
+  background: var(--case-accent, #3b389f);
 }
 
 .booking-ui .phone-head {
-  background: #245f60;
+  background: var(--case-accent, #3b389f);
 }
 
 .pet-ui .phone-head {
-  background: #17294b;
+  background: var(--case-accent, #3b389f);
 }
 
 .phone-head small {
@@ -617,16 +617,16 @@
   display: block;
   width: 64%;
   height: 100%;
-  background: #435bd7;
+  background: var(--case-accent, #3b389f);
   border-radius: inherit;
 }
 
 .booking-ui .phone-progress span {
-  background: #31817d;
+  background: var(--case-accent, #3b389f);
 }
 
 .pet-ui .phone-progress span {
-  background: #c69b4a;
+  background: var(--case-accent, #3b389f);
 }
 
 .phone-card {
@@ -668,7 +668,7 @@
   width: 100%;
   padding: 13px;
   color: #fff;
-  background: #435bd7;
+  background: var(--case-accent, #3b389f);
   border: 0;
   border-radius: 8px;
   font: inherit;
@@ -677,11 +677,11 @@
 }
 
 .booking-ui button {
-  background: #245f60;
+  background: var(--case-accent, #3b389f);
 }
 
 .pet-ui button {
-  background: #17294b;
+  background: var(--case-accent, #3b389f);
 }
 
 .case-cover .mock-window {
@@ -760,7 +760,7 @@
   margin: 0 0 34px;
   padding: 24px 26px;
   color: #20242b;
-  background: #f1f5ff;
+  background: color-mix(in srgb, var(--case-accent, #3b389f) 8%, #fff);
   border-left: 3px solid var(--case-accent);
   border-radius: 0 12px 12px 0;
 }
@@ -770,7 +770,7 @@
   place-items: center;
   width: 38px;
   height: 38px;
-  color: var(--case-accent);
+color: var(--case-text-accent, #3b389f);
   background: #fff;
   border-radius: 50%;
 }
@@ -787,7 +787,7 @@
 .user-voice small {
   display: block;
   margin-bottom: 7px;
-  color: var(--case-accent);
+color: var(--case-text-accent, #3b389f);
   font-size: var(--type-label);
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -1020,7 +1020,7 @@
 .impact-flow > span {
   display: grid;
   place-items: center;
-  color: var(--case-accent);
+color: var(--case-text-accent, #3b389f);
   font-size: 26px;
 }
 
@@ -1144,7 +1144,7 @@
 }
 .case-hero .case-eyebrow {
   margin-bottom: 18px;
-  color: #3182f6;
+color: var(--case-text-accent, #5e86a6);
 }
 .case-hero .case-domain {
   margin: 0;
@@ -1226,13 +1226,13 @@
   margin-bottom: 56px;
 }
 .story-section header > p {
-  color: #3182f6;
+  color: var(--case-text-accent, #3b389f);
   font-size: 13px;
   letter-spacing: 0;
 }
 
 .solution-copy > p {
-  color: #3182f6;
+color: var(--case-text-accent, #3b389f);
   font-size: 13px;
   letter-spacing: 0;
 }
@@ -1242,13 +1242,13 @@
   margin-bottom: 64px;
   padding: 26px 0 26px 28px;
   background: transparent;
-  border-color: #3182f6;
+  border-color: var(--case-accent, #3b389f);
   border-radius: 0;
 }
 
 .user-voice > span {
-  color: #3182f6;
-  background: #f2f6fc;
+color: var(--case-text-accent, #3b389f);
+  background: color-mix(in srgb, var(--case-accent, #3b389f) 9%, #fff);
 }
 
 .user-voice small {
@@ -1293,7 +1293,7 @@
   border-left: 1px solid #e5e8eb;
 }
 .strategy-list b {
-  color: #3182f6;
+color: var(--case-text-accent, #3b389f);
 }
 .strategy-list p {
   color: #6b7684;
@@ -1322,10 +1322,10 @@
   background: #f2f4f6;
 }
 .impact .impact-flow .after {
-  background: #3182f6;
+  background: var(--case-accent, #3b389f);
 }
 .impact .impact-flow > span {
-  color: #3182f6;
+color: var(--case-text-accent, #3b389f);
 }
 .impact .impact-note {
   color: #8b95a1;
@@ -1371,7 +1371,7 @@
 /* 대표 사례의 판단 과정과 진행 내비게이션 */
 .case-section-label {
   margin: 0 0 22px;
-  color: #3182f6;
+color: var(--case-text-accent, #3b389f);
   font-size: 13px;
   font-weight: 700;
   line-height: 1.5;
@@ -1439,10 +1439,10 @@
   line-height: 1.65;
 }
 .reframe-flow .reframed {
-  background: #eaf3ff;
+  background: color-mix(in srgb, var(--case-accent, #3b389f) 11%, #fff);
 }
 .reframe-flow .reframed small {
-  color: #3182f6;
+color: var(--case-text-accent, #3b389f);
 }
 
 .reframe-flow small,
@@ -1498,7 +1498,7 @@
   border-radius: 10px;
 }
 .wireframe i {
-  background: #d8e8ff;
+  background: color-mix(in srgb, var(--case-accent, #3b389f) 18%, #fff);
   border-radius: 5px;
 }
 .wireframe.initial {
@@ -1523,7 +1523,7 @@
   border-bottom: 1px solid #dfe3e8;
 }
 .solution-steps b {
-  color: #3182f6;
+color: var(--case-text-accent, #3b389f);
   font-size: 12px;
 }
 .solution-steps span {
@@ -1708,14 +1708,14 @@ body[data-project=tbm] .comparison-image {
   background: #f5f7fb;
 }
 body[data-project=tbm] .strategy-list {
-  border-top-color: #cad5f4;
+  border-top-color: color-mix(in srgb, var(--case-accent) 30%, #fff);
 }
 
-/* 프로젝트와 관계없이 본문 섹션 라벨은 브랜드 블루로 통일 */
+/* 본문 강조색은 프로젝트별 색상과 고대비 fallback을 사용 */
 .story-section header > p,
 .solution-copy > p,
 .case-section-label {
-  color: var(--blue);
+  color: var(--case-text-accent, #3b389f);
 }
 
 .case-progress {
@@ -1754,12 +1754,12 @@ body[data-project=tbm] .strategy-list {
   transition: 0.2s ease;
 }
 .case-progress a:hover, .case-progress a.active {
-  color: #3182f6;
+color: var(--case-text-accent, #3b389f);
 }
 .case-progress a.active::before {
   width: 6px;
   height: 6px;
-  background: #3182f6;
+  background: var(--case-accent, #3b389f);
   box-shadow: 0 0 0 4px rgba(49, 130, 246, 0.13);
 }
 

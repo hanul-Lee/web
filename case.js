@@ -1,43 +1,43 @@
 const projects = {
   intranet: {
     no:'04', type:'B2B SAAS · MOBILE WORKFLOW', title:'모바일 업무 포털 예약 UX 개선', domain:'Hanmac Mobile Intranet', lead:'PC 중심으로 운영되던 사내 업무 중 자주 사용하는 결재와 예약 기능을 모바일에서도 빠르게 완료하도록 핵심 흐름과 정보 우선순위를 재설계했습니다.',
-    period:'2023.01 — 2023.06', role:'UX 전략 · 정보구조 · UI 디자인', contribution:'100%', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#e7eeec', ink:'#172322', accent:'#315f5d', muted:'#516461',
+    period:'2023.01 — 2023.06', role:'UX 전략 · 정보구조 · UI 디자인', contribution:'100%', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#e7eeec', ink:'#172322', accent:'#315f5d', textAccent:'#315f5d', muted:'#516461',
     problem:'핵심은 모바일에서도 볼 수 있는 것이 아니라, 모바일에서 바로 처리할 수 있는 구조였습니다.', detail:'기존 모바일 화면은 PC 기능을 축소해 보여주는 데 그쳤습니다. 자주 사용하는 전자결재와 예약 업무를 중심으로 진입 경로와 정보 우선순위를 다시 정리했습니다.',
     outcomes:[['43% 증가','전자결재·예약 사용'],['2.1배','모바일 사용'],['4.6 / 5.0','사용자 만족도']], outcomeBasis:'도입 전후 사용량과 기존 사용자 15명 대상 설문조사 기준', images:6, next:['tbm','현장 기록의 모바일 전환 UX']
   },
   dashboard: {
     no:'01', type:'B2B DASHBOARD · DECISION SUPPORT', title:'실시간 운영 의사결정 대시보드', domain:'Project Cost & Workforce Analysis Dashboard', lead:'프로젝트 데이터를 단순히 조회하는 화면이 아니라, 역할별로 필요한 정보를 빠르게 판단하고 위험 신호를 먼저 발견할 수 있는 대시보드로 재구성했습니다.',
-    period:'2025.12 — 2026.03', role:'데이터 UX · UI 디자인 · 퍼블리싱', contribution:'100%', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#151d35', ink:'#fff', accent:'#8fa9ff', muted:'#c0c7da',
+    period:'2025.12 — 2026.03', role:'데이터 UX · UI 디자인 · 퍼블리싱', contribution:'100%', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#151d35', ink:'#fff', accent:'#526dc7', textAccent:'#455db0', muted:'#c0c7da',
     problem:'데이터는 충분했습니다. 문제는 그 데이터가 의사결정에 닿지 못한다는 것이었습니다.', detail:'엑셀과 수기 장부로 흩어진 원가·인원 데이터를 하나로 통합하고, 사용자 역할에 따라 필요한 판단 기준을 다른 뷰로 제공했습니다. 색상은 의미 전달에만 쓰고 카드·테이블·차트의 상태 규칙을 시스템화했습니다.',
     outcomes:[['한 화면','핵심 현황 통합'],['역할 기반','사용자별 화면'],['UI 시스템','일관된 상태 규칙']], outcomeBasis:'프로젝트 원가·공수 데이터 구조와 역할별 핵심 과업 분석 기준', images:6, next:['platform','멀티 유저 B2B 플랫폼']
   },
   platform: {
     no:'02', type:'B2B PLATFORM · INFORMATION ARCHITECTURE', title:'멀티 유저 B2B 플랫폼 정보구조 재설계', domain:'Construction Integrated Platform · 약 60억 규모 R&D 프로젝트', lead:'현장 관리자, 본사 담당자, 외부 사용자가 하나의 시스템을 사용하는 환경에서 각자의 목적에 맞게 정보를 빠르게 탐색하고 판단하도록 정보구조와 핵심 사용자 흐름을 재설계했습니다.',
-    period:'2023.01 — 2023.12', role:'UX 전략 · 정보구조 · UI · 디자인 시스템', contribution:'90%', team:'기획 · UX/UI · 프론트엔드 · 백엔드 · BIM', cover:1, bg:'#1d2024', ink:'#fff', accent:'#ff8b44', muted:'#c7c8ca',
+    period:'2023.01 — 2023.12', role:'UX 전략 · 정보구조 · UI · 디자인 시스템', contribution:'90%', team:'기획 · UX/UI · 프론트엔드 · 백엔드 · BIM', cover:1, bg:'#1d2024', ink:'#fff', accent:'#c85c1b', textAccent:'#a9470f', muted:'#c7c8ca',
     problem:'문제는 정보가 부족한 것이 아니라, 사용자마다 필요한 정보와 탐색 목적이 다르다는 것이었습니다.', detail:'서로 다른 역할의 사용자가 동일한 메뉴 구조를 사용하면서 필요한 정보에 도달하기까지 불필요한 탐색과 화면 이동이 반복되고 있었습니다.',
     outcomes:[['5.4 → 2','대표 과업 기준 평균 탐색 단계'],['25% 감소','적용 이후 이탈률'],['30% 향상','적용 이후 전환율']], outcomeBasis:'대표 탐색 과업과 적용 전후 서비스 지표 기준', images:8, next:['pet','기록을 습관으로 만드는 반려동물 건강관리 UX']
   },
   tbm: {
     no:'05', type:'MOBILE WORKFLOW · DIGITAL TRANSFORMATION', title:'현장 기록의 모바일 전환 UX', domain:'TBM Safety Record System', lead:'종이 작성에서 사무실 입력으로 이어지던 업무를 현장에서 작성과 확인까지 완료할 수 있는 모바일 경험으로 전환했습니다.',
-    period:'2025.11 — 2026.04', role:'현장 조사 · 모바일 UX/UI', contribution:'UX/UI 전담', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#16171b', ink:'#fff', accent:'#7692ff', muted:'#c9cbd2',
+    period:'2025.11 — 2026.04', role:'현장 조사 · 모바일 UX/UI', contribution:'UX/UI 전담', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#16171b', ink:'#fff', accent:'#3b389f', textAccent:'#3b389f', muted:'#c9cbd2',
     problem:'종이 서류에서 디지털로, 현장에서 체감하는 안전관리로.', detail:'수기 기록의 반복 입력, 현장·사무실 간 단절, 긴 점검 절차를 개선했습니다. 엄지손가락 도달 범위와 큰 터치 타깃을 기준으로 모바일 흐름을 설계하고, 서명과 확인 절차를 짧게 연결해 업무 효율과 확장성을 높였습니다.',
     outcomes:[['40% 감소','관리자 수기 정리 업무'],['즉시 검색','과거 TBM 기록'],['현장·관리자','양쪽 사용성 개선']], outcomeBasis:'사용자 피드백과 개선 전후 TBM 기록·관리 업무 비교 기준', images:6, next:['responsive','반응형 웹 전면 리뉴얼']
   },
   pet: {
     no:'03', type:'B2C · HABIT UX', title:'기록을 습관으로 만드는 반려동물 건강관리 UX', domain:'Dangnyangsilrok · Personal Product Project', lead:'해야 하지만 쉽게 미뤄지는 반려동물 건강 기록을 빠른 입력과 즉각적인 보상으로 반복 가능한 행동 경험으로 설계했습니다.',
-    period:'2026.02 — 진행중', role:'UX 전략 · 브랜딩 · UI 디자인', contribution:'100%', team:'개인 프로젝트', cover:1, bg:'#eee8da', ink:'#20201f', accent:'#81643a', muted:'#665f54',
+    period:'2026.02 — 진행중', role:'UX 전략 · 브랜딩 · UI 디자인', contribution:'100%', team:'개인 프로젝트', cover:1, bg:'#eee8da', ink:'#20201f', accent:'#81643a', textAccent:'#72552e', muted:'#665f54',
     problem:'기록은 중요하지만 사용자에게는 번거로운 일입니다.', detail:'“기록해야 한다”는 압박을 “오늘의 실록을 남긴다”는 감성적 보상으로 바꿨습니다. 기록 행동을 최소 단계로 줄이고 캐릭터·문체·시각 언어를 일관되게 설계해, 사용자가 부담 없이 반복할 수 있는 습관 형성 UX를 만들었습니다.',
     outcomes:[['62.4%','기존 서비스 사용자 이탈 지점 분석'],['45.8초','프로토타입 평균 기록 소요'],['2단계','개선한 핵심 기록 플로우']], outcomeBasis:'경쟁 서비스 분석과 2명 대상 프로토타입 과업 테스트 기준', images:8, next:['intranet','모바일 업무 포털과 예약 플로우']
   },
   responsive: {
     no:'06', type:'RESPONSIVE WEB · UI RENEWAL', title:'반응형 웹 전면 리뉴얼', domain:'5G Testing Solutions Website', lead:'디바이스별로 달라지는 탐색 경험과 높은 이탈률을 개선하고, 복잡한 솔루션 정보를 더 쉽게 이해하고 비교할 수 있는 반응형 제품 사이트로 재설계했습니다.',
-    period:'2023.03 — 2023.11', role:'웹 UX/UI · 반응형 디자인 시스템', contribution:'100%', team:'기획 · 디자인 · 개발', bg:'#0d4f91', ink:'#fff', accent:'#73c7ff', muted:'#d2e7f6',
+    period:'2023.03 — 2023.11', role:'웹 UX/UI · 반응형 디자인 시스템', contribution:'100%', team:'기획 · 디자인 · 개발', bg:'#0d4f91', ink:'#fff', accent:'#176fa6', textAccent:'#17618f', muted:'#d2e7f6',
     problem:'글로벌 방문자는 늘었지만, 디바이스가 바뀌면 탐색 경험도 함께 끊기고 있었습니다.', detail:'PC 중심의 고정형 웹은 모바일에서 정보가 잘리거나 우선순위가 흐려졌습니다. 솔루션과 제품 정보를 사용자의 탐색 목적에 맞게 재구성하고, 같은 정보 구조가 모든 화면에서 자연스럽게 이어지도록 반응형 규칙을 만들었습니다.',
     outcomes:[['30% 단축','모바일 페이지 로딩 시간'],['6.3% 감소','사용자 이탈률'],['25% 증가','모바일 사용자 유지율']], outcomeBasis:'리뉴얼 적용 전후 운영 데이터와 디바이스별 사용자 행동 지표 기준', next:['psc','PSC 거더 관리 플랫폼']
   },
   psc: {
     no:'07', type:'B2B PLATFORM · FIELD DATA', title:'PSC 거더 관리 플랫폼', domain:'PSC Girder Measurement & Management Platform', lead:'수기로 기록하던 측면 곡률 데이터를 센서 기반 자동 수집과 실시간 분석으로 연결해, 현장 측정의 정확성과 관리 효율을 높인 웹·앱 플랫폼입니다.',
-    period:'2023.08 — 2024.08', role:'웹/앱 UX/UI · 퍼블리싱 · 현장 구조 분석', contribution:'100%', team:'기획 · 디자인 · 개발 · 현장 실무자', bg:'#367fa0', ink:'#fff', accent:'#b9edff', muted:'#d8edf4',
+    period:'2023.08 — 2024.08', role:'웹/앱 UX/UI · 퍼블리싱 · 현장 구조 분석', contribution:'100%', team:'기획 · 디자인 · 개발 · 현장 실무자', bg:'#367fa0', ink:'#fff', accent:'#5e86a6', textAccent:'#466b88', muted:'#d8edf4',
     problem:'측정값을 손으로 옮기는 과정이 정확도와 현장 대응 속도를 함께 떨어뜨리고 있었습니다.', detail:'종이 기록, 수동 엑셀 입력, 지연된 검토로 이어지던 프로세스를 자동 수집·분석 구조로 바꿨습니다. 웹에서는 거더별 측정 데이터를 통합 관리하고, 모바일에서는 센서 연결과 현장 상태 확인을 빠르게 완료하도록 설계했습니다.',
     outcomes:[['자동화','측정 데이터 수집'],['실시간','곡률 분석·모니터링'],['Web + App','현장·사무실 연결']], outcomeBasis:'현장 측정 프로세스와 제품 구현 범위 기준', next:['dashboard','실시간 운영 의사결정 대시보드']
   }
@@ -278,6 +278,7 @@ if (p) {
   document.documentElement.style.setProperty('--case-bg',p.bg);
   document.documentElement.style.setProperty('--case-ink',p.ink);
   document.documentElement.style.setProperty('--case-accent',p.accent);
+  document.documentElement.style.setProperty('--case-text-accent',p.textAccent || p.accent);
   document.documentElement.style.setProperty('--case-muted',p.muted);
   document.title = `${p.title} — 이한울`;
   document.querySelector('.case-eyebrow').textContent=slug === 'pet'
