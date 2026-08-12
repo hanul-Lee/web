@@ -21,7 +21,7 @@ const projects = {
     no:'05', type:'MOBILE WORKFLOW · DIGITAL TRANSFORMATION', title:'현장 기록의 모바일 전환 UX', domain:'TBM Safety Record System', lead:'종이 작성에서 사무실 입력으로 이어지던 업무를 현장에서 작성과 확인까지 완료할 수 있는 모바일 경험으로 전환했습니다.',
     period:'2025.11 — 2026.04', role:'현장 조사 · 모바일 UX/UI', contribution:'UX/UI 전담', team:'기획자 · 디자이너 · 개발자', cover:1, bg:'#16171b', ink:'#fff', accent:'#7692ff', muted:'#c9cbd2',
     problem:'종이 서류에서 디지털로, 현장에서 체감하는 안전관리로.', detail:'수기 기록의 반복 입력, 현장·사무실 간 단절, 긴 점검 절차를 개선했습니다. 엄지손가락 도달 범위와 큰 터치 타깃을 기준으로 모바일 흐름을 설계하고, 서명과 확인 절차를 짧게 연결해 업무 효율과 확장성을 높였습니다.',
-    outcomes:[['Paper → Mobile','작성 방식'],['PC Only → Field Ready','업무 환경'],['1st → 2nd Company','확장 적용']], outcomeBasis:'현장 기록 프로세스와 두 번째 자회사 적용 범위 기준', images:6, next:['responsive','반응형 웹 전면 리뉴얼']
+    outcomes:[['40% 감소','관리자 수기 정리 업무'],['즉시 검색','과거 TBM 기록'],['현장·관리자','양쪽 사용성 개선']], outcomeBasis:'사용자 피드백과 개선 전후 TBM 기록·관리 업무 비교 기준', images:6, next:['responsive','반응형 웹 전면 리뉴얼']
   },
   pet: {
     no:'03', type:'B2C · HABIT UX', title:'기록을 습관으로 만드는 반려동물 건강관리 UX', domain:'Dangnyangsilrok · Personal Product Project', lead:'해야 하지만 쉽게 미뤄지는 반려동물 건강 기록을 빠른 입력과 즉각적인 보상으로 반복 가능한 행동 경험으로 설계했습니다.',
@@ -33,7 +33,7 @@ const projects = {
     no:'06', type:'RESPONSIVE WEB · UI RENEWAL', title:'반응형 웹 전면 리뉴얼', domain:'5G Testing Solutions Website', lead:'디바이스별로 달라지는 탐색 경험과 높은 이탈률을 개선하고, 복잡한 솔루션 정보를 더 쉽게 이해하고 비교할 수 있는 반응형 제품 사이트로 재설계했습니다.',
     period:'2023.03 — 2023.11', role:'웹 UX/UI · 반응형 디자인 시스템', contribution:'100%', team:'기획 · 디자인 · 개발', bg:'#0d4f91', ink:'#fff', accent:'#73c7ff', muted:'#d2e7f6',
     problem:'글로벌 방문자는 늘었지만, 디바이스가 바뀌면 탐색 경험도 함께 끊기고 있었습니다.', detail:'PC 중심의 고정형 웹은 모바일에서 정보가 잘리거나 우선순위가 흐려졌습니다. 솔루션과 제품 정보를 사용자의 탐색 목적에 맞게 재구성하고, 같은 정보 구조가 모든 화면에서 자연스럽게 이어지도록 반응형 규칙을 만들었습니다.',
-    outcomes:[['6.5% 감소','모바일 페이지 로딩 시간'],['30% 감소','사용자 이탈률'],['4.83 / 5','사용자 만족도']], outcomeBasis:'리뉴얼 적용 전후 운영 지표와 사용자 평가 기준', next:['psc','PSC 거더 관리 플랫폼']
+    outcomes:[['30% 단축','모바일 페이지 로딩 시간'],['6.3% 감소','사용자 이탈률'],['25% 증가','모바일 사용자 유지율']], outcomeBasis:'리뉴얼 적용 전후 운영 데이터와 디바이스별 사용자 행동 지표 기준', next:['psc','PSC 거더 관리 플랫폼']
   },
   psc: {
     no:'07', type:'B2B PLATFORM · FIELD DATA', title:'PSC 거더 관리 플랫폼', domain:'PSC Girder Measurement & Management Platform', lead:'수기로 기록하던 측면 곡률 데이터를 센서 기반 자동 수집과 실시간 분석으로 연결해, 현장 측정의 정확성과 관리 효율을 높인 웹·앱 플랫폼입니다.',
@@ -54,8 +54,15 @@ const caseStudies = {
     reframe:{request:'오래된 웹사이트의 화면을 새롭게 리뉴얼', observed:'시각 스타일보다 디바이스별 탐색 단절과 제품 정보의 이해 장벽이 이탈을 만들고 있었습니다.', result:'화면 교체가 아니라 어떤 디바이스에서도 솔루션을 이해하고 제품을 찾는 탐색 경험으로 정의했습니다.'},
     ui:'web', uiTitle:'어떤 화면에서도 이어지는 솔루션 탐색', uiText:'제품·적용 분야·기술 정보를 재구성하고 데스크톱부터 모바일까지 같은 우선순위로 전달했습니다.',
     finalVisual:['assets/cases/responsive-cover.jpg','반응형 웹 리뉴얼 핵심 화면','기술 솔루션의 신뢰감과 제품 탐색성을 함께 높인 반응형 웹 경험입니다.','landscape'],
-    visuals:[['assets/pp/4.jpg','전체 프로젝트 스토리','문제 정의부터 정보구조, 반응형 시스템, 성과까지 정리한 원본 프로젝트 자료','long']],
-    impact:{type:'depth', label:'운영 성과', title:'이탈은 줄이고, 제품을 탐색한 뒤 이어지는 행동은 늘었습니다.', before:'높은 이탈', after:'−30%', note:'모바일 로딩 시간 6.5% 감소 · 사용자 만족도 4.83/5 · 견적·문의 행동 증가'},
+    visuals:[
+      ['assets/pp/tescom/42.jpg','반응형 웹 전면 리뉴얼','데스크톱과 모바일의 경험 불일치를 해소하고 모바일 유입을 되살린 프로젝트 개요'],
+      ['assets/pp/tescom/41.jpg','문제 정의와 이탈 지점','첫 화면의 서비스 불명확성, 탐색 유도 부족, 상세 도달 전 이탈을 데이터로 정리'],
+      ['assets/pp/tescom/40.jpg','정보 구조 재설계 목표','디바이스와 관계없이 핵심 행동을 파악하도록 정보 위계와 탐색 흐름을 재구성'],
+      ['assets/pp/tescom/39.jpg','메인 배너 최적화','브랜드 노출 영역을 제품·솔루션 탐색을 시작하는 진입점으로 전환'],
+      ['assets/pp/tescom/38.jpg','반응형 디자인 시스템','단일 코드 기반의 유연한 미디어 쿼리로 웹·태블릿·모바일 경험을 통합'],
+      ['assets/pp/tescom/37.jpg','운영 성과','로딩 시간과 이탈률을 낮추고 모바일 사용자 유지율을 높인 결과']
+    ],
+    impact:{type:'depth', label:'운영 성과', title:'이탈은 줄이고, 제품을 탐색한 뒤 이어지는 행동은 늘었습니다.', before:'11.14%', after:'4.84%', note:'이탈률 6.3%p 감소 · 모바일 로딩 시간 30% 단축 · 모바일 사용자 유지율 25% 증가'},
     reflection:{learned:'반응형 디자인은 화면 크기를 줄이는 작업이 아니라, 어떤 환경에서도 같은 판단 순서를 유지하는 정보 설계라는 점을 확인했습니다.', next:'다시 진행한다면 국가·디바이스별 퍼널을 분리해 콘텐츠 우선순위와 문의 전환의 관계를 더 세밀하게 검증하겠습니다.'}
   },
   psc: {
@@ -68,7 +75,14 @@ const caseStudies = {
     reframe:{request:'PSC 측정 결과를 관리하는 화면 구축', observed:'결과 화면만 만들어도 종이 기록과 엑셀 재입력에서 생기는 오류와 지연은 남아 있었습니다.', result:'결과 조회가 아니라 측정부터 분석까지 데이터가 끊기지 않는 현장 플랫폼으로 정의했습니다.'},
     ui:'web', uiTitle:'측정과 분석이 한 흐름으로 이어지는 현장 데이터 플랫폼', uiText:'센서 상태, 거더별 곡률, 측정 이력을 웹과 모바일에서 같은 데이터 기준으로 확인합니다.',
     finalVisual:['assets/cases/psc-cover.jpg','PSC 거더 관리 플랫폼 핵심 화면','거더별 측정·이미지·분석 데이터를 통합한 다크 테마 운영 화면입니다.','landscape'],
-    visuals:[['assets/pp/6.jpg','전체 프로젝트 스토리','디지털 전환 배경부터 자동 수집, 실시간 분석, 현장 앱까지 정리한 원본 프로젝트 자료','long']],
+    visuals:[
+      ['assets/pp/psc/psc-5.jpg','PSC 거더 관리 플랫폼','분산된 거더 공정 데이터를 하나의 웹·앱 흐름으로 연결한 프로젝트 개요'],
+      ['assets/pp/psc/psc-4.jpg','디지털 전환 목표','수동 측정의 오류와 지연을 자동화·실시간 모니터링 중심 과제로 정의'],
+      ['assets/pp/psc/psc-3.jpg','거더 데이터 입력과 분석','측정값과 곡률 변화를 같은 화면에서 비교하는 PC 관리 화면'],
+      ['assets/pp/psc/psc-2.jpg','실시간 곡률 모니터링','6개 센서 데이터와 현장 이미지를 통합해 이상 상태를 빠르게 확인'],
+      ['assets/pp/psc/psc-1.jpg','현장 모바일 연동','센서 연결과 측정 진행 상태를 현장에서 확인하는 모바일 애플리케이션'],
+      ['assets/pp/psc/psc.jpg','성과와 회고','효율·안전·정보 접근성·데이터 정확도 관점에서 정리한 개선 결과']
+    ],
     impact:{type:'workflow', label:'업무 방식 변화', title:'수기 측정과 재입력을 자동 수집과 실시간 분석으로 전환했습니다.', before:'수기 · 엑셀', after:'자동 수집', note:'데이터 정확도 향상 · 작업자 안전성 향상 · 현장 접근성 향상 · 업무 효율 향상'},
     reflection:{learned:'현장 제품의 사용성은 화면 안의 조작뿐 아니라 데이터가 생성되고 전달되는 전체 과정에서 결정된다는 점을 배웠습니다.', next:'운영 로그를 확보한다면 수기 방식 대비 측정 완료 시간과 오류 수정 횟수를 정량화해 자동화 효과를 검증하겠습니다.'}
   },
@@ -117,8 +131,16 @@ const caseStudies = {
     iteration:{initial:'종이 양식에 직접 작성하고 사무실에서 다시 취합하는 흐름', feedback:'현장에서는 기록 도구보다 장갑을 낀 상태에서도 바로 완료할 수 있는 큰 조작 영역이 필요했습니다.', final:'현장에서 확인·작성·보고를 완료하는 모바일 흐름', initialImage:'assets/cases/before-tbm.png', finalImage:'assets/cases/after-tbm.png'},
     ui:'phone', uiTitle:'야외 환경에서도 즉시 기록하는 안전관리', uiText:'작성일, 출역 인원과 결재 상태를 한 화면에서 확인하고 바로 기록합니다.',
     finalVisual:['assets/cases/tbm-7.png','현장 안전관리 최종 화면','장갑 착용과 야외 시인성을 고려해 주요 현장 업무를 큰 터치 영역으로 구성했습니다.','portrait'],
-    visuals:[['assets/cases/tbm-3.jpg','Paper to Mobile','종이 기록을 큰 터치 영역의 모바일 홈으로 전환한 비교'],['assets/cases/tbm-5.jpg','현장 완결형 서명','별도 스캔 없이 모바일에서 서명과 완료 확인을 끝내는 흐름']],
-    impact:{type:'workflow', label:'업무 환경 변화', title:'사무실로 돌아가 기록하던 업무를 현장에서 바로 완료합니다.', before:'종이 · PC', after:'현장 모바일', note:'Paper → Mobile · PC Only → Field Ready · 1st → 2nd Company'},
+    visuals:[
+      ['assets/pp/ptc/it/ptc-6.jpg','현장 TBM 기록 전환','작성 중심의 수기 업무를 활용 중심의 모바일 기록 경험으로 바꾼 프로젝트 개요'],
+      ['assets/pp/ptc/it/ptc-5.jpg','문제 발견과 UX 목표','누락·분리 저장·확인 지연을 발견하고 작성부터 조회까지의 목표를 설정'],
+      ['assets/pp/ptc/it/ptc-4.jpg','행동 흐름 기반 가설','작성·사진 첨부·제출을 하나의 흐름으로 묶어 기록 부담을 줄이는 가설'],
+      ['assets/pp/ptc/it/ptc-3.jpg','현장 기록 구조','작성 시간 단축, 사진 누락 방지, 조회와 재활용을 연결한 UX 구조'],
+      ['assets/pp/ptc/it/ptc-2.jpg','TBM 핵심 화면','홈에서 오늘의 작업을 확인하고 달력과 작성 화면으로 이어지는 모바일 흐름'],
+      ['assets/pp/ptc/it/ptc-1.jpg','사용자 피드백과 결과','관리자 정리 업무 감소와 과거 기록 즉시 검색으로 확인한 개선 효과'],
+      ['assets/pp/ptc/it/ptc.jpg','프로젝트 회고','기록을 나중에 다시 찾고 활용할 수 있는 데이터 자산으로 전환한 회고']
+    ],
+    impact:{type:'workflow', label:'업무 환경 변화', title:'사무실로 돌아가 정리하던 업무를 현장에서 기록하고 바로 활용합니다.', before:'수기 · 분리 저장', after:'검색 가능한 기록', note:'관리자 수기 정리 업무 40% 감소 · 과거 TBM 기록 즉시 검색 · 현장 작성자와 관리자 사용성 개선'},
     reflection:{learned:'종이를 화면으로 옮기는 것보다 기록이 시작되고 끝나는 장소를 먼저 이해해야 했습니다. 야외에서는 작은 효율 차이가 실제 사용 여부를 바꿨습니다.', next:'다시 진행한다면 장갑 착용 상태의 과업 시간과 강한 햇빛 아래 오입력률을 현장에서 더 체계적으로 측정하겠습니다.'}
   },
   intranet: {
@@ -133,7 +155,14 @@ const caseStudies = {
     iteration:{initial:'PC 화면을 축소한 목록·입력 중심 예약 구조', feedback:'사용자는 상세 목록보다 예약 가능한 장소와 시간을 한 화면에서 먼저 확인하고 싶어 했습니다.', final:'위치·날짜·시간과 예약 행동을 한 화면에 연결한 구조', initialImage:'assets/cases/before-intranet.png', finalImage:'assets/cases/after-intranet.png', initialCrop:'left', finalCrop:'right'},
     ui:'booking', uiTitle:'생각하지 않아도 다음 행동이 보이는 예약', uiText:'회의실 현황과 날짜·시간을 한 화면에서 확인하고 최소 단계로 예약합니다.',
     finalVisual:['assets/cases/intranet-7.png','모바일 업무 포털 최종 화면','결재·공지·회의실 등 자주 쓰는 업무를 홈에서 바로 확인하도록 재구성했습니다.','portrait'],
-    visuals:[['assets/cases/intranet-4.jpg','회의실 예약 Before & After','분리된 PC 화면을 위치·날짜·시간이 연결된 모바일 예약 흐름으로 재구성'],['assets/cases/intranet-5.jpg','전자결재 Before & After','작성자 중심 문서 구조를 결재자가 빠르게 처리하는 모바일 화면으로 전환']],
+    visuals:[
+      ['assets/pp/hanmac/it/hanmac-5.jpg','모바일 업무 흐름 연결','전자결재와 회의실 예약을 모바일에서 이어서 처리하도록 설계한 프로젝트 개요'],
+      ['assets/pp/hanmac/it/hanmac-4.jpg','사용자 문제 정의','당일 연차, 회의 연장, 낮은 가독성 등 실제 업무 맥락에서 불편을 구체화'],
+      ['assets/pp/hanmac/it/hanmac-3.jpg','핵심 기능과 설계 원칙','전자결재·회의실 신청을 중심으로 큰 글씨와 직관적인 아이콘 원칙을 설정'],
+      ['assets/pp/hanmac/it/hanmac-2.jpg','모바일 회의실 예약','위치·예약 현황·날짜·시간을 한 흐름으로 묶어 예약 절차를 2단계로 단축'],
+      ['assets/pp/hanmac/it/hanmac-1.jpg','모바일 전자결재','기안·부결 문서를 한눈에 확인하고 복잡한 결재 입력을 모바일에 맞게 단순화'],
+      ['assets/pp/hanmac/it/hanmac.jpg','설문조사와 회고','15명 대상 사용성 설문으로 편의성과 고연령층 가독성 개선을 확인']
+    ],
     reflection:{learned:'모바일 전환의 기준은 기능 수가 아니라 사용자가 작은 화면에서 업무를 끝낼 수 있는지였습니다. 특히 예약은 정보 조회와 행동을 한 화면에 연결했을 때 가치가 분명해졌습니다.', next:'다음에는 결재와 예약 완료까지의 실제 소요 시간을 기능별로 나눠, 홈의 우선순위를 사용 빈도와 긴급도로 함께 검증하고 싶습니다.'}
   },
   pet: {

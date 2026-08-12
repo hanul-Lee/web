@@ -1818,4 +1818,11 @@ body[data-project=tbm] .strategy-list {
   .iteration-compare strong {
     min-height: 0;
   }
+}
+
+/* 프로젝트 히어로에서 설정한 대표 컬러를 본문 섹션까지 일관되게 사용 */
+.story-section header > p,
+.solution-copy > p,
+.case-section-label {
+  color: var(--case-accent);
 }/*# sourceMappingURL=case.css.map */
