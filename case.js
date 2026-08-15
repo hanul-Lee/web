@@ -39,7 +39,7 @@ const projects = {
     no:'07', type:'B2B PLATFORM · FIELD DATA', title:'PSC 거더 관리 플랫폼', domain:'PSC Girder Measurement & Management Platform', lead:'수기로 기록하던 측면 곡률 데이터를 센서 기반 자동 수집과 실시간 분석으로 연결해, 현장 측정의 정확성과 관리 효율을 높인 웹·앱 플랫폼입니다.',
     period:'2023.08 — 2024.08', role:'웹/앱 UX/UI · 퍼블리싱 · 현장 구조 분석', contribution:'100%', team:'기획 · 디자인 · 개발 · 현장 실무자', bg:'#367fa0', ink:'#fff', accent:'#5e86a6', textAccent:'#466b88', muted:'#d8edf4',
     problem:'측정값을 손으로 옮기는 과정이 정확도와 현장 대응 속도를 함께 떨어뜨리고 있었습니다.', detail:'종이 기록, 수동 엑셀 입력, 지연된 검토로 이어지던 프로세스를 자동 수집·분석 구조로 바꿨습니다. 웹에서는 거더별 측정 데이터를 통합 관리하고, 모바일에서는 센서 연결과 현장 상태 확인을 빠르게 완료하도록 설계했습니다.',
-    outcomes:[['자동화','측정 데이터 수집'],['실시간','곡률 분석·모니터링'],['Web + App','현장·사무실 연결']], outcomeBasis:'현장 측정 프로세스와 제품 구현 범위 기준', next:['dashboard','실시간 운영 의사결정 대시보드']
+    outcomes:[['자동화','측정 데이터 수집'],['실시간','곡률 분석·모니터링'],['Web + App','현장·사무실 연결']], outcomeBasis:'현장 측정 프로세스와 제품 구현 범위 기준', next:['designsystem','일관성과 작업 속도를 높인 디자인 시스템']
   },
   designsystem: {
     no:'08', type:'DESIGN SYSTEM · WEB PLATFORM', title:'일관성과 작업 속도를 높인 디자인 시스템', domain:'Hanmac Design System', lead:'프로젝트마다 달랐던 UI 규칙을 공통 기반으로 통합해 디자인 재작업을 줄이고, 팀이 더 빠르고 일관되게 협업할 수 있는 설계 체계를 구축했습니다.',
@@ -392,5 +392,5 @@ if (p) {
     progressSections.forEach(section => progressObserver.observe(section));
   }
   document.querySelector('.next a').href=`project-${p.next[0]}.html`;
-  document.querySelector('.next h3').textContent=p.next[1];
+  document.querySelector('.next h3').textContent=projects[p.next[0]].title;
 }
