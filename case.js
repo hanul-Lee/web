@@ -40,10 +40,66 @@ const projects = {
     period:'2023.08 — 2024.08', role:'웹/앱 UX/UI · 퍼블리싱 · 현장 구조 분석', contribution:'100%', team:'기획 · 디자인 · 개발 · 현장 실무자', bg:'#367fa0', ink:'#fff', accent:'#5e86a6', textAccent:'#466b88', muted:'#d8edf4',
     problem:'측정값을 손으로 옮기는 과정이 정확도와 현장 대응 속도를 함께 떨어뜨리고 있었습니다.', detail:'종이 기록, 수동 엑셀 입력, 지연된 검토로 이어지던 프로세스를 자동 수집·분석 구조로 바꿨습니다. 웹에서는 거더별 측정 데이터를 통합 관리하고, 모바일에서는 센서 연결과 현장 상태 확인을 빠르게 완료하도록 설계했습니다.',
     outcomes:[['자동화','측정 데이터 수집'],['실시간','곡률 분석·모니터링'],['Web + App','현장·사무실 연결']], outcomeBasis:'현장 측정 프로세스와 제품 구현 범위 기준', next:['dashboard','실시간 운영 의사결정 대시보드']
+  },
+  designsystem: {
+    no:'08', type:'DESIGN SYSTEM · WEB PLATFORM', title:'일관성과 작업 속도를 높인 디자인 시스템', domain:'Hanmac Design System', lead:'프로젝트마다 달랐던 UI 규칙을 공통 기반으로 통합해 디자인 재작업을 줄이고, 팀이 더 빠르고 일관되게 협업할 수 있는 설계 체계를 구축했습니다.',
+    period:'2024.05 — 진행중', role:'UX 기획 · 컴포넌트 설계 · 핵심 화면 디자인', contribution:'100%', team:'기획 · 디자인 · 개발', bg:'#1e554d', ink:'#fff', accent:'#4b8d80', textAccent:'#2e6b61', muted:'#d5e5e1',
+    problem:'반복되는 UI 변경과 프로젝트별로 달라지는 규칙이 디자인과 개발 양쪽의 재작업을 만들고 있었습니다.', detail:'브랜드, 파운데이션, 컴포넌트를 하나의 웹 플랫폼으로 정리하고 사용 기준과 예외를 문서화했습니다. 팀이 같은 언어와 규칙으로 설계하고 구현할 수 있는 지속 가능한 기반을 만드는 데 집중했습니다.',
+    outcomes:[['하나의 기준','브랜드·UI 규칙 통합'],['재작업 감소','공통 컴포넌트 재사용'],['지속 가능','업데이트 가능한 문서']], outcomeBasis:'기술개발센터 프로젝트의 UI 자산과 협업 과정 분석 기준', next:['kanvan','업무의 흐름이 보이는 칸반보드']
+  },
+  kanvan: {
+    no:'09', type:'B2B SAAS · WORKFLOW UX · INTERACTION', title:'업무의 흐름이 보이는 칸반보드 서비스', domain:'Kanban Workflow Management', lead:'리스트 중심 업무관리에서 파악하기 어려웠던 상태와 우선순위를 카드와 컬럼으로 시각화하고, 화면에서 직접 변경할 수 있는 인터랙션으로 구현했습니다.',
+    period:'2026.03', role:'문제 정의 · UX 기획 · UI 디자인 · 프론트엔드 구현', contribution:'UX/UI·개발 100%', team:'개인 프로젝트 · 기획 협업', bg:'#15162d', ink:'#fff', accent:'#ff8500', textAccent:'#d96800', muted:'#d4d5e2',
+    problem:'제목과 등록일 중심의 목록만으로는 업무의 현재 상태와 다음 행동을 빠르게 판단하기 어려웠습니다.', detail:'진행·대기·완료 업무를 컬럼으로 구분하고, 카드 안에서 담당자와 우선순위를 바로 확인하도록 정보 위계를 재설계했습니다. 드래그앤드롭과 상세 모달까지 직접 구현하며 상태 변경 과정의 예외를 보완했습니다.',
+    outcomes:[['85% 단축','업무 탐색 시간'],['80% 감소','오클릭'],['100%','과제 성공률']], outcomeBasis:'실무자 7명 대상 기존 리스트와 개선 칸반의 동일 과업 사용성 테스트', next:['skyautonet','자율주행 기술을 이해시키는 웹 경험']
+  },
+  skyautonet: {
+    no:'10', type:'WEB UX · BRAND UX · RESPONSIVE', title:'자율주행 기술을 이해시키는 반응형 웹 리디자인', domain:'SkyAutoNet Website Renewal', lead:'복잡한 자율주행 기술과 핵심 사업을 고객이 빠르게 이해하도록 브랜드 메시지, 정보 위계, 반응형 탐색 구조를 전면 재설계했습니다.',
+    period:'2023.03 — 2023.11', role:'UX 기획 · IA · 브랜드 메시지 · 반응형 UI · 퍼블리싱', contribution:'UX/UI 100% · 퍼블리싱 40%', team:'기획 · 디자인 · 개발', bg:'#303640', ink:'#fff', accent:'#0877c9', textAccent:'#0867aa', muted:'#d9e0e8',
+    problem:'기술력은 있었지만 기존 웹사이트에서는 핵심 사업과 브랜드 신뢰가 충분히 전달되지 않았습니다.', detail:'첫 화면에 사업 분야와 기술 적용 장면을 제시하고, 목적 중심 메뉴와 명확한 정보 위계를 적용했습니다. 데스크톱과 모바일에서 같은 메시지와 CTA가 이어지도록 반응형 경험을 설계했습니다.',
+    outcomes:[['59.86% 감소','사이트 이탈률'],['4배 증가','주요 페이지 조회수'],['확대','해외 유입 국가']], outcomeBasis:'리뉴얼 전후 각 3개월 Google Analytics 및 국가별 세션 비교 기준', next:['dashboard','실시간 운영 의사결정 대시보드']
   }
 };
 
 const caseStudies = {
+  designsystem: {
+    insight:'프로젝트마다 달라지는 UI와 반복 수정이 팀의 속도와 브랜드 일관성을 함께 떨어뜨리고 있었습니다.',
+    strategyHeadline:'브랜드부터 컴포넌트까지 하나의 규칙과 문서 안에서 재사용하도록 통합했습니다.',
+    voice:['협업 과정 분석','“같은 UI도 프로젝트마다 다시 만들고, 변경된 기준을 매번 따로 전달해야 했습니다.”'],
+    context:[['사용자','사내 기획자 · 디자이너 · 개발자'],['환경','다수의 웹 플랫폼 프로젝트'],['범위','브랜드 · 파운데이션 · 컴포넌트']],
+    pains:[['반복되는 재작업','공통 UI를 프로젝트마다 다시 설계하고 수정했습니다.'],['일관되지 않은 규칙','색상·서체·간격·상태 표현이 제품마다 달랐습니다.'],['분산된 가이드','사용 기준과 최신 자산을 한곳에서 확인하기 어려웠습니다.']],
+    strategies:[['01','공통 기반 정의','브랜드와 파운데이션을 먼저 정리해 모든 화면의 기준을 세웠습니다.'],['02','컴포넌트 표준화','상태와 사용 맥락을 포함한 재사용 단위로 UI를 구조화했습니다.'],['03','웹 가이드 구축','팀이 최신 규칙과 리소스를 한곳에서 찾도록 문서화했습니다.']],
+    ui:'web', uiTitle:'팀이 함께 쓰고 계속 확장할 수 있는 디자인 기반', uiText:'브랜드, 파운데이션, 컴포넌트와 다운로드 리소스를 하나의 웹 가이드로 연결했습니다.',
+    finalVisual:['assets/pp/designsystem/designsystem01.jpg','한맥 디자인 시스템','프로젝트 전반의 디자인 기준과 리소스를 통합한 웹 플랫폼입니다.','landscape'],
+    visuals:[['assets/pp/designsystem/designsystem02.jpg','문제 정의와 회고','반복 변경과 일관성 부족을 지속 가능한 시스템의 문제로 재정의'],['assets/pp/designsystem/designsystem03.jpg','디자인 시스템 아웃풋','브랜드·파운데이션·컴포넌트의 실제 가이드 화면']],
+    reflection:{learned:'디자인 시스템은 화면 모음이 아니라 팀이 같은 결정을 반복하지 않게 만드는 협업 도구라는 점을 확인했습니다.', next:'사용 빈도와 변경 이력을 수집해 컴포넌트 우선순위와 운영 정책을 더 정교하게 만들겠습니다.'}
+  },
+  kanvan: {
+    insight:'리스트에서는 업무의 상태, 우선순위, 담당자가 흩어져 있어 현재 흐름을 빠르게 읽기 어려웠습니다.',
+    strategyHeadline:'업무를 상태별 컬럼과 카드로 재구성하고, 화면에서 바로 흐름을 바꾸도록 설계했습니다.',
+    voice:['실무 업무관리 관찰','“업무가 어디까지 진행됐는지 보려면 항목을 하나씩 열어봐야 했습니다.”'],
+    context:[['사용자','기획 · 디자인 · 개발 실무자'],['환경','데스크톱 기반 협업 도구'],['검증','실무자 7명 사용성 테스트']],
+    pains:[['상태 파악의 어려움','진행·대기·완료 업무가 한 목록에 섞여 있었습니다.'],['우선순위 비교의 어려움','긴급도와 마감일을 빠르게 비교하기 어려웠습니다.'],['협업 정보 분산','담당자·댓글·첨부가 상세 화면에 흩어져 있었습니다.']],
+    strategies:[['01','상태 중심 정보 구조','업무를 상태별 컬럼으로 구분해 흐름을 한눈에 보이게 했습니다.'],['02','카드 정보 위계','담당자·우선순위·기한을 열지 않고 확인하도록 정리했습니다.'],['03','직접 조작 인터랙션','드래그앤드롭과 상세 모달로 상태 변경을 짧게 연결했습니다.']],
+    ui:'web', uiTitle:'읽는 목록에서 상태가 흐르는 업무 보드로', uiText:'업무 현황을 카드와 컬럼으로 시각화하고 디자인부터 상태 변경 인터랙션까지 직접 구현했습니다.',
+    finalVisual:['assets/pp/kanvan/kanvan01.jpg','칸반보드 업무관리 서비스','업무 상태와 다음 행동을 한눈에 보여주는 칸반 경험입니다.','landscape'],
+    visuals:[['assets/pp/kanvan/kanvan02.jpg','문제 정의','리스트형 게시판의 상태·우선순위·협업 정보 문제'],['assets/pp/kanvan/kanvan03.jpg','해결 과정','문제 정의부터 UX/UI 설계와 구현·검증까지의 과정'],['assets/pp/kanvan/kanvan04.jpg','Before & After','목록 탐색에서 직접 상태를 변경하는 구조로 전환'],['assets/pp/kanvan/kanvan05.jpg','구현과 회고','드래그앤드롭과 협업 기능 구현 및 후속 검증 과제'],['assets/pp/kanvan/kanvan06.jpg','사용성 테스트 결과','탐색 시간 85% 단축과 과제 성공률 100%를 확인']],
+    impact:{type:'depth', label:'사용성 테스트', title:'칸반 구조에서 업무를 찾는 시간이 85% 줄었습니다.', before:'200초', after:'30초', note:'실무자 7명 대상 동일 업무 탐색 과제 · 오클릭 80% 감소 · 과제 성공률 100%'},
+    reflection:{learned:'화면의 완성도뿐 아니라 상태·예외·데이터 구조까지 함께 다뤄야 실제로 작동하는 UX가 된다는 점을 배웠습니다.', next:'실제 협업 환경에서 장기 생산성을 검증하고 모바일 대체 인터랙션과 검색·필터·알림을 확장하겠습니다.'}
+  },
+  skyautonet: {
+    insight:'기술력은 있었지만 첫 화면과 정보 구조가 핵심 사업과 브랜드 신뢰를 충분히 전달하지 못했습니다.',
+    strategyHeadline:'기술 적용 장면, 목적 중심 정보 구조, 반응형 메시지로 브랜드 신뢰와 접근성을 함께 높였습니다.',
+    voice:['기존 사이트·운영 지표 분석','“첫 화면에서 회사가 무엇을 하는지 알기 어렵고 모바일 탐색도 불편했습니다.”'],
+    context:[['사용자','자율주행 솔루션 고객 · 글로벌 방문자'],['환경','데스크톱 · 모바일 · 다국어'],['근거','리뉴얼 전후 Google Analytics']],
+    pains:[['약한 첫인상','기술 기업의 전문성과 핵심 사업이 첫 화면에서 드러나지 않았습니다.'],['불명확한 정보 구조','중요한 페이지와 정보 우선순위를 파악하기 어려웠습니다.'],['모바일 탐색 단절','작은 화면에서 메시지와 탐색 흐름이 이어지지 않았습니다.']],
+    strategies:[['01','기술 맥락 시각화','실제 자율주행 차량과 산업 현장 이미지로 사업 이해를 도왔습니다.'],['02','정보 위계 재설계','제목·수치·CTA의 우선순위를 정리해 핵심을 먼저 읽게 했습니다.'],['03','반응형 경험 통합','화면 크기가 달라도 메시지와 탐색 흐름이 유지되게 했습니다.']],
+    ui:'web', uiTitle:'복잡한 자율주행 기술을 이해하고 신뢰하는 웹 경험', uiText:'기술 적용 장면과 핵심 메시지를 연결하고 데스크톱과 모바일의 정보 우선순위를 통합했습니다.',
+    finalVisual:['assets/pp/skyautonet/skyautonet01.jpg','스카이오토넷 웹 리디자인','자율주행 기술과 브랜드 메시지를 연결한 반응형 웹 경험입니다.','landscape'],
+    visuals:[['assets/pp/skyautonet/skyautonet02.jpg','문제 발견','브랜드 신뢰와 정보 탐색을 함께 저해한 기존 사이트 진단'],['assets/pp/skyautonet/skyautonet03.jpg','목표와 가설','브랜드 신뢰도와 정보 접근성을 동시에 개선하는 가설 설정'],['assets/pp/skyautonet/skyautonet04.jpg','브랜드 비주얼','실제 산업 장면과 명확한 메시지로 기술 신뢰 강화'],['assets/pp/skyautonet/skyautonet05.jpg','정보 위계','제목·수치·CTA를 재정렬해 핵심 정보를 먼저 읽도록 설계'],['assets/pp/skyautonet/skyautonet06.jpg','반응형 UX','화면 크기가 달라도 메시지와 탐색 흐름을 유지'],['assets/pp/skyautonet/skyautonet07.jpg','리뉴얼 성과','이탈률 감소, 페이지 조회 증가, 해외 유입 확대']],
+    impact:{type:'depth', label:'운영 성과', title:'리뉴얼 이후 이탈률은 줄고 핵심 페이지 탐색은 늘었습니다.', before:'29.74%', after:'11.94%', note:'이탈률 59.86% 감소 · 주요 페이지 조회수 4배 증가 · 해외 유입 국가 확대'},
+    reflection:{learned:'기술 기업의 웹 UX는 기능 설명보다 사용자가 기술의 맥락과 신뢰 근거를 어떤 순서로 이해하는지가 중요했습니다.', next:'국가별 유입 이후의 문의 전환까지 추적해 글로벌 콘텐츠 우선순위를 더 세밀하게 검증하겠습니다.'}
+  },
   responsive: {
     insight:'이탈의 원인은 콘텐츠 부족이 아니라, 디바이스마다 달라지는 정보 구조와 느린 탐색 경험이었습니다.',
     strategyHeadline:'솔루션을 이해하고 제품을 비교하는 흐름을 모든 디바이스에서 같은 구조로 연결했습니다.',
@@ -298,8 +354,22 @@ if (p) {
   document.querySelector('.outcomes').innerHTML=p.outcomes.map(x=>`<div class="outcome"><strong>${x[0]}</strong><span>${x[1]}</span></div>`).join('');
   if (p.outcomeBasis) document.querySelector('.outcomes').insertAdjacentHTML('afterend',`<p class="outcome-basis"><b>측정 기준</b>${p.outcomeBasis}</p>`);
   document.querySelector('.gallery').innerHTML=renderStudy(caseStudies[slug]);
-  if (caseStudies[slug].reframe) {
-    document.querySelector('.case-main').insertAdjacentHTML('beforeend',`<nav class="case-progress" aria-label="사례 진행 순서"><a href="#overview">개요</a><a href="#context">배경</a><a href="#evidence">근거</a><a href="#reframe">재정의</a><a href="#decision">결정</a>${caseStudies[slug].iteration ? '<a href="#iteration">조정</a>' : ''}<a href="#solution">경험</a>${caseStudies[slug].impact ? '<a href="#impact">성과</a>' : ''}${caseStudies[slug].reflection ? '<a href="#reflection">회고</a>' : ''}</nav>`);
+  const progressItems = [
+    ['overview', '개요'],
+    ['context', '배경'],
+    ['evidence', '근거'],
+    ['reframe', '재정의'],
+    ['decision', '결정'],
+    ['iteration', '조정'],
+    ['solution', '경험'],
+    ['impact', '성과'],
+    ['reflection', '회고']
+  ].filter(([id]) => document.getElementById(id));
+  if (progressItems.length) {
+    const progressMarkup = progressItems
+      .map(([id, label]) => `<a href="#${id}">${label}</a>`)
+      .join('');
+    document.querySelector('.case-main').insertAdjacentHTML('beforeend',`<nav class="case-progress" aria-label="사례 진행 순서">${progressMarkup}</nav>`);
     const progressLinks = [...document.querySelectorAll('.case-progress a')];
     const progressSections = progressLinks
       .map(link => document.querySelector(link.getAttribute('href')))
