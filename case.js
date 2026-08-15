@@ -336,7 +336,7 @@ if (p) {
   document.documentElement.style.setProperty('--case-accent',p.accent);
   document.documentElement.style.setProperty('--case-text-accent',p.textAccent || p.accent);
   document.documentElement.style.setProperty('--case-muted',p.muted);
-  document.title = `${p.title} — 이한울`;
+  document.title = '이한울 UX/UI 디자이너 포트폴리오';
   document.querySelector('.case-eyebrow').textContent=slug === 'pet'
     ? `PERSONAL PRODUCT PROJECT · ${p.type}`
     : `PROJECT ${p.no} · ${p.type}`;
