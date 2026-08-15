@@ -239,6 +239,19 @@ const caseStudies = {
   }
 };
 
+const projectOrder = [
+  'dashboard',
+  'platform',
+  'pet',
+  'intranet',
+  'tbm',
+  'responsive',
+  'psc',
+  'designsystem',
+  'kanvan',
+  'skyautonet'
+];
+
 const icon = (name) => {
   const paths = {
     search:'<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>',
@@ -391,6 +404,8 @@ if (p) {
     }, { rootMargin: '-28% 0px -58% 0px', threshold: [0, .15, .35, .6] });
     progressSections.forEach(section => progressObserver.observe(section));
   }
-  document.querySelector('.next a').href=`project-${p.next[0]}.html`;
-  document.querySelector('.next h3').textContent=projects[p.next[0]].title;
+  const currentProjectIndex = projectOrder.indexOf(slug);
+  const nextSlug = projectOrder[(currentProjectIndex + 1) % projectOrder.length];
+  document.querySelector('.next a').href=`project-${nextSlug}.html`;
+  document.querySelector('.next h3').textContent=projects[nextSlug].title;
 }
