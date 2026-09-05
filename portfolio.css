@@ -200,12 +200,35 @@ img {
 .hero .hero-copy .hero-actions .primary span {
   margin-left: 18px;
 }
+.hero .hero-copy .hero-actions .secondary {
+  padding-bottom: 5px;
+  border-bottom: 1px solid currentColor;
+}
 .hero .hero-copy .hero-capabilities {
   margin: 22px 0 0;
   color: #747c89;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.11em;
+}
+.hero .hero-copy .hero-proof {
+  display: flex;
+  gap: 26px;
+  margin-top: 30px;
+}
+.hero .hero-copy .hero-proof div {
+  display: grid;
+  gap: 3px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(7, 92, 255, 0.45);
+}
+.hero .hero-copy .hero-proof strong {
+  font-size: 15px;
+  letter-spacing: -0.03em;
+}
+.hero .hero-copy .hero-proof span {
+  color: #747c89;
+  font-size: 10px;
 }
 .hero .hero-note {
   position: absolute;
@@ -215,7 +238,6 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
-  width: -moz-max-content;
   width: max-content;
   max-width: calc(100% - 48px);
   padding: 10px 14px;
@@ -643,7 +665,7 @@ footer {
     padding-inline: 24px;
   }
   .hero {
-    height: 88vh;
+    height: max(88vh, 1020px);
     min-height: 680px;
   }
   .hero h1 {
@@ -694,6 +716,19 @@ footer {
   .hero-capabilities {
     max-width: 290px;
     line-height: 1.7;
+  }
+  .hero-proof {
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .hero-proof div {
+    padding-left: 9px;
+  }
+  .hero-proof strong {
+    font-size: 13px;
+  }
+  .hero-proof span {
+    font-size: 9px;
   }
   .manifesto,
   .projects,
@@ -1067,4 +1102,6 @@ body {
   .proof div {
     min-height: 138px;
   }
-}/*# sourceMappingURL=portfolio.css.map */
+}
+
+/*# sourceMappingURL=portfolio.css.map */

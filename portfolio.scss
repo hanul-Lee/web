@@ -215,6 +215,11 @@ img {
           margin-left: 18px;
         }
       }
+
+      .secondary {
+        padding-bottom: 5px;
+        border-bottom: 1px solid currentColor;
+      }
     }
 
     .hero-capabilities {
@@ -223,6 +228,29 @@ img {
       font-size: 10px;
       font-weight: 800;
       letter-spacing: 0.11em;
+    }
+
+    .hero-proof {
+      display: flex;
+      gap: 26px;
+      margin-top: 30px;
+
+      div {
+        display: grid;
+        gap: 3px;
+        padding-left: 14px;
+        border-left: 2px solid rgba(7, 92, 255, 0.45);
+      }
+
+      strong {
+        font-size: 15px;
+        letter-spacing: -0.03em;
+      }
+
+      span {
+        color: #747c89;
+        font-size: 10px;
+      }
     }
   }
 
@@ -697,7 +725,7 @@ footer {
     padding-inline: 24px;
   }
   .hero {
-    height: 88vh;
+    height: max(88vh, 1020px);
     min-height: 680px;
   }
   .hero h1 {
@@ -748,6 +776,22 @@ footer {
   .hero-capabilities {
     max-width: 290px;
     line-height: 1.7;
+  }
+  .hero-proof {
+    gap: 14px;
+    margin-top: 24px;
+
+    div {
+      padding-left: 9px;
+    }
+
+    strong {
+      font-size: 13px;
+    }
+
+    span {
+      font-size: 9px;
+    }
   }
   .manifesto,
   .projects,
