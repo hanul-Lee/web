@@ -82,8 +82,7 @@ const projects = {
       ["85.6점", "2023 XR 플러그십 건설 과제 평가 최고점"],
       ["통합 플랫폼", "분산 자료와 지도 기반 정보 연결"],
     ],
-    outcomeBasis:
-      "주요 정보 탐색 평균 클릭 수 비교 · 2023 XR 플러그십 건설 과제 평가 기준",
+    outcomeBasis: "주요 정보 탐색 평균 클릭 수 비교 · 2023 XR 플러그십 건설 과제 평가 기준",
     images: 8,
     next: ["intranet", "모바일 업무 포털 예약 UX 개선"],
   },
@@ -111,8 +110,7 @@ const projects = {
       ["즉시 검색", "과거 TBM 기록"],
       ["현장·관리자", "양쪽 사용성 개선"],
     ],
-    outcomeBasis:
-      "추가 경험 프로젝트 소개와 사용자 피드백 기준 · 정량 성과 별도 검증 필요",
+    outcomeBasis: "추가 경험 프로젝트 소개와 사용자 피드백 기준 · 정량 성과 별도 검증 필요",
     images: 6,
     next: ["responsive", "반응형 웹 전면 리뉴얼"],
   },
@@ -1303,11 +1301,9 @@ const icon = (name) => {
     flow: '<path d="M4 6h7M13 6h7M7 6v12h10V6M4 18h7M13 18h7"/>',
     data: '<path d="M5 19V9M12 19V4M19 19v-7"/>',
     action: '<path d="m5 12 4 4L19 6"/>',
-    voice:
-      '<path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/>',
+    voice: '<path d="M5 6h14v9H9l-4 4V6Z"/><path d="M9 10h6"/>',
   };
-  const className = name === "voice" ? "lucide lucide-messages-square preview-icon" : "";
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${className}" aria-hidden="true">${paths[name] || paths.action}</svg>`;
+  return `<svg viewBox="0 0 24 24" aria-hidden="true">${paths[name] || paths.action}</svg>`;
 };
 
 const renderMockup = (type, finalVisual) => {

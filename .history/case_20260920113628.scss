@@ -17,7 +17,7 @@
     gap: 7vw;
     align-items: center;
     min-height: 760px;
-    padding: 110px clamp(24px, 8vw, 140px);
+    padding: 100px clamp(24px, 8vw, 140px);
 
     .case-eyebrow {
       color: var(--case-text-accent, #5e86a6);
@@ -1161,7 +1161,7 @@
   max-width: 880px;
   margin-bottom: 64px;
   padding: 26px 0 26px 28px;
-  background: transparent;
+  //background: transparent;
   border-color: var(--case-accent, #3b389f);
   border-radius: 0;
 }

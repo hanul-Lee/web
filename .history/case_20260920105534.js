@@ -1,13 +1,13 @@
 const projects = {
   intranet: {
-    no: "03",
+    no: "04",
     type: "B2B SAAS · MOBILE WORKFLOW",
     title: "모바일 업무 포털 예약 UX 개선",
     domain: "Hanmac Mobile Intranet",
     lead: "PC 중심으로 운영되던 사내 업무 중 자주 사용하는 결재와 예약 기능을 모바일에서도 빠르게 완료하도록 핵심 흐름과 정보 우선순위를 재설계했습니다.",
     period: "2023.01 — 2023.06",
     role: "UX 전략 · 정보구조 · UI 디자인",
-    contribution: "UX/UI 기획 및 디자인 100%",
+    contribution: "100%",
     team: "기획자 · 디자이너 · 개발자",
     cover: 1,
     bg: "#e7eeec",
@@ -26,7 +26,7 @@ const projects = {
     ],
     outcomeBasis: "도입 전후 사용량과 기존 사용자 15명 대상 설문조사 기준",
     images: 6,
-    next: ["kanvan", "업무의 흐름이 보이는 칸반보드"],
+    next: ["tbm", "현장 기록의 모바일 전환 UX"],
   },
   dashboard: {
     no: "01",
@@ -36,7 +36,7 @@ const projects = {
     lead: "분산된 프로젝트 비용·인원 데이터를 하나의 플랫폼에서 확인하고, 필요한 정보를 빠르게 찾아 다음 판단으로 이어지도록 정보 구조를 재설계했습니다.",
     period: "2025.12 — 2026.03",
     role: "UX/UI 디자인 · 퍼블리싱",
-    contribution: "UX/UI 디자인 100% · 퍼블리싱 100%",
+    contribution: "100%",
     team: "기획 · 개발 · 연구 · 현장 실무자",
     cover: 1,
     bg: "#151d35",
@@ -82,10 +82,9 @@ const projects = {
       ["85.6점", "2023 XR 플러그십 건설 과제 평가 최고점"],
       ["통합 플랫폼", "분산 자료와 지도 기반 정보 연결"],
     ],
-    outcomeBasis:
-      "주요 정보 탐색 평균 클릭 수 비교 · 2023 XR 플러그십 건설 과제 평가 기준",
+    outcomeBasis: "주요 정보 탐색 평균 클릭 수 비교 · 2023 XR 플러그십 건설 과제 평가 기준",
     images: 8,
-    next: ["intranet", "모바일 업무 포털 예약 UX 개선"],
+    next: ["pet", "기록을 습관으로 만드는 반려동물 건강관리 UX"],
   },
   tbm: {
     no: "05",
@@ -107,17 +106,16 @@ const projects = {
     detail:
       "수기 기록의 반복 입력, 현장·사무실 간 단절, 긴 점검 절차를 개선했습니다. 엄지손가락 도달 범위와 큰 터치 타깃을 기준으로 모바일 흐름을 설계하고, 서명과 확인 절차를 짧게 연결해 업무 효율과 확장성을 높였습니다.",
     outcomes: [
-      ["현장 기록", "모바일 작성·확인"],
+      ["40% 감소", "관리자 수기 정리 업무"],
       ["즉시 검색", "과거 TBM 기록"],
       ["현장·관리자", "양쪽 사용성 개선"],
     ],
-    outcomeBasis:
-      "추가 경험 프로젝트 소개와 사용자 피드백 기준 · 정량 성과 별도 검증 필요",
+    outcomeBasis: "사용자 피드백과 개선 전후 TBM 기록·관리 업무 비교 기준",
     images: 6,
     next: ["responsive", "반응형 웹 전면 리뉴얼"],
   },
   pet: {
-    no: "10",
+    no: "03",
     type: "B2C · HABIT UX",
     title: "기록을 습관으로 만드는 반려동물 건강관리 UX",
     domain: "Dangnyangsilrok · Personal Product Project",
@@ -136,13 +134,13 @@ const projects = {
     detail:
       "“기록해야 한다”는 압박을 “오늘의 실록을 남긴다”는 감성적 보상으로 바꿨습니다. 기록 행동을 최소 단계로 줄이고 캐릭터·문체·시각 언어를 일관되게 설계해, 사용자가 부담 없이 반복할 수 있는 습관 형성 UX를 만들었습니다.",
     outcomes: [
-      ["기록 UX", "빠른 입력 구조"],
-      ["Habit UX", "반복 행동 설계"],
-      ["프로토타입", "과업 흐름 검토"],
+      ["62.4%", "기존 서비스 사용자 이탈 지점 분석"],
+      ["45.8초", "프로토타입 평균 기록 소요"],
+      ["2단계", "개선한 핵심 기록 플로우"],
     ],
-    outcomeBasis: "추가 경험 프로젝트 소개 기준 · 정량 성과 별도 검증 필요",
+    outcomeBasis: "경쟁 서비스 분석과 2명 대상 프로토타입 과업 테스트 기준",
     images: 8,
-    next: ["dashboard", "프로젝트 비용·인원 ERP 분석 대시보드"],
+    next: ["intranet", "모바일 업무 포털과 예약 플로우"],
   },
   responsive: {
     no: "06",
@@ -164,11 +162,12 @@ const projects = {
     detail:
       "PC 중심의 고정형 웹은 모바일에서 정보가 잘리거나 우선순위가 흐려졌습니다. 솔루션과 제품 정보를 사용자의 탐색 목적에 맞게 재구성하고, 같은 정보 구조가 모든 화면에서 자연스럽게 이어지도록 반응형 규칙을 만들었습니다.",
     outcomes: [
-      ["반응형", "디바이스 경험 연결"],
-      ["UI 리뉴얼", "솔루션 정보 구조화"],
-      ["웹 UX", "탐색 흐름 개선"],
+      ["30% 단축", "모바일 페이지 로딩 시간"],
+      ["6.3% 감소", "사용자 이탈률"],
+      ["25% 증가", "모바일 사용자 유지율"],
     ],
-    outcomeBasis: "추가 경험 프로젝트 소개 기준 · 정량 성과 별도 검증 필요",
+    outcomeBasis:
+      "리뉴얼 적용 전후 운영 데이터와 디바이스별 사용자 행동 지표 기준",
     next: ["psc", "PSC 거더 관리 플랫폼"],
   },
   psc: {
@@ -223,17 +222,17 @@ const projects = {
       ["지속 가능", "업데이트 가능한 문서"],
     ],
     outcomeBasis: "기술개발센터 프로젝트의 UI 자산과 협업 과정 분석 기준",
-    next: ["skyautonet", "자율주행 기술을 이해시키는 웹 경험"],
+    next: ["kanvan", "업무의 흐름이 보이는 칸반보드"],
   },
   kanvan: {
-    no: "04",
+    no: "09",
     type: "B2B SAAS · WORKFLOW UX · PROTOTYPE",
     title: "업무의 흐름이 보이는 칸반보드 서비스",
     domain: "Kanban Workflow Management",
     lead: "리스트 중심 업무관리에서 파악하기 어려웠던 상태와 우선순위를 카드와 컬럼으로 시각화하고, 핵심 업무 흐름을 검증할 수 있는 프로토타입으로 설계했습니다.",
     period: "2026.03 — 진행중",
     role: "문제 정의 · UX 구조 설계 · UI 디자인 · 프로토타이핑",
-    contribution: "기획 30% · UX/UI 디자인 100% · 퍼블리싱·개발 100%",
+    contribution: "UX/UI 100% · 구현 보조",
     team: "개인 프로젝트 · AI 협업 프로토타이핑",
     bg: "#15162d",
     ink: "#fff",
@@ -245,16 +244,16 @@ const projects = {
     detail:
       "진행·대기·완료 업무를 컬럼으로 구분하고, 카드 안에서 담당자와 우선순위를 바로 확인하도록 정보 위계를 재설계했습니다. 드래그앤드롭과 상세 모달은 AI의 도움을 받아 프로토타이핑했으며, 현재는 핵심 흐름과 예외를 다듬는 단계입니다.",
     outcomes: [
-      ["85% 단축", "업무 탐색 시간"],
-      ["80% 감소", "오클릭"],
-      ["100% 성공", "과제 성공률"],
+      ["핵심 흐름", "상태·우선순위·담당자 구조화"],
+      ["프로토타입", "드래그앤드롭·상세 모달"],
+      ["검증 준비", "다음 사용자 테스트 과제 정의"],
     ],
     outcomeBasis:
-      "웹·구조·인터랙션 프로토타입 비교 테스트 · 기획·디자인·개발 실무자 7명 · 과업 3개",
-    next: ["tbm", "현장 기록의 모바일 전환 UX"],
+      "개인 프로젝트의 UX 설계와 AI 협업 프로토타이핑 결과 · 정식 사용자 테스트 전",
+    next: ["skyautonet", "자율주행 기술을 이해시키는 웹 경험"],
   },
   skyautonet: {
-    no: "09",
+    no: "10",
     type: "WEB UX · BRAND UX · RESPONSIVE",
     title: "자율주행 기술을 이해시키는 반응형 웹 리디자인",
     domain: "SkyAutoNet Website Renewal",
@@ -273,11 +272,12 @@ const projects = {
     detail:
       "첫 화면에 사업 분야와 기술 적용 장면을 제시하고, 목적 중심 메뉴와 명확한 정보 위계를 적용했습니다. 데스크톱과 모바일에서 같은 메시지와 CTA가 이어지도록 반응형 경험을 설계했습니다.",
     outcomes: [
-      ["브랜드 UX", "핵심 사업 메시지 정리"],
-      ["반응형", "디바이스별 탐색 구조"],
-      ["웹 리디자인", "정보 위계 개선"],
+      ["59.86% 감소", "사이트 이탈률"],
+      ["4배 증가", "주요 페이지 조회수"],
+      ["확대", "해외 유입 국가"],
     ],
-    outcomeBasis: "추가 경험 프로젝트 소개 기준 · 정량 성과 별도 검증 필요",
+    outcomeBasis:
+      "리뉴얼 전후 각 3개월 Google Analytics 및 국가별 세션 비교 기준",
     next: ["dashboard", "실시간 운영 의사결정 대시보드"],
   },
 };
@@ -362,7 +362,7 @@ const caseStudies = {
     context: [
       ["사용자", "기획 · 디자인 · 개발 실무자"],
       ["환경", "데스크톱 기반 협업 도구"],
-      ["검증 범위", "웹·구조·인터랙션 프로토타입 비교 테스트"],
+      ["현재 단계", "핵심 흐름 프로토타입 · 검증 준비"],
     ],
     pains: [
       [
@@ -431,16 +431,16 @@ const caseStudies = {
     ],
     impact: {
       type: "workflow",
-      label: "사용성 테스트",
-      title: "칸반 구조에서 업무 탐색 시간이 85% 줄었습니다.",
-      before: "기존 리스트",
-      after: "칸반 구조",
-      note: "기획·디자인·개발 실무자 7명 · 과업 3개 · 탐색 시간 85% 단축 · 오클릭 80% 감소 · 과제 성공률 100%",
+      label: "프로토타입 검증 범위",
+      title: "리스트에서 업무 상태와 다음 행동이 보이는 보드로 전환했습니다.",
+      before: "리스트 중심",
+      after: "칸반 프로토타입",
+      note: "상태·우선순위·담당자 탐색 흐름을 설계하고, 정식 사용자 테스트를 위한 과업을 정의했습니다.",
     },
     reflection: {
       learned:
         "모든 기능을 완성했다고 말하기보다, 어떤 업무 흐름을 왜 바꿨는지 설명하고 실제 검증 과제를 남기는 것이 중요하다는 점을 배웠습니다. 구현은 AI의 도움을 받아 진행했으며, 상태·예외·데이터 구조를 직접 확인하며 수정했습니다.",
-      next: "추가 협업 환경에서도 같은 효과가 유지되는지, 사용자 수와 업무량을 늘린 테스트로 검증하겠습니다.",
+      next: "다음 단계에서는 실무자 대상 과업 테스트로 탐색 시간과 오클릭을 측정하고, 실제 협업 환경에서 드래그앤드롭·검색·필터·알림의 우선순위를 검증하겠습니다.",
     },
   },
   skyautonet: {
@@ -536,7 +536,7 @@ const caseStudies = {
       title: "리뉴얼 이후 이탈률은 줄고 핵심 페이지 탐색은 늘었습니다.",
       before: "29.74%",
       after: "11.94%",
-      note: "브랜드 메시지와 정보 위계 개선 · 정량 성과 별도 검증 필요",
+      note: "이탈률 59.86% 감소 · 주요 페이지 조회수 4배 증가 · 해외 유입 국가 확대",
     },
     reflection: {
       learned:
@@ -644,7 +644,7 @@ const caseStudies = {
       title: "이탈은 줄이고, 제품을 탐색한 뒤 이어지는 행동은 늘었습니다.",
       before: "11.14%",
       after: "4.84%",
-      note: "솔루션 정보 구조화 · 디바이스별 탐색 경험 연결 · 정량 성과 별도 검증 필요",
+      note: "이탈률 6.3%p 감소 · 모바일 로딩 시간 30% 단축 · 모바일 사용자 유지율 25% 증가",
     },
     reflection: {
       learned:
@@ -749,7 +749,7 @@ const caseStudies = {
       title: "수기 측정과 재입력을 자동 수집과 실시간 분석으로 전환했습니다.",
       before: "수기 · 엑셀",
       after: "자동 수집",
-      note: "데이터 정확도 향상 · 작업자 안전성 향상 · 현장 접근성 향상 · 업무 효율 향상 · 정량 성과 별도 검증 필요",
+      note: "데이터 정확도 향상 · 작업자 안전성 향상 · 현장 접근성 향상 · 업무 효율 향상",
     },
     reflection: {
       learned:
@@ -847,10 +847,10 @@ const caseStudies = {
     impact: {
       type: "depth",
       label: "탐색 구조 검증",
-      title: "주요 정보 탐색 클릭 수를 평균 5.4회에서 약 2회로 줄였습니다.",
-      before: "5.4회",
-      after: "약 2회",
-      note: "주요 정보 탐색 평균 클릭 수 비교 · 2023 XR 플러그십 건설 과제 평가 85.6점(최고점)",
+      title: "정보에 도달하는 경로를 절반 이하로 줄였습니다.",
+      before: "5.4",
+      after: "2",
+      note: "대표 과업 기준 평균 탐색 단계 · Bounce Rate -25% · Conversion +30%",
     },
     reflection: {
       learned:
@@ -1068,7 +1068,7 @@ const caseStudies = {
         "사무실로 돌아가 정리하던 업무를 현장에서 기록하고 바로 활용합니다.",
       before: "수기 · 분리 저장",
       after: "검색 가능한 기록",
-      note: "과거 TBM 기록 즉시 검색 · 현장 작성자와 관리자 사용성 개선 · 정량 성과 별도 검증 필요",
+      note: "관리자 수기 정리 업무 40% 감소 · 과거 TBM 기록 즉시 검색 · 현장 작성자와 관리자 사용성 개선",
     },
     reflection: {
       learned:
@@ -1165,7 +1165,7 @@ const caseStudies = {
       [
         "assets/pp/hanmac/it/hanmac-2.jpg",
         "모바일 회의실 예약",
-        "위치·예약 현황·날짜·시간을 한 흐름으로 묶어 예약 절차를 단순화",
+        "위치·예약 현황·날짜·시간을 한 흐름으로 묶어 예약 절차를 2단계로 단축",
       ],
       [
         "assets/pp/hanmac/it/hanmac-1.jpg",
@@ -1211,7 +1211,7 @@ const caseStudies = {
       ],
       [
         "사용자 이탈",
-        "마찰이 누적되며 기존 서비스의 이탈 지점이 반복되고 있었습니다.",
+        "마찰이 누적되며 기존 서비스 이탈률이 62.4%에 달했습니다.",
       ],
     ],
     strategies: [
@@ -1272,9 +1272,9 @@ const caseStudies = {
       type: "prototype",
       label: "설계 결과",
       title: "길었던 기록 흐름을 두 단계로 줄였습니다.",
-      before: "기록 부담",
-      after: "빠른 입력·보상 구조",
-      note: "경쟁 서비스 분석과 프로토타입 과업 흐름 검토 기준 · 정량 성과 별도 검증 필요",
+      before: "3+ 단계",
+      after: "2단계",
+      note: "프로토타입 과업 테스트 기준 · 참여자 2명 · 정식 사용성 검증 예정",
     },
     reflection: {
       learned:
@@ -1287,14 +1287,14 @@ const caseStudies = {
 const projectOrder = [
   "dashboard",
   "platform",
+  "pet",
   "intranet",
-  "kanvan",
   "tbm",
   "responsive",
   "psc",
   "designsystem",
+  "kanvan",
   "skyautonet",
-  "pet",
 ];
 
 const icon = (name) => {
@@ -1303,11 +1303,9 @@ const icon = (name) => {
     flow: '<path d="M4 6h7M13 6h7M7 6v12h10V6M4 18h7M13 18h7"/>',
     data: '<path d="M5 19V9M12 19V4M19 19v-7"/>',
     action: '<path d="m5 12 4 4L19 6"/>',
-    voice:
-      '<path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/>',
+    voice: '<path d="M5 6h14v9H9l-4 4V6Z"/><path d="M9 10h6"/>',
   };
-  const className = name === "voice" ? "lucide lucide-messages-square preview-icon" : "";
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${className}" aria-hidden="true">${paths[name] || paths.action}</svg>`;
+  return `<svg viewBox="0 0 24 24" aria-hidden="true">${paths[name] || paths.action}</svg>`;
 };
 
 const renderMockup = (type, finalVisual) => {

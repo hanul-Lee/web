@@ -666,7 +666,7 @@ footer {
     padding-inline: 24px;
   }
   .hero {
-    height: max(88vh, 1020px);
+    height: max(88vh, 1000px);
     min-height: 680px;
   }
   .hero h1 {
@@ -1103,4 +1103,4 @@ body {
   .proof div {
     min-height: 138px;
   }
-}/*# sourceMappingURL=portfolio.css.map */
+}/*# sourceMappingURL=portfolio_20260905214705.css.map */
