@@ -1823,3 +1823,62 @@ body[data-project="tbm"] {
     min-height: 0;
   }
 }
+
+/* 첫 화면에서 설계 결과와 공개 범위를 확인 */
+.case-result {
+  margin: 24px 0 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--case-text-accent);
+  background: #f2f4f6;
+  color: #333d4b;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.case-meta .stage-meta { grid-column: 1 / -1; }
+@media (max-width: 1100px) {
+  .case-nav .menu { display: block; }
+}
+
+/* 기본 중첩 선택자의 우선순위를 유지하며 모바일을 한 열로 전환 */
+@media (max-width: 800px) {
+  .case-main {
+    padding-top: 68px;
+    .case-hero {
+      grid-template-columns: minmax(0, 1fr);
+      min-height: 0;
+      gap: 36px;
+      padding: 48px 24px;
+      h1 { font-size: clamp(30px, 8vw, 38px); line-height: 1.3; }
+      .case-meta { margin-top: 28px; gap: 22px 18px; }
+      .case-cover {
+        height: auto;
+        min-height: 0;
+        padding: 24px 16px;
+        border-radius: 20px;
+      }
+    }
+    .case-body {
+      padding: 64px 24px;
+      .case-summary {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        margin-bottom: 48px;
+      }
+      .outcomes {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        margin-bottom: 24px;
+        .outcome { padding: 24px 0; }
+        .outcome + .outcome { border-left: 0; border-top: 1px solid #e5e8eb; }
+      }
+      .next { flex-direction: column; align-items: flex-start; gap: 24px; }
+    }
+  }
+  .impact-flow strong { overflow-wrap: anywhere; }
+}
+.case-main .case-hero .case-meta span {
+  color: #536075;
+  opacity: 1;
+  font-size: 11px;
+}

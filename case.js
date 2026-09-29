@@ -1,5 +1,7 @@
 const projects = {
   intranet: {
+    stage: "업무 프로젝트 · 모바일 UX/UI 설계",
+    summary: "결재·예약을 모바일에서 완료하는 흐름으로 재설계",
     no: "03",
     type: "B2B SAAS · MOBILE WORKFLOW",
     title: "모바일 업무 포털 예약 UX 개선",
@@ -7,7 +9,7 @@ const projects = {
     lead: "PC 중심으로 운영되던 사내 업무 중 자주 사용하는 결재와 예약 기능을 모바일에서도 빠르게 완료하도록 핵심 흐름과 정보 우선순위를 재설계했습니다.",
     period: "2023.01 — 2023.06",
     role: "UX 전략 · 정보구조 · UI 디자인",
-    contribution: "UX/UI 기획 및 디자인 100%",
+    contribution: "모바일 업무 흐름 · 정보 우선순위 · UI 설계",
     team: "기획자 · 디자이너 · 개발자",
     cover: 1,
     bg: "#e7eeec",
@@ -20,15 +22,17 @@ const projects = {
     detail:
       "기존 모바일 화면은 PC 기능을 축소해 보여주는 데 그쳤습니다. 자주 사용하는 전자결재와 예약 업무를 중심으로 진입 경로와 정보 우선순위를 다시 정리했습니다.",
     outcomes: [
-      ["43% 증가", "전자결재·예약 사용"],
-      ["2.1배", "모바일 사용"],
-      ["4.6 / 5.0", "사용자 만족도"],
+      ["과업 중심 홈", "결재·예약에 바로 진입"],
+      ["한 화면 예약", "위치·날짜·시간을 연결"],
+      ["모바일 결재", "문서 확인과 처리를 연결"],
     ],
-    outcomeBasis: "도입 전후 사용량과 기존 사용자 15명 대상 설문조사 기준",
+    outcomeBasis: "공개 화면과 설계 흐름 기준. 이용률·만족도는 원본 데이터와 측정 조건 확인 후 추가합니다.",
     images: 6,
     next: ["kanvan", "업무의 흐름이 보이는 칸반보드"],
   },
   dashboard: {
+    stage: "업무 프로젝트 · 설계·퍼블리싱",
+    summary: "비용·인원 데이터를 역할별 판단 화면으로 통합",
     no: "01",
     type: "B2B DASHBOARD · DECISION SUPPORT",
     title: "프로젝트 비용·인원 ERP 분석 대시보드",
@@ -36,7 +40,7 @@ const projects = {
     lead: "분산된 프로젝트 비용·인원 데이터를 하나의 플랫폼에서 확인하고, 필요한 정보를 빠르게 찾아 다음 판단으로 이어지도록 정보 구조를 재설계했습니다.",
     period: "2025.12 — 2026.03",
     role: "UX/UI 디자인 · 퍼블리싱",
-    contribution: "UX/UI 디자인 100% · 퍼블리싱 100%",
+    contribution: "역할별 IA · 대시보드 UI · 퍼블리싱",
     team: "기획 · 개발 · 연구 · 현장 실무자",
     cover: 1,
     bg: "#151d35",
@@ -53,11 +57,13 @@ const projects = {
       ["역할 기반", "사용자별 화면"],
       ["UI 시스템", "일관된 상태 규칙"],
     ],
-    outcomeBasis: "프로젝트 원가·공수 데이터 구조와 역할별 핵심 과업 분석 기준",
+    outcomeBasis: "원가·공수 데이터의 역할별 정보 구조와 UI 설계 결과입니다. 출시 후 업무 시간·판단 정확도는 검증 과제로 남아 있습니다.",
     images: 6,
     next: ["platform", "멀티 유저 B2B 플랫폼"],
   },
   platform: {
+    stage: "업무 프로젝트 · 설계·퍼블리싱",
+    summary: "역할별 진입점과 지도 기반 탐색으로 분산 정보 연결",
     no: "02",
     type: "MULTI-USER PLATFORM · INFORMATION ARCHITECTURE",
     title: "대규모 통합 관리 플랫폼",
@@ -65,7 +71,7 @@ const projects = {
     lead: "분산된 업무 자료와 시스템을 하나의 플랫폼으로 연결해 현장 관리자, 본사 담당자, 외부 이해관계자가 필요한 정보를 빠르게 찾고 활용할 수 있도록 정보 구조와 탐색 흐름을 재설계했습니다.",
     period: "2023.01 — 2023.12",
     role: "사용자 분석 · IA · UX/UI 설계 · 퍼블리싱",
-    contribution: "UX/UI 디자인 100% · 기획 20%",
+    contribution: "사용자 역할 정의 · IA · UI 설계 · 기획 참여",
     team: "기획 · 디자인 · 개발 · 현장 실무자",
     cover: 1,
     bg: "#1d2024",
@@ -78,16 +84,18 @@ const projects = {
     detail:
       "관련 자료가 파일과 프로그램별로 나뉘어 있어 사용자는 필요한 정보를 찾기 위해 여러 위치를 반복해서 확인해야 했습니다. 역할별 목적과 정보 범위를 정리하고, 지도와 관련 데이터를 연결해 플랫폼 안에서 정보를 이어서 확인하도록 구성했습니다.",
     outcomes: [
-      ["5.4 → 2", "대표 과업 기준 평균 탐색 단계"],
-      ["85.6점", "2023 XR 플러그십 건설 과제 평가 최고점"],
+      ["역할별 진입", "현장·본사·외부 사용자 정보 구분"],
+      ["지도 탐색", "위치와 관련 업무 데이터 연결"],
       ["통합 플랫폼", "분산 자료와 지도 기반 정보 연결"],
     ],
     outcomeBasis:
-      "주요 정보 탐색 평균 클릭 수 비교 · 2023 XR 플러그십 건설 과제 평가 기준",
+      "역할별 IA와 지도 기반 UI의 설계 결과입니다. 탐색 횟수와 외부 평가 수치는 측정 조건·증빙 확인 후 추가합니다.",
     images: 8,
     next: ["intranet", "모바일 업무 포털 예약 UX 개선"],
   },
   tbm: {
+    stage: "업무 프로젝트 · 모바일 UX/UI 설계",
+    summary: "종이 기록을 현장 작성·검색 흐름으로 전환",
     no: "05",
     type: "MOBILE WORKFLOW · DIGITAL TRANSFORMATION",
     title: "현장 기록의 모바일 전환 UX",
@@ -117,6 +125,8 @@ const projects = {
     next: ["responsive", "반응형 웹 전면 리뉴얼"],
   },
   pet: {
+    stage: "개인 프로젝트 · 설계 진행 중",
+    summary: "기록 입력과 피드백을 반복 가능한 흐름으로 설계",
     no: "10",
     type: "B2C · HABIT UX",
     title: "기록을 습관으로 만드는 반려동물 건강관리 UX",
@@ -124,7 +134,7 @@ const projects = {
     lead: "해야 하지만 쉽게 미뤄지는 반려동물 건강 기록을 빠른 입력과 즉각적인 보상으로 반복 가능한 행동 경험으로 설계했습니다.",
     period: "2026.02 — 진행중",
     role: "UX 전략 · 브랜딩 · UI 디자인",
-    contribution: "100%",
+    contribution: "건강 기록 흐름 · 브랜드 · 모바일 UI 설계",
     team: "개인 프로젝트",
     cover: 1,
     bg: "#eee8da",
@@ -145,6 +155,8 @@ const projects = {
     next: ["dashboard", "프로젝트 비용·인원 ERP 분석 대시보드"],
   },
   responsive: {
+    stage: "업무 프로젝트 · 반응형 웹 설계",
+    summary: "디바이스별로 일관된 제품 탐색 구조 설계",
     no: "06",
     type: "RESPONSIVE WEB · UI RENEWAL",
     title: "반응형 웹 전면 리뉴얼",
@@ -152,7 +164,7 @@ const projects = {
     lead: "디바이스별로 달라지는 탐색 경험과 높은 이탈률을 개선하고, 복잡한 솔루션 정보를 더 쉽게 이해하고 비교할 수 있는 반응형 제품 사이트로 재설계했습니다.",
     period: "2023.03 — 2023.11",
     role: "웹 UX/UI · 반응형 디자인 시스템",
-    contribution: "100%",
+    contribution: "제품 탐색 구조 · 반응형 화면 · UI 규칙 설계",
     team: "기획 · 디자인 · 개발",
     bg: "#0d4f91",
     ink: "#fff",
@@ -172,6 +184,8 @@ const projects = {
     next: ["psc", "PSC 거더 관리 플랫폼"],
   },
   psc: {
+    stage: "업무 프로젝트 · 웹·앱 설계·퍼블리싱",
+    summary: "현장 측정과 사무실 관리를 웹·앱으로 연결",
     no: "07",
     type: "B2B PLATFORM · FIELD DATA",
     title: "PSC 거더 관리 플랫폼",
@@ -179,7 +193,7 @@ const projects = {
     lead: "수기로 기록하던 측면 곡률 데이터를 센서 기반 자동 수집과 실시간 분석으로 연결해, 현장 측정의 정확성과 관리 효율을 높인 웹·앱 플랫폼입니다.",
     period: "2023.08 — 2024.08",
     role: "웹/앱 UX/UI · 퍼블리싱 · 현장 구조 분석",
-    contribution: "100%",
+    contribution: "현장 측정 흐름 · 웹·앱 UI · 퍼블리싱",
     team: "기획 · 디자인 · 개발 · 현장 실무자",
     bg: "#367fa0",
     ink: "#fff",
@@ -199,6 +213,8 @@ const projects = {
     next: ["designsystem", "일관성과 작업 속도를 높인 디자인 시스템"],
   },
   designsystem: {
+    stage: "업무 프로젝트 · 설계 진행 중",
+    summary: "브랜드·컴포넌트·사용 가이드를 하나의 기준으로 통합",
     no: "08",
     type: "DESIGN SYSTEM · WEB PLATFORM",
     title: "일관성과 작업 속도를 높인 디자인 시스템",
@@ -206,7 +222,7 @@ const projects = {
     lead: "프로젝트마다 달랐던 UI 규칙을 공통 기반으로 통합해 디자인 재작업을 줄이고, 팀이 더 빠르고 일관되게 협업할 수 있는 설계 체계를 구축했습니다.",
     period: "2024.05 — 진행중",
     role: "UX 기획 · 컴포넌트 설계 · 핵심 화면 디자인",
-    contribution: "100%",
+    contribution: "파운데이션 · 컴포넌트 · 사용 가이드 설계",
     team: "기획 · 디자인 · 개발",
     bg: "#1e554d",
     ink: "#fff",
@@ -226,6 +242,8 @@ const projects = {
     next: ["skyautonet", "자율주행 기술을 이해시키는 웹 경험"],
   },
   kanvan: {
+    stage: "개인 프로젝트 · 프로토타입",
+    summary: "업무 상태를 카드로 확인하고 직접 바꾸는 흐름 구현",
     no: "04",
     type: "B2B SAAS · WORKFLOW UX · PROTOTYPE",
     title: "업무의 흐름이 보이는 칸반보드 서비스",
@@ -233,8 +251,8 @@ const projects = {
     lead: "리스트 중심 업무관리에서 파악하기 어려웠던 상태와 우선순위를 카드와 컬럼으로 시각화하고, 핵심 업무 흐름을 검증할 수 있는 프로토타입으로 설계했습니다.",
     period: "2026.03 — 진행중",
     role: "문제 정의 · UX 구조 설계 · UI 디자인 · 프로토타이핑",
-    contribution: "기획 30% · UX/UI 디자인 100% · 퍼블리싱·개발 100%",
-    team: "개인 프로젝트 · AI 협업 프로토타이핑",
+    contribution: "문제 재구성 · UX/UI 설계 · AI 활용 프로토타입 구현",
+    team: "개인 프로젝트",
     bg: "#15162d",
     ink: "#fff",
     accent: "#ff8500",
@@ -245,15 +263,17 @@ const projects = {
     detail:
       "진행·대기·완료 업무를 컬럼으로 구분하고, 카드 안에서 담당자와 우선순위를 바로 확인하도록 정보 위계를 재설계했습니다. 드래그앤드롭과 상세 모달은 AI의 도움을 받아 프로토타이핑했으며, 현재는 핵심 흐름과 예외를 다듬는 단계입니다.",
     outcomes: [
-      ["85% 단축", "업무 탐색 시간"],
-      ["80% 감소", "오클릭"],
-      ["100% 성공", "과제 성공률"],
+      ["상태별 보드", "진행·대기·완료 업무 구분"],
+      ["카드 정보", "담당자·우선순위·기한 표시"],
+      ["직접 조작", "드래그앤드롭 프로토타입"],
     ],
     outcomeBasis:
-      "웹·구조·인터랙션 프로토타입 비교 테스트 · 기획·디자인·개발 실무자 7명 · 과업 3개",
+      "실무에서 관찰한 문제를 재구성한 개인 프로토타입입니다. 테스트 기록의 측정 단위가 확인되지 않아 정량 성과를 싣지 않았습니다.",
     next: ["tbm", "현장 기록의 모바일 전환 UX"],
   },
   skyautonet: {
+    stage: "업무 프로젝트 · 반응형 웹 설계",
+    summary: "기술 적용 장면과 목적별 탐색 구조 연결",
     no: "09",
     type: "WEB UX · BRAND UX · RESPONSIVE",
     title: "자율주행 기술을 이해시키는 반응형 웹 리디자인",
@@ -261,7 +281,7 @@ const projects = {
     lead: "복잡한 자율주행 기술과 핵심 사업을 고객이 빠르게 이해하도록 브랜드 메시지, 정보 위계, 반응형 탐색 구조를 전면 재설계했습니다.",
     period: "2023.03 — 2023.11",
     role: "UX 기획 · IA · 브랜드 메시지 · 반응형 UI · 퍼블리싱",
-    contribution: "UX/UI 100% · 퍼블리싱 40%",
+    contribution: "IA · 브랜드 메시지 · UI 설계 · 퍼블리싱 참여",
     team: "기획 · 디자인 · 개발",
     bg: "#303640",
     ink: "#fff",
@@ -362,7 +382,7 @@ const caseStudies = {
     context: [
       ["사용자", "기획 · 디자인 · 개발 실무자"],
       ["환경", "데스크톱 기반 협업 도구"],
-      ["검증 범위", "웹·구조·인터랙션 프로토타입 비교 테스트"],
+      ["공개 범위", "개인 프로토타입 · 업무 흐름과 인터랙션 설계"],
     ],
     pains: [
       [
@@ -423,24 +443,19 @@ const caseStudies = {
         "프로토타입과 회고",
         "드래그앤드롭과 협업 기능을 구현하며 확인한 후속 검증 과제",
       ],
-      [
-        "assets/pp/kanvan/kanvan06.jpg",
-        "다음 검증 과제",
-        "탐색 시간과 과제 성공률을 측정하기 위한 사용자 테스트 계획",
-      ],
     ],
     impact: {
       type: "workflow",
-      label: "사용성 테스트",
-      title: "칸반 구조에서 업무 탐색 시간이 85% 줄었습니다.",
+      label: "프로토타입 설계 결과",
+      title: "목록을 읽고 찾던 업무를 상태별로 확인하고 직접 이동하도록 설계했습니다.",
       before: "기존 리스트",
       after: "칸반 구조",
-      note: "기획·디자인·개발 실무자 7명 · 과업 3개 · 탐색 시간 85% 단축 · 오클릭 80% 감소 · 과제 성공률 100%",
+      note: "드래그앤드롭과 상세 모달을 프로토타입으로 구현했습니다. 탐색 시간·오선택·도움 없이 과업을 마치는 비율은 동일 조건에서 확인할 항목입니다.",
     },
     reflection: {
       learned:
         "모든 기능을 완성했다고 말하기보다, 어떤 업무 흐름을 왜 바꿨는지 설명하고 실제 검증 과제를 남기는 것이 중요하다는 점을 배웠습니다. 구현은 AI의 도움을 받아 진행했으며, 상태·예외·데이터 구조를 직접 확인하며 수정했습니다.",
-      next: "추가 협업 환경에서도 같은 효과가 유지되는지, 사용자 수와 업무량을 늘린 테스트로 검증하겠습니다.",
+      next: "리스트와 칸반에서 같은 과업을 수행하도록 하고, 탐색 시간의 집계 단위와 오선택 기준을 명시해 사용성을 검증하겠습니다.",
     },
   },
   skyautonet: {
@@ -449,13 +464,13 @@ const caseStudies = {
     strategyHeadline:
       "기술 적용 장면, 목적 중심 정보 구조, 반응형 메시지로 브랜드 신뢰와 접근성을 함께 높였습니다.",
     voice: [
-      "기존 사이트·운영 지표 분석",
+      "기존 사이트의 정보 구조 분석",
       "“첫 화면에서 회사가 무엇을 하는지 알기 어렵고 모바일 탐색도 불편했습니다.”",
     ],
     context: [
       ["사용자", "자율주행 솔루션 고객 · 글로벌 방문자"],
       ["환경", "데스크톱 · 모바일 · 다국어"],
-      ["근거", "리뉴얼 전후 Google Analytics"],
+      ["공개 범위", "정보 위계 · 반응형 UI 설계"],
     ],
     pains: [
       [
@@ -493,7 +508,7 @@ const caseStudies = {
     uiText:
       "기술 적용 장면과 핵심 메시지를 연결하고 데스크톱과 모바일의 정보 우선순위를 통합했습니다.",
     finalVisual: [
-      "assets/pp/skyautonet/skyautonet01.jpg",
+      "assets/pp/skyautonet/skyautonet06.jpg",
       "스카이오토넷 웹 리디자인",
       "자율주행 기술과 브랜드 메시지를 연결한 반응형 웹 경험입니다.",
       "landscape",
@@ -519,23 +534,13 @@ const caseStudies = {
         "정보 위계",
         "제목·수치·CTA를 재정렬해 핵심 정보를 먼저 읽도록 설계",
       ],
-      [
-        "assets/pp/skyautonet/skyautonet06.jpg",
-        "반응형 UX",
-        "화면 크기가 달라도 메시지와 탐색 흐름을 유지",
-      ],
-      [
-        "assets/pp/skyautonet/skyautonet07.jpg",
-        "리뉴얼 성과",
-        "이탈률 감소, 페이지 조회 증가, 해외 유입 확대",
-      ],
     ],
     impact: {
       type: "depth",
-      label: "운영 성과",
-      title: "리뉴얼 이후 이탈률은 줄고 핵심 페이지 탐색은 늘었습니다.",
-      before: "29.74%",
-      after: "11.94%",
+      label: "설계 결과",
+      title: "기술 소개를 적용 장면과 다음 탐색으로 연결했습니다.",
+      before: "기술 설명 중심",
+      after: "적용 장면 · 목적별 탐색",
       note: "브랜드 메시지와 정보 위계 개선 · 정량 성과 별도 검증 필요",
     },
     reflection: {
@@ -601,49 +606,24 @@ const caseStudies = {
     uiText:
       "제품·적용 분야·기술 정보를 재구성하고 데스크톱부터 모바일까지 같은 우선순위로 전달했습니다.",
     finalVisual: [
-      "assets/cases/responsive-cover.jpg",
+      "assets/pp/tescom/38.jpg",
       "반응형 웹 리뉴얼 핵심 화면",
       "기술 솔루션의 신뢰감과 제품 탐색성을 함께 높인 반응형 웹 경험입니다.",
       "landscape",
     ],
     visuals: [
       [
-        "assets/pp/tescom/42.jpg",
-        "반응형 웹 전면 리뉴얼",
-        "데스크톱과 모바일의 경험 불일치를 해소하고 모바일 유입을 되살린 프로젝트 개요",
-      ],
-      [
-        "assets/pp/tescom/41.jpg",
-        "문제 정의와 이탈 지점",
-        "첫 화면의 서비스 불명확성, 탐색 유도 부족, 상세 도달 전 이탈을 데이터로 정리",
-      ],
-      [
-        "assets/pp/tescom/40.jpg",
-        "정보 구조 재설계 목표",
-        "디바이스와 관계없이 핵심 행동을 파악하도록 정보 위계와 탐색 흐름을 재구성",
-      ],
-      [
         "assets/pp/tescom/39.jpg",
         "메인 배너 최적화",
         "브랜드 노출 영역을 제품·솔루션 탐색을 시작하는 진입점으로 전환",
       ],
-      [
-        "assets/pp/tescom/38.jpg",
-        "반응형 디자인 시스템",
-        "단일 코드 기반의 유연한 미디어 쿼리로 웹·태블릿·모바일 경험을 통합",
-      ],
-      [
-        "assets/pp/tescom/37.jpg",
-        "운영 성과",
-        "로딩 시간과 이탈률을 낮추고 모바일 사용자 유지율을 높인 결과",
-      ],
     ],
     impact: {
       type: "depth",
-      label: "운영 성과",
-      title: "이탈은 줄이고, 제품을 탐색한 뒤 이어지는 행동은 늘었습니다.",
-      before: "11.14%",
-      after: "4.84%",
+      label: "설계 결과",
+      title: "화면 크기가 달라도 제품을 비교하는 순서를 유지하도록 설계했습니다.",
+      before: "PC 중심 고정 화면",
+      after: "반응형 제품 탐색",
       note: "솔루션 정보 구조화 · 디바이스별 탐색 경험 연결 · 정량 성과 별도 검증 필요",
     },
     reflection: {
@@ -846,11 +826,11 @@ const caseStudies = {
     ],
     impact: {
       type: "depth",
-      label: "탐색 구조 검증",
-      title: "주요 정보 탐색 클릭 수를 평균 5.4회에서 약 2회로 줄였습니다.",
-      before: "5.4회",
-      after: "약 2회",
-      note: "주요 정보 탐색 평균 클릭 수 비교 · 2023 XR 플러그십 건설 과제 평가 85.6점(최고점)",
+      label: "탐색 구조 변화",
+      title: "파일과 시스템을 오가던 탐색을 역할·위치 중심으로 연결했습니다.",
+      before: "분산된 파일·시스템",
+      after: "역할별 진입 · 지도 탐색",
+      note: "같은 현장의 공정·CCTV·BIM 정보를 위치 맥락 안에서 이어서 확인하도록 설계했습니다. 탐색 효율의 정량 측정 조건은 추가 확인이 필요합니다.",
     },
     reflection: {
       learned:
@@ -935,16 +915,16 @@ const caseStudies = {
       [
         "assets/cases/dashboard-5.jpg",
         "Before & After",
-        "수작업 원장 조회에서 실시간 리스크 탐지 화면으로 바뀐 결과",
+        "수작업 원장 조회에서 역할별 현황·위험 상태 비교 화면으로 바꾼 설계",
       ],
     ],
     impact: {
       type: "risk",
       label: "판단 방식 변화",
-      title: "보고서를 만든 뒤 확인하던 위험을, 화면에서 먼저 발견합니다.",
+      title: "수동으로 취합하던 현황을 역할별 비교 화면으로 설계했습니다.",
       before: "수동 취합",
-      after: "실시간 감지",
-      note: "Spreadsheet reporting → Live risk signal",
+      after: "역할별 위험 상태 표시",
+      note: "설계 결과: 원가·공수·진행 상태의 비교와 상세 진입을 한 화면에 연결했습니다. 운영 성과를 측정한 결과는 포함하지 않았습니다.",
     },
     reflection: {
       learned:
@@ -1148,19 +1128,9 @@ const caseStudies = {
     ],
     visuals: [
       [
-        "assets/pp/hanmac/it/hanmac-5.jpg",
-        "모바일 업무 흐름 연결",
-        "전자결재와 회의실 예약을 모바일에서 이어서 처리하도록 설계한 프로젝트 개요",
-      ],
-      [
         "assets/pp/hanmac/it/hanmac-4.jpg",
         "사용자 문제 정의",
         "당일 연차, 회의 연장, 낮은 가독성 등 실제 업무 맥락에서 불편을 구체화",
-      ],
-      [
-        "assets/pp/hanmac/it/hanmac-3.jpg",
-        "핵심 기능과 설계 원칙",
-        "전자결재·회의실 신청을 중심으로 큰 글씨와 직관적인 아이콘 원칙을 설정",
       ],
       [
         "assets/pp/hanmac/it/hanmac-2.jpg",
@@ -1171,11 +1141,6 @@ const caseStudies = {
         "assets/pp/hanmac/it/hanmac-1.jpg",
         "모바일 전자결재",
         "기안·부결 문서를 한눈에 확인하고 복잡한 결재 입력을 모바일에 맞게 단순화",
-      ],
-      [
-        "assets/pp/hanmac/it/hanmac.jpg",
-        "설문조사와 회고",
-        "15명 대상 사용성 설문으로 편의성과 고연령층 가독성 개선을 확인",
       ],
     ],
     reflection: {
@@ -1425,7 +1390,7 @@ if (p) {
     p.textAccent || p.accent,
   );
   document.documentElement.style.setProperty("--case-muted", p.muted);
-  document.title = "이한울 UX/UI 디자이너 포트폴리오";
+  document.title = `${p.title} | 이한울 · Product Designer`;
   document.querySelector(".case-eyebrow").textContent =
     `PROJECT ${p.no} · ${p.type}`;
   document.querySelector(".case-title").textContent = p.title;
@@ -1435,6 +1400,8 @@ if (p) {
   document.querySelector(".role").textContent = p.role;
   document.querySelector(".contribution").textContent = p.contribution;
   document.querySelector(".team").textContent = p.team;
+  document.querySelector(".stage").textContent = p.stage;
+  document.querySelector(".case-result").textContent = p.summary;
   document.querySelector(".case-cover").innerHTML = renderMockup(
     caseStudies[slug].ui,
     caseStudies[slug].finalVisual,
@@ -1455,7 +1422,7 @@ if (p) {
       .querySelector(".outcomes")
       .insertAdjacentHTML(
         "afterend",
-        `<p class="outcome-basis"><b>측정 기준</b>${p.outcomeBasis}</p>`,
+        `<p class="outcome-basis"><b>결과의 범위</b>${p.outcomeBasis}</p>`,
       );
   document.querySelector(".gallery").innerHTML = renderStudy(caseStudies[slug]);
   const progressItems = [
@@ -1466,7 +1433,7 @@ if (p) {
     ["decision", "결정"],
     ["iteration", "조정"],
     ["solution", "경험"],
-    ["impact", "성과"],
+    ["impact", "결과"],
     ["reflection", "회고"],
   ].filter(([id]) => document.getElementById(id));
   if (progressItems.length) {
