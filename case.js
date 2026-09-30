@@ -1459,16 +1459,18 @@ if (p) {
       });
     };
     setActiveSection("overview");
-    const progressObserver = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActiveSection(visible.target.id);
-      },
-      { rootMargin: "-28% 0px -58% 0px", threshold: [0, 0.15, 0.35, 0.6] },
-    );
-    progressSections.forEach((section) => progressObserver.observe(section));
+    if ("IntersectionObserver" in window) {
+      const progressObserver = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (visible) setActiveSection(visible.target.id);
+        },
+        { rootMargin: "-28% 0px -58% 0px", threshold: [0, 0.15, 0.35, 0.6] },
+      );
+      progressSections.forEach((section) => progressObserver.observe(section));
+    }
   }
   const currentProjectIndex = projectOrder.indexOf(slug);
   const nextSlug =

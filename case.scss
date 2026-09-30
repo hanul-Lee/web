@@ -1,17 +1,10 @@
-@import url("portfolio.css");
+@import url("portfolio.css?v=20260930-compat");
 
 /* HTML 구조: body > header + main(.case-main) > hero + body */
-.case-nav {
-  position: fixed;
-  background: rgba(255, 255, 255, 0.94);
-  border-bottom: 1px solid #e4e5e8;
-  backdrop-filter: blur(12px);
-}
-
 .case-main {
   --case-section-inline: clamp(24px, 8vw, 140px);
   --case-section-block: 100px;
-  padding-top: 82px;
+  padding-top: var(--header-height);
 
   .case-hero,
   .case-body {
@@ -1035,11 +1028,6 @@
   background: #fff;
 }
 
-.case-nav {
-  background: rgba(255, 255, 255, 0.92);
-  border-color: #f0f1f3;
-}
-
 .case-hero {
   min-height: 720px;
   color: #191f28;
@@ -1830,7 +1818,6 @@ body[data-project="tbm"] {
   .case-main {
     --case-section-inline: var(--mobile-gutter, 24px);
     --case-section-block: 48px;
-    padding-top: 68px;
     .case-hero {
       grid-template-columns: minmax(0, 1fr);
       min-height: 0;

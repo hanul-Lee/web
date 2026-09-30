@@ -42,8 +42,14 @@ if (menu && nav) {
   document.addEventListener('focusin', event => {
     if (!nav.contains(event.target) && !menu.contains(event.target)) setMenuOpen(false);
   });
-  window.matchMedia('(max-width: 1100px)').addEventListener('change', () => {
+  const menuBreakpoint = window.matchMedia('(max-width: 1100px)');
+  const resetMenuAtBreakpoint = () => {
     const focusWasInNav = nav.contains(document.activeElement);
-    setMenuOpen(false, focusWasInNav && window.innerWidth <= 1100);
-  });
+    setMenuOpen(false, focusWasInNav && menuBreakpoint.matches);
+  };
+  if (menuBreakpoint.addEventListener) {
+    menuBreakpoint.addEventListener('change', resetMenuAtBreakpoint);
+  } else {
+    menuBreakpoint.addListener(resetMenuAtBreakpoint);
+  }
 }
