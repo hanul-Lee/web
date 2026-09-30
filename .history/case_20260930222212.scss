@@ -1864,10 +1864,10 @@ body[data-project="tbm"] {
       }
       .outcomes {
         grid-template-columns: minmax(0, 1fr);
-        gap: 12px;
+        gap: 0;
         margin-bottom: 24px;
         .outcome {
-          padding: 24px;
+          padding: 24px 0;
         }
         .outcome + .outcome {
           border-left: 0;

@@ -1572,8 +1572,10 @@
 .project-visuals .visual-frame img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .project-visuals figure:hover img {
@@ -1617,7 +1619,8 @@
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mock-window.final-mockup.portrait {
   width: min(100%, 436px);
@@ -1658,8 +1661,10 @@
   min-height: 0;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .outcomes {
@@ -1872,11 +1877,11 @@ body[data-project=tbm] .strategy-list {
   }
   .case-main .case-body .outcomes {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0;
+    gap: 12px;
     margin-bottom: 24px;
   }
   .case-main .case-body .outcomes .outcome {
-    padding: 24px 0;
+    padding: 24px;
   }
   .case-main .case-body .outcomes .outcome + .outcome {
     border-left: 0;
@@ -1897,4 +1902,144 @@ body[data-project=tbm] .strategy-list {
   font-size: 11px;
 }
 
-/*# sourceMappingURL=case.css.map */
+/* 모바일: 외곽 24px, 설명 블록의 내부 여백, 공통 글자 위계 */
+@media (max-width: 800px) {
+  .case-title,
+  .case-summary h2,
+  .story-section h3 {
+    text-wrap: balance;
+  }
+  .story-section {
+    padding-block: 48px;
+  }
+  .story-section header {
+    margin-bottom: 28px;
+  }
+  .story-section.solution {
+    padding-block: 32px;
+  }
+  .evidence-grid h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  body[data-project=dashboard] .evidence-grid > div {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 8px 12px;
+    align-items: start;
+    padding-block: 24px;
+  }
+  body[data-project=dashboard] .evidence-grid > div h4 {
+    margin: 0;
+  }
+  .case-main .case-hero,
+  .case-main .case-body {
+    padding-inline: var(--mobile-gutter);
+  }
+  .case-main .case-hero h1 {
+    font-size: var(--type-h1);
+    line-height: 1.3;
+  }
+  .case-main .case-hero .case-domain {
+    font-size: var(--type-caption);
+    line-height: 1.6;
+  }
+  .case-main .case-hero .case-lead {
+    font-size: var(--type-body);
+    line-height: 1.75;
+  }
+  .case-main .case-hero .case-meta > div {
+    min-width: 0;
+  }
+  .case-main .case-hero .case-meta span {
+    font-size: var(--type-label);
+    line-height: 1.6;
+  }
+  .case-main .case-hero .case-meta b {
+    font-size: var(--type-caption);
+    line-height: 1.65;
+  }
+  .case-main .case-body .case-summary h2 {
+    font-size: var(--type-section);
+    line-height: 1.4;
+  }
+  .case-main .case-body .case-summary .detail {
+    font-size: var(--type-body);
+    font-weight: 400;
+    line-height: 1.75;
+  }
+  .case-main .case-body .case-summary .case-section-label {
+    margin-bottom: 20px;
+  }
+  .story-section h3 {
+    font-size: var(--type-title-lg);
+    line-height: 1.4;
+  }
+  .evidence-grid h4,
+  .strategy-list h4 {
+    font-size: 19px;
+    line-height: 1.45;
+  }
+  .evidence-grid p,
+  .strategy-list p,
+  .solution-copy > span,
+  .solution-steps span,
+  .reframe-flow p,
+  .iteration-compare blockquote p,
+  .reflection-grid p {
+    font-size: var(--type-body);
+    line-height: 1.75;
+  }
+  .case-section-label,
+  .story-section header > p,
+  .solution-copy > p,
+  .user-voice small,
+  .evidence-grid small,
+  .strategy-list b,
+  .strategy-list small,
+  .reframe-flow small,
+  .iteration-compare small,
+  .reflection-grid small,
+  .impact-flow small,
+  .project-visuals figcaption small {
+    font-size: var(--type-label);
+    line-height: 1.6;
+  }
+  .user-voice {
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  .user-voice p {
+    font-size: var(--type-body);
+    line-height: 1.75;
+  }
+  .evidence-grid > div,
+  .strategy-list > div,
+  .strategy-list > div + div {
+    padding-inline: 16px;
+    min-width: 0;
+  }
+  .solution {
+    margin-inline: 0;
+  }
+  .reframe-flow > div,
+  .iteration-compare > div,
+  .iteration-compare blockquote {
+    padding-inline: 20px;
+  }
+  .impact-flow strong {
+    font-size: var(--type-title-md);
+    line-height: 1.4;
+  }
+  .outcome-basis,
+  .impact-note {
+    font-size: var(--type-caption);
+    line-height: 1.7;
+  }
+  .outcome-basis {
+    margin-bottom: 48px;
+  }
+  .case-result {
+    font-size: var(--type-body);
+    line-height: 1.65;
+  }
+}/*# sourceMappingURL=case.css.map */
