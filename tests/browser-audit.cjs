@@ -4,12 +4,15 @@ const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const base = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:4173';
-const files = ['index.html', ...fs.readdirSync(root).filter(f => /^project-.*\.html$/.test(f))];
+const allFiles = ['index.html', ...fs.readdirSync(root).filter(f => /^project-.*\.html$/.test(f))];
+const files = process.env.AUDIT_PAGES ? allFiles.filter(f => process.env.AUDIT_PAGES.split(',').includes(f)) : allFiles;
+if (!files.length) throw new Error('AUDIT_PAGES did not match any portfolio page');
 const widths = [320, 360, 375, 390, 412, 430, 640, 768, 800, 801, 844, 1024, 1100, 1101, 1280, 1366, 1440, 1920, 2560];
 const report = {pages:files.length, widths, pageChecks:0, errors:[], failures:[]};
 async function audit(page, label, file, width) {
   await page.goto(`${base}/${file}`, {waitUntil:'load'});
   await page.evaluate(async () => {
+    document.querySelectorAll('details').forEach(d => d.open = true);
     document.querySelectorAll('img').forEach(i => i.loading = 'eager');
     await Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(() => {}))]);
   });

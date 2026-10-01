@@ -1487,6 +1487,13 @@ body {
   .capability-grid p { font-size: 15px; color: #586478; line-height: 1.85; }
   .capability-grid b { display: block; margin-top: 24px; color: var(--blue); font-size: 12px; line-height: 1.7; }
   .more-work { padding-block: 0 80px; }
+  .more-work summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px 0; border-block: 1px solid #dce3ef; cursor: pointer; }
+  .more-work summary::-webkit-details-marker { display: none; }
+  .more-work summary strong { display: block; font-size: 26px; letter-spacing: -.04em; margin: 12px 0; }
+  .more-description { display: block; color: #586478; font-size: 14px; line-height: 1.7; }
+  .expand-mark { font-size: 32px; font-weight: 400; }
+  details[open] .expand-mark { transform: rotate(45deg); }
+  .more-work .project-grid { margin-top: 28px; }
   .mini-project { border-radius: 8px; }
   .designer-about { padding-block: 64px 100px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; border-top: 1px solid #dce3ef; }
   .designer-about h2 { font-size: clamp(28px, 2.7vw, 38px); line-height: 1.5; letter-spacing: -.05em; }
@@ -1540,6 +1547,8 @@ body {
     .capability-grid h3 { font-size: 23px; margin-top: 16px; }
     .capability-grid h3 br { display: none; }
     .more-work { padding-bottom: 48px; }
+    .more-work summary strong { font-size: 23px; }
+    .more-description { font-size: 12px; }
     .designer-about { grid-template-columns: 1fr; padding-block: 36px 56px; gap: 16px; }
     .designer-bio > p { font-size: 16px; }
     .career-list > div { grid-template-columns: 105px minmax(0, 1fr); gap: 14px; }
@@ -1567,37 +1576,4 @@ body {
 }
 @media (max-width: 800px) {
   :root { --radius-panel: 20px; }
-}
-
-/* 추가 사례는 별도 조작 없이 탐색 가능한 작은 목록으로 노출 */
-.portfolio-home {
-  #more-title > span { color: var(--blue); white-space: nowrap; }
-  .more-project-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
-  .more-project-list > li { min-width: 0; }
-  .more-project { display: grid; grid-template-columns: 112px minmax(0, 1fr) 24px; align-items: center; gap: 20px; height: 100%; padding: 20px; border: 1px solid #e0e6ef; border-radius: var(--radius-card); background: #fff; transition: border-color .18s ease, background-color .18s ease; }
-  .more-project-thumb { display: grid; place-items: center; height: 94px; overflow: hidden; padding: 8px; background: #eef2f8; border-radius: var(--radius-control); }
-  .more-project-thumb img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
-  .more-project-copy { min-width: 0; }
-  .more-project-category { margin: 0 0 8px; color: #586478; font-size: 11px; line-height: 1.6; }
-  .more-project h3 { margin: 0; color: var(--ink); font-size: 18px; font-weight: 700; line-height: 1.6; letter-spacing: -.03em; }
-  .more-project-scope { margin: 8px 0 0; color: #586478; font-size: 12px; line-height: 1.65; }
-  .more-project-arrow { color: var(--blue); font-size: 22px; justify-self: end; }
-  .more-project:focus-visible { background: #eef2f8; }
-  @media (hover: hover) and (pointer: fine) {
-    .more-project:hover { border-color: #9bafce; background: #f3f6fb; }
-  }
-  @media (max-width: 1100px) {
-    .more-project { grid-template-columns: 80px minmax(0, 1fr) 20px; gap: 14px; padding: 18px; }
-    .more-project-thumb { height: 80px; }
-    .more-project h3 { font-size: 16px; }
-  }
-  @media (max-width: 800px) {
-    .more-project-list { grid-template-columns: 1fr; gap: 12px; }
-    .more-project { padding: 16px; }
-  }
-  @media (max-width: 380px) {
-    .more-project { grid-template-columns: 60px minmax(0, 1fr) 16px; gap: 10px; padding: 14px; }
-    .more-project-thumb { height: 68px; padding: 5px; }
-    .more-project-arrow { font-size: 18px; }
-  }
 }

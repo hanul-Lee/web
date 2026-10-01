@@ -15,9 +15,9 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <meta name="color-scheme" content="light">
     <link rel="stylesheet" href="assets/fonts/fonts.css?v=20260930">
-    <link rel="stylesheet" href="portfolio.css?v=20260930-compat" />
+    <link rel="stylesheet" href="portfolio.css?v=20261001-more-work" />
   </head>
-  <body>
+  <body class="portfolio-home">
     <a class="skip-link" href="#top">본문으로 건너뛰기</a>
     <header class="nav">
       <a class="logo" href="#top">HANUL<span>●</span></a>
@@ -38,235 +38,80 @@
     </header>
 
     <main id="top" tabindex="-1">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="kicker">PRODUCT DESIGNER · B2B &amp; DATA UX</p>
-          <h1>복잡한 B2B 업무를,<br /><em>판단하고 실행하기 쉽게.</em></h1>
-          <p class="hero-text">
-            프로덕트 디자이너 이한울입니다.<br /> ERP와 업무 플랫폼의 정보를 사용자 역할에 맞게 구조화하고,
-            UI 설계부터 작동하는 프로토타입까지 연결합니다.
-          </p>
-          <div class="hero-actions">
-            <a class="primary" href="#work">대표 프로젝트 보기 <span>↗</span></a>
-            <!-- <a class="secondary" href="assets/portfolio.pdf" target="_blank" rel="noreferrer">포트폴리오 PDF ↗</a> -->
-          </div>
-          <div class="hero-proof" aria-label="핵심 경력 요약">
-            <div><strong>2020.09—</strong><span>디지털 디자인 경력 시작</span></div>
-            <div><strong>2022.12—</strong><span>Product Design 집중</span></div>
-            <div><strong>Design → Build</strong><span>IA · UI · 프로토타이핑</span></div>
-          </div>
-        </div>
-        <a class="hero-preview" href="project-dashboard.html">
-          <div class="preview-heading"><span>SELECTED WORK / 01</span><span>ERP · DATA UX</span></div>
-          <img src="assets/cases/dashboard-7.png" width="700" height="420" fetchpriority="high" alt="프로젝트별 비용·인원·위험 상태를 비교하는 ERP 대시보드 설계 화면" />
-          <div class="preview-caption"><div><strong>흩어진 데이터를 역할별 판단 화면으로</strong><span>프로젝트 비용·인원 ERP 대시보드</span></div><span aria-hidden="true">↗</span></div>
-        </a>
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-topline"><p>이한울 · PRODUCT DESIGNER</p><span>B2B / DATA / WORKFLOW</span></div>
+        <h1 id="intro-title">복잡한 업무를,<br><em>명확한 다음 행동으로.</em></h1>
+        <div class="intro-bottom"><p>ERP의 숫자를 판단의 기준으로, PC의 업무를 모바일의 흐름으로.<br>정보 구조부터 UI와 퍼블리싱까지 연결하는 디자이너 이한울입니다.</p><a class="intro-link" href="#work">선택한 프로젝트 3개 <span aria-hidden="true">↓</span></a></div>
+        <div class="intro-facts"><span>2020.09부터 디지털 디자인</span><span>2022.12부터 프로덕트 디자인</span><span>IA · UX/UI · 퍼블리싱</span></div>
       </section>
-
-      <section class="projects" id="work">
-        <div class="section-head">
-          <p class="label" style="color: var(--ink)">01 — 대표 프로젝트</p>
-          <p>ERP · 통합 플랫폼 · 모바일 업무 흐름</p>
-        </div>
-        <a
-          class="project project-wide dark dashboard-primary reveal"
-          href="project-dashboard.html"
-        >
-          <div class="project-copy">
-            <span>PRIMARY CASE STUDY · 01</span>
-            <p class="project-tags">
-              DATA UX · DASHBOARD · ENTERPRISE · DECISION SUPPORT
-            </p>
-            <h3>프로젝트 비용·인원<br />ERP 분석 대시보드</h3>
-            <p>
-              흩어진 프로젝트 비용·인원 데이터를 하나의 화면에서 확인하고,
-              사용자가 더 빠르게 판단할 수 있도록 정보 구조를 재설계했습니다.
-            </p>
-            <p class="primary-impact">
-              2025.12—2026.03 · UX/UI 설계 · 퍼블리싱<br /><strong
-                >비용·인원 현황을 역할별 판단 화면으로 통합</strong
-              >
-            </p>
-            <b>프로젝트 자세히 보기 ↗</b>
-          </div>
-          <div class="project-image">
-            <img width="700" height="420"
-              src="assets/cases/dashboard-7.png"
-              alt="실시간 운영 의사결정 대시보드" loading="lazy" decoding="async"
-            />
-          </div>
-        </a>
-        <div class="project-grid">
-          <a class="project light reveal" href="project-platform.html"
-            ><div class="thumb platform">
-              <img width="1289" height="659"
-                src="assets/cases/platform-9.png"
-                alt="멀티 유저 B2B 플랫폼" loading="lazy" decoding="async"
-              />
-            </div>
-            <div class="card-copy">
-              <span>02 · MULTI-USER PLATFORM / IA / MAP UX</span>
-              <h3>대규모 통합 관리<br />플랫폼</h3>
-              <p>
-                서로 다른 목적의 사용자가 하나의 플랫폼에서 필요한 정보를 빠르게
-                찾도록 탐색 구조를 재설계했습니다.
-              </p>
-              <small>2023.01—2023.12 · IA · UX/UI · 퍼블리싱</small>
-              <p class="card-impact">역할별 진입점과 지도 기반 탐색을 하나로 연결</p>
-              <b>프로젝트 자세히 보기 ↗</b>
-            </div></a
-          >
-          <a class="project light reveal" href="project-intranet.html"
-            ><div class="thumb sand">
-              <img width="374" height="773" src="assets/cases/intranet-7.png" alt="모바일 업무 포털" loading="lazy" decoding="async" />
-            </div>
-            <div class="card-copy">
-              <span>03 · MOBILE APP / ADMIN / WORKFLOW UX</span>
-              <h3>전자결재·회의실 예약<br />모바일 업무 포털</h3>
-              <p>
-                PC 중심으로 끊겨 있던 전자결재와 회의실 예약 업무를 모바일에서
-                바로 처리할 수 있는 흐름으로 재설계했습니다.
-              </p>
-              <small>2023.01—2023.06 · 모바일 UX/UI 설계</small>
-              <p class="card-impact">결재·예약을 모바일에서 완료하는 흐름</p>
-              <b>프로젝트 자세히 보기 ↗</b>
-            </div></a
-          >
-        </div>
-        <div class="subsection-head">
-          <p class="label">04—10 · 추가 프로젝트</p>
-          <p>프로토타이핑 · 현장 UX · 디자인 시스템 · 웹</p>
-        </div>
-        <div class="project-grid compact">
-          <a class="mini-project reveal" href="project-kanvan.html"
-            ><span>04 · B2B SAAS / WORKFLOW UX / INTERACTION</span>
-            <h3>칸반보드 업무관리<br />서비스</h3>
-            <p>2026.03— · 개인 프로토타입 · UX/UI·구현</p>
-            <img width="1920" height="1080"
-              src="assets/pp/kanvan/kanvan01.jpg"
-              alt="칸반보드 업무관리 서비스" loading="lazy" decoding="async"
-          /></a>
-          <a class="mini-project field reveal" href="project-tbm.html"
-            ><span>05 · MOBILE UX / WORKFLOW / FIELD PRODUCT</span>
-            <h3>현장 기록의<br />모바일 전환 UX</h3>
-            <p>2025.11—2026.04 · 현장 조사·모바일 UX/UI</p>
-            <img width="1440" height="810" src="assets/cases/tbm-1.jpg" alt="현장 기록 모바일 UX" loading="lazy" decoding="async"
-          /></a>
-          <a class="mini-project web-renewal" href="project-responsive.html"
-            ><span>06 · RESPONSIVE WEB / UI RENEWAL</span>
-            <h3>디바이스 경험을 연결한<br />반응형 웹 전면 리뉴얼</h3>
-            <p>2023.03—2023.11 · 웹 UX/UI·반응형 설계</p>
-            <img width="1920" height="1080"
-              src="assets/pp/tescom/38.jpg"
-              alt="반응형 웹 전면 리뉴얼" loading="lazy" decoding="async"
-          /></a>
-          <a class="mini-project psc" href="project-psc.html"
-            ><span>07 · B2B PLATFORM / FIELD DATA</span>
-            <h3>현장 데이터를 연결한<br />PSC 거더 관리 플랫폼</h3>
-            <p>2023.08—2024.08 · 웹·앱 UX/UI·퍼블리싱</p>
-            <img width="1920" height="1080" src="assets/cases/psc-cover.jpg" alt="PSC 거더 관리 플랫폼" loading="lazy" decoding="async"
-          /></a>
-          <a class="mini-project reveal" href="project-designsystem.html"
-            ><span>08 · DESIGN SYSTEM / WEB PLATFORM</span>
-            <h3>일관성과 작업 속도를 높인<br />디자인 시스템</h3>
-            <p>2024.05— · 컴포넌트·UI 가이드 설계</p>
-            <img width="1920" height="1080"
-              src="assets/pp/designsystem/designsystem01.jpg"
-              alt="한맥 디자인 시스템" loading="lazy" decoding="async"
-          /></a>
-          <a
-            class="mini-project web-renewal reveal"
-            href="project-skyautonet.html"
-            ><span>09 · WEB UX / BRAND UX / RESPONSIVE</span>
-            <h3>자율주행 기술을 이해시키는<br />반응형 웹 리디자인</h3>
-            <p>2023.03—2023.11 · IA·웹 UI·퍼블리싱 참여</p>
-            <img width="1920" height="1080"
-              src="assets/pp/skyautonet/skyautonet06.jpg"
-              alt="스카이오토넷 웹 리디자인" loading="lazy" decoding="async"
-          /></a>
-          <a class="mini-project" href="project-pet.html">
-            <span>10 · PERSONAL PROJECT / HABIT UX</span>
-            <h3>기록을 습관으로 만드는<br />반려동물 건강관리 UX</h3>
-            <p>2026.02— · 개인 프로젝트 · UX·브랜딩·UI</p>
-            <img width="374" height="773" src="assets/cases/pet-9.png" alt="반려동물 건강 기록 서비스 설계 화면" loading="lazy" decoding="async" />
-          </a>
-        </div>
+      <section class="selected-work" id="work" aria-labelledby="work-title">
+        <div class="work-heading"><div><p class="label">SELECTED WORK / 01—03</p><h2 id="work-title">서로 다른 문제, 세 가지 설계.</h2></div><p>판단을 돕는 데이터 · 목적에 맞는 탐색 · 끝낼 수 있는 업무</p></div>
+        <article class="work-case featured-case">
+          <a class="work-visual dashboard-visual" href="project-dashboard.html" aria-label="ERP 분석 대시보드 사례 보기"><div class="visual-label"><span>01 / ERP DASHBOARD</span><span>DATA UX</span></div><img src="assets/cases/dashboard-7.png" width="700" height="420" fetchpriority="high" alt="프로젝트별 원가·공수·위험 상태를 비교하는 ERP 대시보드 UI"><span class="visual-link" aria-hidden="true">사례 보기 ↗</span></a>
+          <div class="work-story"><p class="work-meta">2025.12—2026.03 · 업무 프로젝트</p><h3><a href="project-dashboard.html">숫자를 모으는 화면에서,<br>위험을 발견하는 화면으로.</a></h3><p class="work-description">프로젝트 비용·인원 ERP 분석 대시보드</p><dl class="work-decisions"><div><dt>문제</dt><dd>흩어진 원가와 공수를 수작업으로 취합해야 하는 업무</dd></div><div><dt>결정</dt><dd>역할별 지표와 위험 상태를 먼저 보여주는 정보 위계</dd></div><div><dt>담당</dt><dd>역할별 IA · 대시보드 UI · 퍼블리싱</dd></div></dl><a class="case-text-link" href="project-dashboard.html">설계 결정과 실제 화면 보기 <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="work-case">
+          <a class="work-visual platform-visual" href="project-platform.html" aria-label="통합 관리 플랫폼 사례 보기"><div class="visual-label"><span>02 / INTEGRATED PLATFORM</span><span>INFORMATION ARCHITECTURE</span></div><img src="assets/cases/platform-9.png" width="1289" height="659" loading="lazy" decoding="async" alt="지도와 현장의 공정·영상 정보를 연결한 통합 관리 플랫폼 UI"><span class="visual-link" aria-hidden="true">사례 보기 ↗</span></a>
+          <div class="work-story"><p class="work-meta">2023.01—2023.12 · 업무 프로젝트</p><h3><a href="project-platform.html">같은 플랫폼에서도,<br>시작점은 다르게.</a></h3><p class="work-description">현장·본사·외부 사용자를 위한 통합 관리 플랫폼</p><dl class="work-decisions"><div><dt>문제</dt><dd>역할이 다른 사용자에게 동일하게 제공되던 기능 중심 메뉴</dd></div><div><dt>결정</dt><dd>역할별 진입점과 현장 위치 중심의 지도 탐색</dd></div><div><dt>담당</dt><dd>사용자 역할 정의 · IA · UX/UI · 퍼블리싱</dd></div></dl><a class="case-text-link" href="project-platform.html">정보 구조의 변화 보기 <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="work-case">
+          <a class="work-visual mobile-visual" href="project-intranet.html" aria-label="모바일 업무 포털 사례 보기"><div class="visual-label"><span>03 / MOBILE INTRANET</span><span>WORKFLOW UX</span></div><img src="assets/cases/intranet-7.png" width="374" height="773" loading="lazy" decoding="async" alt="결재·공지·회의실 예약의 진입점을 배치한 모바일 업무 포털 홈"><span class="visual-link" aria-hidden="true">사례 보기 ↗</span></a>
+          <div class="work-story"><p class="work-meta">2023.01—2023.06 · 업무 프로젝트</p><h3><a href="project-intranet.html">작게 보는 PC에서,<br>업무를 끝내는 모바일로.</a></h3><p class="work-description">전자결재·회의실 예약 모바일 업무 포털</p><dl class="work-decisions"><div><dt>문제</dt><dd>이동 중에 확인해도 처리는 PC로 돌아가야 했던 흐름</dd></div><div><dt>결정</dt><dd>과업 중심 홈과 위치·날짜·시간을 연결한 예약 화면</dd></div><div><dt>담당</dt><dd>모바일 업무 흐름 · 정보 우선순위 · UI 설계</dd></div></dl><a class="case-text-link" href="project-intranet.html">예약 흐름의 전후 비교 보기 <span aria-hidden="true">↗</span></a></div>
+        </article>
       </section>
-
-      <section class="manifesto">
-        <p class="label">02 — 디자인 관점</p>
-        <h2>업무를 이해하고, 정보를 구조화하고,<br /><mark>작동하는 화면으로 연결합니다.</mark></h2>
-        <div class="metrics">
-          <div><small>01 / CONTEXT</small><strong>업무 맥락</strong><span>누가, 언제, 무엇을 판단하는가</span></div>
-          <div><small>02 / STRUCTURE</small><strong>역할별 IA</strong><span>사용자마다 다른 정보와 진입점</span></div>
-          <div><small>03 / INTERFACE</small><strong>상태와 행동</strong><span>지금 확인할 정보와 다음 행동</span></div>
-          <div><small>04 / BUILD</small><strong>프로토타입</strong><span>인터랙션·상태·예외 흐름 확인</span></div>
-        </div>
+      <section class="capabilities" aria-labelledby="capability-title"><div class="work-heading"><div><p class="label">HOW I CONTRIBUTE</p><h2 id="capability-title">화면 너머의 업무까지 설계합니다.</h2></div></div><div class="capability-grid">
+        <a href="project-dashboard.html#decision"><span>01 / STRUCTURE</span><h3>복잡한 정보에<br>판단의 순서를 만듭니다.</h3><p>원가·공수·진행률을 역할별로 정리하고, 먼저 확인해야 하는 상태를 구분합니다.</p><b>ERP의 설계 결정 ↗</b></a>
+        <a href="project-intranet.html#iteration"><span>02 / WORKFLOW</span><h3>사용자의 과업을<br>완료까지 연결합니다.</h3><p>PC 기능을 축소하는 대신, 모바일에서 결재와 예약을 끝내는 동선을 설계합니다.</p><b>모바일 예약의 구조 변화 ↗</b></a>
+        <a href="project-designsystem.html#solution"><span>03 / DELIVERY</span><h3>일관된 UI를<br>구현으로 이어갑니다.</h3><p>컴포넌트와 UI 가이드를 정리하고, HTML·SCSS 퍼블리싱으로 화면을 구체화합니다.</p><b>디자인 시스템과 웹 가이드 ↗</b></a>
+      </div></section>
+      <section class="more-work" aria-labelledby="more-title">
+        <div class="work-heading"><div><p class="label">MORE WORK / 04—10</p><h2 id="more-title">더 살펴볼 프로젝트 <span>7개</span></h2></div><p>현장 UX부터 디자인 시스템까지,<br>다른 문제로 넓혀온 경험입니다.</p></div>
+        <ul class="more-project-list">
+          <li><a class="more-project" href="project-kanvan.html">
+            <div class="more-project-thumb"><img src="assets/pp/kanvan/kanvan01.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
+            <div class="more-project-copy"><p class="more-project-category">04 · 업무 흐름 · 인터랙션</p><h3>칸반보드 업무관리 서비스</h3><p class="more-project-scope">개인 프로토타입 · UX/UI·구현</p></div>
+            <span class="more-project-arrow" aria-hidden="true">↗</span>
+          </a></li>
+          <li><a class="more-project" href="project-tbm.html">
+            <div class="more-project-thumb"><img src="assets/cases/tbm-1.jpg" width="1440" height="810" alt="" loading="lazy" decoding="async"></div>
+            <div class="more-project-copy"><p class="more-project-category">05 · 현장 UX · 모바일</p><h3>현장 기록의 모바일 전환</h3><p class="more-project-scope">업무 프로젝트 · 현장 조사·UX/UI</p></div>
+            <span class="more-project-arrow" aria-hidden="true">↗</span>
+          </a></li>
+          <li><a class="more-project" href="project-responsive.html">
+            <div class="more-project-thumb"><img src="assets/pp/tescom/38.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
+            <div class="more-project-copy"><p class="more-project-category">06 · 반응형 웹 · UI</p><h3>반응형 웹 전면 리뉴얼</h3><p class="more-project-scope">업무 프로젝트 · 웹 UX/UI·반응형 설계</p></div>
+            <span class="more-project-arrow" aria-hidden="true">↗</span>
+          </a></li>
+          <li><a class="more-project" href="project-psc.html">
+            <div class="more-project-thumb"><img src="assets/cases/psc-cover.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
+            <div class="more-project-copy"><p class="more-project-category">07 · B2B 플랫폼 · 현장 데이터</p><h3>PSC 거더 관리 플랫폼</h3><p class="more-project-scope">업무 프로젝트 · 웹·앱 UX/UI·퍼블리싱</p></div>
+            <span class="more-project-arrow" aria-hidden="true">↗</span>
+          </a></li>
+          <li><a class="more-project" href="project-designsystem.html">
+            <div class="more-project-thumb"><img src="assets/pp/designsystem/designsystem01.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
+            <div class="more-project-copy"><p class="more-project-category">08 · 디자인 시스템 · 웹 가이드</p><h3>한맥 디자인 시스템</h3><p class="more-project-scope">업무 프로젝트 · 컴포넌트·UI 가이드</p></div>
+            <span class="more-project-arrow" aria-hidden="true">↗</span>
+          </a></li>
+          <li><a class="more-project" href="project-skyautonet.html">
+            <div class="more-project-thumb"><img src="assets/pp/skyautonet/skyautonet06.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
+            <div class="more-project-copy"><p class="more-project-category">09 · 브랜드 UX · 반응형 웹</p><h3>스카이오토넷 웹 리디자인</h3><p class="more-project-scope">업무 프로젝트 · IA·웹 UI·퍼블리싱 참여</p></div>
+            <span class="more-project-arrow" aria-hidden="true">↗</span>
+          </a></li>
+          <li><a class="more-project" href="project-pet.html">
+            <div class="more-project-thumb"><img src="assets/cases/pet-9.png" width="374" height="773" alt="" loading="lazy" decoding="async"></div>
+            <div class="more-project-copy"><p class="more-project-category">10 · 건강 기록 · 습관 형성</p><h3>반려동물 건강관리 UX</h3><p class="more-project-scope">개인 프로젝트 · UX·브랜딩·UI</p></div>
+            <span class="more-project-arrow" aria-hidden="true">↗</span>
+          </a></li>
+        </ul>
       </section>
-
-      <section class="about" id="about">
-        <div>
-          <p class="label">03 — 소개와 실행</p>
-          <h2 class="reveal">
-            문제를 정의하고,<br />구현까지 이어지는 답을 만듭니다.
-          </h2>
-        </div>
-        <div class="about-body reveal">
-          <p>
-            B2B 업무·데이터 UX에 강점을 둔 프로덕트 디자이너입니다.
-            ERP, 현장 플랫폼, 모바일 업무 도구에서 사용자가 필요한 정보를 찾고
-            판단한 뒤 실행하는 흐름을 설계해왔습니다.
-          </p>
-          <p class="about-positioning">
-            웹디자인과 퍼블리싱으로 시작해 제품의 정보 구조와 업무 흐름까지
-            설계 범위를 넓혔습니다. UX/UI 설계를 기반으로, 개발자와 협업하고
-            핵심 인터랙션은 프로토타입으로 구체화합니다.
-          </p>
-          <div class="skills">
-            <span>UX Strategy</span><span>IA / User Flow</span
-            ><span>Data UX</span><span>UI Design</span><span>Design System</span
-            ><span>HTML / CSS / SCSS</span>
-          </div>
-          <div class="proof">
-            <div>
-              <strong>Web Design</strong><b>2020.09—2022.12</b
-              ><span>디지털 디자인 경력의 시작</span>
-            </div>
-            <div>
-              <strong>Product Design</strong><b>2022.12—현재</b
-              ><span>B2B 제품의 IA·UX/UI 설계</span>
-            </div>
-            <div>
-              <strong>Design → Build</strong><b>HTML · SCSS · JavaScript</b
-              ><span>퍼블리싱·인터랙션 프로토타입</span>
-            </div>
-          </div>
-          <a href="assets/portfolio.pdf" target="_blank" rel="noreferrer"
-            >이력과 전체 포트폴리오 보기 ↗</a
-          >
-        </div>
-      </section>
-      <section class="contact" id="contact">
-        <p class="label">04 — 연락처</p>
-        <h2>
-          함께 풀어볼 문제가 있다면,<br /><a
-            href="mailto:hanul.designer@gmail.com"
-            >이야기를 들려주세요. ↗</a
-          >
-        </h2>
-        <div>
-          <span>대한민국 경기도 구리</span
-          ><a href="mailto:hanul.designer@gmail.com"
-            >Email ↗ · hanul.designer@gmail.com</a
-          >
-        </div>
-      </section>
+      <section class="designer-about" id="about" aria-labelledby="about-title"><div><p class="label">ABOUT / 이한울</p><h2 id="about-title">업무를 이해하는 디자이너.<br>구현을 이해하는 동료.</h2></div><div class="designer-bio"><p>웹디자인과 퍼블리싱으로 시작해, B2B 제품의 정보 구조와 업무 흐름으로 설계 범위를 넓혔습니다.</p><p>경영진이 보는 숫자, 현장 관리자가 찾는 정보, 이동 중인 직원이 끝내야 하는 업무. 같은 제품에서도 역할과 상황에 따라 달라지는 사용자의 목적을 화면에 반영합니다.</p><dl class="career-list"><div><dt>2022.12—현재</dt><dd><strong>Product Design</strong><span>ERP · 통합 플랫폼 · 모바일 업무 UX/UI</span></dd></div><div><dt>2020.09—2022.12</dt><dd><strong>Web Design</strong><span>웹 UI · 반응형 디자인 · 퍼블리싱</span></dd></div></dl><p class="tools-line">IA / User Flow · UI Design · Design System · HTML / CSS / SCSS</p><a class="case-text-link" href="assets/portfolio.pdf" target="_blank" rel="noopener noreferrer">전체 포트폴리오 PDF <span aria-hidden="true">↗</span></a></div></section>
+      <section class="contact" id="contact"><p class="label">LET’S WORK TOGETHER</p><h2>복잡한 업무를 함께 풀어갈<br>팀을 만나고 싶습니다.</h2><p class="contact-role">UX/UI · Product Designer / B2B · 업무 플랫폼</p><div><a href="mailto:hanul.designer@gmail.com">hanul.designer@gmail.com ↗</a><span>경기도 구리 · 대한민국</span></div></section>
     </main>
     <footer>
       <a class="logo" href="#top">HANUL<span>●</span></a>
       <p>© 2026 이한울</p>
       <a href="#top">맨 위로 ↑</a>
     </footer>
-    <script src="script.js?v=20260930-compat"></script>
+    <script src="script.js?v=20261001-header-overlay"></script>
   </body>
 </html>

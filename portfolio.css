@@ -13,8 +13,12 @@
   --ink: #101114;
   --muted: #6b707a;
   --line: #dcdfe4;
-  --blue: #075cff;
+  --blue: #4267a9;
   --paper: #f4f5f7;
+  --radius-small: 8px;
+  --radius-control: 10px;
+  --radius-card: 16px;
+  --radius-panel: 24px;
   --type-display: clamp(42px, 4.2vw, 64px);
   --type-h1: clamp(38px, 3.7vw, 56px);
   --type-section: clamp(32px, 3vw, 44px);
@@ -110,9 +114,12 @@ img {
 .nav-cta {
   flex: 0 0 auto;
   padding: 11px 17px;
-  background: rgba(255, 255, 255, 0.7019607843);
-  border-radius: 30px;
+  color: var(--blue);
+  background: #fff;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
   white-space: nowrap;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
 }
 
 /* 모바일 메뉴 버튼은 넓은 화면에서 숨깁니다. */
@@ -234,7 +241,7 @@ img {
   display: grid;
   gap: 3px;
   padding-left: 14px;
-  border-left: 2px solid rgba(7, 92, 255, 0.45);
+  border-left: 2px solid rgba(66, 103, 169, 0.45);
 }
 .hero .hero-copy .hero-proof strong {
   font-size: 15px;
@@ -883,7 +890,7 @@ footer {
 .card-impact {
   min-height: 0 !important;
   margin: 10px 0 0;
-  color: #3182f6 !important;
+  color: var(--blue) !important;
   font-size: 13px !important;
   font-weight: 700 !important;
 }
@@ -1141,7 +1148,7 @@ body {
 }
 /* 리서치 반영: 직무·경력·실제 제품 화면을 첫 화면에서 함께 전달 */
 :focus-visible {
-  outline: 3px solid #075cff;
+  outline: 3px solid #4267a9;
   outline-offset: 5px;
 }
 
@@ -1442,6 +1449,664 @@ body {
   }
   .project-copy .primary-impact strong {
     font-size: var(--type-body);
+  }
+}
+/* 2026-10 채용 검토 흐름: 포지셔닝 → 대표 사례 → 근거 있는 강점 → 경력 */
+.portfolio-home {
+  --home-gutter: clamp(24px, 6vw, 96px);
+  background: #fafbfe;
+}
+.portfolio-home .nav {
+  background: #fafbfe;
+  border-bottom-color: #e1e6ef;
+}
+.portfolio-home .intro, .portfolio-home .selected-work, .portfolio-home .capabilities, .portfolio-home .more-work, .portfolio-home .designer-about {
+  padding-inline: var(--home-gutter);
+  max-width: 1680px;
+  margin-inline: auto;
+}
+.portfolio-home .intro {
+  padding-top: calc(var(--header-height) + 48px);
+  padding-bottom: 32px;
+}
+.portfolio-home .intro-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.portfolio-home .intro-topline p {
+  margin: 0;
+}
+.portfolio-home .intro-topline > span {
+  color: #586478;
+}
+.portfolio-home .intro h1 {
+  margin: 28px 0 24px;
+  font-size: clamp(40px, 4.8vw, 68px);
+  line-height: 1.45;
+  letter-spacing: -0.06em;
+  font-weight: 700;
+}
+.portfolio-home .intro h1 em {
+  font-style: normal;
+  color: var(--blue);
+}
+.portfolio-home .intro-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+}
+.portfolio-home .intro-bottom p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.85;
+  color: #485469;
+}
+.portfolio-home .intro-link {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 0 0 0 20px;
+  min-height: 54px;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  color: #fff;
+  background: var(--blue);
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.portfolio-home .intro-link span {
+  display: grid;
+  place-items: center;
+  align-self: stretch;
+  width: 52px;
+  min-height: 52px;
+  flex-shrink: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.2705882353);
+  font-size: 22px;
+}
+.portfolio-home .intro-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #dce3ef;
+  color: #586478;
+  font-size: 12px;
+}
+.portfolio-home .selected-work {
+  padding-top: 28px;
+  padding-bottom: 64px;
+}
+.portfolio-home .work-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.portfolio-home .work-heading .label {
+  color: var(--blue);
+  margin: 0 0 14px;
+  letter-spacing: 0.08em;
+}
+.portfolio-home .work-heading h2 {
+  font-size: clamp(25px, 2.6vw, 36px);
+  line-height: 1.4;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+.portfolio-home .work-heading > p {
+  max-width: 300px;
+  color: #586478;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+}
+.portfolio-home .work-case {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+  padding: 44px 0;
+  border-top: 1px solid #dce3ef;
+}
+.portfolio-home .work-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 430px;
+  padding: 24px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.portfolio-home .dashboard-visual {
+  background: #e3e9f3;
+}
+.portfolio-home .platform-visual {
+  background: #e8eef7;
+}
+.portfolio-home .mobile-visual {
+  background: #eee9e1;
+}
+.portfolio-home .visual-label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #485469;
+}
+.portfolio-home .work-visual img {
+  width: 100%;
+  height: auto;
+  margin: 28px 0;
+  box-shadow: 0 14px 30px rgba(23, 45, 65, 0.0784313725);
+  transition: transform 0.25s ease;
+}
+.portfolio-home .mobile-visual img {
+  width: auto;
+  height: 330px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 16px auto;
+  box-shadow: none;
+}
+.portfolio-home .visual-link {
+  align-self: flex-end;
+  font-size: 12px;
+  font-weight: 700;
+}
+.portfolio-home .work-meta {
+  margin: 0 0 18px;
+  color: #586478;
+  font-size: 12px;
+}
+.portfolio-home .work-story h3 {
+  margin: 0;
+  font-size: clamp(26px, 2.7vw, 38px);
+  line-height: 1.4;
+  letter-spacing: -0.055em;
+}
+.portfolio-home .work-description {
+  margin: 16px 0 26px;
+  color: #586478;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.portfolio-home .work-decisions {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 28px;
+}
+.portfolio-home .work-decisions > div {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.portfolio-home .work-decisions dt {
+  color: #586478;
+}
+.portfolio-home .work-decisions dd {
+  margin: 0;
+}
+.portfolio-home .case-text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 48px;
+  padding: 0 0 0 16px;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  color: var(--blue);
+  background: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.portfolio-home .case-text-link > span {
+  display: grid;
+  place-items: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 46px;
+  min-height: 46px;
+  color: #fff;
+  background: var(--blue);
+  font-size: 19px;
+}
+.portfolio-home .intro-link, .portfolio-home .case-text-link {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+.portfolio-home .capability-grid > a {
+  transition: background-color 0.18s ease;
+}
+.portfolio-home .capability-grid > a:focus-visible {
+  background: #eef2f8;
+  outline-offset: -3px;
+}
+.portfolio-home .contact > div a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 14px 20px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--blue);
+  font-weight: 700;
+}
+.portfolio-home .contact a:focus-visible {
+  outline-color: #fff;
+}
+.portfolio-home .capabilities {
+  padding-block: 64px 80px;
+}
+.portfolio-home .capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block: 1px solid #dce3ef;
+}
+.portfolio-home .capability-grid > a {
+  padding: 32px 28px;
+}
+.portfolio-home .capability-grid > a + a {
+  border-left: 1px solid #dce3ef;
+}
+.portfolio-home .capability-grid span {
+  color: #586478;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+.portfolio-home .capability-grid h3 {
+  margin: 24px 0 16px;
+  font-size: 24px;
+  letter-spacing: -0.045em;
+  line-height: 1.5;
+}
+.portfolio-home .capability-grid p {
+  font-size: 15px;
+  color: #586478;
+  line-height: 1.85;
+}
+.portfolio-home .capability-grid b {
+  display: block;
+  margin-top: 24px;
+  color: var(--blue);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.portfolio-home .more-work {
+  padding-block: 0 80px;
+}
+.portfolio-home .mini-project {
+  border-radius: 8px;
+}
+.portfolio-home .designer-about {
+  padding-block: 64px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  border-top: 1px solid #dce3ef;
+}
+.portfolio-home .designer-about h2 {
+  font-size: clamp(28px, 2.7vw, 38px);
+  line-height: 1.5;
+  letter-spacing: -0.05em;
+}
+.portfolio-home .designer-bio > p {
+  margin: 0 0 22px;
+  color: #485469;
+  font-size: 17px;
+  line-height: 1.85;
+}
+.portfolio-home .career-list {
+  margin: 36px 0 24px;
+}
+.portfolio-home .career-list > div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 20px;
+  padding: 22px 0;
+  border-top: 1px solid #dce3ef;
+}
+.portfolio-home .career-list dt {
+  font-size: 12px;
+  color: #586478;
+}
+.portfolio-home .career-list dd {
+  margin: 0;
+}
+.portfolio-home .career-list strong {
+  font-size: 17px;
+}
+.portfolio-home .career-list span {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #586478;
+  line-height: 1.7;
+}
+.portfolio-home .designer-bio .tools-line {
+  font-size: 12px;
+}
+.portfolio-home .contact {
+  padding: 76px var(--home-gutter);
+  background: var(--blue);
+}
+.portfolio-home .contact h2 {
+  font-size: clamp(30px, 3.3vw, 46px);
+  line-height: 1.45;
+}
+.portfolio-home .contact-role {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.portfolio-home .contact > div {
+  margin-top: 36px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-home .work-visual:hover img {
+    transform: translateY(-4px);
+  }
+  .portfolio-home .case-text-link:hover, .portfolio-home .intro-link:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0 #c6d2e6;
+  }
+  .portfolio-home .intro-link:hover {
+    background: #35558d;
+  }
+  .portfolio-home .case-text-link:hover {
+    background: #eef2f8;
+  }
+  .portfolio-home .capability-grid > a:hover {
+    background: #eef2f8;
+  }
+}
+@media (max-width: 1100px) {
+  .portfolio-home .intro-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .portfolio-home .work-case {
+    gap: 32px;
+  }
+  .portfolio-home .work-visual {
+    min-height: 350px;
+  }
+  .portfolio-home .visual-label span:last-child {
+    display: none;
+  }
+  .portfolio-home .work-heading > p {
+    display: none;
+  }
+  .portfolio-home .designer-about {
+    gap: 32px;
+  }
+  .portfolio-home .capability-grid h3 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 800px) {
+  .portfolio-home .intro {
+    padding-top: calc(var(--header-height) + 40px);
+    padding-bottom: 24px;
+  }
+  .portfolio-home .intro-topline {
+    font-size: 10px;
+  }
+  .portfolio-home .intro-topline > span {
+    display: none;
+  }
+  .portfolio-home .intro h1 {
+    font-size: clamp(31px, 7.8vw, 56px);
+    margin: 30px 0 24px;
+  }
+  .portfolio-home .intro-bottom p {
+    font-size: 15px;
+  }
+  .portfolio-home .intro-bottom p br {
+    display: none;
+  }
+  .portfolio-home .intro-facts {
+    margin-top: 28px;
+    gap: 10px 20px;
+    font-size: 11px;
+  }
+  .portfolio-home .selected-work {
+    padding-top: 36px;
+    padding-bottom: 24px;
+  }
+  .portfolio-home .work-heading {
+    margin-bottom: 24px;
+  }
+  .portfolio-home .work-case {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 0 36px;
+  }
+  .portfolio-home .work-visual {
+    min-height: 0;
+    padding: 18px;
+  }
+  .portfolio-home .work-story h3 {
+    font-size: clamp(26px, 6.4vw, 34px);
+  }
+  .portfolio-home .mobile-visual img {
+    height: 280px;
+  }
+  .portfolio-home .work-decisions > div {
+    font-size: 14px;
+    gap: 12px;
+  }
+  .portfolio-home .capabilities {
+    padding-block: 36px 48px;
+  }
+  .portfolio-home .capability-grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-home .capability-grid > a {
+    padding: 28px 24px;
+  }
+  .portfolio-home .capability-grid > a + a {
+    border-left: 0;
+    border-top: 1px solid #dce3ef;
+  }
+  .portfolio-home .capability-grid h3 {
+    font-size: 23px;
+    margin-top: 16px;
+  }
+  .portfolio-home .capability-grid h3 br {
+    display: none;
+  }
+  .portfolio-home .more-work {
+    padding-bottom: 48px;
+  }
+  .portfolio-home .designer-about {
+    grid-template-columns: 1fr;
+    padding-block: 36px 56px;
+    gap: 16px;
+  }
+  .portfolio-home .designer-bio > p {
+    font-size: 16px;
+  }
+  .portfolio-home .career-list > div {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 14px;
+  }
+  .portfolio-home .contact {
+    padding-block: 56px;
+  }
+  .portfolio-home .contact > div a {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* 메인과 상세가 공유하는 헤더 버튼 */
+@media (hover: hover) and (pointer: fine) {
+  .nav-cta:hover {
+    background: #eef2f8;
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0 #c6d2e6;
+  }
+}
+/* 박스 크기에 따른 광학적 둥글기: 작은 조작부 → 카드 → 큰 패널 */
+.nav-cta {
+  border-radius: var(--radius-control);
+}
+
+.skip-link {
+  border-radius: var(--radius-small);
+}
+
+.portfolio-home .intro-link, .portfolio-home .case-text-link, .portfolio-home .contact > div a {
+  border-radius: var(--radius-control);
+}
+.portfolio-home .intro-link > span, .portfolio-home .case-text-link > span {
+  border-radius: 0 calc(var(--radius-control) - 1px) calc(var(--radius-control) - 1px) 0;
+}
+.portfolio-home .work-visual {
+  border-radius: var(--radius-panel);
+}
+.portfolio-home .mini-project {
+  border-radius: var(--radius-panel);
+}
+
+@media (max-width: 800px) {
+  :root {
+    --radius-panel: 20px;
+  }
+}
+/* 추가 사례는 별도 조작 없이 탐색 가능한 작은 목록으로 노출 */
+.portfolio-home #more-title > span {
+  color: var(--blue);
+  white-space: nowrap;
+}
+.portfolio-home .more-project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.portfolio-home .more-project-list > li {
+  min-width: 0;
+}
+.portfolio-home .more-project {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #e0e6ef;
+  border-radius: var(--radius-card);
+  background: #fff;
+  transition: border-color 0.18s ease, background-color 0.18s ease;
+}
+.portfolio-home .more-project-thumb {
+  display: grid;
+  place-items: center;
+  height: 94px;
+  overflow: hidden;
+  padding: 8px;
+  background: #eef2f8;
+  border-radius: var(--radius-control);
+}
+.portfolio-home .more-project-thumb img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+.portfolio-home .more-project-copy {
+  min-width: 0;
+}
+.portfolio-home .more-project-category {
+  margin: 0 0 8px;
+  color: #586478;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.portfolio-home .more-project h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: -0.03em;
+}
+.portfolio-home .more-project-scope {
+  margin: 8px 0 0;
+  color: #586478;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.portfolio-home .more-project-arrow {
+  color: var(--blue);
+  font-size: 22px;
+  justify-self: end;
+}
+.portfolio-home .more-project:focus-visible {
+  background: #eef2f8;
+}
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-home .more-project:hover {
+    border-color: #9bafce;
+    background: #f3f6fb;
+  }
+}
+@media (max-width: 1100px) {
+  .portfolio-home .more-project {
+    grid-template-columns: 80px minmax(0, 1fr) 20px;
+    gap: 14px;
+    padding: 18px;
+  }
+  .portfolio-home .more-project-thumb {
+    height: 80px;
+  }
+  .portfolio-home .more-project h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .portfolio-home .more-project-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .portfolio-home .more-project {
+    padding: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .portfolio-home .more-project {
+    grid-template-columns: 60px minmax(0, 1fr) 16px;
+    gap: 10px;
+    padding: 14px;
+  }
+  .portfolio-home .more-project-thumb {
+    height: 68px;
+    padding: 5px;
+  }
+  .portfolio-home .more-project-arrow {
+    font-size: 18px;
   }
 }
 

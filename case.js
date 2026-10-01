@@ -1348,10 +1348,30 @@ const renderVisuals = (items) =>
   </article>`
     : "";
 
+// Existing project decisions, with explicit follow-up questions rather than invented test results.
+const decisionNotes = {
+  dashboard: [
+    ["판단의 기준", "같은 정보를 모든 역할에 나열하면 각 사용자가 중요한 지표를 다시 골라야 합니다. 역할별 관점과 위험 상태를 정보 위계의 기준으로 삼았습니다."],
+    ["UI에 반영한 방식", "원가·공수·진행률을 비교 화면에 연결하고, 위험 상태에 시각적 강조를 집중했습니다. 전체 현황에서 프로젝트 상세로 확인 범위를 좁힙니다."],
+    ["후속 확인", "강조한 위험 상태가 실제로 먼저 확인해야 할 항목인지, 상세 진입 후 원인을 찾을 수 있는지는 운영 과업과 로그로 확인할 과제입니다."]
+  ],
+  platform: [
+    ["판단의 기준", "현장·본사·외부 사용자는 같은 기능에서도 찾는 정보가 다릅니다. 기능을 모으는 것과 함께 각 역할의 진입 목적을 구분했습니다."],
+    ["UI에 반영한 방식", "현장 위치를 공통 맥락으로 삼아 공정·CCTV·BIM을 연결했습니다. 지도에서 현장을 찾은 뒤 관련 정보를 이어서 확인하도록 구성했습니다."],
+    ["후속 확인", "위치를 아는 사용자와 현장명을 검색하는 사용자의 탐색 방식은 다를 수 있습니다. 역할별 과업 성공과 지도·목록 진입 비중을 확인할 필요가 있습니다."]
+  ],
+  intranet: [
+    ["판단의 기준", "작은 화면에 PC 기능을 모두 담기보다, 이동 중 자주 처리하는 결재와 예약을 우선했습니다. 모바일에서도 업무를 끝낼 수 있는지가 기준입니다."],
+    ["UI에 반영한 방식", "홈에 주요 과업의 진입점을 배치하고, 예약의 위치·날짜·시간 선택을 한 흐름으로 연결했습니다. 가능한 시간을 확인한 자리에서 예약으로 이어집니다."],
+    ["후속 확인", "한 화면에 정보를 모으면 선택 영역이 복잡해질 수 있습니다. 날짜·시간 오선택과 예약 완료 여부를 실제 과업으로 확인할 필요가 있습니다."]
+  ]
+};
+const renderDecisionNotes = (key) => decisionNotes[key] ? `<aside class="decision-notes" aria-label="설계 판단과 후속 확인">${decisionNotes[key].map(([title, text]) => `<div><h4>${title}</h4><p>${text}</p></div>`).join("")}</aside>` : "";
+
 const renderStudy = (study) => `
   <article class="story-section evidence" id="evidence">
     <header><p>02 문제 발견</p><h3>${study.insight}</h3></header>
-    <blockquote class="user-voice"><span>${icon("voice")}</span><div><small>${study.voice[0]}</small><p>${study.voice[1]}</p></div></blockquote>
+    <div class="user-voice"><span>${icon("voice")}</span><div><small>프로젝트에서 정의한 문제</small><p>${study.pains[0][1]}</p></div></div>
     <div class="evidence-grid">${study.pains.map((x, i) => `<div><small>0${i + 1}</small><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join("")}</div>
   </article>
   ${renderReframe(study.reframe)}
@@ -1359,6 +1379,7 @@ const renderStudy = (study) => `
     <header><p>${study.reframe ? "04" : "03"} 설계 결정</p><h3>${study.strategyHeadline}</h3></header>
     <div class="strategy-list">${study.strategies.map((x) => `<div><b>${x[0]}</b><h4>${x[1]}</h4><small>선택 이유</small><p>${x[2]}</p></div>`).join("")}</div>
   </article>
+  ${renderDecisionNotes(slug)}
   ${renderIteration(study.iteration, study.reframe ? "05" : "04")}
   <article class="story-section solution" id="solution">
     <div class="solution-copy"><p>${study.reframe ? (study.iteration ? "06" : "05") : study.iteration ? "05" : "04"} 최종 경험</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map((x) => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}</ol>` : ""}</div>
@@ -1394,14 +1415,15 @@ if (p) {
   document.querySelector(".case-eyebrow").textContent =
     `PROJECT ${p.no} · ${p.type}`;
   document.querySelector(".case-title").textContent = p.title;
-  document.querySelector(".case-domain").textContent = p.domain;
   document.querySelector(".case-lead").textContent = p.lead;
   document.querySelector(".period").textContent = p.period;
   document.querySelector(".role").textContent = p.role;
   document.querySelector(".contribution").textContent = p.contribution;
   document.querySelector(".team").textContent = p.team;
   document.querySelector(".stage").textContent = p.stage;
-  document.querySelector(".case-result").textContent = p.summary;
+  const resultText = document.createElement("span");
+  resultText.textContent = `"${p.summary}"`;
+  document.querySelector(".case-result").replaceChildren(resultText);
   document.querySelector(".case-cover").innerHTML = renderMockup(
     caseStudies[slug].ui,
     caseStudies[slug].finalVisual,
@@ -1425,8 +1447,24 @@ if (p) {
         `<p class="outcome-basis"><b>결과의 범위</b>${p.outcomeBasis}</p>`,
       );
   document.querySelector(".gallery").innerHTML = renderStudy(caseStudies[slug]);
+  const study = caseStudies[slug];
+  document.querySelector(".case-hero").insertAdjacentHTML("afterend", `
+    <section class="case-brief" id="brief" aria-labelledby="brief-title">
+      <div class="brief-heading">
+        <div class="brief-title-group"><p>CASE AT A GLANCE</p><h2 id="brief-title">이 사례의 핵심</h2></div>
+        <a href="#solution">실제 화면 보기 <span aria-hidden="true">↓</span></a>
+      </div>
+      <dl class="brief-facts">
+        <div><dt><span aria-hidden="true">01</span> 해결할 문제</dt><dd>${study.pains[0][1]}</dd></div>
+        <div class="brief-decision"><dt><span aria-hidden="true">02</span> 핵심 설계 결정</dt><dd>${study.strategyHeadline}</dd></div>
+        <div><dt><span aria-hidden="true">03</span> 직접 담당한 범위</dt><dd>${p.contribution}</dd></div>
+      </dl>
+      <div class="brief-scope"><strong>결과의 범위</strong><p>${p.outcomeBasis}</p></div>
+    </section>`);
+  installImageViewer();
   const progressItems = [
     ["overview", "개요"],
+    ["brief", "핵심"],
     ["context", "배경"],
     ["evidence", "근거"],
     ["reframe", "재정의"],
@@ -1477,4 +1515,45 @@ if (p) {
     projectOrder[(currentProjectIndex + 1) % projectOrder.length];
   document.querySelector(".next a").href = `project-${nextSlug}.html`;
   document.querySelector(".next h3").textContent = projects[nextSlug].title;
+}
+
+
+function installImageViewer() {
+  if (!window.HTMLDialogElement || !HTMLDialogElement.prototype.showModal) return;
+  const dialog = document.createElement("dialog");
+  dialog.className = "image-viewer";
+  dialog.setAttribute("aria-label", "프로젝트 화면 확대");
+  dialog.innerHTML = '<div class="viewer-toolbar"><p id="viewer-caption"></p><button type="button" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="viewer-canvas"></div>';
+  document.body.append(dialog);
+  const image = document.createElement("img");
+  const closeButton = dialog.querySelector("button");
+  let opener;
+  closeButton.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener("close", () => {
+    document.body.classList.remove("viewer-open");
+    opener?.focus({ preventScroll: true });
+  });
+  document.querySelectorAll(".visual-frame, .comparison-image, .ui-stage .final-mockup").forEach(frame => {
+    const source = frame.querySelector("img");
+    if (!source) return;
+    frame.classList.add("zoomable-frame");
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "image-zoom";
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5M7.5 10.5h6M10.5 7.5v6"/></svg><span>화면 확대</span>';
+    button.setAttribute("aria-label", `${source.alt} 확대`);
+    button.addEventListener("click", () => {
+      opener = button;
+      image.src = source.src;
+      image.alt = source.alt;
+      image.style.setProperty("--viewer-image-width", `${Math.min(source.naturalWidth || 900, 1200)}px`);
+      dialog.querySelector(".viewer-canvas").replaceChildren(image);
+      dialog.querySelector("#viewer-caption").textContent = source.alt;
+      dialog.showModal();
+      document.body.classList.add("viewer-open");
+      dialog.querySelector(".viewer-canvas").scrollTo(0, 0);
+    });
+    frame.append(button);
+  });
 }

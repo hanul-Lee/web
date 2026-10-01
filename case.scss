@@ -1,4 +1,4 @@
-@import url("portfolio.css?v=20260930-compat");
+@import url("portfolio.css?v=20261001-rounded");
 
 /* HTML 구조: body > header + main(.case-main) > hero + body */
 .case-main {
@@ -917,7 +917,7 @@
   letter-spacing: 0.1em;
 }
 .impact-flow strong {
-  font-size: clamp(28px, 4vw, 56px);
+  font-size: clamp(28px, 3.2vw, 56px);
   line-height: 1.1;
 }
 .impact-flow .after {
@@ -1032,7 +1032,7 @@
   min-height: 720px;
   color: #191f28;
   background: #fff;
-  border-bottom: 1px solid #f0f1f3;
+  border-bottom: none;
 
   .case-eyebrow {
     margin-bottom: 18px;
@@ -1796,9 +1796,9 @@ body[data-project="tbm"] {
 /* 첫 화면에서 설계 결과와 공개 범위를 확인 */
 .case-result {
   margin: 24px 0 0;
-  padding: 16px 18px;
-  border-left: 3px solid var(--case-text-accent);
-  background: #f2f4f6;
+  padding: 0;
+  border: 0;
+  background: none;
   color: #333d4b;
   font-size: 15px;
   font-weight: 600;
@@ -2014,3 +2014,117 @@ body[data-project="tbm"] {
     line-height: 1.65;
   }
 }
+
+/* 채용 검토용 빠른 요약과 원본 화면 확인 */
+// 제목·핵심 정보·결과 범위가 구분되는 요약 패널
+.case-brief {
+  margin: 0 var(--case-section-inline) 16px;
+  padding: clamp(24px, 3vw, 40px);
+  background: #f3f5f8;
+  border: 0;
+  border-radius: 12px;
+  .brief-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+  .brief-title-group > p { margin: 0 0 10px; color: var(--case-text-accent); font-size: 11px; font-weight: 700; letter-spacing: .08em; line-height: 1.5; }
+  h2 { margin: 0; font-size: 26px; line-height: 1.4; letter-spacing: -.04em; }
+  .brief-heading a { display: inline-flex; align-items: center; justify-content: space-between; flex-shrink: 0; gap: 24px; min-height: 44px; padding: 10px 16px; border: 1px solid #d5dce7; border-radius: 4px; background: #fff; color: #34445d; font-size: 13px; font-weight: 700; }
+  .brief-heading a:hover { color: var(--case-text-accent); background: #f8faff; }
+  .brief-heading a span { font-size: 18px; }
+  .brief-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
+  .brief-facts > div { min-width: 0; padding: 24px; background: #fff; border-radius: 8px; }
+  .brief-facts .brief-decision dt { color: var(--case-text-accent); }
+  dt { display: flex; align-items: baseline; gap: 10px; margin: 0 0 16px; color: #526073; font-size: 13px; font-weight: 700; line-height: 1.6; }
+  dt span { color: var(--case-text-accent); font-size: 11px; }
+  dd { margin: 0; color: #263344; font-size: 15px; line-height: 1.8; }
+  .brief-scope { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 16px; margin: 24px 0 0; padding: 0; border: 0; color: #586478; font-size: 13px; line-height: 1.8; }
+  .brief-scope strong { margin: 0; color: #48566a; font-size: 12px; }
+  .brief-scope p { margin: 0; }
+}
+
+.decision-notes {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;
+  margin: -32px 0 72px; padding: 28px; background: #f5f7f9; border-left: 2px solid var(--case-text-accent);
+  h4 { margin: 0 0 12px; font-size: 14px; }
+  p { margin: 0; font-size: 14px; color: #515d6c; line-height: 1.85; }
+}
+.zoomable-frame { position: relative; }
+.image-zoom { position: absolute; bottom: 8px; right: 8px; z-index: 1; min-height: 30px; padding: 5px 8px; border: 1px solid #c9d1db; border-radius: 4px; color: #24334c; background: #fff; font: inherit; font-size: 11px; font-weight: 700; cursor: pointer; }
+.viewer-open { overflow: hidden; }
+.image-viewer {
+  width: min(1480px, calc(100vw - 32px)); max-width: none; max-height: calc(100vh - 32px); padding: 0; border: 1px solid #d8dfe5; border-radius: 8px; background: #f4f6f8; color: #172322;
+  &::backdrop { background: #101827d9; }
+  .viewer-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 12px 20px; background: #fff; }
+  .viewer-toolbar p { font-size: 13px; margin: 0; line-height: 1.6; }
+  button { flex-shrink: 0; min-height: 44px; padding: 8px 16px; font: inherit; font-size: 14px; cursor: pointer; background: #edf0f4; border: 0; border-radius: 4px; }
+  .viewer-canvas { max-height: calc(100vh - 130px); overflow: auto; padding: 20px; }
+  img { width: auto; max-width: 100%; height: auto; margin: auto; }
+}
+@media (max-width: 800px) {
+  .case-brief { padding: 24px; margin-bottom: 16px; }
+  .case-brief .brief-facts { grid-template-columns: 1fr; gap: 12px; }
+  .decision-notes { grid-template-columns: 1fr; gap: 24px; }
+  .case-brief .brief-heading { align-items: flex-start; flex-direction: column; gap: 20px; margin-bottom: 24px; }
+  .case-brief .brief-facts > div { padding: 20px; }
+  .case-brief dt { margin-bottom: 12px; }
+  .case-brief .brief-scope { grid-template-columns: 1fr; gap: 6px; margin-top: 20px; }
+  .case-brief .brief-heading a { margin-left: 0; }
+  .decision-notes { margin-top: 0; padding: 24px; }
+  .image-viewer .viewer-canvas { padding: 12px; }
+  .image-viewer img { max-width: none; width: max(100%, var(--viewer-image-width, 900px)); }
+}
+
+/* 상세 읽기 리듬: 구분선 대신 제목과 여백으로 섹션 구분 */
+.case-main {
+  .case-body { padding-top: 48px; padding-bottom: 64px; }
+  .case-body .case-summary { margin-bottom: 48px; }
+  .case-body .outcomes { margin-bottom: 0; }
+  .case-body .outcomes .outcome + .outcome { border: 0; }
+  .case-body .gallery { gap: 0; }
+  .story-section { border: 0; padding-block: 48px; }
+  .story-section header { margin-bottom: 32px; }
+  .story-section.solution { margin-block: 24px 32px; padding-block: 40px; }
+  .story-section.impact { margin-bottom: 0; }
+  .outcome-basis { margin-bottom: 32px; }
+  .user-voice { margin-bottom: 32px; }
+  .case-brief { margin-bottom: 16px; border-top: 0; border-radius: 12px;}
+
+  .decision-notes { margin: 0 0 32px; border-left: 0; }
+  .context-facts, .context-facts > div,
+  .evidence-grid > div, .strategy-list,
+  .strategy-list > div + div, .reflection-grid > div { border: 0; }
+  .case-body .next { border-top: 1px solid #ddd; margin-top: 48px; padding-top: 24px; }
+}
+.image-zoom { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 30px; }
+.image-zoom svg { flex: 0 0 14px; width: 14px; height: 14px; }
+@media (max-width: 800px) {
+  .case-main {
+    .case-body { padding-top: 32px; padding-bottom: 40px; }
+    .case-body .case-summary { margin-bottom: 32px; }
+    .story-section { padding-block: 32px; }
+    .story-section header { margin-bottom: 24px; }
+    .story-section.solution { margin-block: 16px 24px; padding-block: 28px; }
+    .outcome-basis { margin-bottom: 24px; }
+    .decision-notes { margin-bottom: 24px; }
+    .case-body .next { margin-top: 32px; }
+  }
+}
+
+/* 줄바꿈된 각 문장 아래에도 이어지는 프로젝트별 하이라이트 */
+.case-result > span {
+  background-image: linear-gradient(transparent 62%, color-mix(in srgb, var(--case-accent) 20%, transparent) 62%, color-mix(in srgb, var(--case-accent) 20%, transparent) 94%, transparent 94%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* 메인과 같은 둥글기 기준. 작은 버튼과 중첩 카드에 크기별 보정 적용 */
+.case-main {
+  .case-hero .case-cover, .case-brief, .story-section.solution { border-radius: var(--radius-panel); }
+  .brief-facts > div, .decision-notes, .user-voice,
+  .reframe-flow > div, .iteration-compare > div, .iteration-compare blockquote,
+  .impact-flow > div, .project-visuals .visual-frame, .ui-stage { border-radius: var(--radius-card); }
+  .brief-heading a { border-radius: var(--radius-control); }
+  .comparison-image, .wireframe, .mock-window.final-mockup.landscape img { border-radius: var(--radius-control); }
+}
+.case-progress { border-radius: var(--radius-card); }
+.image-zoom { border-radius: var(--radius-small); }
+.image-viewer { border-radius: var(--radius-panel); overflow: hidden; }
+.image-viewer button { border-radius: var(--radius-control); }
