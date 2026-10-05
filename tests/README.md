@@ -32,3 +32,7 @@ NODE_PATH=/tmp/portfolio-qa/node_modules node tests/browser-audit.cjs
 3개 브라우저에서 추가 프로젝트의 즉시 노출·키보드 이동, 상세 이동, 핵심 요약에서 실제 화면으로 이동, 이미지 확대/닫기, Escape와 포커스 복귀, JavaScript 비활성화 시 프로젝트 노출를 검사합니다. `browser-audit.cjs`는 추가 프로젝트 목록을 포함한 전체 레이아웃도 검사합니다.
 
 특정 페이지만 수정했다면 `AUDIT_PAGES=index.html`처럼 파일명을 지정해 관련 페이지를 재검사할 수 있습니다. 여러 파일은 쉼표로 구분합니다.
+
+## 큰 영역 간격 실측
+
+`node tests/section-spacing.cjs`는 로컬 Chrome의 개발자 도구 프로토콜로 메인과 10개 상세 페이지를 320–2560px의 10개 폭에서 검사합니다. 가장 바깥 영역·대표 프로젝트·상세 스토리 영역 사이의 `getBoundingClientRect()` 거리를 측정하고, 모바일(800px 이하) 60–74px, 데스크톱 96–120px 범위와 인접 영역의 외부 마진 0을 확인합니다. 폰트와 이미지를 로드한 뒤 측정하며, 가로 넘침과 누락된 이미지도 검사합니다. `CHROME_PATH`로 실행 파일, `AUDIT_REPORT`로 결과 경로를 지정할 수 있습니다.

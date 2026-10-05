@@ -8,7 +8,7 @@
 - `project-*.html`: 프로젝트별 공통 케이스 스터디 템플릿
 - `case.js`: 프로젝트 정보, 케이스 스터디 내용, 다음 프로젝트 순서 렌더링
 - `case.css`: 케이스 스터디 전용 레이아웃과 컴포넌트 스타일
-- `assets/portfolio.pdf`: 기존 다운로드 PDF(새 원고 반영 후 교체 예정)
+- `assets/portfolio.pdf`: 34쪽 다운로드 PDF · 05–10 각각 독립 페이지
 
 ## 프로젝트 순서
 
@@ -75,6 +75,10 @@ npx --yes sass portfolio.scss portfolio.css
 
 메인을 대표 사례 3개 → 근거와 연결한 강점 → 항상 보이는 추가 사례 목록 → 경력·연락처로 재구성했습니다. 상세 10개에는 핵심 요약과 화면 확대 기능, 대표 3개에는 설계 판단과 후속 확인을 추가했습니다. 평가 근거와 남은 증빙 과제는 [채용 관점 검토](hiring-review.md)에 정리했습니다.
 
-## 2026-10-03 웹 기준 PDF 개편·내용 대조
+## 2026-10-05 웹·PDF 프로젝트 분리
 
-현재 PDF 36쪽과 웹의 프로젝트별 자료를 대조했습니다. PDF 편집에는 [30쪽 제출 원고](docs/portfolio-pdf-revision.md)를, 원본 페이지별 변경과 근거에는 [내용 대조 기록](docs/portfolio-content-audit.md)을 사용합니다. 이번 대조가 과거 검토 문서의 역할·성과 표현보다 우선합니다. 원본 PDF는 보존했으므로 원고를 디자인 파일에 반영해 다시 출력한 뒤 `assets/portfolio.pdf`를 교체해야 합니다.
+웹의 05–10은 각각 별도 카드·상세 페이지이며, PDF에서도 각 프로젝트를 28–33쪽의 독립 페이지로 분리했습니다. [34쪽 제출 원고](docs/portfolio-pdf-revision.md)와 다운로드 파일 `assets/portfolio.pdf`를 함께 갱신했습니다. 이전 다운로드 파일은 `assets/portfolio-before-project-separation.pdf`에 보존했습니다. 이전 내용 대조의 근거는 [내용 대조 기록](docs/portfolio-content-audit.md)을 참고합니다.
+
+PDF 출력 원본은 `docs/portfolio-print.html`이며, `python3 tools/build-portfolio-pdf.py`로 로컬 Chrome에서 다시 출력할 수 있습니다. 05–10의 제목·기간·문제·담당 범위·화면은 해당 웹 프로젝트 자료만 사용합니다.
+
+큰 영역 간격은 `--section-gap`과 부모 컨테이너의 `gap`으로 한 번만 적용합니다. 데스크톱은 96–120px, 모바일(800px 이하)은 60–74px이며, 영역 자체의 위아래 마진·패딩을 중복하지 않습니다. 작은 카드나 문장마다 큰 영역 간격을 적용하지 않습니다. 최종 개발자 도구 실측 결과는 `docs/section-spacing-validation.json`에 기록했습니다.

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("portfolio.css?v=20261001-rounded");
+@import url("portfolio.css?v=20261005-section-gap");
 /* HTML 구조: body > header + main(.case-main) > hero + body */
 .case-main {
   --case-section-inline: clamp(24px, 8vw, 140px);
@@ -1553,8 +1553,10 @@
 .project-visuals .visual-frame img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .project-visuals figure:hover img {
@@ -1598,7 +1600,8 @@
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mock-window.final-mockup.portrait {
   width: min(100%, 436px);
@@ -1639,8 +1642,10 @@
   min-height: 0;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .outcomes {
@@ -2393,4 +2398,110 @@ body[data-project=tbm] .strategy-list {
   border-radius: var(--radius-control);
 }
 
-/*# sourceMappingURL=case.css.map */
+/* 중첩된 컨테이너에는 외부 여백을 두지 않고 부모 gap으로 한 번만 띄운다. */
+.case-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-top: calc(var(--header-height) + 64px);
+  padding-bottom: var(--section-gap);
+}
+
+.case-main > .case-hero {
+  min-height: 0;
+  margin-block: 0;
+  padding-block: 0;
+}
+
+.case-main > .case-brief {
+  margin-block: 0;
+}
+
+.case-main > .case-body {
+  display: grid;
+  gap: var(--section-gap);
+  margin-block: 0;
+  padding-block: 0;
+}
+
+.case-main .case-body > .case-context,
+.case-main .case-body > .gallery {
+  margin-block: 0;
+  padding-block: 0;
+}
+
+.case-main .case-body .gallery {
+  gap: var(--section-gap);
+}
+
+.case-main .case-body .gallery > .story-section {
+  margin-block: 0;
+  padding-block: 0;
+}
+
+.case-main .case-context {
+  display: flow-root;
+}
+
+.case-main .case-context .case-summary {
+  margin-bottom: 32px;
+}
+
+.case-main .case-context .outcomes {
+  margin-block: 0;
+}
+
+.case-main .case-context .outcome-basis {
+  margin-block: 18px 0;
+}
+
+.case-main .story-section > :first-child {
+  margin-top: 0;
+}
+
+.case-main .story-section > :last-child {
+  margin-bottom: 0;
+}
+
+.case-main .story-section .decision-notes {
+  margin-block: 32px 0;
+}
+
+@media (max-width: 800px) {
+  .case-main {
+    padding-top: calc(var(--header-height) + 40px);
+  }
+}
+/* 투명한 마지막 행의 패딩·문단 마진이 영역 간격에 더해지지 않게 한다. */
+.case-main .evidence-grid > div > * {
+  margin-bottom: 0;
+}
+
+.case-main .evidence-grid > div:nth-last-child(-n+2) {
+  padding-bottom: 0;
+}
+
+body[data-project=dashboard] .case-main .evidence-grid > div {
+  padding-bottom: 34px;
+}
+
+body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
+  padding-bottom: 0;
+}
+
+.case-main .strategy-list > div {
+  padding-bottom: 0;
+}
+
+.case-main .strategy-list > div > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .case-main .evidence-grid > div:nth-last-child(-n+2) {
+    padding-bottom: 34px;
+  }
+  .case-main .evidence-grid > div:last-child {
+    padding-bottom: 0;
+  }
+}/*# sourceMappingURL=case.css.map */

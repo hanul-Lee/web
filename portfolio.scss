@@ -1601,3 +1601,38 @@ body {
     .more-project-arrow { font-size: 18px; }
   }
 }
+
+/* 영역 간격은 가장 바깥 스택의 gap 한 곳에서만 관리한다. */
+:root { --section-gap: clamp(96px, 8vw, 120px); }
+@media (max-width: 800px) {
+  :root { --section-gap: clamp(60px, 16vw, 74px); }
+}
+.portfolio-home > main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-top: calc(var(--header-height) + 64px);
+  padding-bottom: var(--section-gap);
+}
+.portfolio-home > main > section {
+  width: 100%;
+  margin-block: 0;
+  padding-block: 0;
+}
+.portfolio-home > main > section > :first-child { margin-top: 0; }
+.portfolio-home > main > section > :last-child { margin-bottom: 0; }
+.portfolio-home .featured-projects {
+  display: grid;
+  gap: var(--section-gap);
+}
+.portfolio-home .featured-projects > .work-case {
+  margin-block: 0;
+  padding-block: 0;
+  border-top: 0;
+}
+.portfolio-home .designer-about { border-top: 0; }
+/* 연락 영역의 배경 내부 여백은 영역 사이 gap과 분리한다. */
+.portfolio-home > main > .contact { padding-block: 32px; }
+@media (max-width: 800px) {
+  .portfolio-home > main { padding-top: calc(var(--header-height) + 40px); }
+}

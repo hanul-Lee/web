@@ -395,8 +395,8 @@ const projects = {
     ],
     "outcomeBasis": "핵심 사업 메시지·정보 위계·반응형 화면의 설계 결과입니다. 신뢰도·이탈률·조회수 변화는 측정 성과로 제시하지 않습니다.",
     "next": [
-      "dashboard",
-      "프로젝트 비용·인원 ERP 분석 대시보드"
+      "pet",
+      "기록과 일정을 연결하는 반려동물 건강관리 UX"
     ]
   },
 };
@@ -1392,8 +1392,8 @@ const renderStudy = (study) => `
   <article class="story-section strategy" id="decision">
     <header><p>${study.reframe ? "04" : "03"} 설계 결정</p><h3>${study.strategyHeadline}</h3></header>
     <div class="strategy-list">${study.strategies.map((x) => `<div><b>${x[0]}</b><h4>${x[1]}</h4><small>선택 이유</small><p>${x[2]}</p></div>`).join("")}</div>
+    ${renderDecisionNotes(slug)}
   </article>
-  ${renderDecisionNotes(slug)}
   ${renderIteration(study.iteration, study.reframe ? "05" : "04")}
   <article class="story-section solution" id="solution">
     <div class="solution-copy"><p>${study.reframe ? (study.iteration ? "06" : "05") : study.iteration ? "05" : "04"} 최종 경험</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map((x) => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}</ol>` : ""}</div>
@@ -1476,6 +1476,15 @@ if (p) {
       </dl>
       <div class="brief-scope"><strong>결과의 범위</strong><p>${p.outcomeBasis}</p></div>
     </section>`);
+  // 배경·결과 요약은 한 영역으로 묶어 외부 간격을 중복하지 않는다.
+  const context = document.createElement("section");
+  context.className = "case-context";
+  context.setAttribute("aria-label", "프로젝트 배경과 결과 요약");
+  const summary = document.querySelector(".case-summary");
+  summary.before(context);
+  context.append(summary, document.querySelector(".outcomes"));
+  const outcomeBasis = document.querySelector(".outcome-basis");
+  if (outcomeBasis) context.append(outcomeBasis);
   installImageViewer();
   const progressItems = [
     ["overview", "개요"],

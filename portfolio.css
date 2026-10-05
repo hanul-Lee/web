@@ -42,7 +42,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
 }
 
 body {
@@ -135,7 +136,8 @@ img {
   background: none;
   cursor: pointer;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   border-radius: 0;
   font: inherit;
 }
@@ -259,6 +261,7 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: -moz-max-content;
   width: max-content;
   max-width: calc(100% - 48px);
   padding: 10px 14px;
@@ -482,8 +485,10 @@ img {
   height: 100%;
   min-width: 0;
   min-height: 0;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 .thumb.navy {
   background: #dce3f4;
@@ -540,8 +545,10 @@ img {
 .mini-project img {
   width: 100%;
   aspect-ratio: 16/9;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 8px;
   transition: 0.4s;
 }
@@ -1279,11 +1286,13 @@ body {
 }
 
 .project .project-image img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .thumb.sand img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding: 24px;
 }
 
@@ -1619,7 +1628,8 @@ body {
   width: auto;
   height: 330px;
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 16px auto;
   box-shadow: none;
 }
@@ -2034,7 +2044,8 @@ body {
   width: 100%;
   height: 100%;
   min-height: 0;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .portfolio-home .more-project-copy {
   min-width: 0;
@@ -2108,6 +2119,41 @@ body {
   .portfolio-home .more-project-arrow {
     font-size: 18px;
   }
+}
+
+/* 영역 간격은 가장 바깥 스택의 gap 한 곳에서만 관리한다. */
+:root { --section-gap: clamp(96px, 8vw, 120px); }
+@media (max-width: 800px) {
+  :root { --section-gap: clamp(60px, 16vw, 74px); }
+}
+.portfolio-home > main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-top: calc(var(--header-height) + 64px);
+  padding-bottom: var(--section-gap);
+}
+.portfolio-home > main > section {
+  width: 100%;
+  margin-block: 0;
+  padding-block: 0;
+}
+.portfolio-home > main > section > :first-child { margin-top: 0; }
+.portfolio-home > main > section > :last-child { margin-bottom: 0; }
+.portfolio-home .featured-projects {
+  display: grid;
+  gap: var(--section-gap);
+}
+.portfolio-home .featured-projects > .work-case {
+  margin-block: 0;
+  padding-block: 0;
+  border-top: 0;
+}
+.portfolio-home .designer-about { border-top: 0; }
+/* 연락 영역의 배경 내부 여백은 영역 사이 gap과 분리한다. */
+.portfolio-home > main > .contact { padding-block: 32px; }
+@media (max-width: 800px) {
+  .portfolio-home > main { padding-top: calc(var(--header-height) + 40px); }
 }
 
 /*# sourceMappingURL=portfolio.css.map */
