@@ -2145,7 +2145,9 @@ body {
 .portfolio-home > main {
   display: flex;
   flex-direction: column;
+  gap: var(--section-gap);
   padding-top: calc(var(--header-height) + 64px);
+  padding-bottom: 0;
 }
 
 .portfolio-home > main > section {
@@ -2175,11 +2177,6 @@ body {
 
 .portfolio-home .designer-about {
   border-top: 0;
-}
-
-/* 연락 영역의 배경 내부 여백은 영역 사이 gap과 분리한다. */
-.portfolio-home > main > .contact {
-  padding-block: 32px;
 }
 
 @media (max-width: 800px) {
