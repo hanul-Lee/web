@@ -1,0 +1,25 @@
+{
+  "status": "local_web_completed",
+  "source_reviewed_pages": 25,
+  "excluded_pages": [
+    2
+  ],
+  "web_page_checks": 44,
+  "review_page_checks": 2,
+  "interaction_checks": 9,
+  "spacing_page_width_checks": 110,
+  "browser": "Local Google Chrome",
+  "remaining_source_pages": [
+    13,
+    23,
+    25
+  ],
+  "source_data_confirmation_pages": [
+    16,
+    17,
+    18,
+    19
+  ],
+  "deployed": false,
+  "download_pdf_replaced": false
+}

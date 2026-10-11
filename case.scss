@@ -917,7 +917,7 @@
   letter-spacing: 0.1em;
 }
 .impact-flow strong {
-  font-size: clamp(28px, 3.2vw, 56px);
+  font-size: clamp(28px, 2.4vw, 56px);
   line-height: 1.1;
 }
 .impact-flow .after {
@@ -2135,7 +2135,8 @@ body[data-project="tbm"] {
   flex-direction: column;
   gap: var(--section-gap);
   padding-top: calc(var(--header-height) + 64px);
-  padding-bottom: var(--section-gap);
+  //padding-bottom: var(--section-gap);
+  padding-bottom: 50px;
 }
 .case-main > .case-hero {
   min-height: 0;

@@ -1,0 +1,531 @@
+{
+  "date": "2026-10-11",
+  "method": "Local Chrome DevTools Protocol",
+  "scope": "Final local website and 25 updated source pages; page 02 excluded; original PDF and live apps not tested",
+  "checks": [
+    {
+      "file": "index.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "복잡한 업무 정보를,찾고 쓰기 쉬운 화면으로.",
+      "sections": 0,
+      "overlaps": [],
+      "images": 10
+    },
+    {
+      "file": "project-platform.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "지도와 업무 자료를 연결한 통합 관리 플랫폼",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-tbm.html",
+      "images": 4
+    },
+    {
+      "file": "project-tbm.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "현장 안전 기록(TBM)의 웹·모바일 전환",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-dashboard.html",
+      "images": 4
+    },
+    {
+      "file": "project-dashboard.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "조회 목적에 맞춘 비용·인원 ERP 대시보드",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-designsystem.html",
+      "images": 2
+    },
+    {
+      "file": "project-designsystem.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "컬러 토큰과 공통 UI 기준·웹 가이드",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-intranet.html",
+      "images": 5
+    },
+    {
+      "file": "project-intranet.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "회의실 예약·근태 신청 모바일 인트라넷",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-kanvan.html",
+      "images": 3
+    },
+    {
+      "file": "project-kanvan.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "카드 이동·작업 생성 개인 칸반 프로토타입",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-responsive.html",
+      "images": 3
+    },
+    {
+      "file": "project-responsive.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "반응형 웹 전면 리뉴얼",
+      "sections": 7,
+      "overlaps": [],
+      "next": "project-psc.html",
+      "images": 3
+    },
+    {
+      "file": "project-psc.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "PSC 거더 관리 플랫폼",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-skyautonet.html",
+      "images": 3
+    },
+    {
+      "file": "project-skyautonet.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "자율주행 기술을 이해시키는 반응형 웹 리디자인",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-pet.html",
+      "images": 3
+    },
+    {
+      "file": "project-pet.html",
+      "width": 320,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "기록과 일정을 연결하는 반려동물 건강관리 UX",
+      "sections": 7,
+      "overlaps": [],
+      "next": "project-platform.html",
+      "images": 5
+    },
+    {
+      "file": "index.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "복잡한 업무 정보를,찾고 쓰기 쉬운 화면으로.",
+      "sections": 0,
+      "overlaps": [],
+      "images": 10
+    },
+    {
+      "file": "project-platform.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "지도와 업무 자료를 연결한 통합 관리 플랫폼",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-tbm.html",
+      "images": 4
+    },
+    {
+      "file": "project-tbm.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "현장 안전 기록(TBM)의 웹·모바일 전환",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-dashboard.html",
+      "images": 4
+    },
+    {
+      "file": "project-dashboard.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "조회 목적에 맞춘 비용·인원 ERP 대시보드",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-designsystem.html",
+      "images": 2
+    },
+    {
+      "file": "project-designsystem.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "컬러 토큰과 공통 UI 기준·웹 가이드",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-intranet.html",
+      "images": 5
+    },
+    {
+      "file": "project-intranet.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "회의실 예약·근태 신청 모바일 인트라넷",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-kanvan.html",
+      "images": 3
+    },
+    {
+      "file": "project-kanvan.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "카드 이동·작업 생성 개인 칸반 프로토타입",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-responsive.html",
+      "images": 3
+    },
+    {
+      "file": "project-responsive.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "반응형 웹 전면 리뉴얼",
+      "sections": 7,
+      "overlaps": [],
+      "next": "project-psc.html",
+      "images": 3
+    },
+    {
+      "file": "project-psc.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "PSC 거더 관리 플랫폼",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-skyautonet.html",
+      "images": 3
+    },
+    {
+      "file": "project-skyautonet.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "자율주행 기술을 이해시키는 반응형 웹 리디자인",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-pet.html",
+      "images": 3
+    },
+    {
+      "file": "project-pet.html",
+      "width": 390,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "기록과 일정을 연결하는 반려동물 건강관리 UX",
+      "sections": 7,
+      "overlaps": [],
+      "next": "project-platform.html",
+      "images": 5
+    },
+    {
+      "file": "index.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "복잡한 업무 정보를,찾고 쓰기 쉬운 화면으로.",
+      "sections": 0,
+      "overlaps": [],
+      "images": 10
+    },
+    {
+      "file": "project-platform.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "지도와 업무 자료를 연결한 통합 관리 플랫폼",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-tbm.html",
+      "images": 4
+    },
+    {
+      "file": "project-tbm.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "현장 안전 기록(TBM)의 웹·모바일 전환",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-dashboard.html",
+      "images": 4
+    },
+    {
+      "file": "project-dashboard.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "조회 목적에 맞춘 비용·인원 ERP 대시보드",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-designsystem.html",
+      "images": 2
+    },
+    {
+      "file": "project-designsystem.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "컬러 토큰과 공통 UI 기준·웹 가이드",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-intranet.html",
+      "images": 5
+    },
+    {
+      "file": "project-intranet.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "회의실 예약·근태 신청 모바일 인트라넷",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-kanvan.html",
+      "images": 3
+    },
+    {
+      "file": "project-kanvan.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "카드 이동·작업 생성 개인 칸반 프로토타입",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-responsive.html",
+      "images": 3
+    },
+    {
+      "file": "project-responsive.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "반응형 웹 전면 리뉴얼",
+      "sections": 7,
+      "overlaps": [],
+      "next": "project-psc.html",
+      "images": 3
+    },
+    {
+      "file": "project-psc.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "PSC 거더 관리 플랫폼",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-skyautonet.html",
+      "images": 3
+    },
+    {
+      "file": "project-skyautonet.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "자율주행 기술을 이해시키는 반응형 웹 리디자인",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-pet.html",
+      "images": 3
+    },
+    {
+      "file": "project-pet.html",
+      "width": 801,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "기록과 일정을 연결하는 반려동물 건강관리 UX",
+      "sections": 7,
+      "overlaps": [],
+      "next": "project-platform.html",
+      "images": 5
+    },
+    {
+      "file": "index.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "복잡한 업무 정보를,찾고 쓰기 쉬운 화면으로.",
+      "sections": 0,
+      "overlaps": [],
+      "images": 10
+    },
+    {
+      "file": "project-platform.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "지도와 업무 자료를 연결한 통합 관리 플랫폼",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-tbm.html",
+      "images": 4
+    },
+    {
+      "file": "project-tbm.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "현장 안전 기록(TBM)의 웹·모바일 전환",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-dashboard.html",
+      "images": 4
+    },
+    {
+      "file": "project-dashboard.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "조회 목적에 맞춘 비용·인원 ERP 대시보드",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-designsystem.html",
+      "images": 2
+    },
+    {
+      "file": "project-designsystem.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "컬러 토큰과 공통 UI 기준·웹 가이드",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-intranet.html",
+      "images": 5
+    },
+    {
+      "file": "project-intranet.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "회의실 예약·근태 신청 모바일 인트라넷",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-kanvan.html",
+      "images": 3
+    },
+    {
+      "file": "project-kanvan.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "카드 이동·작업 생성 개인 칸반 프로토타입",
+      "sections": 5,
+      "overlaps": [],
+      "next": "project-responsive.html",
+      "images": 3
+    },
+    {
+      "file": "project-responsive.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "반응형 웹 전면 리뉴얼",
+      "sections": 7,
+      "overlaps": [],
+      "next": "project-psc.html",
+      "images": 3
+    },
+    {
+      "file": "project-psc.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "PSC 거더 관리 플랫폼",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-skyautonet.html",
+      "images": 3
+    },
+    {
+      "file": "project-skyautonet.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "자율주행 기술을 이해시키는 반응형 웹 리디자인",
+      "sections": 6,
+      "overlaps": [],
+      "next": "project-pet.html",
+      "images": 3
+    },
+    {
+      "file": "project-pet.html",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "h1": "기록과 일정을 연결하는 반려동물 건강관리 UX",
+      "sections": 7,
+      "overlaps": [],
+      "next": "project-platform.html",
+      "images": 5
+    },
+    {
+      "file": "output/1011-final/1011_최종확인.html",
+      "width": 390,
+      "pages": 25,
+      "overflow": false,
+      "missingImages": 0
+    },
+    {
+      "file": "output/1011-final/1011_최종확인.html",
+      "width": 1440,
+      "pages": 25,
+      "overflow": false,
+      "missingImages": 0
+    }
+  ],
+  "errors": [],
+  "interactions": [
+    "Mobile menu open and Escape close",
+    "platform: summary link, image zoom, Escape and focus restore",
+    "tbm: summary link, image zoom, Escape and focus restore",
+    "dashboard: summary link, image zoom, Escape and focus restore",
+    "designsystem: summary link, image zoom, Escape and focus restore",
+    "intranet: summary link, image zoom, Escape and focus restore",
+    "kanvan: summary link, image zoom, Escape and focus restore",
+    "Updated page 22 actual input guide: mobile zoom, decode and close",
+    "All 10 project links present without JavaScript"
+  ],
+  "home": {
+    "featured": [
+      "project-platform.html",
+      "project-tbm.html",
+      "project-dashboard.html",
+      "project-designsystem.html"
+    ],
+    "extra": [
+      "project-intranet.html",
+      "project-kanvan.html",
+      "project-responsive.html",
+      "project-psc.html",
+      "project-skyautonet.html",
+      "project-pet.html"
+    ],
+    "phone": "010 9271 8997"
+  },
+  "status": "passed"
+}
