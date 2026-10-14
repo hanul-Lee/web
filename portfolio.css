@@ -2176,5 +2176,251 @@ body {
     margin-bottom: var(--section-gap);
   }
 }
+/* 첫 화면: 포지셔닝과 실제 작업 근거를 함께 보여준다. */
+.portfolio-home .intro-topline {
+  padding-bottom: 22px;
+  border-bottom: 1px solid #d8dfe9;
+}
+.portfolio-home .intro-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+  padding-block: 48px;
+}
+.portfolio-home .intro-position {
+  color: #52637b;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+.portfolio-home .intro h1 {
+  font-size: clamp(32px, 3.65vw, 59px);
+  line-height: 1.38;
+  margin: 0 0 24px;
+  letter-spacing: -0.055em;
+}
+.portfolio-home .intro-description {
+  color: #526075;
+  font-size: 15px;
+  line-height: 1.9;
+}
+.portfolio-home .intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+.portfolio-home .intro-pdf {
+  font-size: 13px;
+  font-weight: 700;
+  padding-block: 12px;
+  border-bottom: 1px solid #a3afc0;
+}
+.portfolio-home .signature-panel {
+  overflow: hidden;
+  padding: 28px;
+  background: #18241f;
+  color: #fff;
+  border: 1px solid #26382e;
+  border-radius: 12px;
+}
+.portfolio-home .signature-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #b4c3b9;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.portfolio-home .signature-status {
+  color: #c7ebaf;
+  letter-spacing: 0;
+  padding: 6px 9px;
+  border: 1px solid #65795c;
+  border-radius: 4px;
+}
+.portfolio-home .signature-panel h2 {
+  margin: 32px 0 14px;
+  font-size: clamp(32px, 3.2vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+}
+.portfolio-home .signature-panel h2 em {
+  font-style: normal;
+  color: #c7ebaf;
+}
+.portfolio-home .signature-summary {
+  color: #bac7bf;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+.portfolio-home .signature-screen {
+  position: relative;
+  display: block;
+  margin-inline: -28px;
+  background: #101b15;
+  overflow: hidden;
+}
+.portfolio-home .signature-screen img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+.portfolio-home .signature-screen .signature-open {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: #142219;
+  background: #d3efbd;
+  border-radius: 50%;
+  font-size: 25px;
+  transition: transform 0.2s;
+}
+.portfolio-home .signature-screen:hover .signature-open {
+  transform: translate(2px, -2px);
+}
+.portfolio-home .signature-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 20px;
+  color: #b4c3b9;
+  font-size: 10px;
+}
+.portfolio-home .signature-footer > :first-child {
+  color: #fff;
+  font-size: 12px;
+}
+.portfolio-home .intro-evidence {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block: 1px solid #d8dfe9;
+}
+.portfolio-home .intro-evidence a {
+  padding: 24px;
+  border-right: 1px solid #d8dfe9;
+}
+.portfolio-home .intro-evidence a:first-child {
+  padding-left: 0;
+}
+.portfolio-home .intro-evidence a:last-child {
+  border-right: 0;
+}
+.portfolio-home .intro-evidence a > span {
+  color: #62738d;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+}
+.portfolio-home .intro-evidence strong {
+  display: block;
+  font-size: 17px;
+  margin-top: 12px;
+  letter-spacing: -0.04em;
+}
+.portfolio-home .intro-evidence p {
+  color: #5c697d;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+.portfolio-home .intro-evidence b {
+  color: #4267a9;
+  margin-left: 6px;
+}
+.portfolio-home .intro-evidence a:hover strong, .portfolio-home .intro-pdf:hover {
+  color: var(--blue);
+}
+@media (max-width: 1000px) {
+  .portfolio-home .intro-layout {
+    gap: 28px;
+  }
+  .portfolio-home .intro-description br {
+    display: none;
+  }
+  .portfolio-home .signature-panel {
+    padding: 24px;
+  }
+  .portfolio-home .signature-screen {
+    margin-inline: -24px;
+  }
+  .portfolio-home .signature-heading {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 800px) {
+  .portfolio-home .intro-layout {
+    grid-template-columns: 1fr;
+    padding-block: 32px;
+    gap: 32px;
+  }
+  .portfolio-home .intro h1 {
+    font-size: clamp(29px, 6vw, 46px);
+  }
+  .portfolio-home .signature-panel {
+    padding: 24px;
+  }
+  .portfolio-home .intro-evidence {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-home .intro-evidence a, .portfolio-home .intro-evidence a:first-child {
+    padding: 20px 0;
+    border-right: 0;
+    border-bottom: 1px solid #d8dfe9;
+  }
+  .portfolio-home .intro-evidence a:last-child {
+    border-bottom: 0;
+  }
+  .portfolio-home .intro-evidence strong {
+    margin-top: 8px;
+  }
+}
+
+/* 햄버거 바로 아래에 붙는 콘텐츠 너비 메뉴 */
+@media (max-width: 1100px) {
+  .nav nav.mobile-open {
+    width: fit-content;
+    max-width: calc(100vw - 48px);
+    left: auto;
+    right: clamp(24px, 6vw, 96px);
+    top: calc(var(--header-height) - 2px);
+    gap: 4px;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(20, 32, 45, 0.1019607843);
+  }
+  .nav nav.mobile-open a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 6px;
+  }
+  .nav nav.mobile-open a:hover {
+    background: #edf1f6;
+  }
+}
+@media (max-width: 800px) {
+  .nav nav.mobile-open {
+    right: 24px;
+  }
+}
+.portfolio-home .intro-layout {
+  padding-top: 0;
+}
+
+/* 히어로의 상단 여백은 main에서만 관리한다. */
+.portfolio-home .intro {
+  padding-block: 0;
+}
 
 /*# sourceMappingURL=portfolio.css.map */

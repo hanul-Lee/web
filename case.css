@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("portfolio.css?v=20261014-mobile-spacing");
+@import url("portfolio.css?v=20261014-editorial");
 /* HTML 구조: body > header + main(.case-main) > hero + body */
 .case-main {
   --case-section-inline: clamp(24px, 8vw, 140px);
@@ -2501,6 +2501,78 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   }
   .case-main .evidence-grid > div:last-child {
     padding-bottom: 0;
+  }
+}
+.case-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 24px 0;
+}
+.case-hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid currentColor;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.case-main .case-body > .next {
+  margin-block: 0;
+}
+
+/* 다음 사례는 큰 탐색 링크, 목록 복귀는 별도 보조 버튼 */
+.case-main .case-body .next {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding-top: 28px;
+}
+.case-main .case-body .next > a:first-child {
+  position: relative;
+  padding-right: 48px;
+}
+.case-main .case-body .next > a:first-child > span {
+  color: #667080;
+  font-size: 12px;
+}
+.case-main .case-body .next > a:first-child::after {
+  content: "↗";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+.case-main .case-body .next h3 {
+  font-size: clamp(21px, 2.4vw, 30px);
+  line-height: 1.4;
+}
+.case-main .case-body .next .back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  padding: 14px 18px;
+  background: #f3f5f7;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  color: #434e5e;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.case-main .case-body .next .back:hover {
+  background: #e8edf3;
+}
+
+@media (max-width: 800px) {
+  .case-main .case-body .next {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
 }
 

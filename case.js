@@ -792,8 +792,8 @@ const caseStudies = {
     }
   },
   "platform": {
-    "insight": "흩어진 현장 자료를 업무 목적에 따라 정리했습니다.",
-    "strategyHeadline": "현장 설명과 사업 관리의 공통 메뉴를 구성했습니다.",
+    "insight": "같은 현장 자료도, 사용자마다 찾는 목적이 달랐습니다.",
+    "strategyHeadline": "파일의 분류 대신, 사용자의 업무 목적을 메뉴의 기준으로 삼았습니다.",
     "context": [
       [
         "사용자",
@@ -836,7 +836,7 @@ const caseStudies = {
       [
         "03",
         "메뉴 대안 선택",
-        "흰색·검정·반투명 검정을 비교해 메뉴 구분과 지도 배경의 연속성을 함께 고려했습니다."
+        "흰색·검정·반투명 검정을 비교했습니다. 메뉴를 구분하면서 지도 맥락을 유지하기 위해 반투명 검정안을 선택했습니다."
       ]
     ],
     "ui": "map",
@@ -1209,11 +1209,11 @@ const renderMockup = (type, finalVisual) => {
   return "";
 };
 
-const renderReframe = (item) =>
+const renderReframe = (item, number) =>
   item
     ? `
   <article class="story-section reframe" id="reframe">
-    <header><p>03 문제 재정의</p><h3>기존 업무에서 해결할 문제와 설계 방향을 정리했습니다.</h3></header>
+    <header><p>${number} 문제 재정의</p><h3>기존 업무에서 해결할 문제와 설계 방향을 정리했습니다.</h3></header>
     <div class="reframe-flow">
       <div><small>설계 과제</small><p>${item.request}</p></div>
       <span>→</span>
@@ -1237,11 +1237,11 @@ const renderIteration = (item, number) =>
   </article>`
     : "";
 
-const renderReflection = (item, number = "08") =>
+const renderReflection = (item, number) =>
   item
     ? `
   <article class="story-section reflection" id="reflection">
-    <header><p>${number} 회고</p><h3>이 프로젝트에서 배운 것과 다음에 검증할 것</h3></header>
+    <header><p>${number} 회고</p><h3>설계하며 배운 점, 다음에 확인할 점</h3></header>
     <div class="reflection-grid"><div><small>배운 점</small><p>${item.learned}</p></div><div><small>다시 한다면</small><p>${item.next}</p></div></div>
   </article>`
     : "";
@@ -1311,26 +1311,29 @@ const decisionNotes = {
 
 const renderDecisionNotes = (key) => decisionNotes[key] ? `<aside class="decision-notes" aria-label="설계 판단과 후속 확인">${decisionNotes[key].map(([title, text]) => `<div><h4>${title}</h4><p>${text}</p></div>`).join("")}</aside>` : "";
 
-const renderStudy = (study) => `
+const renderStudy = (study) => {
+  let section = 2;
+  const nextSection = () => String(section++).padStart(2, "0");
+  return `
   <article class="story-section evidence" id="evidence">
-    <header><p>02 문제 발견</p><h3>${study.insight}</h3></header>
-    <div class="user-voice"><span>${icon("voice")}</span><div><small>프로젝트에서 정의한 문제</small><p>${study.pains[0][1]}</p></div></div>
+    <header><p>${nextSection()} 문제 발견</p><h3>${study.insight}</h3></header>
     <div class="evidence-grid">${study.pains.map((x, i) => `<div><small>0${i + 1}</small><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join("")}</div>
   </article>
-  ${renderReframe(study.reframe)}
+  ${study.reframe ? renderReframe(study.reframe, nextSection()) : ""}
   <article class="story-section strategy" id="decision">
-    <header><p>${study.reframe ? "04" : "03"} 설계 결정</p><h3>${study.strategyHeadline}</h3></header>
+    <header><p>${nextSection()} 설계 결정</p><h3>${study.strategyHeadline}</h3></header>
     <div class="strategy-list">${study.strategies.map((x) => `<div><b>${x[0]}</b><h4>${x[1]}</h4><small>선택 이유</small><p>${x[2]}</p></div>`).join("")}</div>
     ${renderDecisionNotes(slug)}
   </article>
-  ${renderIteration(study.iteration, study.reframe ? "05" : "04")}
+  ${study.iteration ? renderIteration(study.iteration, nextSection()) : ""}
   <article class="story-section solution" id="solution">
-    <div class="solution-copy"><p>${study.reframe ? (study.iteration ? "06" : "05") : study.iteration ? "05" : "04"} 설계 화면과 흐름</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map((x) => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}</ol>` : ""}</div>
+    <div class="solution-copy"><p>${nextSection()} 설계 화면과 흐름</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map((x) => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}</ol>` : ""}</div>
     <div class="ui-stage">${renderMockup(study.ui, study.finalVisual)}</div>
   </article>
   ${renderVisuals(study.visuals)}
-  ${study.impact ? renderImpact(study.impact, study.reframe ? (study.iteration ? "07" : "06") : study.iteration ? "06" : "05") : ""}
-  ${renderReflection(study.reflection, study.reframe ? (study.iteration ? "08" : study.impact ? "07" : "06") : "08")}`;
+  ${study.impact ? renderImpact(study.impact, nextSection()) : ""}
+  ${study.reflection ? renderReflection(study.reflection, nextSection()) : ""}`;
+};
 
 const renderImpact = (impact, number) => `
   <article class="story-section impact impact-${impact.type}" id="impact">
@@ -1414,6 +1417,9 @@ if (p) {
   context.append(summary, document.querySelector(".outcomes"));
   const outcomeBasis = document.querySelector(".outcome-basis");
   if (outcomeBasis) context.append(outcomeBasis);
+  if (slug === "platform") {
+    document.querySelector(".case-result").insertAdjacentHTML("afterend", '<div class="case-hero-actions"><a href="#decision">왜 이렇게 설계했는가 <span aria-hidden="true">↓</span></a><a href="#solution">실제 화면 보기 ↗</a></div>');
+  }
   installImageViewer();
   const progressItems = [
     ["overview", "개요"],

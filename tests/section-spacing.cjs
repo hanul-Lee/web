@@ -32,6 +32,19 @@ return{width:innerWidth,gapToken:getComputedStyle(document.documentElement).getP
 assert.equal(info.overflow,false,file+' overflow '+width);assert.equal(info.missing,0,file+' missing images');
 const min=width<=800?60:96,max=width<=800?74:120;
 for(const gap of info.gaps){assert.ok(gap.actual>=min-.1&&gap.actual<=max+.1,JSON.stringify({file,width,...gap}));assert.equal(gap.previousMargin,'0px');assert.equal(gap.nextMargin,'0px');}
+if(file !== 'index.html') {
+  const numbers = await evalJS(`Array.from(document.querySelectorAll('.gallery > .story-section > header > p, .gallery > .story-section > .solution-copy > p')).map(x => x.textContent.match(/^([0-9]{2}) /)?.[1]).filter(Boolean).map(Number)`);
+  assert.deepEqual(numbers, numbers.map((_, i) => i + 2), file + ' section sequence');
+  assert.equal(await evalJS(`document.querySelectorAll('.user-voice').length`), 0);
+}
+if(width <= 1024) {
+  await evalJS(`document.querySelector('.menu').click()`);
+  const menu = await evalJS(`(()=>{const n=document.querySelector('#primary-nav').getBoundingClientRect(),b=document.querySelector('.menu').getBoundingClientRect();return {width:n.width,right:n.right,buttonRight:b.right,expanded:document.querySelector('.menu').getAttribute('aria-expanded')};})()`);
+  assert.equal(menu.expanded,'true');
+  assert.ok(menu.width < width - 48, file + ' compact menu');
+  assert.ok(Math.abs(menu.right-menu.buttonRight)<2, file + ' menu right alignment');
+  await evalJS(`document.querySelector('.menu').click()`);
+}
 report.push({file,...info});
 if(file==='index.html'&&width===390){await evalJS(`document.documentElement.style.scrollBehavior='auto'; document.querySelector('.selected-work').scrollIntoView({behavior:'instant'})`);const shot=await send('Page.captureScreenshot');fs.writeFileSync('/tmp/section-gap-home.png',Buffer.from(shot.data,'base64'));}
 if(file==='project-dashboard.html'&&width===1280){await evalJS(`document.documentElement.style.scrollBehavior='auto'; document.querySelector('#evidence').scrollIntoView({behavior:'instant'})`);const shot=await send('Page.captureScreenshot');fs.writeFileSync('/tmp/section-gap-detail.png',Buffer.from(shot.data,'base64'));}
