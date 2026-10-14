@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("portfolio.css?v=20261014-editorial");
+@import url("portfolio.css?v=20261014-layout-alignment");
 /* HTML 구조: body > header + main(.case-main) > hero + body */
 .case-main {
   --case-section-inline: clamp(24px, 8vw, 140px);
@@ -2573,6 +2573,326 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   .case-main .case-body .next {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
+  }
+}
+/* 작업 상세: 홈과 같은 그리드, 긴 설명은 밝은 종이 위에서 읽는다. */
+.case-main {
+  --case-section-inline: var(--page-gutter);
+  padding-bottom: 72px;
+}
+.case-main > .case-hero, .case-main > .case-body, .case-main > .case-brief {
+  width: min(var(--content-max), 100% - var(--page-gutter) * 2);
+  max-width: none;
+  margin-inline: auto;
+}
+.case-main > .case-hero, .case-main > .case-body {
+  padding-inline: 0;
+}
+.case-main .case-hero {
+  gap: 60px;
+}
+.case-main .case-hero h1 {
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.35;
+}
+.case-main .case-hero .case-cover {
+  min-height: 0;
+  height: auto;
+  padding: 32px;
+  background: #edf0f2;
+  border-radius: 20px;
+}
+.case-main .case-result > span {
+  background: none;
+}
+.case-main .case-result {
+  color: #556370;
+  font-weight: 400;
+}
+.case-main .case-brief {
+  background: #f4f5f5;
+  border-radius: 16px;
+}
+.case-main .case-brief .brief-facts > div {
+  background: transparent;
+  padding: 12px 24px 12px 0;
+  border-radius: 0;
+}
+.case-main .case-brief .brief-facts > div + div {
+  border-left: 1px solid #d7dde1;
+  padding-left: 24px;
+}
+.case-main .case-brief .brief-heading a {
+  border-radius: 999px;
+  background: transparent;
+}
+.case-main .case-body .outcomes .outcome {
+  background: transparent;
+  border-radius: 0;
+  border-top: 1px solid #d7dde1;
+  padding: 24px 24px 0 0;
+}
+.case-main .case-body .outcomes .outcome + .outcome {
+  border-top: 1px solid #d7dde1;
+}
+.case-main .story-section header h3, .case-main .solution-copy h3 {
+  font-weight: 600;
+}
+.case-main .decision-notes {
+  background: #f4f5f5;
+  border-radius: 12px;
+}
+.case-main .case-body .case-summary {
+  gap: 60px;
+}
+
+.case-nav {
+  padding-inline: max(var(--page-gutter), (100vw - var(--content-max)) / 2);
+}
+
+.case-footer {
+  padding-inline: max(var(--page-gutter), (100vw - var(--content-max)) / 2);
+  background: #0c0f14;
+}
+
+@media (max-width: 800px) {
+  .case-main .case-hero {
+    gap: 32px;
+  }
+  .case-main .case-hero .case-cover {
+    padding: 24px 16px;
+  }
+  .case-main .case-body .case-summary {
+    gap: 28px;
+  }
+  .case-main .case-brief .brief-facts > div {
+    padding: 16px 0;
+  }
+  .case-main .case-brief .brief-facts > div + div {
+    border-left: 0;
+    border-top: 1px solid #d7dde1;
+    padding-left: 0;
+  }
+}
+/* 설계 화면은 내용 높이로 표시하며 태블릿부터 설명 → 이미지 순으로 쌓는다. */
+.case-main .case-body .gallery > .story-section.solution {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  min-height: 0;
+  padding: clamp(24px, 3.5vw, 48px);
+}
+.case-main .case-body .gallery > .story-section.solution .solution-copy {
+  flex: 0 1 35%;
+  min-width: 0;
+}
+.case-main .case-body .gallery > .story-section.solution .ui-stage {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 24px;
+}
+
+@media (max-width: 1100px) {
+  .case-main .case-body .gallery > .story-section.solution {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+    padding: 28px;
+  }
+  .case-main .case-body .gallery > .story-section.solution .solution-copy {
+    flex: none;
+    width: 100%;
+  }
+  .case-main .case-body .gallery > .story-section.solution .ui-stage {
+    flex: none;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+  }
+  .case-main .case-body .gallery > .story-section.solution .final-mockup.portrait {
+    width: min(100%, 220px);
+  }
+  .case-main .case-body .gallery > .story-section.solution .final-mockup.portrait img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+}
+@media (max-width: 480px) {
+  .case-main .case-body .gallery > .story-section.solution {
+    padding: 24px 20px;
+    gap: 24px;
+  }
+}
+/* 다음 사례의 화살표는 제목의 마지막 글자 바로 뒤에 둔다. */
+.case-main .case-body .next > a:first-child {
+  width: fit-content;
+  max-width: 100%;
+  padding-right: 0;
+}
+.case-main .case-body .next > a:first-child::after {
+  content: none;
+}
+.case-main .case-body .next h3::after {
+  content: "↗";
+  display: inline-block;
+  position: static;
+  margin-left: 8px;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: 400;
+  vertical-align: baseline;
+}
+
+/* 개요는 소개+대표 화면, 참여 정보의 두 그룹으로 분리한다. */
+.case-main > .case-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 40px;
+  min-height: 0;
+}
+.case-main > .case-hero .case-hero-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 48px;
+  min-width: 0;
+}
+.case-main > .case-hero .case-hero-copy {
+  min-width: 0;
+}
+.case-main > .case-hero .case-eyebrow {
+  margin: 0 0 18px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.case-main > .case-hero h1 {
+  margin: 0 0 24px;
+}
+.case-main > .case-hero .case-lead {
+  max-width: none;
+  margin: 0;
+}
+.case-main > .case-hero .case-result {
+  margin: 20px 0 0;
+}
+.case-main > .case-hero .case-hero-actions {
+  margin: 24px 0 0;
+  gap: 12px 24px;
+}
+.case-main > .case-hero .case-cover {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  padding: 28px;
+  grid-row: auto;
+}
+.case-main > .case-hero > .case-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  width: 100%;
+  margin: 0;
+  padding: 28px 0 0;
+  gap: 24px;
+  border-top: 1px solid #dce1e6;
+}
+.case-main > .case-hero > .case-meta > div {
+  min-width: 0;
+}
+.case-main > .case-hero > .case-meta .stage-meta {
+  grid-column: auto;
+}
+.case-main > .case-hero > .case-meta span {
+  margin-bottom: 8px;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 1.7;
+  color: #637080;
+}
+.case-main > .case-hero > .case-meta b {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #263344;
+}
+
+@media (max-width: 1100px) {
+  .case-main > .case-hero {
+    gap: 32px;
+  }
+  .case-main > .case-hero .case-hero-overview {
+    gap: 32px;
+  }
+  .case-main > .case-hero .case-hero-copy {
+    width: 100%;
+  }
+  .case-main > .case-hero h1 {
+    font-size: clamp(30px, 4.5vw, 44px);
+  }
+  .case-main > .case-hero .case-cover {
+    padding: 28px;
+  }
+  .case-main > .case-hero .case-cover .final-mockup.portrait {
+    width: min(100%, 240px);
+  }
+  .case-main > .case-hero .case-cover .final-mockup.portrait img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+  .case-main > .case-hero > .case-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .case-main > .case-hero > .case-meta .stage-meta {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 800px) {
+  .case-main > .case-hero .case-hero-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .case-main > .case-hero h1 {
+    font-size: clamp(28px, 7.5vw, 38px);
+  }
+  .case-main > .case-hero .case-cover {
+    padding: 20px 16px;
+  }
+  .case-main > .case-hero .case-hero-actions {
+    column-gap: 20px;
+  }
+  .case-main > .case-hero .case-hero-actions a {
+    gap: 10px;
+    font-size: 12px;
+  }
+  .case-main > .case-hero > .case-meta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding-top: 24px;
+  }
+  .case-main > .case-hero > .case-meta > div {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+    align-items: baseline;
+  }
+  .case-main > .case-hero > .case-meta .stage-meta {
+    grid-column: auto;
+  }
+  .case-main > .case-hero > .case-meta span {
+    margin: 0;
+  }
+  .case-main > .case-hero > .case-meta b {
+    font-size: 12px;
   }
 }
 

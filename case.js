@@ -1417,9 +1417,6 @@ if (p) {
   context.append(summary, document.querySelector(".outcomes"));
   const outcomeBasis = document.querySelector(".outcome-basis");
   if (outcomeBasis) context.append(outcomeBasis);
-  if (slug === "platform") {
-    document.querySelector(".case-result").insertAdjacentHTML("afterend", '<div class="case-hero-actions"><a href="#decision">왜 이렇게 설계했는가 <span aria-hidden="true">↓</span></a><a href="#solution">실제 화면 보기 ↗</a></div>');
-  }
   installImageViewer();
   const progressItems = [
     ["overview", "개요"],
