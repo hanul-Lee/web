@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("portfolio.css?v=20261005-section-gap");
+@import url("portfolio.css?v=20261014-mobile-spacing");
 /* HTML 구조: body > header + main(.case-main) > hero + body */
 .case-main {
   --case-section-inline: clamp(24px, 8vw, 140px);
@@ -1553,10 +1553,8 @@
 .project-visuals .visual-frame img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .project-visuals figure:hover img {
@@ -1600,8 +1598,7 @@
   display: block;
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .mock-window.final-mockup.portrait {
   width: min(100%, 436px);
@@ -1642,10 +1639,8 @@
   min-height: 0;
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: contain;
+  object-position: center;
 }
 
 .outcomes {
@@ -2471,6 +2466,9 @@ body[data-project=tbm] .strategy-list {
   .case-main {
     padding-top: calc(var(--header-height) + 40px);
   }
+  .case-main .case-body .gallery > .story-section.solution {
+    padding-block: 28px;
+  }
 }
 /* 투명한 마지막 행의 패딩·문단 마진이 영역 간격에 더해지지 않게 한다. */
 .case-main .evidence-grid > div > * {
@@ -2504,4 +2502,6 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   .case-main .evidence-grid > div:last-child {
     padding-bottom: 0;
   }
-}/*# sourceMappingURL=case.css.map */
+}
+
+/*# sourceMappingURL=case.css.map */

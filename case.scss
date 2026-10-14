@@ -1,4 +1,4 @@
-@import url("portfolio.css?v=20261005-section-gap");
+@import url("portfolio.css?v=20261014-mobile-spacing");
 
 /* HTML 구조: body > header + main(.case-main) > hero + body */
 .case-main {
@@ -2170,6 +2170,8 @@ body[data-project="tbm"] {
 
 @media (max-width: 800px) {
   .case-main { padding-top: calc(var(--header-height) + 40px); }
+  // 배경이 있는 설계 화면 영역은 바깥 gap과 별도로 내부 여백을 유지한다.
+  .case-main .case-body .gallery > .story-section.solution { padding-block: 28px; }
 }
 
 /* 투명한 마지막 행의 패딩·문단 마진이 영역 간격에 더해지지 않게 한다. */

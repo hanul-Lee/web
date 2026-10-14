@@ -2242,4 +2242,7 @@ body {
   .portfolio-home > main {
     padding-top: calc(var(--header-height) + 40px);
   }
+  .portfolio-home .selected-work > .work-heading {
+    margin-bottom: var(--section-gap);
+  }
 }
