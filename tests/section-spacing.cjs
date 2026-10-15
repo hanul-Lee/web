@@ -74,7 +74,7 @@ if(width <= 1024) {
 if(file==='index.html' && [390,1280].includes(width)) {
   const hero=await evalJS(`({image:document.querySelector('.hero-case-screen img').getAttribute('src'),scope:document.querySelector('.hero-case-meta').textContent,status:document.querySelector('.hero-case-top strong').textContent,planets:document.querySelectorAll('img[src*="assets/planets/"]').length,proof:document.querySelectorAll('.intro-proof > a').length})`);
   assert.equal(hero.image,'assets/cases/platform-9.png');
-  assert.ok(hero.scope.includes('공통 메뉴 IA') && hero.scope.includes('퍼블리싱'));
+  assert.ok(hero.scope.includes('메뉴 UI') && hero.scope.includes('퍼블리싱'));
   assert.equal(hero.status,'배포 후 실사용');
   assert.equal(hero.planets,0);
   assert.equal(hero.proof,3);

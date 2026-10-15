@@ -1511,7 +1511,7 @@ body {
     max-width: calc(100vw - 48px);
     left: auto;
     right: max(var(--page-gutter), (100vw - var(--content-max)) / 2);
-    top: calc(var(--header-height) - 2px);
+    top: calc(var(--header-height) + 8px);
     gap: 4px;
     padding: 10px;
     border-radius: 12px;

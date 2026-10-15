@@ -33,12 +33,20 @@ async function audit(page, label, file, width) {
       const edge=e=>e.getBoundingClientRect().left+parseFloat(getComputedStyle(e).paddingLeft);
       if(Math.abs(edge(hero)-edge(body))>1) issues.push('case hero/body misaligned');
     }
-    const texts=[], walker=document.createTreeWalker(document.querySelector('main'),NodeFilter.SHOW_TEXT);
+    const texts=[], canvas=document.createElement('canvas').getContext('2d'), walker=document.createTreeWalker(document.querySelector('main'),NodeFilter.SHOW_TEXT);
     while(walker.nextNode()) {
       const n=walker.currentNode, p=n.parentElement;
       if(!n.textContent.trim() || p.closest('script,style,svg,.case-progress')) continue;
       const range=document.createRange(); range.selectNodeContents(n);
-      for(const r of range.getClientRects()) if(r.width && r.height) texts.push({p,x:r.x,y:r.y,right:r.right,bottom:r.bottom,text:n.textContent.trim().slice(0,45)});
+      // Range bounds include font leading; use ink bounds when Chrome exposes matching font metrics.
+      const style=getComputedStyle(p);
+      canvas.font=`${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+      const metrics=canvas.measureText(n.textContent);
+      for(const r of range.getClientRects()) if(r.width && r.height) {
+        const useInk=Number.isFinite(metrics.fontBoundingBoxAscent) && Math.abs(r.height-metrics.fontBoundingBoxAscent-metrics.fontBoundingBoxDescent)<2 && metrics.actualBoundingBoxAscent+metrics.actualBoundingBoxDescent>0;
+        const baseline=r.top+metrics.fontBoundingBoxAscent;
+        texts.push({p,x:r.x,y:useInk?baseline-metrics.actualBoundingBoxAscent:r.y,right:r.right,bottom:useInk?baseline+metrics.actualBoundingBoxDescent:r.bottom,text:n.textContent.trim().slice(0,45)});
+      }
     }
     for(let i=0;i<texts.length;i++) for(let j=i+1;j<texts.length;j++) {
       const a=texts[i],b=texts[j];

@@ -1,4 +1,4 @@
-@import url("portfolio.css?v=20261014-layout-alignment");
+@import url("portfolio.css?v=20261015-content-review");
 
 /* HTML 구조: body > header + main(.case-main) > hero + body */
 .case-main {
@@ -2357,4 +2357,50 @@ body[data-project="dashboard"] .case-main .evidence-grid > div:last-child { padd
     > .case-meta span { margin: 0; }
     > .case-meta b { font-size: 12px; }
   }
+}
+
+// Keep the rationale, source screen, and delivery facts next to the claims they support.
+.evidence-source {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: 24px 0;
+  border-block: 1px solid #dfe3e8;
+  p { flex: 1; margin: 0; color: #515d6c; font-size: 16px; line-height: 1.85; }
+  a { flex-shrink: 0; padding-block: 4px; color: var(--case-text-accent); font-size: 14px; font-weight: 700; text-underline-offset: 5px; }
+}
+.decision-detail {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #dfe3e8;
+  .detail-eyebrow { margin: 0 0 12px; color: var(--case-text-accent); font-size: 13px; font-weight: 700; }
+  h4 { margin: 0 0 16px; color: #19212b; font-size: clamp(22px, 2.3vw, 30px); line-height: 1.45; letter-spacing: -.04em; }
+  .decision-detail-copy > p:last-child { margin: 0; color: #515d6c; font-size: 16px; line-height: 1.85; }
+  figure { margin: 28px 0 0; }
+  .visual-frame { overflow: hidden; border-radius: 12px; }
+  img { display: block; width: 100%; height: auto; }
+  figcaption { margin-top: 12px; color: #626d7b; font-size: 13px; line-height: 1.8; }
+}
+.decision-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0 0;
+  > div { padding: 20px; background: #f4f5f7; border: 1px solid transparent; border-radius: 8px; }
+  .is-selected { background: #faf5f0; border-color: #d4a98d; }
+  dt { margin: 0 0 10px; color: #263344; font-size: 15px; font-weight: 700; }
+  dd { margin: 0; color: #515d6c; font-size: 14px; line-height: 1.8; }
+}
+.delivery-facts {
+  margin: 32px 0 0;
+  > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; padding: 20px 0; border-bottom: 1px solid #dfe3e8; }
+  dt { color: #263344; font-size: 14px; font-weight: 700; line-height: 1.85; }
+  dd { margin: 0; color: #515d6c; font-size: 16px; line-height: 1.85; }
+}
+@media (max-width: 800px) {
+  .evidence-source { flex-direction: column; gap: 16px; padding-block: 20px; }
+  .decision-options { grid-template-columns: 1fr; gap: 12px; }
+  .decision-detail { margin-top: 32px; padding-top: 24px; }
+  .delivery-facts > div { grid-template-columns: 1fr; gap: 8px; }
 }

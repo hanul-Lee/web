@@ -91,7 +91,7 @@ const projects = {
     "lead": "현장·본사·외부 사용자가 필요한 자료를 찾도록 공통 메뉴와 지도 중심 화면을 설계했습니다. 정보 구조·UI·퍼블리싱을 담당했으며, 배포 후 실제 사용자가 이용했습니다.",
     "period": "2023.01 — 2023.12",
     "role": "정보 구조 · UX/UI · 퍼블리싱 · 기획 참여",
-    "contribution": "사용자 목적 정리 · 공통 메뉴 IA · 지도 탐색 UI · 퍼블리싱",
+    "contribution": "메뉴 UI · 지도 탐색 UI · 퍼블리싱",
     "team": "개발자 · 기획자 · 엔지니어",
     "cover": 1,
     "bg": "#1d2024",
@@ -99,12 +99,12 @@ const projects = {
     "accent": "#c85c1b",
     "textAccent": "#a9470f",
     "muted": "#c7c8ca",
-    "problem": "문제는 정보가 부족한 것이 아니라, 사용자마다 필요한 정보와 탐색 목적이 다르다는 것이었습니다.",
-    "detail": "공정·자원·보상·지도 자료가 파일과 프로그램별로 나뉘어 있었습니다. 사용자별 확인 목적을 정리하고, 공통 메뉴와 지도 화면에서 관련 정보를 이어서 확인하도록 구성했습니다.",
+    "problem": "자료는 파일·프로그램에 나뉘어 있었고, 초기 메뉴에서는 기능의 분야를 구분하기 어려웠습니다.",
+    "detail": "처음 프로젝트를 맡으며 여러 파일과 기존 프로그램의 자료를 전달받았습니다. 각자 보유한 파일이 달라 최종본이 무엇인지 헷갈리기도 했습니다. 공통 메뉴와 지도에서 관련 자료로 이어지는 화면을 설계했습니다.",
     "outcomes": [
       [
         "공통 메뉴",
-        "업무 단위로 자료 통합"
+        "업무별 기능 진입점 구분"
       ],
       [
         "지도 탐색",
@@ -115,7 +115,7 @@ const projects = {
         "현재 상태·주요 정보·상세 구분"
       ]
     ],
-    "outcomeBasis": "설계·퍼블리싱한 플랫폼이 배포되어 실제 사용자가 이용했습니다. 산출물은 프로젝트 시연과 내부 소통에도 활용했습니다. 탐색 시간과 클릭 수의 개선 수치는 제시하지 않습니다.",
+    "deliverySummary": "정보 구조·UI·퍼블리싱을 담당한 플랫폼이 배포되어 실제 사용자가 이용했습니다.",
     "images": 8,
     "next": [
       "tbm",
@@ -156,7 +156,7 @@ const projects = {
         "개발자를 통한 의견 전달"
       ]
     ],
-    "outcomeBasis": "모바일 기획·디자인과 웹 UI에 참여한 서비스가 배포되어 실제 사용자가 이용했습니다. 사용자 의견은 개발자를 통해 전달받았습니다. 사용자 평가 수치와 업무 시간 감소는 제시하지 않습니다.",
+    "deliverySummary": "모바일 기획·디자인과 웹 UI에 참여했습니다. 서비스는 배포 후 실제 사용자가 이용했으며, 개발자를 통해 사용자 의견을 전달받았습니다.",
     "images": 6,
     "next": [
       "dashboard",
@@ -221,7 +221,7 @@ const projects = {
     "accent": "#176fa6",
     "textAccent": "#17618f",
     "muted": "#d2e7f6",
-    "problem": "글로벌 방문자는 늘었지만, 디바이스가 바뀌면 탐색 경험도 함께 끊기고 있었습니다.",
+    "problem": "PC 중심의 고정형 화면을 모바일·태블릿에서도 탐색할 수 있도록 바꿀 필요가 있었습니다.",
     "detail": "PC 중심의 고정형 웹은 모바일에서 정보가 잘리거나 우선순위가 흐려졌습니다. 솔루션과 제품 정보를 사용자의 탐색 목적에 맞게 재구성하고, 같은 정보 구조가 모든 화면에서 자연스럽게 이어지도록 반응형 규칙을 만들었습니다.",
     "outcomes": [
       [
@@ -339,7 +339,7 @@ const projects = {
     "textAccent": "#d96800",
     "muted": "#d4d5e2",
     "problem": "이미지와 제목을 함께 보여주는 작업 보드 UI를 설계했습니다.",
-    "detail": "이미지·제목·담당자 정보를 카드에 배치하고 카드 이동과 작업 생성 입력을 구현했습니다. 현재 컬럼은 작업 분야와 상태가 함께 포함된 구성으로, 검증된 업무 단계 체계로 소개하지 않습니다.",
+    "detail": "이미지·제목·담당자 정보를 카드에 배치하고 카드 이동과 작업 생성 입력을 구현했습니다. 현재 컬럼에는 작업 분야와 진행 상태가 함께 포함되어 있습니다.",
     "outcomes": [
       [
         "이미지 카드",
@@ -534,7 +534,7 @@ const caseStudies = {
     ],
     "ui": "web",
     "uiTitle": "이미지 카드와 작업 생성 프로토타입",
-    "uiText": "보드 시연 화면과 작업 생성 항목을 보여드립니다. 현재 컬럼 구성이 검증된 단계 체계라는 주장은 하지 않습니다.",
+    "uiText": "보드 시연 화면과 작업 생성 항목을 보여드립니다. 컬럼에는 작업 분야와 진행 상태가 함께 포함되어 있습니다.",
     "finalVisual": [
       "assets/cases/kanban-board-source.png",
       "개인 칸반 보드 시연 화면",
@@ -545,7 +545,7 @@ const caseStudies = {
       [
         "assets/cases/1011/task-create.svg",
         "작업 생성 항목 설명도",
-        "1011 25쪽의 입력 항목 재구성 · 작업 상세 편집 화면으로 소개하지 않습니다.",
+        "작업 생성 화면의 제목·설명·첨부·담당자·상태·일정 항목을 재구성한 설명도",
         "landscape"
       ]
     ],
@@ -670,7 +670,7 @@ const caseStudies = {
       ],
       [
         "02",
-        "메인 배너 최적화",
+        "메인 배너의 탐색 진입점",
         "메인 배너에서 제품·솔루션 정보 탐색을 시작하도록 진입점을 구성했습니다."
       ],
       [
@@ -696,7 +696,7 @@ const caseStudies = {
     "visuals": [
       [
         "assets/pp/tescom/39.jpg",
-        "메인 배너 최적화",
+        "메인 배너의 탐색 진입점",
         "브랜드 노출 영역을 제품·솔루션 탐색을 시작하는 진입점으로 전환"
       ]
     ],
@@ -714,7 +714,7 @@ const caseStudies = {
     }
   },
   "psc": {
-    "insight": "현장의 데이터 오류는 입력 화면의 문제가 아니라 수기 기록과 재입력이 반복되는 업무 구조에서 시작됐습니다.",
+    "insight": "수기 기록과 재입력이 반복되는 과정에서 누락·오기 위험을 고려했습니다.",
     "strategyHeadline": "센서 수집 상태와 거더별 분석 정보를 확인하는 웹·앱 UI를 설계했습니다.",
     "context": [
       [
@@ -792,8 +792,19 @@ const caseStudies = {
     }
   },
   "platform": {
-    "insight": "같은 현장 자료도, 사용자마다 찾는 목적이 달랐습니다.",
-    "strategyHeadline": "파일의 분류 대신, 사용자의 업무 목적을 메뉴의 기준으로 삼았습니다.",
+    "evidenceLabel": "문제 발견",
+    "insight": "자료는 흩어져 있었고, 메뉴의 구분도 모호했습니다.",
+    "evidenceLink": ["프로젝트를 처음 맡으며 많은 자료를 전달받고, 기존 파일과 프로그램을 살펴봤습니다. 사람마다 다른 파일을 가지고 있는 경우도 있어, 어떤 자료가 최종본인지 확인하기 어려웠습니다.", "탐색 흐름과 메뉴 보기"],
+    "decisionDetail": {
+      "eyebrow": "비교한 대안과 선택",
+      "title": "메뉴는 구분하되, 지도는 끊지 않기",
+      "intro": "지도 위에서 메뉴를 사용하는 화면이라, 메뉴 영역의 구분과 지도 배경의 연속성을 함께 고려했습니다.",
+      "image": "assets/cases/1011/page-08.png",
+      "alt": "흰색·검정·반투명 검정 메뉴 대안과 반투명 검정 선택안",
+      "options": [["흰색", "메뉴 경계는 선명하지만 지도와 분리되어 보임"], ["검정", "메뉴 영역의 존재감이 강하게 드러남"], ["반투명 검정 · 선택", "메뉴를 구분하면서 지도 배경의 연속성을 고려"]],
+      "caption": "당시 시안 비교 자료입니다. 메뉴 구성과 선택 상태도 달라, 동일 조건의 가독성 실험으로 해석하지 않았습니다."
+    },
+    "strategyHeadline": "‘현장 설명 / 사업 관리’의 구분을 메뉴 UI에 반영했습니다.",
     "context": [
       [
         "사용자",
@@ -805,28 +816,28 @@ const caseStudies = {
       ],
       [
         "상태",
-        "배포 후 실사용 · 전시 활용"
+        "배포 후 실사용 · 시연·내부 소통 활용"
       ]
     ],
     "pains": [
       [
-        "기존 업무",
-        "공정·자원·보상·현장 자료를 파일과 프로그램에서 각각 찾아 확인했습니다."
+        "흩어진 자료",
+        "프로젝트 인계 과정에서 여러 파일과 기존 프로그램의 자료를 전달받아 함께 살펴봐야 했습니다."
       ],
       [
-        "현장·본사",
-        "현장 위치와 공정, 자원·보상 관리 현황을 서로 다른 목적으로 확인했습니다."
+        "최종본의 혼동",
+        "각자 가진 파일이 달라 어떤 것이 최종 자료인지 헷갈리는 상황이 있었습니다."
       ],
       [
-        "외부 사용자",
-        "프로젝트 현황과 시각화 자료를 확인했습니다."
+        "메뉴 구분의 어려움",
+        "초기에는 기능이 어느 분야에 속하는지 사람들이 잘 구분하지 못했습니다."
       ]
     ],
     "strategies": [
       [
         "01",
-        "공통 메뉴",
-        "현장 설명 / 사업 관리의 공통 메뉴와 관련 기능의 진입점을 정리했습니다."
+        "기획 요청을 UI로",
+        "디자인 작업 중 기획 측에서 ‘현장 설명 / 사업 관리’로 나누자는 요청을 받았습니다. 이 구분을 메뉴 UI에 반영했습니다."
       ],
       [
         "02",
@@ -854,16 +865,10 @@ const caseStudies = {
         "지도·메뉴·자료 유형의 대응",
         "1 지도 · 2 업무 메뉴 · 3 자료 유형 선택",
         "landscape"
-      ],
-      [
-        "assets/cases/1011/page-08.png",
-        "흰색·검정·반투명 검정 비교",
-        "메뉴 구성과 선택 상태도 다른 당시 대안입니다. 통제 실험 결과가 아닙니다.",
-        "landscape"
       ]
     ],
     "reflection": {
-      "learned": "메뉴를 구분하면서 지도 배경이 이어 보이도록 반투명 검정안을 선택했습니다. 정보 범위와 UI 기준은 개발자·기획자·엔지니어와 조율했습니다.",
+      "learned": "메뉴 분리는 기획 측 제안이었고, 저는 이를 화면에 반영했습니다. 구분이 명확해 사용하기 좋다는 의견을 받으며 메뉴를 시각적으로 나누는 의미를 확인했습니다.",
       "next": "역할별 탐색 과업을 정하고 같은 조건에서 자료 찾기 경로와 완료 시간을 확인하고 싶습니다."
     },
     "impact": {
@@ -872,7 +877,8 @@ const caseStudies = {
       "title": "설계·퍼블리싱한 플랫폼이 실제 사용으로 이어졌습니다.",
       "before": "파일·프로그램별 자료 확인",
       "after": "공통 메뉴·지도에서 관련 자료 탐색",
-      "note": "설계·퍼블리싱한 플랫폼이 배포되어 실제 사용자가 이용했습니다. 산출물은 프로젝트 시연과 내부 소통에도 활용했습니다. 탐색 시간과 클릭 수의 개선 수치는 제시하지 않습니다."
+      "facts": [["직접 담당", "기획의 메뉴 분리 요청을 UI에 반영하고 지도 탐색 화면과 퍼블리싱을 담당"], ["배포와 사용", "배포 후 실제 사용자 이용"], ["메뉴 분리 후 의견", "구분이 명확해졌고, 나뉘어 있어 사용하기 좋다는 의견을 받음"], ["협업과 활용", "개발자·기획자·엔지니어와 조율하고, 산출물을 프로젝트 시연과 내부 소통에 활용"]],
+      "note": "메뉴 분리 후 받은 의견은 정성 피드백입니다. 최종본 혼동의 해소 여부나 탐색 시간·클릭 수의 변화는 측정하지 않았습니다."
     }
   },
   "dashboard": {
@@ -910,7 +916,7 @@ const caseStudies = {
       [
         "01",
         "조회 범위",
-        "전사·프로젝트·개인이라는 조회 목적을 구분했습니다. 역할별 접근 권한 정책으로 확대하지 않습니다."
+        "전사·프로젝트·개인이라는 조회 목적을 구분했습니다. 접근 권한이 아닌 정보 조회 범위에 따른 구분입니다."
       ],
       [
         "02",
@@ -929,7 +935,7 @@ const caseStudies = {
     "finalVisual": [
       "assets/cases/1011/erp-structure.svg",
       "비용·인원 ERP 조회 구조 설명도",
-      "1011의 정보 구조 재구성 · 최종 웹 설계안 미사용",
+      "기존 설계 자료를 바탕으로 재구성한 설명도 · 최종 웹 설계안 미사용",
       "landscape"
     ],
     "visuals": [],
@@ -947,7 +953,8 @@ const caseStudies = {
     }
   },
   "tbm": {
-    "insight": "종이 일지의 보관과 판독 문제를 설계 과제로 삼았습니다.",
+    "insight": "종이 일지의 보관과 판독, 두 문제에 대응했습니다.",
+    "evidenceLink": ["종이 기록의 분실·변색과 손글씨 판독 문제를 설계 과제로 정리했습니다. 화면 자료에서는 작성일·출역 인원·확인 상태를 어떻게 구분했는지 보여드립니다.", "일지 항목과 확인 상태 보기"],
     "strategyHeadline": "일지의 작성 맥락과 확인 상태, 서명 저장 결과를 구분했습니다.",
     "context": [
       [
@@ -1007,27 +1014,28 @@ const caseStudies = {
       [
         "assets/cases/1011/tbm-record.svg",
         "작성일·출역 인원·확인 항목",
-        "1011 13쪽의 입력 항목과 확인 상태를 재구성한 모바일 UI 설명도",
+        "기존 일지 화면의 입력 항목과 확인 상태를 재구성한 모바일 UI 설명도",
         "landscape"
       ],
       [
         "assets/cases/1011/page-14.png",
         "마이페이지 서명 입력과 저장 완료",
-        "1011 14쪽 · 서명 저장의 두 상태이며 일지 전체 저장 완료 화면은 아닙니다.",
+        "마이페이지의 서명 입력과 저장 완료 상태 · 일지 전체 저장과는 별도 흐름",
         "landscape"
       ]
     ],
     "reflection": {
-      "learned": "일지의 작성 맥락과 확인 상태를 구분하고, 서명 저장 뒤 처리 결과를 보여주는 화면을 설계했습니다. 사용자 의견은 개발자를 통해 전달받았습니다.",
+      "learned": "초기 기획은 프로젝트 선택과 TBM 일지 작성·업로드였습니다. 이후 사이트에서 PDF·HWP 등의 파일을 열어 확인하는 기능도 추가 제작했습니다. 사용자 의견은 개발자를 통해 전달받았습니다.",
       "next": "서명 미입력·저장 실패와 현장 작성 중단을 실제 과업에서 확인하고 싶습니다."
     },
     "impact": {
       "type": "workflow",
-      "label": "배포 결과",
-      "title": "담당한 TBM 화면이 배포되어 실제 사용자가 이용했습니다.",
-      "before": "종이 일지",
-      "after": "웹·모바일 기록 입력",
-      "note": "모바일 기획·디자인과 웹 UI에 참여한 서비스가 배포되어 실제 사용자가 이용했습니다. 사용자 의견은 개발자를 통해 전달받았습니다. 사용자 평가 수치와 업무 시간 감소는 제시하지 않습니다."
+      "label": "배포와 기능 확장",
+      "title": "일지를 올리는 기능에서, 관련 파일을 열어보는 기능까지.",
+      "before": "초기 기획 · 프로젝트 선택과 TBM 일지 작성·업로드",
+      "after": "추가 제작 · 사이트에서 PDF·HWP 파일 열람",
+      "facts": [["직접 담당", "모바일 일지·서명 화면 기획·디자인, 웹 UI 참여"], ["배포와 사용", "서비스 배포 후 실제 사용자 이용"], ["추가한 기능", "초기 기획 범위에 더해, 사이트에서 PDF·HWP 등의 파일을 열어 확인하는 기능을 추가 제작"], ["의견 전달 경로", "개발자를 통해 사용자 의견을 전달받음"]],
+      "note": "배포·실사용 사실과 초기 기획 대비 추가 제작 범위를 정리했습니다. 파일 열람 기능의 이용률이나 업무 시간 변화는 측정하지 않았습니다."
     }
   },
   "intranet": {
@@ -1091,7 +1099,7 @@ const caseStudies = {
       [
         "assets/cases/1011/mobile-flow.svg",
         "회의실 예약·근태 신청 흐름",
-        "1011 24쪽의 흐름 재구성 · 승인·반려 전체 절차를 검증한 결과는 아닙니다.",
+        "회의실 예약·근태 신청 화면을 바탕으로 재구성한 입력 흐름 설명도",
         "landscape"
       ]
     ],
@@ -1103,7 +1111,7 @@ const caseStudies = {
   "pet": {
     "label": "습관 형성 UX",
     "insight": "반려동물 기록을 시작하고 다시 확인하는 흐름의 부담을 줄이는 것을 설계 과제로 삼았습니다.",
-    "strategyHeadline": "기록의 부담은 줄이고 보상은 강화해 반복 행동 구조를 만들었습니다.",
+    "strategyHeadline": "빠른 기록과 업적·리포트를 연결해 다시 기록할 계기를 설계했습니다.",
     "context": [
       [
         "사용자",
@@ -1265,20 +1273,6 @@ const renderVisuals = (items) =>
 
 // Existing project decisions, with explicit follow-up questions rather than invented test results.
 const decisionNotes = {
-  "platform": [
-    [
-      "판단 기준",
-      "메뉴 구분과 지도 배경의 연속성을 함께 고려했습니다."
-    ],
-    [
-      "선택과 협업",
-      "흰색·검정·반투명 검정 대안을 비교하고 정보 범위와 UI 기준을 관련 직군과 조율했습니다."
-    ],
-    [
-      "실제 활용",
-      "배포 후 실제 사용자 이용 · 프로젝트 시연과 내부 소통 활용"
-    ]
-  ],
   "dashboard": [
     [
       "조회 목적",
@@ -1311,18 +1305,27 @@ const decisionNotes = {
 
 const renderDecisionNotes = (key) => decisionNotes[key] ? `<aside class="decision-notes" aria-label="설계 판단과 후속 확인">${decisionNotes[key].map(([title, text]) => `<div><h4>${title}</h4><p>${text}</p></div>`).join("")}</aside>` : "";
 
+const renderDecisionDetail = (detail) => detail ? `
+    <div class="decision-detail">
+      <div class="decision-detail-copy"><p class="detail-eyebrow">${detail.eyebrow}</p><h4>${detail.title}</h4><p>${detail.intro}</p></div>
+      <dl class="decision-options">${detail.options.map(([title, text], i) => `<div${i === detail.options.length - 1 ? ' class="is-selected"' : ""}><dt>${title}</dt><dd>${text}</dd></div>`).join("")}</dl>
+      <figure><div class="visual-frame landscape"><img src="${detail.image}" alt="${detail.alt}" loading="lazy" decoding="async"></div><figcaption>${detail.caption}</figcaption></figure>
+    </div>` : "";
+
 const renderStudy = (study) => {
   let section = 2;
   const nextSection = () => String(section++).padStart(2, "0");
   return `
   <article class="story-section evidence" id="evidence">
-    <header><p>${nextSection()} 문제 발견</p><h3>${study.insight}</h3></header>
+    <header><p>${nextSection()} ${study.evidenceLabel || "설계 과제"}</p><h3>${study.insight}</h3></header>
+    ${study.evidenceLink ? `<aside class="evidence-source"><p>${study.evidenceLink[0]}</p><a href="#visuals">${study.evidenceLink[1]} <span aria-hidden="true">↓</span></a></aside>` : ""}
     <div class="evidence-grid">${study.pains.map((x, i) => `<div><small>0${i + 1}</small><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join("")}</div>
   </article>
   ${study.reframe ? renderReframe(study.reframe, nextSection()) : ""}
   <article class="story-section strategy" id="decision">
     <header><p>${nextSection()} 설계 결정</p><h3>${study.strategyHeadline}</h3></header>
-    <div class="strategy-list">${study.strategies.map((x) => `<div><b>${x[0]}</b><h4>${x[1]}</h4><small>선택 이유</small><p>${x[2]}</p></div>`).join("")}</div>
+    <div class="strategy-list">${study.strategies.map((x) => `<div><b>${x[0]}</b><h4>${x[1]}</h4><small>설계 내용</small><p>${x[2]}</p></div>`).join("")}</div>
+    ${renderDecisionDetail(study.decisionDetail)}
     ${renderDecisionNotes(slug)}
   </article>
   ${study.iteration ? renderIteration(study.iteration, nextSection()) : ""}
@@ -1343,7 +1346,8 @@ const renderImpact = (impact, number) => `
       <span aria-hidden="true"><i></i><b>→</b></span>
       <div class="after"><small>AFTER</small><strong>${impact.after}</strong></div>
     </div>
-    <p class="impact-note">${impact.note}</p>
+    ${impact.facts ? `<dl class="delivery-facts">${impact.facts.map(([title, text]) => `<div><dt>${title}</dt><dd>${text}</dd></div>`).join("")}</dl>` : ""}
+    ${projects[slug].outcomeBasis ? "" : `<p class="impact-note">${impact.note}</p>`}
   </article>`;
 
 const slug = document.body.dataset.project;
@@ -1386,27 +1390,20 @@ if (p) {
         `<div class="outcome"><strong>${x[0]}</strong><span>${x[1]}</span></div>`,
     )
     .join("");
-  if (p.outcomeBasis)
-    document
-      .querySelector(".outcomes")
-      .insertAdjacentHTML(
-        "afterend",
-        `<p class="outcome-basis"><b>결과의 범위</b>${p.outcomeBasis}</p>`,
-      );
   document.querySelector(".gallery").innerHTML = renderStudy(caseStudies[slug]);
   const study = caseStudies[slug];
   document.querySelector(".case-hero").insertAdjacentHTML("afterend", `
     <section class="case-brief" id="brief" aria-labelledby="brief-title">
       <div class="brief-heading">
         <div class="brief-title-group"><p>CASE AT A GLANCE</p><h2 id="brief-title">이 사례의 핵심</h2></div>
-        <a href="#solution">설계 화면 보기 <span aria-hidden="true">↓</span></a>
+        <a href="#solution">${slug === "dashboard" ? "설계 구조 보기" : "설계 화면 보기"} <span aria-hidden="true">↓</span></a>
       </div>
       <dl class="brief-facts">
         <div><dt><span aria-hidden="true">01</span> 해결할 문제</dt><dd>${study.pains[0][1]}</dd></div>
         <div class="brief-decision"><dt><span aria-hidden="true">02</span> 핵심 설계 결정</dt><dd>${study.strategyHeadline}</dd></div>
         <div><dt><span aria-hidden="true">03</span> 직접 담당한 범위</dt><dd>${p.contribution}</dd></div>
       </dl>
-      <div class="brief-scope"><strong>결과의 범위</strong><p>${p.outcomeBasis}</p></div>
+      <div class="brief-scope"><strong>${p.deliverySummary ? "배포와 참여" : "결과의 범위"}</strong><p>${p.deliverySummary || p.outcomeBasis}</p></div>
     </section>`);
   // 배경·결과 요약은 한 영역으로 묶어 외부 간격을 중복하지 않는다.
   const context = document.createElement("section");
@@ -1415,8 +1412,6 @@ if (p) {
   const summary = document.querySelector(".case-summary");
   summary.before(context);
   context.append(summary, document.querySelector(".outcomes"));
-  const outcomeBasis = document.querySelector(".outcome-basis");
-  if (outcomeBasis) context.append(outcomeBasis);
   installImageViewer();
   const progressItems = [
     ["overview", "개요"],
