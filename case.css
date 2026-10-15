@@ -3033,5 +3033,91 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
     gap: 8px;
   }
 }
+.decision-options > div {
+  min-width: 0;
+  padding: 16px;
+}
+.decision-options dt {
+  margin-bottom: 16px;
+}
+.decision-options dd > p {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.decision-options .option-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 549/311;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #25382c;
+}
+.decision-options .option-preview img {
+  position: absolute;
+  top: -154.0193%;
+  left: var(--source-left);
+  width: 349.7268%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+
+.decision-source {
+  margin-top: 24px;
+}
+.decision-source summary {
+  width: fit-content;
+  min-height: 44px;
+  padding-block: 12px;
+  color: #334457;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.decision-source figure {
+  margin-top: 12px;
+}
+
+.decision-detail .comparison-context {
+  margin: 12px 0 0;
+  max-width: 760px;
+  color: #637080;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.feedback-record {
+  margin-top: 32px;
+  padding: 28px 32px;
+  border-left: 2px solid var(--case-text-accent);
+  background: #f5f6f7;
+}
+.feedback-record .feedback-label {
+  margin: 0 0 16px;
+  color: var(--case-text-accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+.feedback-record blockquote {
+  margin: 0;
+  color: #1b2735;
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.6;
+}
+.feedback-record > p:last-child {
+  margin: 16px 0 0;
+  color: #637080;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+@media (max-width: 800px) {
+  .feedback-record {
+    padding: 24px;
+  }
+}
 
 /*# sourceMappingURL=case.css.map */
