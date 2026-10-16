@@ -917,7 +917,7 @@
   letter-spacing: 0.1em;
 }
 .impact-flow strong {
-  font-size: clamp(28px, 2.4vw, 56px);
+  font-size: clamp(28px, 2vw, 50px);
   line-height: 1.1;
 }
 .impact-flow .after {
@@ -2445,4 +2445,14 @@ body[data-project="dashboard"] .case-main .evidence-grid > div:last-child { padd
 }
 @media (max-width: 800px) {
   .feedback-record { padding: 24px; }
+}
+
+// Keep real mobile screens legible instead of shrinking them into a 16:9 frame.
+.project-visuals .visual-frame.portrait {
+  aspect-ratio: 4 / 5;
+  max-height: 560px;
+  padding: 20px;
+}
+@media (max-width: 800px) {
+  .project-visuals .visual-frame.portrait { max-height: 520px; padding: 16px; }
 }

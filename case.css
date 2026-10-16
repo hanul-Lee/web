@@ -3119,5 +3119,17 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
     padding: 24px;
   }
 }
+.project-visuals .visual-frame.portrait {
+  aspect-ratio: 4/5;
+  max-height: 560px;
+  padding: 20px;
+}
+
+@media (max-width: 800px) {
+  .project-visuals .visual-frame.portrait {
+    max-height: 520px;
+    padding: 16px;
+  }
+}
 
 /*# sourceMappingURL=case.css.map */

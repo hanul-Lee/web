@@ -14,7 +14,9 @@ B2B 업무 서비스의 정보 구조·UX/UI·퍼블리싱 경험을 소개하�
 - `assets/cases`, `assets/pp`: 현재 웹에서 참조하는 사례 이미지·설명도
 - `assets/fonts`: 자체 호스팅 글꼴과 라이선스
 - `tests`: 브라우저·탐색·간격 검증 도구
-- `docs`: 기존 면접 준비·리서치 원고. 과거 참고자료이며 최신 제출본과는 별도입니다.
+- `docs/portfolio-final-review.md`: 2026-10-16 PDF·웹 수정 및 검증 기록
+- `tools/build_portfolio_pdf.py`: 검색·링크가 가능한 26쪽 PDF 빌드 소스
+- `docs`의 면접 준비·리서치 원고는 과거 참고자료이며 최신 제출본과는 별도입니다.
 
 이전 검토 출력물, 중복 수정안, 구버전 PDF, 사용하지 않는 이미지·스타일, 자동 편집 기록은 정리했습니다. 최종 다운로드 PDF는 `assets/portfolio.pdf` 한 곳에서 관리합니다.
 
