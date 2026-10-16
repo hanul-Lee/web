@@ -1005,7 +1005,7 @@
 }
 
 .impact-flow strong {
-  font-size: clamp(28px, 2.4vw, 56px);
+  font-size: clamp(28px, 2vw, 50px);
   line-height: 1.1;
 }
 
@@ -1553,8 +1553,10 @@
 .project-visuals .visual-frame img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .project-visuals figure:hover img {
@@ -1598,7 +1600,8 @@
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mock-window.final-mockup.portrait {
   width: min(100%, 436px);
@@ -1639,8 +1642,10 @@
   min-height: 0;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .outcomes {
@@ -2300,9 +2305,12 @@ body[data-project=tbm] .strategy-list {
   margin: 0 0 32px;
   border-left: 0;
 }
-.case-main .context-facts, .case-main .context-facts > div,
-.case-main .evidence-grid > div, .case-main .strategy-list,
-.case-main .strategy-list > div + div, .case-main .reflection-grid > div {
+.case-main .context-facts,
+.case-main .context-facts > div,
+.case-main .evidence-grid > div,
+.case-main .strategy-list,
+.case-main .strategy-list > div + div,
+.case-main .reflection-grid > div {
   border: 0;
 }
 .case-main .case-body .next {
@@ -2361,18 +2369,28 @@ body[data-project=tbm] .strategy-list {
 }
 
 /* 메인과 같은 둥글기 기준. 작은 버튼과 중첩 카드에 크기별 보정 적용 */
-.case-main .case-hero .case-cover, .case-main .case-brief, .case-main .story-section.solution {
+.case-main .case-hero .case-cover,
+.case-main .case-brief,
+.case-main .story-section.solution {
   border-radius: var(--radius-panel);
 }
-.case-main .brief-facts > div, .case-main .decision-notes, .case-main .user-voice,
-.case-main .reframe-flow > div, .case-main .iteration-compare > div, .case-main .iteration-compare blockquote,
-.case-main .impact-flow > div, .case-main .project-visuals .visual-frame, .case-main .ui-stage {
+.case-main .brief-facts > div,
+.case-main .decision-notes,
+.case-main .user-voice,
+.case-main .reframe-flow > div,
+.case-main .iteration-compare > div,
+.case-main .iteration-compare blockquote,
+.case-main .impact-flow > div,
+.case-main .project-visuals .visual-frame,
+.case-main .ui-stage {
   border-radius: var(--radius-card);
 }
 .case-main .brief-heading a {
   border-radius: var(--radius-control);
 }
-.case-main .comparison-image, .case-main .wireframe, .case-main .mock-window.final-mockup.landscape img {
+.case-main .comparison-image,
+.case-main .wireframe,
+.case-main .mock-window.final-mockup.landscape img {
   border-radius: var(--radius-control);
 }
 
@@ -2556,6 +2574,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 14px 18px;
   background: #f3f5f7;
@@ -2580,12 +2599,15 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   --case-section-inline: var(--page-gutter);
   padding-bottom: 72px;
 }
-.case-main > .case-hero, .case-main > .case-body, .case-main > .case-brief {
+.case-main > .case-hero,
+.case-main > .case-body,
+.case-main > .case-brief {
   width: min(var(--content-max), 100% - var(--page-gutter) * 2);
   max-width: none;
   margin-inline: auto;
 }
-.case-main > .case-hero, .case-main > .case-body {
+.case-main > .case-hero,
+.case-main > .case-body {
   padding-inline: 0;
 }
 .case-main .case-hero {
@@ -2636,7 +2658,8 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
 .case-main .case-body .outcomes .outcome + .outcome {
   border-top: 1px solid #d7dde1;
 }
-.case-main .story-section header h3, .case-main .solution-copy h3 {
+.case-main .story-section header h3,
+.case-main .solution-copy h3 {
   font-weight: 600;
 }
 .case-main .decision-notes {
@@ -2729,6 +2752,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
 }
 /* 다음 사례의 화살표는 제목의 마지막 글자 바로 뒤에 둔다. */
 .case-main .case-body .next > a:first-child {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
   padding-right: 0;
@@ -2868,7 +2892,8 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
     padding: 20px 16px;
   }
   .case-main > .case-hero .case-hero-actions {
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
   .case-main > .case-hero .case-hero-actions a {
     gap: 10px;
@@ -3067,6 +3092,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   margin-top: 24px;
 }
 .decision-source summary {
+  width: -moz-fit-content;
   width: fit-content;
   min-height: 44px;
   padding-block: 12px;
@@ -3130,6 +3156,4 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
     max-height: 520px;
     padding: 16px;
   }
-}
-
-/*# sourceMappingURL=case.css.map */
+}/*# sourceMappingURL=case.css.map */
