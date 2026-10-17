@@ -171,7 +171,7 @@ const projects = {
     "title": "기록과 일정을 연결하는 반려동물 건강관리 UX",
     "domain": "Dangnyangsilrok · Personal Product Project",
     "lead": "해야 하지만 쉽게 미뤄지는 반려동물 건강 기록을 빠른 입력과 즉각적인 보상으로 반복 가능한 행동 경험으로 설계했습니다.",
-    "period": "2026.02 — 진행중",
+    "period": "2026.02 — 진행 중",
     "role": "UX 전략 · 브랜딩 · UI 디자인",
     "contribution": "건강 기록 흐름 · 브랜드 · 모바일 UI 설계",
     "team": "개인 프로젝트",
@@ -212,7 +212,7 @@ const projects = {
     "title": "반응형 웹 전면 리뉴얼",
     "domain": "5G Testing Solutions Website",
     "lead": "PC 중심의 제품 사이트를 모바일·태블릿·데스크톱에서 살펴볼 수 있도록 정보 구조와 반응형 UI를 재설계했습니다.",
-    "period": "2022.01.01 — 2022.06.01",
+    "period": "2022.01 — 2022.06",
     "role": "웹 UX/UI · 반응형 화면·UI 규칙",
     "contribution": "제품 탐색 구조 · 반응형 화면 · UI 규칙 설계",
     "team": "",
@@ -368,7 +368,7 @@ const projects = {
     "title": "자율주행 기술을 이해시키는 반응형 웹 리디자인",
     "domain": "SkyAutoNet Website Renewal",
     "lead": "복잡한 자율주행 기술과 핵심 사업을 고객이 빠르게 이해하도록 브랜드 메시지, 정보 위계, 반응형 탐색 구조를 전면 재설계했습니다.",
-    "period": "2021.09.01 — 2021.11.01",
+    "period": "2021.09 — 2021.11",
     "role": "UX 기획 · IA · 브랜드 메시지 · 반응형 UI · 퍼블리싱",
     "contribution": "IA · 브랜드 메시지 · UI 설계 · 퍼블리싱 참여",
     "team": "",
@@ -420,7 +420,7 @@ const caseStudies = {
     "evidenceLabel": "컬러 변수와 웹 가이드",
     "strategyLabel": "입력 UI의 상태와 구현 기준",
     "solutionLabel": "공통 UI 기준·웹 가이드",
-    "visualsLabel": "검색 입력의 상태와 배치",
+    "visualsLabel": "컬러와 입력·검색 UI 기준",
     "visualsTitle": "컬러 변수와 입력·검색 UI의 기준을 정리했습니다.",
     "insight": "컬러 변수와 가이드의 색상 기준을 연결했습니다.",
     "strategyHeadline": "컬러 정의와 입력·검색 상태를 웹 가이드로 정리했습니다.",
@@ -505,7 +505,7 @@ const caseStudies = {
       ],
       [
         "assets/cases/final/search-states.png",
-        "검색 입력의 상태와 배치",
+        "검색 입력의 네 상태",
         "당시 가이드 발췌 · 기본·포커스·입력 중·비활성 상태",
         "landscape"
       ],
@@ -787,7 +787,7 @@ const caseStudies = {
       [
         "01",
         "수집 상태 확인",
-        "6개 센서의 측정 위치와 수집 정보를 확인하는 UI를 구성했습니다."
+        "센서의 측정 위치와 수집 정보를 확인하는 UI를 구성했습니다."
       ],
       [
         "02",
@@ -859,7 +859,7 @@ const caseStudies = {
       "eyebrow": "메뉴 대안 선택",
       "title": "메뉴는 구분하되, 지도는 끊지 않기",
       "intro": "지도 위에서 메뉴를 사용하는 화면이라, 메뉴 영역의 구분과 지도 배경의 연속성을 함께 고려했습니다.",
-      "image": "assets/cases/1011/page-08.png",
+      "image": "assets/cases/1017/platform-menu-options.png",
       "alt": "흰색·검정·반투명 검정 메뉴 대안과 반투명 검정 선택안",
       "options": [
         [
@@ -1178,7 +1178,7 @@ const caseStudies = {
       "portrait"
     ],
     "finalVisual": [
-      "assets/cases/final/tbm-record-source.png",
+      "assets/cases/final/tbm-record-source.png?v=20261017-final-review",
       "모바일 TBM 일지 · 작성 정보와 확인 상태",
       "작성일·출역 인원·담당자 확인 상태와 작성하기 버튼",
       "portrait"

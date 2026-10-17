@@ -116,7 +116,7 @@ if(file==='project-dashboard.html'&&width===1280){await evalJS(`document.documen
 }
 console.log('PASS',width+'px',pages.length+' pages: all outer gaps within '+(width<=800?'72':'140')+'px, zero adjacent margins, no overflow or missing images');
 }
-fs.writeFileSync(process.env.AUDIT_REPORT || path.join(os.tmpdir(),'section-spacing-validation.json'),JSON.stringify({date:'2026-10-05',method:'Chrome DevTools Protocol + getBoundingClientRect + computed styles',results:report},null,2));
+fs.writeFileSync(process.env.AUDIT_REPORT || path.join(os.tmpdir(),'section-spacing-validation.json'),JSON.stringify({date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),method:'Chrome DevTools Protocol + getBoundingClientRect + computed styles',results:report},null,2));
 await send('Browser.close');
 }finally{if(ws)ws.close();chrome.kill();}
 })().catch(e=>{console.error(e);process.exit(1)});

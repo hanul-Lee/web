@@ -29,7 +29,7 @@ NODE_PATH=/tmp/portfolio-qa/node_modules node tests/browser-audit.cjs
 
 `NODE_PATH=/tmp/portfolio-qa/node_modules node tests/recruiter-flow.cjs`
 
-3개 브라우저에서 추가 프로젝트의 즉시 노출·키보드 이동, 상세 이동, 핵심 요약에서 실제 화면으로 이동, 이미지 확대/닫기, Escape와 포커스 복귀, JavaScript 비활성화 시 프로젝트 노출를 검사합니다. `browser-audit.cjs`는 추가 프로젝트 목록을 포함한 전체 레이아웃도 검사합니다.
+3개 브라우저에서 추가 프로젝트의 즉시 노출·키보드 이동, 상세 이동, 핵심 요약에서 실제 화면으로 이동, 이미지 확대/닫기, Escape와 포커스 복귀, JavaScript 비활성화 시 프로젝트 노출을 검사합니다. `browser-audit.cjs`는 추가 프로젝트 목록을 포함한 전체 레이아웃도 검사합니다.
 
 특정 페이지만 수정했다면 `AUDIT_PAGES=index.html`처럼 파일명을 지정해 관련 페이지를 재검사할 수 있습니다. 여러 파일은 쉼표로 구분합니다.
 
@@ -43,4 +43,4 @@ NODE_PATH=/tmp/portfolio-qa/node_modules node tests/browser-audit.cjs
 
 상세 설계 자료의 가로·세로 이미지는 공통 16:9 프레임과 같은 카드 높이를 유지하는지 검사합니다. 이미지 아래 설명의 시작선, 초기안·최종안 이미지 높이와 나란한 배치의 정렬도 확인합니다.
 
-상세 상단은 소개·바로가기와 대표 이미지가 같은 그룹에 있는지, 참여 정보가 별도 전체 너비 그룹인지 확인합니다. 800px 이하의 세로 배치와 801px 이상의 나란한 배치·이미지 상단 정렬를 검사하며 1057px·1100px·1101px을 포함합니다.
+상세 상단은 소개·바로가기와 대표 이미지가 같은 그룹에 있는지, 참여 정보가 별도 전체 너비 그룹인지 확인합니다. 800px 이하의 세로 배치와 801px 이상의 나란한 배치·이미지 상단 정렬을 검사하며 1057px·1100px·1101px을 포함합니다.
