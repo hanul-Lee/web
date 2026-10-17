@@ -42,6 +42,22 @@ if(file === 'index.html') {
   if(width>800)for(const key of ['top','bottom','story','title','decisions','link'])assert.ok(Math.abs(pair[0][key]-pair[1][key])<1,'project pair '+key+' '+width);
 }
 if(file !== 'index.html') {
+  const visualCards = await evalJS(`(()=>{
+    const measure=element=>{const bounds=element.getBoundingClientRect();return {top:bounds.top,bottom:bounds.bottom,height:bounds.height,width:bounds.width};};
+    return [...document.querySelectorAll('.project-visual-grid')].map(grid=>[...grid.querySelectorAll('figure')].map(figure=>({card:measure(figure),frame:measure(figure.querySelector('.visual-frame')),caption:measure(figure.querySelector('figcaption'))})));
+  })()`);
+  for(const cards of visualCards) for(const card of cards) {
+    assert.ok(Math.abs(card.frame.height-cards[0].frame.height)<1,file+' equal image frame heights '+width);
+    assert.ok(Math.abs(card.card.height-cards[0].card.height)<1,file+' equal visual card heights '+width);
+    assert.ok(Math.abs(card.frame.width/card.frame.height-16/9)<.02,file+' compact visual frame '+width);
+    assert.ok(card.caption.top>=card.frame.bottom,file+' caption below image '+width);
+    if(Math.abs(card.card.top-cards[0].card.top)<1) assert.ok(Math.abs(card.caption.top-cards[0].caption.top)<1,file+' aligned visual captions '+width);
+  }
+  const comparisonCards = await evalJS(`(()=>{const cards=[...document.querySelectorAll('.iteration-compare > div')];return cards.map(card=>{const bounds=card.getBoundingClientRect(),frame=card.querySelector('.comparison-image, .wireframe').getBoundingClientRect();return {top:bounds.top,height:bounds.height,frameTop:frame.top,frameHeight:frame.height};});})()`);
+  if(comparisonCards.length>1) {
+    assert.ok(Math.abs(comparisonCards[0].frameHeight-comparisonCards[1].frameHeight)<1,file+' equal comparison image heights '+width);
+    if(width>800) for(const key of ['top','height','frameTop']) assert.ok(Math.abs(comparisonCards[0][key]-comparisonCards[1][key])<1,file+' aligned comparison '+key+' '+width);
+  }
   const heroGroups = await evalJS(`(()=>{const hero=document.querySelector('.case-hero'),overview=hero.querySelector(':scope > .case-hero-overview'),copy=overview.querySelector(':scope > .case-hero-copy'),cover=overview.querySelector(':scope > .case-cover'),meta=hero.querySelector(':scope > .case-meta');const h=hero.getBoundingClientRect(),o=overview.getBoundingClientRect(),c=copy.getBoundingClientRect(),v=cover.getBoundingClientRect(),m=meta.getBoundingClientRect();return {groups:hero.children.length,actions:copy.querySelectorAll('.case-hero-actions a').length,actionsInside:!!copy.querySelector('.case-result + .case-hero-actions'),metaOutside:!overview.contains(meta),overviewBottom:o.bottom,metaTop:m.top,heroWidth:h.width,metaWidth:m.width,copyTop:c.top,copyBottom:c.bottom,copyRight:c.right,coverTop:v.top,coverLeft:v.left,coverBottom:v.bottom,coverRight:v.right};})()`);
   assert.equal(heroGroups.groups,2,file+' two hero groups');
   assert.equal(heroGroups.actions,2,file+' hero shortcuts');

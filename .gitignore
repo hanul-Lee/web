@@ -3,3 +3,8 @@
 node_modules/
 output/
 portfolio_review_*/
+
+# Local portfolio backup and review notes
+/assets/_portfolio.pdf
+/docs/portfolio-1017-review.md
+/docs/portfolio-1017-final-proofread.md

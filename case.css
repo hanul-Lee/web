@@ -1443,7 +1443,7 @@
 
 .iteration-compare {
   display: grid;
-  grid-template-columns: 1fr minmax(220px, 0.7fr) 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr) minmax(0, 1fr);
   gap: 20px;
   align-items: stretch;
 }
@@ -1537,13 +1537,18 @@
 .project-visuals .project-visual-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: clamp(18px, 3vw, 36px);
 }
 .project-visuals figure {
+  display: grid;
+  grid-template-rows: auto 1fr;
   min-width: 0;
   margin: 0;
 }
 .project-visuals .visual-frame {
+  position: relative;
+  width: 100%;
   overflow: hidden;
   aspect-ratio: 16/9;
   background: #f2f4f6;
@@ -1551,12 +1556,13 @@
   border-radius: 18px;
 }
 .project-visuals .visual-frame img {
+  position: absolute;
+  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .project-visuals figure:hover img {
@@ -1564,7 +1570,8 @@
 }
 .project-visuals figcaption {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
   gap: 7px 20px;
   padding: 18px 4px 0;
 }
@@ -1579,8 +1586,7 @@
   line-height: 1.65;
 }
 .project-visuals figcaption small {
-  grid-column: 2;
-  grid-row: 1;
+  grid-column: 1;
   color: #6b7684;
   font-size: 10px;
   letter-spacing: 0.04em;
@@ -1600,8 +1606,7 @@
   display: block;
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .mock-window.final-mockup.portrait {
   width: min(100%, 436px);
@@ -1627,25 +1632,28 @@
 }
 
 .comparison-image {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
   place-items: center;
+  width: 100%;
+  aspect-ratio: 16/9;
   margin-top: 24px;
   overflow: hidden;
 }
 .comparison-image img {
+  position: absolute;
+  inset: 0;
   display: block;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   min-width: 0;
   min-height: 0;
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: contain;
+  object-position: center;
 }
 
 .outcomes {
@@ -1780,8 +1788,7 @@ body[data-project=tbm] .strategy-list {
     max-height: 330px;
   }
   .comparison-image {
-    height: min(100vw, 400px);
-    max-height: 400px;
+    height: auto;
   }
   .outcome-basis {
     display: grid;
@@ -2574,7 +2581,6 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 14px 18px;
   background: #f3f5f7;
@@ -2752,7 +2758,6 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
 }
 /* 다음 사례의 화살표는 제목의 마지막 글자 바로 뒤에 둔다. */
 .case-main .case-body .next > a:first-child {
-  width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
   padding-right: 0;
@@ -2892,8 +2897,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
     padding: 20px 16px;
   }
   .case-main > .case-hero .case-hero-actions {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
   .case-main > .case-hero .case-hero-actions a {
     gap: 10px;
@@ -3092,7 +3096,6 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   margin-top: 24px;
 }
 .decision-source summary {
-  width: -moz-fit-content;
   width: fit-content;
   min-height: 44px;
   padding-block: 12px;
@@ -3145,15 +3148,62 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
     padding: 24px;
   }
 }
-.project-visuals .visual-frame.portrait {
-  aspect-ratio: 4/5;
-  max-height: 560px;
-  padding: 20px;
+.project-visuals .visual-frame.portrait img {
+  padding: 16px;
 }
 
-@media (max-width: 800px) {
-  .project-visuals .visual-frame.portrait {
-    max-height: 520px;
-    padding: 16px;
+.iteration-compare > div {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 0;
+}
+
+.delivery-visual {
+  min-width: 0;
+  margin: 32px 0 0;
+}
+.delivery-visual .visual-frame {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border: 1px solid #e5e8eb;
+  border-radius: var(--radius-card);
+  background: #f2f4f6;
+}
+.delivery-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.delivery-visual figcaption {
+  margin-top: 12px;
+  color: #626d7b;
+  font-size: var(--type-caption);
+  line-height: 1.7;
+}
+
+.impact-flow {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+}
+.impact-flow > span {
+  align-self: center;
+}
+
+@media (min-width: 801px) and (max-width: 1100px) {
+  .iteration-compare {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
-}/*# sourceMappingURL=case.css.map */
+  .iteration-compare blockquote {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+}
+@media (max-width: 800px) {
+  .impact-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/*# sourceMappingURL=case.css.map */

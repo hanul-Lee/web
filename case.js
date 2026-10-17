@@ -33,7 +33,7 @@ const projects = {
         "기획·UI·퍼블리싱 참여"
       ]
     ],
-    "outcomeBasis": "미배포 프로젝트로, 디자이너 팀 내부에서 설계·구현을 확인했습니다. 본인은 기획·UI·퍼블리싱에 참여했으며, 실제 직원 이용이나 예약 완료율의 성과는 제시하지 않습니다.",
+    "outcomeBasis": "디자이너 팀에서 모바일 인트라넷의 기획·UI·퍼블리싱에 참여했습니다. 팀 내부에서 설계·구현을 확인한 미배포 프로젝트입니다.",
     "images": 6,
     "next": [
       "kanvan",
@@ -129,7 +129,7 @@ const projects = {
     "type": "B2B WORKFLOW · WEB / MOBILE",
     "title": "현장 안전 기록(TBM)의 웹·모바일 전환",
     "domain": "TBM Safety Record System",
-    "lead": "작업 전 안전 점검을 기록하는 TBM 일지를 디지털 입력 화면으로 설계했습니다. 웹은 기록 보관과 판독 문제에 대응하고, 모바일은 현장 작성을 지원하도록 구성했습니다.",
+    "lead": "모바일 일지·서명 화면의 기획·디자인과 웹 UI에 참여했습니다. 담당자 요청으로 추가한 파일 열람 기능의 디자인·퍼블리싱도 맡았습니다.",
     "period": "2025.11 — 2026.04",
     "role": "모바일 기획·디자인 · 웹 UI·퍼블리싱",
     "contribution": "모바일 일지·서명 기획·디자인 · 웹 파일 열람 UI·퍼블리싱",
@@ -289,8 +289,8 @@ const projects = {
     "type": "COMMON UI · SCSS TOKENS · WEB GUIDE",
     "title": "컬러 토큰과 공통 UI 기준·웹 가이드",
     "domain": "Hanmac Design System",
-    "lead": "컬러를 토큰과 SCSS로 관리해 프로젝트마다 사용했습니다. 입력·라디오·체크박스 등 일부 UI 요소는 화면에 맞춰 크기를 조정해 사용하고, 웹 가이드로 정리했습니다.",
-    "period": "2024.05 — 진행중",
+    "lead": "공통 컬러를 SCSS 변수로 관리하고 입력·검색 UI의 상태를 웹 가이드로 정리했습니다. 컬러와 일부 UI 요소를 디자이너의 작업에서 재사용했습니다.",
+    "period": "2024.05 — 2024.07",
     "role": "공통 UI 기준 · 가이드 설계 · SCSS 컬러 토큰 관리",
     "contribution": "컬러 변수 정의 · 입력·검색 상태 가이드 · 일부 UI 요소 재사용",
     "team": "",
@@ -315,7 +315,7 @@ const projects = {
         "기본·포커스·입력 중·비활성"
       ]
     ],
-    "outcomeBasis": "디자이너의 디자인·퍼블리싱에서 컬러와 일부 UI 요소를 재사용했습니다. 공개 자료는 변수 정의와 웹 가이드이며, 조직 전체 도입 성과는 측정하지 않았습니다.",
+    "outcomeBasis": "공통 컬러를 SCSS 변수와 웹 가이드로 정리하고, 컬러와 일부 UI를 프로젝트에 재사용했습니다.",
     "next": [
       "intranet",
       "회의실 예약·근태 신청 모바일 인트라넷"
@@ -329,7 +329,7 @@ const projects = {
     "title": "카드 이동·작업 생성 개인 칸반 프로토타입",
     "domain": "Kanban Workflow Management",
     "lead": "이미지와 제목으로 작업을 구분하는 보드 UI를 설계했습니다. AI의 도움을 받아 카드 이동과 작업 입력을 구현했으며, 실제 사용자 평가는 진행하지 않았습니다.",
-    "period": "2026.03 — 진행중",
+    "period": "2026.03 — 진행 중",
     "role": "개인 UX/UI 설계 · AI 보조 구현",
     "contribution": "보드 UI · 카드 이동 · 작업 생성 프로토타입",
     "team": "개인 프로젝트",
@@ -417,7 +417,12 @@ const caseStudies = {
         "컬러와 일부 UI 요소를 디자이너의 디자인·프론트 작업에서 참고하고 재사용했습니다."
       ]
     ],
-    "insight": "반복 사용하는 컬러와 입력 UI의 기준을 정리했습니다.",
+    "evidenceLabel": "컬러 변수와 웹 가이드",
+    "strategyLabel": "입력 UI의 상태와 구현 기준",
+    "solutionLabel": "공통 UI 기준·웹 가이드",
+    "visualsLabel": "검색 입력의 상태와 배치",
+    "visualsTitle": "컬러 변수와 입력·검색 UI의 기준을 정리했습니다.",
+    "insight": "컬러 변수와 가이드의 색상 기준을 연결했습니다.",
     "strategyHeadline": "컬러 정의와 입력·검색 상태를 웹 가이드로 정리했습니다.",
     "context": [
       [
@@ -487,6 +492,12 @@ const caseStudies = {
         "landscape"
       ],
       [
+        "assets/cases/final/input-code.png",
+        "입력 UI의 상태와 구현 기준",
+        "실제 SCSS · 테이블·목록의 읽기 전용·편집 스타일",
+        "landscape"
+      ],
+      [
         "assets/cases/final/input-guide.png",
         "기본 입력과 라벨·설명문 예시",
         "당시 가이드 발췌 · 일부 입력 UI는 화면에 맞춰 크기를 조정해 사용했습니다.",
@@ -494,8 +505,14 @@ const caseStudies = {
       ],
       [
         "assets/cases/final/search-states.png",
-        "검색 입력의 네 상태",
+        "검색 입력의 상태와 배치",
         "당시 가이드 발췌 · 기본·포커스·입력 중·비활성 상태",
+        "landscape"
+      ],
+      [
+        "assets/cases/final/search-layout.png",
+        "검색창 배치 예시",
+        "콘텐츠 영역 상단에 검색 입력을 배치한 당시 가이드",
         "landscape"
       ]
     ],
@@ -505,7 +522,9 @@ const caseStudies = {
     }
   },
   "kanvan": {
-    "insight": "이미지와 제목을 함께 보여주는 작업 보드 UI를 설계했습니다.",
+    "evidenceLabel": "추가 경험 · 개인 칸반 프로토타입",
+    "solutionLabel": "구현 범위와 다음 개선",
+    "insight": "이미지 카드와 작업 생성을 직접 구현해 본 개인 작업입니다.",
     "strategyHeadline": "이미지 카드와 카드 이동, 작업 생성 입력을 구현했습니다.",
     "context": [
       [
@@ -826,14 +845,18 @@ const caseStudies = {
         "배포 후 실제 사용으로 이어졌고, 메뉴 구분이 명확해 사용하기 좋다는 내부 동료의 의견을 받았습니다."
       ]
     ],
-    "evidenceLabel": "문제 발견",
-    "insight": "자료는 흩어져 있었고, 메뉴의 구분도 모호했습니다.",
+    "evidenceLabel": "업무 배경과 설계 과제",
+    "strategyLabel": "메뉴 구분과 UI 설계",
+    "solutionLabel": "지도에서 자료로 이어지는 흐름",
+    "visualsLabel": "자료 유형별 메뉴 진입점",
+    "visualsTitle": "자료 유형마다 진입할 메뉴를 정리했습니다.",
+    "insight": "흩어진 자료를 살펴보고, 기능이 구분되는 메뉴를 설계했습니다.",
     "evidenceLink": [
       "프로젝트를 처음 맡으며 많은 자료를 전달받고, 기존 파일과 프로그램을 살펴봤습니다. 사람마다 다른 파일을 가지고 있는 경우도 있어, 어떤 자료가 최종본인지 확인하기 어려웠습니다.",
       "탐색 흐름과 메뉴 보기"
     ],
     "decisionDetail": {
-      "eyebrow": "비교한 대안과 선택",
+      "eyebrow": "메뉴 대안 선택",
       "title": "메뉴는 구분하되, 지도는 끊지 않기",
       "intro": "지도 위에서 메뉴를 사용하는 화면이라, 메뉴 영역의 구분과 지도 배경의 연속성을 함께 고려했습니다.",
       "image": "assets/cases/1011/page-08.png",
@@ -855,9 +878,9 @@ const caseStudies = {
           1250
         ]
       ],
-      "caption": "당시 시안 비교 자료입니다. 메뉴 구성과 선택 상태도 달라, 동일 조건의 가독성 실험으로 해석하지 않았습니다."
+      "caption": "당시 제작한 메뉴 디자인 시안 비교"
     },
-    "strategyHeadline": "‘현장 설명 / 사업 관리’의 구분을 메뉴 UI에 반영했습니다.",
+    "strategyHeadline": "기획의 메뉴 구분을 바탕으로 UI 표현을 구체화했습니다.",
     "context": [
       [
         "사용자",
@@ -904,8 +927,8 @@ const caseStudies = {
       ]
     ],
     "ui": "map",
-    "uiTitle": "지도 → 업무 메뉴 → 자료 유형 선택",
-    "uiText": "지도와 하단 메뉴, 시뮬레이션 유형 선택의 대응을 실제 화면에 표시했습니다.",
+    "uiTitle": "지도에서 업무 메뉴로, 메뉴에서 자료 유형으로 이어집니다.",
+    "uiText": "위치와 메뉴, 자료 선택 영역의 역할을 나눠 화면을 구성했습니다.",
     "finalVisual": [
       "assets/cases/platform-9.png",
       "지도와 업무 메뉴가 연결된 실제 설계 화면",
@@ -914,9 +937,21 @@ const caseStudies = {
     ],
     "visuals": [
       [
-        "assets/cases/1011/page-07-final.png",
-        "지도·메뉴·자료 유형의 대응",
-        "1 지도 · 2 업무 메뉴 · 3 자료 유형 선택",
+        "assets/cases/1017/platform-menu.png",
+        "기획의 메뉴 구분을 반영한 UI",
+        "현장 설명·사업 관리의 구분과 메뉴 선택 상태",
+        "landscape"
+      ],
+      [
+        "assets/cases/platform-9.png",
+        "시뮬레이션 유형 선택 화면",
+        "공정·주행·일조·배수 시뮬레이션을 선택하는 메뉴",
+        "landscape"
+      ],
+      [
+        "assets/cases/1017/platform-video.png",
+        "실감형 영상·시뮬레이션 영상",
+        "주행 영상과 시설별 영상 탐색 화면",
         "landscape"
       ]
     ],
@@ -946,7 +981,7 @@ const caseStudies = {
         ],
         [
           "협업과 활용",
-          "개발자·기획자·엔지니어와 조율하고, 산출물을 프로젝트 시연과 내부 소통에 활용"
+          "개발자·기획자·엔지니어와 조율하고, 산출물을 프로젝트 시연·내부 소통과 DMC 전시에 활용"
         ]
       ],
       "note": "탐색 시간·클릭 수의 변화와 최종본 혼동의 해소 여부는 측정하지 않았습니다."
@@ -967,7 +1002,12 @@ const caseStudies = {
         "웹 UI를 설계·퍼블리싱했습니다. 제공 형식이 PDF로 변경되어 웹 설계안은 최종 사용되지 않았습니다."
       ]
     ],
-    "insight": "행 단위 업무 자료를 요약과 상세 정보로 나눴습니다.",
+    "evidenceLabel": "기존 자료와 설계안",
+    "strategyLabel": "조회 범위와 정보 위계",
+    "solutionLabel": "조회 범위와 정보 위계",
+    "visualsLabel": "상태 표현과 프로젝트 결과",
+    "visualsTitle": "조회 범위, 비용 합계, 초과 상태를 구분했습니다.",
+    "insight": "행 단위 자료를 요약과 상세로 나눴습니다.",
     "strategyHeadline": "전사·프로젝트·개인으로 조회 목적을 나눴습니다.",
     "context": [
       [
@@ -1015,8 +1055,8 @@ const caseStudies = {
       ]
     ],
     "ui": "dashboard",
-    "uiTitle": "조회 조건에서 요약과 상세로 이어지는 구조",
-    "uiText": "당시 웹 설계안에서 주요 수치를 위에, 프로젝트·인원별 상세를 아래에 배치했습니다. 아래 설명도에서 조회 순서를 확인할 수 있습니다.",
+    "uiTitle": "조건을 정한 뒤, 주요 수치와 상세 내역을 확인합니다.",
+    "uiText": "전사·프로젝트·개인은 정보를 조회하는 범위입니다. 조회 조건 → 주요 수치 → 프로젝트·인원별 상세 순서로 구성했습니다.",
     "finalVisual": [
       "assets/cases/final/erp-screen.png",
       "비용·인원 ERP 실제 웹 설계안",
@@ -1049,7 +1089,7 @@ const caseStudies = {
     },
     "impact": {
       "type": "risk",
-      "label": "설계·퍼블리싱 결과",
+      "label": "상태 표현과 프로젝트 결과",
       "title": "웹 UI를 설계·퍼블리싱했고, 최종 제공 형식은 PDF로 바뀌었습니다.",
       "before": "행 단위 업무 기록",
       "after": "요약·상세를 구분한 웹 설계안",
@@ -1071,10 +1111,16 @@ const caseStudies = {
         "서비스가 배포되어 실제 사용자가 이용했습니다. 담당자 요청으로 PDF·HWP 파일 열람 기능의 디자인·퍼블리싱도 추가 진행했습니다."
       ]
     ],
-    "insight": "종이 일지의 보관과 판독, 두 문제에 대응했습니다.",
+    "evidenceLabel": "수기 기록에서 찾은 설계 과제",
+    "strategyLabel": "모바일 일지 설계",
+    "solutionLabel": "일지 확인과 작성 진입",
+    "visualsLabel": "서명 입력과 저장 확인",
+    "visualsTitle": "서명 입력과 저장 완료를 구분해 보여줍니다.",
+    "insight": "기록의 보관·판독 문제와 현장 작성 환경을 고려했습니다.",
     "evidenceLink": [
       "종이 기록의 분실·변색과 손글씨 판독 문제를 설계 과제로 정리했습니다. 화면 자료에서는 작성일·출역 인원·확인 상태를 어떻게 구분했는지 보여드립니다.",
-      "일지 항목과 확인 상태 보기"
+      "일지 항목과 확인 상태 보기",
+      "#solution"
     ],
     "strategyHeadline": "일지의 작성 맥락과 확인 상태, 서명 저장 결과를 구분했습니다.",
     "context": [
@@ -1093,11 +1139,11 @@ const caseStudies = {
     ],
     "pains": [
       [
-        "보관 문제",
+        "보관과 조회",
         "종이 일지의 분실·변색 위험에 대응하는 디지털 기록이 필요했습니다."
       ],
       [
-        "판독 문제",
+        "내용 입력과 판독",
         "손글씨 대신 내용을 입력하는 항목을 구성했습니다."
       ],
       [
@@ -1123,21 +1169,26 @@ const caseStudies = {
       ]
     ],
     "ui": "phone",
-    "uiTitle": "모바일 일지와 마이페이지 서명 저장",
-    "uiText": "일지 화면의 작성일·확인 상태·작성 진입과 서명 입력·저장 완료 두 상태를 보여드립니다.",
-    "finalVisual": [
+    "uiTitle": "작성 맥락과 확인 상태를 보고, 일지 작성으로 진입합니다.",
+    "uiText": "일지의 작성일·출역 인원·담당자 확인 항목과 작성 버튼을 구분했습니다.",
+    "heroVisual": [
       "assets/cases/tbm-7.png",
       "현장 안전 기록 모바일 홈",
       "현장 안전 기록 서비스의 모바일 홈 화면",
       "portrait"
     ],
+    "finalVisual": [
+      "assets/cases/final/tbm-record-source.png",
+      "모바일 TBM 일지 · 작성 정보와 확인 상태",
+      "작성일·출역 인원·담당자 확인 상태와 작성하기 버튼",
+      "portrait"
+    ],
+    "solutionSteps": [
+      ["01 작성일·출역 인원", "작성일과 금일 출역 인원을 상단에서 확인합니다."],
+      ["02 담당·소장 확인 상태", "담당·소장 확인 상태와 근로자 확인 항목을 구분합니다."],
+      ["03 일지 작성 진입", "하단 ‘작성하기’ 버튼에서 다음 입력 단계로 이동합니다."]
+    ],
     "visuals": [
-      [
-        "assets/cases/final/tbm-record-source.png",
-        "모바일 일지의 작성 맥락과 확인 상태",
-        "당시 설계 자료 발췌 · 작성일·출역 인원·확인 항목과 작성 진입",
-        "portrait"
-      ],
       [
         "assets/cases/final/tbm-sign-source.png",
         "마이페이지 서명 입력",
@@ -1157,10 +1208,15 @@ const caseStudies = {
     },
     "impact": {
       "type": "workflow",
-      "label": "배포와 기능 확장",
-      "title": "일지를 올리는 기능에서, 관련 파일을 열어보는 기능까지.",
-      "before": "초기 기획 · 프로젝트 선택과 TBM 일지 작성·업로드",
-      "after": "추가 제작 · 사이트 안에서 PDF·HWP 파일 확인",
+      "label": "추가 요청과 웹 기능 확장",
+      "title": "일지 업로드에서, 사이트 내 파일 열람으로 범위를 넓혔습니다.",
+      "before": "프로젝트 선택·TBM 일지 작성 및 업로드",
+      "after": "사이트 안에서 관련 파일 열람",
+      "visual": [
+        "assets/cases/1017/tbm-file-viewer.png",
+        "사이트 내 파일 목록과 PDF 열람 화면",
+        "추가 요청에 따라 디자인·퍼블리싱한 웹 파일 열람 기능"
+      ],
       "facts": [
         [
           "추가 요청의 배경",
@@ -1183,7 +1239,9 @@ const caseStudies = {
     }
   },
   "intranet": {
-    "insight": "회의실 현황과 문서 상태에서 필요한 신청으로 이어지도록 구성했습니다.",
+    "evidenceLabel": "추가 경험 · 모바일 인트라넷",
+    "solutionLabel": "회의실 예약과 근태 신청",
+    "insight": "현황 확인에서 회의실 예약과 근태 신청으로 연결했습니다.",
     "strategyHeadline": "현황 확인에서 신청 입력으로 이어지는 두 흐름을 설계했습니다.",
     "context": [
       [
@@ -1243,13 +1301,13 @@ const caseStudies = {
       [
         "assets/cases/final/intranet-booking.png",
         "회의실 현황에서 예약 입력으로",
-        "당시 설계 화면 · 공간 확인 후 예약일·시간·목적 입력",
+        "회의실 현황 확인 → 예약일·시간·목적 입력",
         "portrait"
       ],
       [
         "assets/cases/final/intranet-request.png",
-        "문서 현황에서 근태 신청으로",
-        "당시 설계 화면 · 근태 종류·일자·사유 입력",
+        "문서 선택에서 근태 신청으로",
+        "문서 선택 → 근태 종류·일자·사유 입력",
         "portrait"
       ]
     ],
@@ -1404,11 +1462,11 @@ const renderReflection = (item, number) =>
   </article>`
     : "";
 
-const renderVisuals = (items) =>
+const renderVisuals = (items, label = "설계 자료", title = "실제 화면과 설계 자료") =>
   items?.length
     ? `
   <article class="story-section project-visuals" id="visuals">
-    <header><p>설계 자료</p><h3>실제 화면과 설계 자료</h3></header>
+    <header><p>${label}</p><h3>${title}</h3></header>
     <div class="project-visual-grid">${items
       .map(
         (item, index) => `
@@ -1460,7 +1518,7 @@ const renderDecisionDetail = (detail) => detail ? `
       <div class="decision-detail-copy"><p class="detail-eyebrow">${detail.eyebrow}</p><h4>${detail.title}</h4><p>${detail.intro}</p></div>
       <dl class="decision-options">${detail.options.map(([title, text, x], i) => `<div${i === detail.options.length - 1 ? ' class="is-selected"' : ""}><dt>${title}</dt><dd><div class="option-preview" style="--source-left: ${-(x / 549) * 100}%"><img src="${detail.image}" alt="${title} 메뉴 시안의 지도와 메뉴 부분" loading="lazy" decoding="async"></div><p>${text}</p></dd></div>`).join("")}</dl>
       <details class="decision-source"><summary>원본 시안 비교 자료 보기</summary><figure><div class="visual-frame landscape"><img src="${detail.image}" alt="${detail.alt}" loading="lazy" decoding="async"></div><figcaption>${detail.caption}</figcaption></figure></details>
-      <p class="comparison-context">같은 크기로 볼 수 있도록 원본의 지도·메뉴 부분을 발췌했습니다. 메뉴 구성과 선택 상태가 다른 당시 시안이며, 통제된 사용성 실험 결과는 아닙니다.</p>
+      <p class="comparison-context">같은 크기로 비교할 수 있도록 당시 메뉴 디자인 시안의 지도·메뉴 부분을 발췌했습니다.</p>
     </div>` : "";
 
 const renderStudy = (study) => {
@@ -1469,22 +1527,22 @@ const renderStudy = (study) => {
   return `
   <article class="story-section evidence" id="evidence">
     <header><p>${nextSection()} ${study.evidenceLabel || "설계 과제"}</p><h3>${study.insight}</h3></header>
-    ${study.evidenceLink ? `<aside class="evidence-source"><p>${study.evidenceLink[0]}</p><a href="#visuals">${study.evidenceLink[1]} <span aria-hidden="true">↓</span></a></aside>` : ""}
+    ${study.evidenceLink ? `<aside class="evidence-source"><p>${study.evidenceLink[0]}</p><a href="${study.evidenceLink[2] || "#visuals"}">${study.evidenceLink[1]} <span aria-hidden="true">↓</span></a></aside>` : ""}
     <div class="evidence-grid">${study.pains.map((x, i) => `<div><small>0${i + 1}</small><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join("")}</div>
   </article>
   ${study.reframe ? renderReframe(study.reframe, nextSection()) : ""}
   <article class="story-section strategy" id="decision">
-    <header><p>${nextSection()} 설계 결정</p><h3>${study.strategyHeadline}</h3></header>
+    <header><p>${nextSection()} ${study.strategyLabel || "설계 결정"}</p><h3>${study.strategyHeadline}</h3></header>
     <div class="strategy-list">${study.strategies.map((x) => `<div><b>${x[0]}</b><h4>${x[1]}</h4><small>설계 내용</small><p>${x[2]}</p></div>`).join("")}</div>
     ${renderDecisionDetail(study.decisionDetail)}
     ${renderDecisionNotes(slug)}
   </article>
   ${study.iteration ? renderIteration(study.iteration, nextSection()) : ""}
   <article class="story-section solution" id="solution">
-    <div class="solution-copy"><p>${nextSection()} 설계 화면과 흐름</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map((x) => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}</ol>` : ""}</div>
+    <div class="solution-copy"><p>${nextSection()} ${study.solutionLabel || "설계 화면과 흐름"}</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map((x) => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}</ol>` : ""}</div>
     <div class="ui-stage">${renderMockup(study.ui, study.finalVisual)}</div>
   </article>
-  ${renderVisuals(study.visuals)}
+  ${renderVisuals(study.visuals, study.visualsLabel, study.visualsTitle)}
   ${study.impact ? renderImpact(study.impact, nextSection()) : ""}
   ${study.reflection ? renderReflection(study.reflection, nextSection()) : ""}`;
 };
@@ -1497,6 +1555,7 @@ const renderImpact = (impact, number) => `
       <span aria-hidden="true"><i></i><b>→</b></span>
       <div class="after"><small>AFTER</small><strong>${impact.after}</strong></div>
     </div>
+    ${impact.visual ? `<figure class="delivery-visual"><div class="visual-frame"><img src="${impact.visual[0]}" alt="${impact.visual[1]}" loading="lazy" decoding="async"></div><figcaption>${impact.visual[2]}</figcaption></figure>` : ""}
     ${impact.feedback ? `<aside class="feedback-record"><p class="feedback-label">${impact.feedback.label}</p><blockquote>${impact.feedback.text}</blockquote><p>${impact.feedback.context}</p></aside>` : ""}
     ${impact.facts ? `<dl class="delivery-facts">${impact.facts.map(([title, text]) => `<div><dt>${title}</dt><dd>${text}</dd></div>`).join("")}</dl>` : ""}
     ${projects[slug].outcomeBasis ? "" : `<p class="impact-note">${impact.note}</p>`}
@@ -1529,7 +1588,7 @@ if (p) {
   document.querySelector(".case-result").replaceChildren(resultText);
   document.querySelector(".case-cover").innerHTML = renderMockup(
     caseStudies[slug].ui,
-    caseStudies[slug].finalVisual,
+    caseStudies[slug].heroVisual || caseStudies[slug].finalVisual,
   );
   document.querySelector(".problem").textContent = p.problem;
   document.querySelector(".detail").textContent = p.detail;

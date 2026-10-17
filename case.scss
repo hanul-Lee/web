@@ -1381,7 +1381,7 @@
 
 .iteration-compare {
   display: grid;
-  grid-template-columns: 1fr minmax(220px, 0.7fr) 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr) minmax(0, 1fr);
   gap: 20px;
   align-items: stretch;
 
@@ -1488,15 +1488,20 @@
   .project-visual-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
     gap: clamp(18px, 3vw, 36px);
   }
 
   figure {
+    display: grid;
+    grid-template-rows: auto 1fr;
     min-width: 0;
     margin: 0;
   }
 
   .visual-frame {
+    position: relative;
+    width: 100%;
     overflow: hidden;
     aspect-ratio: 16 / 9;
     background: #f2f4f6;
@@ -1504,6 +1509,9 @@
     border-radius: 18px;
 
     img {
+      position: absolute;
+      inset: 0;
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -1518,7 +1526,8 @@
 
   figcaption {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
     gap: 7px 20px;
     padding: 18px 4px 0;
 
@@ -1535,8 +1544,7 @@
     }
 
     small {
-      grid-column: 2;
-      grid-row: 1;
+      grid-column: 1;
       color: #6b7684;
       font-size: 10px;
       letter-spacing: 0.04em;
@@ -1590,17 +1598,22 @@
 }
 
 .comparison-image {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
   place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   margin-top: 24px;
   overflow: hidden;
 
   img {
+    position: absolute;
+    inset: 0;
     display: block;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     min-width: 0;
     min-height: 0;
     max-width: 100%;
@@ -1765,8 +1778,7 @@ body[data-project="tbm"] {
   }
 
   .comparison-image {
-    height: min(100vw, 400px);
-    max-height: 400px;
+    height: auto;
   }
 
   .outcome-basis {
@@ -3135,15 +3147,68 @@ body[data-project="dashboard"] .case-main .evidence-grid > div:last-child {
   }
 }
 
-// Keep real mobile screens legible instead of shrinking them into a 16:9 frame.
 .project-visuals .visual-frame.portrait {
-  aspect-ratio: 4 / 5;
-  max-height: 560px;
-  padding: 20px;
-}
-@media (max-width: 800px) {
-  .project-visuals .visual-frame.portrait {
-    max-height: 520px;
+  img {
     padding: 16px;
+  }
+}
+
+.iteration-compare > div {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 0;
+}
+
+.delivery-visual {
+  min-width: 0;
+  margin: 32px 0 0;
+
+  .visual-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid #e5e8eb;
+    border-radius: var(--radius-card);
+    background: #f2f4f6;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  figcaption {
+    margin-top: 12px;
+    color: #626d7b;
+    font-size: var(--type-caption);
+    line-height: 1.7;
+  }
+}
+
+.impact-flow {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+
+  > span {
+    align-self: center;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1100px) {
+  .iteration-compare {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    blockquote {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .impact-flow {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
