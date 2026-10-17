@@ -3152,6 +3152,19 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   padding: 16px;
 }
 
+.project-visuals .visual-frame img[src^="assets/cases/final/erp-overtime.png"] {
+  width: auto;
+  height: 160px;
+  max-width: calc(100% - 32px);
+  max-height: calc(100% - 32px);
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  .project-visuals .visual-frame img[src^="assets/cases/final/erp-overtime.png"] {
+    height: 110px;
+  }
+}
 .iteration-compare > div {
   display: grid;
   grid-template-rows: auto 1fr auto;
