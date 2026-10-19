@@ -1899,7 +1899,8 @@ body {
   padding: 0;
   --chapter-light: #a9dce3;
 }
-.portfolio-home .work-case:first-child, .portfolio-home .work-case:last-child {
+.portfolio-home .work-case:first-child,
+.portfolio-home .work-case:last-child {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   grid-column: 1/-1;
@@ -2243,7 +2244,8 @@ body {
   .portfolio-home .intro-layout {
     min-height: 560px;
   }
-  .portfolio-home .work-case:first-child, .portfolio-home .work-case:last-child {
+  .portfolio-home .work-case:first-child,
+  .portfolio-home .work-case:last-child {
     gap: 24px 32px;
   }
   .portfolio-home .work-visual {
@@ -2309,7 +2311,8 @@ body {
   .portfolio-home .intro-proof {
     grid-template-columns: minmax(0, 1fr);
   }
-  .portfolio-home .intro-proof > a, .portfolio-home .intro-proof > a:first-child {
+  .portfolio-home .intro-proof > a,
+  .portfolio-home .intro-proof > a:first-child {
     padding: 20px 0;
   }
   .portfolio-home .intro-proof > a + a {
@@ -2327,7 +2330,8 @@ body {
     grid-template-columns: minmax(0, 1fr);
     gap: 64px;
   }
-  .portfolio-home .work-case:first-child, .portfolio-home .work-case:last-child {
+  .portfolio-home .work-case:first-child,
+  .portfolio-home .work-case:last-child {
     display: block;
     grid-column: auto;
   }
@@ -2336,7 +2340,8 @@ body {
     padding: 20px;
     border-radius: 16px;
   }
-  .portfolio-home .work-story, .portfolio-home .work-case:not(:first-child):not(:last-child) .work-story {
+  .portfolio-home .work-story,
+  .portfolio-home .work-case:not(:first-child):not(:last-child) .work-story {
     padding-top: 24px;
   }
   .portfolio-home .work-story h3 {
@@ -2351,7 +2356,8 @@ body {
   .portfolio-home .capability-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .portfolio-home .capability-grid > a, .portfolio-home .capability-grid > a:first-child {
+  .portfolio-home .capability-grid > a,
+  .portfolio-home .capability-grid > a:first-child {
     padding: 28px 0;
   }
   .portfolio-home .capability-grid > a + a {
@@ -2394,7 +2400,8 @@ body {
   grid-column: 1/-1;
   margin-bottom: 24px;
 }
-.portfolio-home .work-case:first-child .project-chapter, .portfolio-home .work-case:last-child .project-chapter {
+.portfolio-home .work-case:first-child .project-chapter,
+.portfolio-home .work-case:last-child .project-chapter {
   margin-bottom: 0;
 }
 .portfolio-home .project-chapter::after {
@@ -2431,12 +2438,15 @@ body {
   .portfolio-home .project-chapter {
     margin-bottom: 20px;
   }
-  .portfolio-home .work-case:first-child .project-chapter, .portfolio-home .work-case:last-child .project-chapter {
+  .portfolio-home .work-case:first-child .project-chapter,
+  .portfolio-home .work-case:last-child .project-chapter {
     margin-bottom: 20px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .portfolio-home *, .portfolio-home *::before, .portfolio-home *::after {
+  .portfolio-home *,
+  .portfolio-home *::before,
+  .portfolio-home *::after {
     transition: none;
   }
 }

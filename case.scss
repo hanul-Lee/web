@@ -3162,7 +3162,9 @@ body[data-project="dashboard"] .case-main .evidence-grid > div:last-child {
 }
 
 @media (max-width: 800px) {
-  .project-visuals .visual-frame img[src^="assets/cases/final/erp-overtime.png"] {
+  .project-visuals
+    .visual-frame
+    img[src^="assets/cases/final/erp-overtime.png"] {
     height: 110px;
   }
 }
