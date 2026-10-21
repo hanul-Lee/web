@@ -100,7 +100,7 @@ const projects = {
     "textAccent": "#a9470f",
     "muted": "#c7c8ca",
     "problem": "자료는 파일·프로그램에 나뉘어 있었고, 초기 메뉴에서는 기능의 분야를 구분하기 어려웠습니다.",
-    "detail": "처음 프로젝트를 맡으며 여러 파일과 기존 프로그램의 자료를 전달받았습니다. 각자 보유한 파일이 달라 최종본이 무엇인지 헷갈리기도 했습니다. 공통 메뉴와 지도에서 관련 자료로 이어지는 화면을 설계했습니다.",
+    "detail": "자료 인계 과정에서 파일과 프로그램에 정보가 흩어져 있음을 확인했습니다. 이번 작업은 자료 버전 관리가 아닌, 업무별 메뉴와 지도 탐색 UI에 집중했습니다.",
     "outcomes": [
       [
         "공통 메뉴",
@@ -141,7 +141,7 @@ const projects = {
     "textAccent": "#3b389f",
     "muted": "#c9cbd2",
     "problem": "종이 일지의 보관과 판독 문제를 설계 과제로 삼았습니다.",
-    "detail": "종이 일지는 보관 중 분실·변색될 수 있고 손글씨를 읽기 어려울 수 있었습니다. 웹에는 기록을 입력하고 보관하는 구조, 모바일에는 현장에서 작성하는 화면을 설계했습니다.",
+    "detail": "웹의 기록 입력·보관과 모바일 현장 작성을 함께 다뤘습니다. 이후 담당자 요청으로 사이트 내 PDF·HWP 파일 열람까지 제작 범위가 확장됐습니다.",
     "outcomes": [
       [
         "일지 화면",
@@ -1203,7 +1203,7 @@ const caseStudies = {
       ]
     ],
     "reflection": {
-      "learned": "일지 작성으로 시작한 작업에 파일 열람이 추가됐습니다. 각자의 PC에서 파일을 여는 대신 사이트 안에서 함께 확인하려는 요청이었고, 저는 추가 기능의 디자인·퍼블리싱을 맡았습니다.",
+      "learned": "추가 요청을 반영하며 모바일의 현장 작성과 웹의 자료 확인을 나누어 설계했습니다.",
       "next": "서명 미입력·저장 실패와 현장 작성 중단을 실제 과업에서 확인하고 싶습니다."
     },
     "impact": {
@@ -1525,11 +1525,11 @@ const renderStudy = (study) => {
   let section = 2;
   const nextSection = () => String(section++).padStart(2, "0");
   return `
-  <article class="story-section evidence" id="evidence">
+  ${study.briefFacts ? "" : `<article class="story-section evidence" id="evidence">
     <header><p>${nextSection()} ${study.evidenceLabel || "설계 과제"}</p><h3>${study.insight}</h3></header>
     ${study.evidenceLink ? `<aside class="evidence-source"><p>${study.evidenceLink[0]}</p><a href="${study.evidenceLink[2] || "#visuals"}">${study.evidenceLink[1]} <span aria-hidden="true">↓</span></a></aside>` : ""}
     <div class="evidence-grid">${study.pains.map((x, i) => `<div><small>0${i + 1}</small><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join("")}</div>
-  </article>
+  </article>`}
   ${study.reframe ? renderReframe(study.reframe, nextSection()) : ""}
   <article class="story-section strategy" id="decision">
     <header><p>${nextSection()} ${study.strategyLabel || "설계 결정"}</p><h3>${study.strategyHeadline}</h3></header>

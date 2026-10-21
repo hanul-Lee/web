@@ -93,7 +93,7 @@ if(file==='index.html' && [390,1280].includes(width)) {
   assert.ok(hero.scope.includes('메뉴 UI') && hero.scope.includes('퍼블리싱'));
   assert.equal(hero.status,'배포 후 실사용');
   assert.equal(hero.planets,0);
-  assert.equal(hero.proof,3);
+  assert.equal(hero.proof,0);
   const rows=await evalJS(`(()=>{const rows=[];for(const e of document.querySelectorAll('.work-case')){const r=e.getBoundingClientRect();let row=rows.find(x=>Math.abs(x.top-r.top)<1);if(row)row.bottom=Math.max(row.bottom,r.bottom);else rows.push({top:r.top,bottom:r.bottom});}return rows.sort((a,b)=>a.top-b.top);})()`);
   for(let r=1;r<rows.length;r++)assert.ok(Math.abs(rows[r].top-rows[r-1].bottom-(width<=800?64:80))<1,'project row spacing '+width);
   const shot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(root,'docs','hanul-home-'+width+'.png'),Buffer.from(shot.data,'base64'));
@@ -112,7 +112,7 @@ if(['project-platform.html','project-tbm.html'].includes(file) && [390,1057,1280
 }
 report.push({file,...info});
 if(file==='index.html'&&width===390){await evalJS(`document.documentElement.style.scrollBehavior='auto'; document.querySelector('.selected-work').scrollIntoView({behavior:'instant'})`);const shot=await send('Page.captureScreenshot');fs.writeFileSync('/tmp/section-gap-home.png',Buffer.from(shot.data,'base64'));}
-if(file==='project-dashboard.html'&&width===1280){await evalJS(`document.documentElement.style.scrollBehavior='auto'; document.querySelector('#evidence').scrollIntoView({behavior:'instant'})`);const shot=await send('Page.captureScreenshot');fs.writeFileSync('/tmp/section-gap-detail.png',Buffer.from(shot.data,'base64'));}
+if(file==='project-dashboard.html'&&width===1280){await evalJS(`document.documentElement.style.scrollBehavior='auto'; document.querySelector('#context').scrollIntoView({behavior:'instant'})`);const shot=await send('Page.captureScreenshot');fs.writeFileSync('/tmp/section-gap-detail.png',Buffer.from(shot.data,'base64'));}
 }
 console.log('PASS',width+'px',pages.length+' pages: all outer gaps within '+(width<=800?'72':'140')+'px, zero adjacent margins, no overflow or missing images');
 }

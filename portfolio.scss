@@ -1950,8 +1950,7 @@ body {
     padding: 0;
     --chapter-light: #a9dce3;
   }
-  .work-case:first-child,
-  .work-case:last-child {
+  .work-case:first-child {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
     grid-column: 1 / -1;
@@ -1976,9 +1975,6 @@ body {
   }
   .dashboard-visual {
     background: #e9e3da;
-  }
-  .work-case:last-child .work-visual {
-    background: #dce4e0;
   }
   .visual-label {
     display: flex;
@@ -2011,7 +2007,7 @@ body {
     margin: 20px auto;
     box-shadow: none;
   }
-  .work-case:not(:first-child):not(:last-child) .work-story {
+  .work-case:not(:first-child) .work-story {
     padding-top: 28px;
   }
   .work-meta {
@@ -2294,8 +2290,7 @@ body {
     .intro-layout {
       min-height: 560px;
     }
-    .work-case:first-child,
-    .work-case:last-child {
+    .work-case:first-child {
       gap: 24px 32px;
     }
     .work-visual {
@@ -2380,8 +2375,7 @@ body {
       grid-template-columns: minmax(0, 1fr);
       gap: 64px;
     }
-    .work-case:first-child,
-    .work-case:last-child {
+    .work-case:first-child {
       display: block;
       grid-column: auto;
     }
@@ -2391,7 +2385,7 @@ body {
       border-radius: 16px;
     }
     .work-story,
-    .work-case:not(:first-child):not(:last-child) .work-story {
+    .work-case:not(:first-child) .work-story {
       padding-top: 24px;
     }
     .work-story h3 {
@@ -2450,8 +2444,7 @@ body {
     grid-column: 1 / -1;
     margin-bottom: 24px;
   }
-  .work-case:first-child .project-chapter,
-  .work-case:last-child .project-chapter {
+  .work-case:first-child .project-chapter {
     margin-bottom: 0;
   }
   .project-chapter::after {
@@ -2488,8 +2481,7 @@ body {
     .project-chapter {
       margin-bottom: 20px;
     }
-    .work-case:first-child .project-chapter,
-    .work-case:last-child .project-chapter {
+    .work-case:first-child .project-chapter {
       margin-bottom: 20px;
     }
   }
