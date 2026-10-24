@@ -3222,7 +3222,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
 body[data-project=tbm] .project-visuals figure.portrait .visual-frame,
 body[data-project=psc] .project-visuals figure.portrait .visual-frame {
   aspect-ratio: 390/810;
-  max-height: 740px;
+  max-height: 450px;
 }
 
 body[data-project=dashboard] .project-visuals figure.portrait .visual-frame {
@@ -3236,7 +3236,7 @@ body[data-project=dashboard] .case-cover .final-mockup img {
 }
 
 body[data-project=tbm] .case-cover .final-mockup.portrait img {
-  max-height: 510px;
+  max-height: 380px;
 }
 
 body[data-project=intranet] .project-visuals figure.portrait .visual-frame {
@@ -3274,6 +3274,57 @@ body[data-project=psc] .project-visuals figure .visual-frame {
   body[data-project=intranet] .project-visuals figure .visual-frame,
   body[data-project=psc] .project-visuals figure .visual-frame {
     height: 380px;
+  }
+}
+/* Keep the overview cover compact so participation details stay near the fold. */
+.case-main > .case-hero .case-cover {
+  --cover-image-height: 308px;
+  max-height: 364px;
+}
+.case-main > .case-hero .case-cover .mock-window.final-mockup {
+  max-height: var(--cover-image-height);
+}
+.case-main > .case-hero .case-cover .mock-window.final-mockup img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: var(--cover-image-height);
+  object-fit: contain;
+}
+
+@media (max-width: 800px) {
+  .case-main > .case-hero .case-cover {
+    --cover-image-height: 316px;
+  }
+}
+@media (max-width: 600px) {
+  .case-main > .case-hero .case-cover {
+    --cover-image-height: 324px;
+  }
+}
+/* Kanban: fit the tall board into a compact overview and readable body preview. */
+body[data-project=kanvan] .case-main > .case-hero {
+  gap: 28px;
+}
+body[data-project=kanvan] .case-main > .case-hero .case-cover {
+  --cover-image-height: 224px;
+  max-height: 280px;
+}
+body[data-project=kanvan] .ui-stage .mock-window.final-mockup.landscape {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+body[data-project=kanvan] .ui-stage .mock-window.final-mockup.landscape img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+}
+
+@media (min-width: 801px) {
+  body[data-project=kanvan] .case-main {
+    padding-top: calc(var(--header-height) + 40px);
   }
 }
 

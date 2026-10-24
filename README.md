@@ -8,6 +8,7 @@ B2B 업무 서비스의 정보 구조·UX/UI·퍼블리싱 경험을 소개하�
 - `project-*.html`: 프로젝트 상세 페이지 10개
 - `case.js`: 프로젝트 내용과 다음 프로젝트 순서, 화면 확대 기능
 - `script.js`: 공통 메뉴 동작
+- `components.js`: 전체 페이지의 공통 헤더·푸터, 메뉴·PDF 링크 (메뉴 초기화를 위해 `script.js` 앞에서 불러옵니다.)
 - `portfolio.scss` / `portfolio.css`: 메인·공통 스타일 원본과 결과물
 - `case.scss` / `case.css`: 상세 스타일 원본과 결과물
 - `assets/portfolio.pdf`: 현재 지원용 다운로드 PDF. 제출할 때도 이 파일을 사용합니다.
@@ -56,7 +57,7 @@ CSS 소스맵은 스타일 원본을 찾는 데 사용하므로 현재 파일을
 
 ## PDF 교체와 배포
 
-새 제출본으로 교체할 때는 `assets/portfolio.pdf`를 갱신하고 모든 HTML의 PDF 링크에 있는 `v` 값을 함께 변경합니다. 브라우저에 이전 PDF가 남는 것을 줄이기 위한 버전입니다.
+새 제출본으로 교체할 때는 `assets/portfolio.pdf`를 갱신하고 `components.js`의 `pdfLink`와 `index.html` 본문의 PDF 링크에 있는 `v` 값을 함께 변경합니다. 브라우저에 이전 PDF가 남는 것을 줄이기 위한 버전입니다.
 
 로컬 파일 수정은 공개 GitHub Pages에 자동 반영되지 않습니다. 공개 반영 여부는 저장소의 배포 상태와 실제 다운로드 파일을 확인합니다.
 

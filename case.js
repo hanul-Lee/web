@@ -6,7 +6,7 @@ const projects = {
     "type": "TEAM PROJECT · MOBILE WORKFLOW",
     "title": "회의실 예약·근태 신청 모바일 인트라넷",
     "domain": "Mobile Intranet Concept",
-    "lead": "디자이너 팀에서 모바일 인트라넷의 기획·UI·퍼블리싱에 참여했습니다. 회의실 현황에서 예약으로, 전자결재 현황에서 근태 신청으로 이어지는 화면을 구성했습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
+    "lead": "디자이너 팀에서 모바일 인트라넷의 기획·UI·퍼블리싱에 참여했습니다. 회의실 현황에서 예약으로, 전자결재 현황에서 근태 신청으로 이어지는 화면을 구성했습니다. 당시 설계한 원본 화면을 소개합니다.",
     "period": "2023.01 — 2023.06",
     "role": "팀 내 기획 · UI · 퍼블리싱 참여",
     "contribution": "회의실 예약·근태 신청 모바일 화면의 기획·UI·퍼블리싱 참여",
@@ -250,7 +250,7 @@ const projects = {
     "type": "B2B PLATFORM · FIELD DATA",
     "title": "PSC 거더 관리 플랫폼",
     "domain": "PSC Girder Measurement & Management Platform",
-    "lead": "거더의 측정값·곡률·현장 이미지를 확인하는 웹·앱 UI와 퍼블리싱을 담당했습니다. 센서 기반 수집 과정과 관리 화면을 연결하는 정보 구조를 설계했습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
+    "lead": "거더의 측정값·곡률·현장 이미지를 확인하는 웹·앱 UI와 퍼블리싱을 담당했습니다. 센서 기반 수집 과정과 관리 화면을 연결하는 정보 구조를 설계했습니다. 보안을 위해 공개 이미지와 디자인을 설명용으로 재구성했으며, 가상 데이터를 사용합니다.",
     "period": "2023.09 — 2024.08",
     "role": "웹/앱 UX/UI · 퍼블리싱 · 현장 구조 분석",
     "contribution": "현장 측정 흐름 · 웹·앱 UI · 퍼블리싱",
@@ -784,7 +784,7 @@ const caseStudies = {
     ],
     "ui": "web",
     "uiTitle": "측정과 분석이 한 흐름으로 이어지는 현장 데이터 플랫폼",
-    "uiText": "센서 상태, 거더별 곡률, 측정 이력을 웹과 모바일에서 같은 데이터 기준으로 확인합니다.",
+    "uiText": "센서 상태, 거더별 곡률, 측정 이력을 웹과 모바일에서 같은 데이터 기준으로 확인합니다. 보안을 위해 이미지와 디자인을 재구성한 화면이며, 가상 데이터를 사용합니다.",
     "finalVisual": [
       "assets/cases/20261024/psc-desktop.webp",
       "PSC 거더 관리 플랫폼 핵심 화면",
@@ -1305,24 +1305,24 @@ const caseStudies = {
     ],
     "ui": "booking",
     "uiTitle": "회의실 예약과 근태 신청의 모바일 설계",
-    "uiText": "모바일 홈과 회의실 예약·근태 신청 흐름의 재구성 화면입니다. 디자이너 팀 내부 작업이며 미배포 상태입니다.",
+    "uiText": "모바일 홈과 회의실 예약·근태 신청의 당시 설계 화면입니다. 디자이너 팀 내부 작업이며 미배포 상태입니다.",
     "finalVisual": [
-      "assets/cases/20261024/intranet-home-reviewed.webp",
+      "assets/cases/intranet-7.png",
       "모바일 인트라넷 홈 설계 화면",
-      "현황과 예약·신청 진입을 설명하는 재구성 화면",
+      "디자이너 팀 내부 설계 · 미배포",
       "portrait"
     ],
     "visuals": [
       [
-        "assets/cases/20261024/intranet-booking-reviewed.webp",
+        "assets/cases/final/intranet-booking.png",
         "회의실 현황에서 예약 입력으로",
-        "회의실 현황 확인 → 예약일·시간·목적 입력 · 설명용 재구성",
+        "회의실 현황 확인 → 예약일·시간·목적 입력",
         "portrait"
       ],
       [
-        "assets/cases/20261024/intranet-request-reviewed.webp",
+        "assets/cases/final/intranet-request.png",
         "문서 선택에서 근태 신청으로",
-        "문서 선택 → 근태 종류·일자·사유 입력 · 설명용 재구성",
+        "문서 선택 → 근태 종류·일자·사유 입력",
         "portrait"
       ]
     ],
