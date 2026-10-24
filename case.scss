@@ -3228,3 +3228,42 @@ body[data-project="dashboard"] .case-main .evidence-grid > div:last-child {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Reviewed 1024 assets: preserve aspect ratios and allow high-resolution inspection. */
+body[data-project="tbm"] .project-visuals figure.portrait .visual-frame,
+body[data-project="psc"] .project-visuals figure.portrait .visual-frame {
+  aspect-ratio: 390 / 810;
+  max-height: 740px;
+}
+body[data-project="dashboard"] .project-visuals figure.portrait .visual-frame {
+  aspect-ratio: 4 / 5;
+  max-height: 640px;
+}
+body[data-project="designsystem"] .case-cover .final-mockup img,
+body[data-project="dashboard"] .case-cover .final-mockup img {
+  box-shadow: none;
+}
+body[data-project="tbm"] .case-cover .final-mockup.portrait img {
+  max-height: 510px;
+}
+
+body[data-project="intranet"] .project-visuals figure.portrait .visual-frame {
+  aspect-ratio: 458 / 725;
+  max-height: 650px;
+}
+
+/* Consistent compact evidence images; preserve full artwork without cropping. */
+body[data-project="dashboard"] .project-visuals figure .visual-frame {
+  height: 280px; max-height: none; aspect-ratio: auto;
+}
+body[data-project="intranet"] .project-visuals figure .visual-frame,
+body[data-project="psc"] .project-visuals figure .visual-frame {
+  height: 440px; max-height: none; aspect-ratio: auto;
+}
+.project-visuals .project-visual-grid { gap: 24px; grid-auto-rows: auto; }
+.project-visuals figcaption { padding-top: 12px; }
+@media (max-width: 600px) {
+  body[data-project="dashboard"] .project-visuals figure .visual-frame { height: 220px; }
+  body[data-project="intranet"] .project-visuals figure .visual-frame,
+  body[data-project="psc"] .project-visuals figure .visual-frame { height: 380px; }
+}

@@ -5,8 +5,8 @@ const projects = {
     "no": "05",
     "type": "TEAM PROJECT · MOBILE WORKFLOW",
     "title": "회의실 예약·근태 신청 모바일 인트라넷",
-    "domain": "Hanmac Mobile Intranet",
-    "lead": "디자이너 팀에서 모바일 인트라넷의 기획·UI·퍼블리싱에 참여했습니다. 회의실 현황에서 예약으로, 전자결재 현황에서 근태 신청으로 이어지는 화면을 구성했습니다.",
+    "domain": "Mobile Intranet Concept",
+    "lead": "디자이너 팀에서 모바일 인트라넷의 기획·UI·퍼블리싱에 참여했습니다. 회의실 현황에서 예약으로, 전자결재 현황에서 근태 신청으로 이어지는 화면을 구성했습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
     "period": "2023.01 — 2023.06",
     "role": "팀 내 기획 · UI · 퍼블리싱 참여",
     "contribution": "회의실 예약·근태 신청 모바일 화면의 기획·UI·퍼블리싱 참여",
@@ -47,7 +47,7 @@ const projects = {
     "type": "B2B DASHBOARD · DECISION SUPPORT",
     "title": "조회 목적에 맞춘 비용·인원 ERP 대시보드",
     "domain": "Project Cost & Workforce ERP Analysis Dashboard",
-    "lead": "전사·프로젝트·개인 범위에 따라 주요 수치와 상세 내역을 확인하는 UI를 설계하고 퍼블리싱했습니다. 제공 형식이 PDF로 변경되어 최종 웹 설계안은 사용되지 않았습니다.",
+    "lead": "전사·프로젝트·개인 범위에 따라 주요 수치와 상세 내역을 확인하는 UI를 설계하고 퍼블리싱했습니다. 제공 형식이 PDF로 변경되어 최종 웹 설계안은 사용되지 않았습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
     "period": "2025.11 — 2026.04",
     "role": "조회 범위 · UX/UI · HTML·CSS·SCSS 퍼블리싱",
     "contribution": "조회 범위와 정보 위계 · 상태 표현 · 웹 퍼블리싱",
@@ -129,7 +129,7 @@ const projects = {
     "type": "B2B WORKFLOW · WEB / MOBILE",
     "title": "현장 안전 기록(TBM)의 웹·모바일 전환",
     "domain": "TBM Safety Record System",
-    "lead": "모바일 일지·서명 화면의 기획·디자인과 웹 UI에 참여했습니다. 담당자 요청으로 추가한 파일 열람 기능의 디자인·퍼블리싱도 맡았습니다.",
+    "lead": "모바일 일지·서명 화면의 기획·디자인과 웹 UI에 참여했습니다. 담당자 요청으로 추가한 파일 열람 기능의 디자인·퍼블리싱도 맡았습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
     "period": "2025.11 — 2026.04",
     "role": "모바일 기획·디자인 · 웹 UI·퍼블리싱",
     "contribution": "모바일 일지·서명 기획·디자인 · 웹 파일 열람 UI·퍼블리싱",
@@ -250,7 +250,7 @@ const projects = {
     "type": "B2B PLATFORM · FIELD DATA",
     "title": "PSC 거더 관리 플랫폼",
     "domain": "PSC Girder Measurement & Management Platform",
-    "lead": "거더의 측정값·곡률·현장 이미지를 확인하는 웹·앱 UI와 퍼블리싱을 담당했습니다. 센서 기반 수집 과정과 관리 화면을 연결하는 정보 구조를 설계했습니다.",
+    "lead": "거더의 측정값·곡률·현장 이미지를 확인하는 웹·앱 UI와 퍼블리싱을 담당했습니다. 센서 기반 수집 과정과 관리 화면을 연결하는 정보 구조를 설계했습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
     "period": "2023.09 — 2024.08",
     "role": "웹/앱 UX/UI · 퍼블리싱 · 현장 구조 분석",
     "contribution": "현장 측정 흐름 · 웹·앱 UI · 퍼블리싱",
@@ -288,17 +288,17 @@ const projects = {
     "no": "04",
     "type": "COMMON UI · SCSS TOKENS · WEB GUIDE",
     "title": "컬러 토큰과 공통 UI 기준·웹 가이드",
-    "domain": "Hanmac Design System",
-    "lead": "공통 컬러를 SCSS 변수로 관리하고 입력·검색 UI의 상태를 웹 가이드로 정리했습니다. 컬러와 일부 UI 요소를 디자이너의 작업에서 재사용했습니다.",
+    "domain": "Common UI Guidelines",
+    "lead": "공통 컬러를 SCSS 변수로 관리하고 입력·검색 UI의 상태를 웹 가이드로 정리했습니다. 컬러와 일부 UI 요소를 디자이너의 작업에서 재사용했습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
     "period": "2024.05 — 2024.07",
     "role": "공통 UI 기준 · 가이드 설계 · SCSS 컬러 토큰 관리",
     "contribution": "컬러 변수 정의 · 입력·검색 상태 가이드 · 일부 UI 요소 재사용",
     "team": "",
-    "bg": "#1e554d",
-    "ink": "#fff",
-    "accent": "#4b8d80",
-    "textAccent": "#2e6b61",
-    "muted": "#d5e5e1",
+    "bg": "#EFE6DF",
+    "ink": "#27201D",
+    "accent": "#984629",
+    "textAccent": "#863C23",
+    "muted": "#62564D",
     "problem": "반복 사용하는 컬러와 입력 UI의 기준을 정리했습니다.",
     "detail": "공통 컬러 값을 SCSS 변수로 정의하고 웹 가이드에 같은 색상 기준을 정리했습니다. 입력·검색 UI의 상태와 배치 예시를 정리해 디자이너의 디자인·프론트 작업에서 참고하고 재사용했습니다.",
     "outcomes": [
@@ -471,55 +471,37 @@ const caseStudies = {
     ],
     "ui": "web",
     "uiTitle": "컬러 토큰과 입력·검색 UI의 기준",
-    "uiText": "실제 컬러 변수와 웹 가이드, 입력·검색 상태 자료입니다. 컬러와 일부 UI 요소를 디자인·퍼블리싱 작업에 재사용했습니다.",
+    "uiText": "공통 컬러 관리와 입력·검색 상태를 설명하기 위해 새로 구성한 예시입니다. 실제 업무 화면과 소스코드는 포함하지 않았습니다.",
     "finalVisual": [
-      "assets/cases/designsystem-guide-source.png",
-      "공통 UI 기준 웹 가이드",
-      "공통 컬러·입력 UI 기준을 정리한 웹 가이드",
+      "assets/cases/20261024/ui-colors-reviewed.webp",
+      "컬러 기준과 적용 방식",
+      "실제 컬러 값과 코드를 사용하지 않은 새 팔레트 예시",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/cases/final/color-code.png",
-        "실제 SCSS 컬러 변수",
-        "공통 컬러 값을 변수로 정의했습니다.",
+        "assets/cases/20261024/ui-input-reviewed.webp",
+        "읽기 전용·편집·입력 상태",
+        "기존 SCSS 발췌 대신 새로 구성한 입력 상태 예시",
         "landscape"
       ],
       [
-        "assets/cases/final/color-guide.png",
-        "웹 가이드의 색상 기준",
-        "변수와 대응하는 Primary·Secondary 색상 단계를 정리했습니다.",
-        "landscape"
-      ],
-      [
-        "assets/cases/final/input-code.png",
-        "입력 UI의 상태와 구현 기준",
-        "실제 SCSS · 테이블·목록의 읽기 전용·편집 스타일",
-        "landscape"
-      ],
-      [
-        "assets/cases/final/input-guide.png",
-        "기본 입력과 라벨·설명문 예시",
-        "당시 가이드 발췌 · 일부 입력 UI는 화면에 맞춰 크기를 조정해 사용했습니다.",
-        "portrait"
-      ],
-      [
-        "assets/cases/final/search-states.png",
-        "검색 입력의 네 상태",
-        "당시 가이드 발췌 · 기본·포커스·입력 중·비활성 상태",
-        "landscape"
-      ],
-      [
-        "assets/cases/final/search-layout.png",
-        "검색창 배치 예시",
-        "콘텐츠 영역 상단에 검색 입력을 배치한 당시 가이드",
+        "assets/cases/20261024/ui-search-reviewed.webp",
+        "검색 상태와 배치",
+        "기본·포커스·입력 중·비활성 상태와 가상 자료실 예시",
         "landscape"
       ]
     ],
     "reflection": {
       "learned": "컬러 값은 변수로 공유하고, 입력 UI는 사용 맥락에 따라 크기와 배치를 조정했습니다. 공통 기준을 유지할 부분과 화면마다 달라질 부분을 나누어 관리했습니다.",
       "next": "프로젝트의 토큰 참조 코드와 기본·변형 UI를 함께 모아 실제 적용 범위를 더 구체적으로 보여주고 싶습니다."
-    }
+    },
+    "heroVisual": [
+      "assets/cases/20261024/ui-desktop-cover.webp",
+      "공통 UI 목업",
+      "공통 UI의 구성 요소를 표현한 텍스트 없는 목업",
+      "landscape"
+    ]
   },
   "kanvan": {
     "evidenceLabel": "추가 경험 · 개인 칸반 프로토타입",
@@ -804,17 +786,23 @@ const caseStudies = {
     "uiTitle": "측정과 분석이 한 흐름으로 이어지는 현장 데이터 플랫폼",
     "uiText": "센서 상태, 거더별 곡률, 측정 이력을 웹과 모바일에서 같은 데이터 기준으로 확인합니다.",
     "finalVisual": [
-      "assets/cases/psc-measurement-source.png",
+      "assets/cases/20261024/psc-desktop.webp",
       "PSC 거더 관리 플랫폼 핵심 화면",
-      "거더별 측정·이미지·분석 데이터를 통합한 다크 테마 운영 화면입니다.",
+      "측정·분석 흐름을 설명하기 위해 재구성한 가상 화면",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/cases/psc-mobile-source.png",
+        "assets/cases/20261024/psc-start.webp",
+        "모바일 시작 화면",
+        "거더 관리 서비스의 설명용 재구성",
+        "portrait"
+      ],
+      [
+        "assets/cases/20261024/psc-mobile.webp",
         "모바일 측정 화면",
-        "프로젝트·레이저 거리·서버 정보와 진행 상태를 확인하는 UI",
-        "landscape"
+        "가상 프로젝트·측정 정보로 구성한 재구성 예시",
+        "portrait"
       ]
     ],
     "impact": {
@@ -1056,30 +1044,36 @@ const caseStudies = {
     ],
     "ui": "dashboard",
     "uiTitle": "조건을 정한 뒤, 주요 수치와 상세 내역을 확인합니다.",
-    "uiText": "전사·프로젝트·개인은 정보를 조회하는 범위입니다. 조회 조건 → 주요 수치 → 프로젝트·인원별 상세 순서로 구성했습니다.",
+    "uiText": "조회 조건 → 주요 수치 → 프로젝트·인원별 상세 순서의 설계 의도를 재구성했습니다. 아래 화면은 실제 납품 화면이 아니며 모든 이름·금액·시간은 가상 예시입니다.",
     "finalVisual": [
-      "assets/cases/final/erp-screen.png",
-      "비용·인원 ERP 실제 웹 설계안",
-      "주요 수치·프로젝트 현황·인원 현황을 배치한 당시 웹 설계안 · 최종 미사용",
+      "assets/cases/20261024/erp-dashboard-updated.webp",
+      "비용·인원 대시보드 · 설명용 재구성",
+      "미사용 웹 설계안의 정보 구조를 새 UI와 가상 데이터로 설명합니다.",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/cases/1011/erp-structure.svg",
+        "assets/cases/20261024/erp-structure-updated.webp",
         "조회 범위와 정보 위계",
-        "전사·프로젝트·개인 조회와 요약·상세의 관계를 재구성한 설명도",
+        "조건·주요 수치·상세의 관계를 새로 구성한 설명도",
         "landscape"
       ],
       [
-        "assets/cases/final/erp-menu.png",
-        "선택한 조회 범위와 비용 합계",
-        "실제 설계안 발췌 · 활성 메뉴와 비용 합계를 강조했습니다.",
+        "assets/cases/20261024/erp-detail-updated.webp",
+        "프로젝트별 비용과 투입 시간",
+        "전체 현황과 같은 데이터·스타일을 사용하는 상세 예시",
+        "landscape"
+      ],
+      [
+        "assets/cases/20261024/erp-menu-updated.webp",
+        "활성 메뉴와 비용 합계",
+        "선택 상태와 합계 강조를 설명하는 가상 요소",
         "portrait"
       ],
       [
-        "assets/cases/final/erp-overtime.png",
+        "assets/cases/20261024/erp-overtime-updated.webp",
         "기준을 넘긴 투입 시간",
-        "실제 설계안 발췌 · 9시간 / 기준 8시간은 UI 상태 예시입니다.",
+        "9시간 / 기준 8시간의 상태 예시 · 실제 근태 기록이 아닙니다.",
         "landscape"
       ]
     ],
@@ -1094,7 +1088,13 @@ const caseStudies = {
       "before": "행 단위 업무 기록",
       "after": "요약·상세를 구분한 웹 설계안",
       "note": "조회 범위·대시보드 UI·웹 퍼블리싱을 수행했습니다. 제공 형식이 PDF로 바뀌어 웹 설계안은 최종 미사용입니다. 9시간 / 기준 8시간은 상태 표시 예시이며 효과 측정값이 아닙니다."
-    }
+    },
+    "heroVisual": [
+      "assets/cases/20261024/erp-flat-cover.webp",
+      "비용·인원 ERP 목업 · 설명용 재구성",
+      "가상 서비스 예산노트",
+      "landscape"
+    ]
   },
   "tbm": {
     "briefFacts": [
@@ -1170,36 +1170,51 @@ const caseStudies = {
     ],
     "ui": "phone",
     "uiTitle": "작성 맥락과 확인 상태를 보고, 일지 작성으로 진입합니다.",
-    "uiText": "일지의 작성일·출역 인원·담당자 확인 항목과 작성 버튼을 구분했습니다.",
+    "uiText": "일지의 작성일·출역 인원·담당자 확인 항목과 작성 버튼을 구분했습니다. 아래 이미지는 실제 운영 화면을 대체한 설명용 재구성입니다.",
     "heroVisual": [
-      "assets/cases/tbm-7.png",
-      "현장 안전 기록 모바일 홈",
-      "현장 안전 기록 서비스의 모바일 홈 화면",
+      "assets/cases/20261024/tbm-home-reviewed.webp",
+      "오늘안전 모바일 홈 · 재구성 예시",
+      "사용자가 수정한 작업 준비와 확인 상태의 가상 화면",
       "portrait"
     ],
     "finalVisual": [
-      "assets/cases/final/tbm-record-source.png?v=20261017-final-review",
-      "모바일 TBM 일지 · 작성 정보와 확인 상태",
-      "작성일·출역 인원·담당자 확인 상태와 작성하기 버튼",
+      "assets/cases/20261024/tbm-record-reviewed.webp",
+      "모바일 TBM 일지 · 재구성 예시",
+      "작성일·출역 인원·확인 상태를 설명하는 가상 화면",
       "portrait"
     ],
     "solutionSteps": [
-      ["01 작성일·출역 인원", "작성일과 금일 출역 인원을 상단에서 확인합니다."],
-      ["02 담당·소장 확인 상태", "담당·소장 확인 상태와 근로자 확인 항목을 구분합니다."],
-      ["03 일지 작성 진입", "하단 ‘작성하기’ 버튼에서 다음 입력 단계로 이동합니다."]
+      [
+        "01 작성일·출역 인원",
+        "작성일과 금일 출역 인원을 상단에서 확인합니다."
+      ],
+      [
+        "02 담당·소장 확인 상태",
+        "담당·소장 확인 상태와 근로자 확인 항목을 구분합니다."
+      ],
+      [
+        "03 일지 작성 진입",
+        "하단 ‘작성하기’ 버튼에서 다음 입력 단계로 이동합니다."
+      ]
     ],
     "visuals": [
       [
-        "assets/cases/final/tbm-sign-source.png",
+        "assets/cases/20261024/tbm-profile-reviewed.webp",
         "마이페이지 서명 입력",
-        "당시 설계 화면 · 서명을 입력하거나 변경한 뒤 저장합니다.",
+        "개인정보와 실제 서명을 제외한 설명용 재구성",
         "portrait"
       ],
       [
-        "assets/cases/final/tbm-saved-source.png",
+        "assets/cases/20261024/tbm-saved-reviewed.webp",
         "서명 저장 완료",
-        "당시 설계 화면 · 서명 저장 결과이며 일지 전체 저장과는 별도입니다.",
+        "서명 저장 결과를 구분한 재구성 예시",
         "portrait"
+      ],
+      [
+        "assets/cases/20261024/tbm-journal-reviewed.webp",
+        "웹 TBM 일지와 사진대장",
+        "회사·현장·사용자 정보를 가상 데이터로 치환한 재구성 예시",
+        "landscape"
       ]
     ],
     "reflection": {
@@ -1213,9 +1228,9 @@ const caseStudies = {
       "before": "프로젝트 선택·TBM 일지 작성 및 업로드",
       "after": "사이트 안에서 관련 파일 열람",
       "visual": [
-        "assets/cases/1017/tbm-file-viewer.png",
-        "사이트 내 파일 목록과 PDF 열람 화면",
-        "추가 요청에 따라 디자인·퍼블리싱한 웹 파일 열람 기능"
+        "assets/cases/20261024/tbm-documents-reviewed.webp",
+        "파일 목록과 문서 열람 · 재구성 예시",
+        "파일 열람 흐름을 설명하는 가상 문서와 화면입니다."
       ],
       "facts": [
         [
@@ -1290,24 +1305,24 @@ const caseStudies = {
     ],
     "ui": "booking",
     "uiTitle": "회의실 예약과 근태 신청의 모바일 설계",
-    "uiText": "모바일 홈과 회의실 예약·근태 신청의 당시 설계 화면입니다. 디자이너 팀 내부 작업이며 미배포 상태입니다.",
+    "uiText": "모바일 홈과 회의실 예약·근태 신청 흐름의 재구성 화면입니다. 디자이너 팀 내부 작업이며 미배포 상태입니다.",
     "finalVisual": [
-      "assets/cases/intranet-7.png",
+      "assets/cases/20261024/intranet-home-reviewed.webp",
       "모바일 인트라넷 홈 설계 화면",
-      "디자이너 팀 내부 설계 · 미배포",
+      "현황과 예약·신청 진입을 설명하는 재구성 화면",
       "portrait"
     ],
     "visuals": [
       [
-        "assets/cases/final/intranet-booking.png",
+        "assets/cases/20261024/intranet-booking-reviewed.webp",
         "회의실 현황에서 예약 입력으로",
-        "회의실 현황 확인 → 예약일·시간·목적 입력",
+        "회의실 현황 확인 → 예약일·시간·목적 입력 · 설명용 재구성",
         "portrait"
       ],
       [
-        "assets/cases/final/intranet-request.png",
+        "assets/cases/20261024/intranet-request-reviewed.webp",
         "문서 선택에서 근태 신청으로",
-        "문서 선택 → 근태 종류·일자·사유 입력",
+        "문서 선택 → 근태 종류·일자·사유 입력 · 설명용 재구성",
         "portrait"
       ]
     ],
@@ -1472,7 +1487,7 @@ const renderVisuals = (items, label = "설계 자료", title = "실제 화면과
         (item, index) => `
       <figure class="${index === 0 ? "featured" : ""} ${item[3] || ""}">
         <div class="visual-frame ${item[3] || ""}"><img src="${item[0]}" alt="${item[1]}" loading="lazy" decoding="async"></div>
-        <figcaption><b>${item[1]}</b><span>${item[2]}</span><small>해당 프로젝트 설계 자료</small></figcaption>
+        <figcaption><b>${item[1]}</b><span>${item[2]}</span><small>${item[0].includes("/20261024/") ? "포트폴리오 설명용 재구성" : "해당 프로젝트 설계 자료"}</small></figcaption>
       </figure>`,
       )
       .join("")}</div>

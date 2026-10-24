@@ -18,6 +18,6 @@ for(const file of ['index.html',...keys.map(k=>'project-'+k+'.html')]){
   const url=m[1];if(/^(https?:|mailto:|tel:|data:)/.test(url))continue;
   assert.ok(fs.existsSync(url.split(/[?#]/)[0]),file+' missing '+url);
  }
- assert.ok(h.includes('portfolio.pdf?v=20261017-linked'),file+' stale PDF');
+ assert.ok(h.includes('portfolio.pdf?v=20261024-reviewed'),file+' stale PDF');
 }
 console.log('PASS: 10 project templates, 11 HTML files, '+images.size+' rendered image paths, section targets and PDF versions');

@@ -1561,10 +1561,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .project-visuals figure:hover img {
@@ -1608,8 +1606,7 @@
   display: block;
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .mock-window.final-mockup.portrait {
   width: min(100%, 436px);
@@ -1655,10 +1652,8 @@
   min-height: 0;
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: contain;
+  object-position: center;
 }
 
 .outcomes {
@@ -2586,7 +2581,6 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 14px 18px;
   background: #f3f5f7;
@@ -2764,7 +2758,6 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
 }
 /* 다음 사례의 화살표는 제목의 마지막 글자 바로 뒤에 둔다. */
 .case-main .case-body .next > a:first-child {
-  width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
   padding-right: 0;
@@ -2904,8 +2897,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
     padding: 20px 16px;
   }
   .case-main > .case-hero .case-hero-actions {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
   .case-main > .case-hero .case-hero-actions a {
     gap: 10px;
@@ -3104,7 +3096,6 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   margin-top: 24px;
 }
 .decision-source summary {
-  width: -moz-fit-content;
   width: fit-content;
   min-height: 44px;
   padding-block: 12px;
@@ -3196,8 +3187,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .delivery-visual figcaption {
   margin-top: 12px;
@@ -3227,4 +3217,64 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   .impact-flow {
     grid-template-columns: minmax(0, 1fr);
   }
-}/*# sourceMappingURL=case.css.map */
+}
+/* Reviewed 1024 assets: preserve aspect ratios and allow high-resolution inspection. */
+body[data-project=tbm] .project-visuals figure.portrait .visual-frame,
+body[data-project=psc] .project-visuals figure.portrait .visual-frame {
+  aspect-ratio: 390/810;
+  max-height: 740px;
+}
+
+body[data-project=dashboard] .project-visuals figure.portrait .visual-frame {
+  aspect-ratio: 4/5;
+  max-height: 640px;
+}
+
+body[data-project=designsystem] .case-cover .final-mockup img,
+body[data-project=dashboard] .case-cover .final-mockup img {
+  box-shadow: none;
+}
+
+body[data-project=tbm] .case-cover .final-mockup.portrait img {
+  max-height: 510px;
+}
+
+body[data-project=intranet] .project-visuals figure.portrait .visual-frame {
+  aspect-ratio: 458/725;
+  max-height: 650px;
+}
+
+/* Consistent compact evidence images; preserve full artwork without cropping. */
+body[data-project=dashboard] .project-visuals figure .visual-frame {
+  height: 280px;
+  max-height: none;
+  aspect-ratio: auto;
+}
+
+body[data-project=intranet] .project-visuals figure .visual-frame,
+body[data-project=psc] .project-visuals figure .visual-frame {
+  height: 440px;
+  max-height: none;
+  aspect-ratio: auto;
+}
+
+.project-visuals .project-visual-grid {
+  gap: 24px;
+  grid-auto-rows: auto;
+}
+
+.project-visuals figcaption {
+  padding-top: 12px;
+}
+
+@media (max-width: 600px) {
+  body[data-project=dashboard] .project-visuals figure .visual-frame {
+    height: 220px;
+  }
+  body[data-project=intranet] .project-visuals figure .visual-frame,
+  body[data-project=psc] .project-visuals figure .visual-frame {
+    height: 380px;
+  }
+}
+
+/*# sourceMappingURL=case.css.map */
