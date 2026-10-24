@@ -3,7 +3,7 @@
   const isHome = document.body.classList.contains('portfolio-home');
   const homeLink = isHome ? '#top' : 'index.html';
   const sectionLink = (id) => `${isHome ? '' : 'index.html'}#${id}`;
-  const pdfLink = 'assets/portfolio.pdf?v=20261024-reviewed';
+  const pdfLink = 'assets/portfolio.pdf?v=20261024-repaired';
   const logo = `<a class="logo" href="${homeLink}">HANUL<span>●</span></a>`;
 
   document.querySelector('[data-site-header]')?.insertAdjacentHTML('afterbegin', `
