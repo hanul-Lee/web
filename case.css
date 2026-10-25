@@ -1561,8 +1561,10 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .project-visuals figure:hover img {
@@ -1606,7 +1608,8 @@
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mock-window.final-mockup.portrait {
   width: min(100%, 436px);
@@ -1652,8 +1655,10 @@
   min-height: 0;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .outcomes {
@@ -2581,6 +2586,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 14px 18px;
   background: #f3f5f7;
@@ -2758,6 +2764,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
 }
 /* 다음 사례의 화살표는 제목의 마지막 글자 바로 뒤에 둔다. */
 .case-main .case-body .next > a:first-child {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
   padding-right: 0;
@@ -2897,7 +2904,8 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
     padding: 20px 16px;
   }
   .case-main > .case-hero .case-hero-actions {
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
   .case-main > .case-hero .case-hero-actions a {
     gap: 10px;
@@ -3096,6 +3104,7 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   margin-top: 24px;
 }
 .decision-source summary {
+  width: -moz-fit-content;
   width: fit-content;
   min-height: 44px;
   padding-block: 12px;
@@ -3187,7 +3196,8 @@ body[data-project=dashboard] .case-main .evidence-grid > div:last-child {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .delivery-visual figcaption {
   margin-top: 12px;
@@ -3289,7 +3299,8 @@ body[data-project=psc] .project-visuals figure .visual-frame {
   max-width: 100%;
   height: auto;
   max-height: var(--cover-image-height);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (max-width: 800px) {
@@ -3319,13 +3330,12 @@ body[data-project=kanvan] .ui-stage .mock-window.final-mockup.landscape img {
   max-width: 100%;
   height: auto;
   max-height: 320px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (min-width: 801px) {
   body[data-project=kanvan] .case-main {
     padding-top: calc(var(--header-height) + 40px);
   }
-}
-
-/*# sourceMappingURL=case.css.map */
+}/*# sourceMappingURL=case.css.map */

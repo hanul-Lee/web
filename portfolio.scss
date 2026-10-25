@@ -2191,7 +2191,7 @@ body {
     color: #b4bec8;
     font-size: 15px;
     line-height: 1.9;
-    margin: 0 0 22px;
+    margin: 0 0 3px;
   }
   .career-list {
     margin: 36px 0 24px;
@@ -2224,6 +2224,9 @@ body {
   .designer-bio .tools-line {
     font-size: 12px;
     color: #93a0ae;
+  }
+  .designer-bio .learning-line {
+    margin-top: 10px;
   }
   > main > .contact {
     position: relative;
