@@ -1,0 +1,19 @@
+{
+  "created": "2026-10-25",
+  "source_pdf": "assets/portfolio.pdf",
+  "source_pdf_sha256": "e9ceb0b199322261572402366483ec8d2f446c46347a25bc3d5c3f33cdfbe8be",
+  "source_web": [
+    "index.html",
+    "case.js"
+  ],
+  "scope": "UX/UI·Product Designer, industries other than civil engineering/architecture",
+  "files": [
+    "00-핵심암기.md",
+    "01-PT-발표대본.md",
+    "02-직무-심층문답.md",
+    "03-채용절차-컬처핏-역량검사.md",
+    "04-실전훈련-지원전략.md",
+    "README.md",
+    "전체-면접준비.md"
+  ]
+}
