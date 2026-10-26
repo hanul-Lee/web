@@ -164,14 +164,14 @@ const projects = {
     ]
   },
   "pet": {
-    "stage": "개인 프로젝트 · iOS 앱 출시",
+    "stage": "개인 프로젝트 · 2026.08.17 iOS 앱 출시",
     "summary": "공동 기획·UX/UI 디자인부터 iOS 앱 출시까지",
     "no": "10",
     "type": "B2C · HABIT UX",
     "title": "댕냥실록 | 반려동물 건강 기록·일정 관리 앱",
     "domain": "Dangnyangsilrok · Personal Product Project",
     "lead": "댕냥실록은 반려동물의 건강 기록과 돌봄 일정을 관리하는 앱입니다. 개발자 1명과 함께 기획하고, 조선시대 콘셉트의 캐릭터와 문체를 활용한 UX/UI를 디자인해 iOS 앱으로 출시했습니다.",
-    "period": "2026.02 — 진행 중",
+    "period": "2026.02 — 2026.08.17",
     "role": "공동 기획 · UX/UI 디자인",
     "contribution": "건강 기록·일정 UI · 브랜드 콘셉트 · 캐릭터·문체 구성",
     "team": "개발자 1명",
@@ -1346,7 +1346,7 @@ const caseStudies = {
       ],
       [
         "출시 상태",
-        "개인 프로젝트 · iOS 앱 출시"
+        "개인 프로젝트 · 2026.08.17 iOS 앱 출시"
       ]
     ],
     "pains": [
