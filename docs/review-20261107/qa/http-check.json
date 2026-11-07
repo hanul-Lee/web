@@ -1,0 +1,62 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-pet.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-tbm.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-skyautonet.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-kanvan.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-psc.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-intranet.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-responsive.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-designsystem.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-dashboard.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "project-platform.html",
+    "status": 200,
+    "content_type": "text/html"
+  },
+  {
+    "path": "assets/portfolio.pdf?v=20261025-linked",
+    "status": 200,
+    "content_type": "application/pdf"
+  }
+]

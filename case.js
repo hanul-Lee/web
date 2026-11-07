@@ -916,7 +916,13 @@ const caseStudies = {
     ],
     "ui": "map",
     "uiTitle": "지도에서 업무 메뉴로, 메뉴에서 자료 유형으로 이어집니다.",
-    "uiText": "위치와 메뉴, 자료 선택 영역의 역할을 나눠 화면을 구성했습니다.",
+    "uiText": "위치와 메뉴, 자료 선택 영역의 역할을 나눠 화면을 구성했습니다. 아래는 당시 설계 화면을 읽는 순서이며, 과업 성공률을 측정한 결과는 아닙니다.",
+    "solutionFirst": true,
+    "solutionSteps": [
+      ["01 지도에서 위치 확인", "지도 맥락을 유지한 채 관련 위치를 확인합니다."],
+      ["02 업무 메뉴 선택", "기획에서 구분한 현장 설명·사업 관리 메뉴를 선택합니다."],
+      ["03 자료 유형 탐색", "공정·주행·일조·배수 등 시뮬레이션 자료 유형으로 진입합니다."]
+    ],
     "finalVisual": [
       "assets/cases/platform-9.png",
       "지도와 업무 메뉴가 연결된 실제 설계 화면",
@@ -1496,6 +1502,11 @@ const renderVisuals = (items, label = "설계 자료", title = "실제 화면과
 
 // Existing project decisions, with explicit follow-up questions rather than invented test results.
 const decisionNotes = {
+  "designsystem": [
+    ["공유한 기준", "컬러는 SCSS 변수와 웹 가이드로 연결하고, 검색 입력은 기본·포커스·입력 중·비활성으로 구분했습니다."],
+    ["재사용 범위", "디자이너의 디자인·프론트 작업에서 컬러와 일부 UI를 재사용했습니다. 조직 전체의 도입률이나 개발 시간 단축은 측정하지 않았습니다."],
+    ["공개 자료의 성격", "아래 화면은 설명용 재구성입니다. 당시 Figma 라이브러리나 실제 서비스 코드의 증빙을 대체하지 않습니다."]
+  ],
   "dashboard": [
     [
       "조회 목적",
@@ -1539,6 +1550,12 @@ const renderDecisionDetail = (detail) => detail ? `
 const renderStudy = (study) => {
   let section = 2;
   const nextSection = () => String(section++).padStart(2, "0");
+  const renderSolution = () => `
+  <article class="story-section solution" id="solution">
+    <div class="solution-copy"><p>${nextSection()} ${study.solutionLabel || "설계 화면과 흐름"}</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map((x) => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}</ol>` : ""}</div>
+    <div class="ui-stage">${renderMockup(study.ui, study.finalVisual)}</div>
+  </article>
+`;
   return `
   ${study.briefFacts ? "" : `<article class="story-section evidence" id="evidence">
     <header><p>${nextSection()} ${study.evidenceLabel || "설계 과제"}</p><h3>${study.insight}</h3></header>
@@ -1546,6 +1563,7 @@ const renderStudy = (study) => {
     <div class="evidence-grid">${study.pains.map((x, i) => `<div><small>0${i + 1}</small><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join("")}</div>
   </article>`}
   ${study.reframe ? renderReframe(study.reframe, nextSection()) : ""}
+  ${study.solutionFirst ? renderSolution() : ""}
   <article class="story-section strategy" id="decision">
     <header><p>${nextSection()} ${study.strategyLabel || "설계 결정"}</p><h3>${study.strategyHeadline}</h3></header>
     <div class="strategy-list">${study.strategies.map((x) => `<div><b>${x[0]}</b><h4>${x[1]}</h4><small>설계 내용</small><p>${x[2]}</p></div>`).join("")}</div>
@@ -1553,10 +1571,7 @@ const renderStudy = (study) => {
     ${renderDecisionNotes(slug)}
   </article>
   ${study.iteration ? renderIteration(study.iteration, nextSection()) : ""}
-  <article class="story-section solution" id="solution">
-    <div class="solution-copy"><p>${nextSection()} ${study.solutionLabel || "설계 화면과 흐름"}</p><h3>${study.uiTitle}</h3><span>${study.uiText}</span>${study.solutionSteps ? `<ol class="solution-steps">${study.solutionSteps.map((x) => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}</ol>` : ""}</div>
-    <div class="ui-stage">${renderMockup(study.ui, study.finalVisual)}</div>
-  </article>
+  ${study.solutionFirst ? "" : renderSolution()}
   ${renderVisuals(study.visuals, study.visualsLabel, study.visualsTitle)}
   ${study.impact ? renderImpact(study.impact, nextSection()) : ""}
   ${study.reflection ? renderReflection(study.reflection, nextSection()) : ""}`;
@@ -1573,7 +1588,7 @@ const renderImpact = (impact, number) => `
     ${impact.visual ? `<figure class="delivery-visual"><div class="visual-frame"><img src="${impact.visual[0]}" alt="${impact.visual[1]}" loading="lazy" decoding="async"></div><figcaption>${impact.visual[2]}</figcaption></figure>` : ""}
     ${impact.feedback ? `<aside class="feedback-record"><p class="feedback-label">${impact.feedback.label}</p><blockquote>${impact.feedback.text}</blockquote><p>${impact.feedback.context}</p></aside>` : ""}
     ${impact.facts ? `<dl class="delivery-facts">${impact.facts.map(([title, text]) => `<div><dt>${title}</dt><dd>${text}</dd></div>`).join("")}</dl>` : ""}
-    ${projects[slug].outcomeBasis ? "" : `<p class="impact-note">${impact.note}</p>`}
+    ${impact.note ? `<p class="impact-note">${impact.note}</p>` : ""}
   </article>`;
 
 const slug = document.body.dataset.project;
@@ -1648,7 +1663,9 @@ if (p) {
     ["solution", "경험"],
     ["impact", "결과"],
     ["reflection", "회고"],
-  ].filter(([id]) => document.getElementById(id));
+  ].filter(([id]) => document.getElementById(id)).sort(([a], [b]) =>
+    document.getElementById(a).compareDocumentPosition(document.getElementById(b)) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1
+  );
   if (progressItems.length) {
     const progressMarkup = progressItems
       .map(([id, label]) => `<a href="#${id}">${label}</a>`)
