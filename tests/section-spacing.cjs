@@ -60,7 +60,7 @@ if(file !== 'index.html') {
   }
   const heroGroups = await evalJS(`(()=>{const hero=document.querySelector('.case-hero'),overview=hero.querySelector(':scope > .case-hero-overview'),copy=overview.querySelector(':scope > .case-hero-copy'),cover=overview.querySelector(':scope > .case-cover'),meta=hero.querySelector(':scope > .case-meta');const h=hero.getBoundingClientRect(),o=overview.getBoundingClientRect(),c=copy.getBoundingClientRect(),v=cover.getBoundingClientRect(),m=meta.getBoundingClientRect();return {groups:hero.children.length,actions:copy.querySelectorAll('.case-hero-actions a').length,actionsInside:!!copy.querySelector('.case-result + .case-hero-actions'),metaOutside:!overview.contains(meta),overviewBottom:o.bottom,metaTop:m.top,heroWidth:h.width,metaWidth:m.width,copyTop:c.top,copyBottom:c.bottom,copyRight:c.right,coverTop:v.top,coverLeft:v.left,coverBottom:v.bottom,coverRight:v.right};})()`);
   assert.equal(heroGroups.groups,2,file+' two hero groups');
-  assert.equal(heroGroups.actions,2,file+' hero shortcuts');
+  assert.equal(heroGroups.actions,file==='project-pet.html'?3:2,file+' hero shortcuts');
   assert.equal(heroGroups.actionsInside,true);
   assert.equal(heroGroups.metaOutside,true);
   assert.ok(heroGroups.metaTop>=heroGroups.overviewBottom+31,file+' metadata below overview');
@@ -89,26 +89,26 @@ if(width <= 1024) {
 }
 if(file==='index.html' && [390,1280].includes(width)) {
   const hero=await evalJS(`({image:document.querySelector('.hero-case-screen img').getAttribute('src'),scope:document.querySelector('.hero-case-meta').textContent,status:document.querySelector('.hero-case-top strong').textContent,planets:document.querySelectorAll('img[src*="assets/planets/"]').length,proof:document.querySelectorAll('.intro-proof > a').length})`);
-  assert.equal(hero.image,'assets/cases/platform-9.png');
-  assert.ok(hero.scope.includes('메뉴 UI') && hero.scope.includes('퍼블리싱'));
+  assert.equal(hero.image,'assets/cases/20261024/tbm-journal-reviewed.webp');
+  assert.ok(hero.scope.includes('모바일 UI 디자인') && hero.scope.includes('퍼블리싱'));
   assert.equal(hero.status,'배포 후 실사용');
   assert.equal(hero.planets,0);
   assert.equal(hero.proof,0);
   const rows=await evalJS(`(()=>{const rows=[];for(const e of document.querySelectorAll('.work-case')){const r=e.getBoundingClientRect();let row=rows.find(x=>Math.abs(x.top-r.top)<1);if(row)row.bottom=Math.max(row.bottom,r.bottom);else rows.push({top:r.top,bottom:r.bottom});}return rows.sort((a,b)=>a.top-b.top);})()`);
   for(let r=1;r<rows.length;r++)assert.ok(Math.abs(rows[r].top-rows[r-1].bottom-(width<=800?64:80))<1,'project row spacing '+width);
-  const shot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(root,'docs','hanul-home-'+width+'.png'),Buffer.from(shot.data,'base64'));
+  const shot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(os.tmpdir(),'hanul-home-'+width+'.png'),Buffer.from(shot.data,'base64'));
   await evalJS(`document.documentElement.style.scrollBehavior='auto';document.querySelector('#work').scrollIntoView({behavior:'instant'})`);
-  const workShot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(root,'docs','hanul-work-'+width+'.png'),Buffer.from(workShot.data,'base64'));
+  const workShot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(os.tmpdir(),'hanul-work-'+width+'.png'),Buffer.from(workShot.data,'base64'));
 
 }
 if(width===1010 && (file==='index.html'||file==='project-platform.html'||file==='project-tbm.html')) {
   const selector=file==='index.html'?'.work-case:nth-child(2)':file==='project-platform.html'?'#solution':'.next';
   await evalJS(`document.documentElement.style.scrollBehavior='auto';document.querySelector('${selector}').scrollIntoView({behavior:'instant'})`);
-  const shot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(root,'docs',file.replace('.html','')+'-alignment.png'),Buffer.from(shot.data,'base64'));
+  const shot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(os.tmpdir(),file.replace('.html','')+'-alignment.png'),Buffer.from(shot.data,'base64'));
 }
 if(['project-platform.html','project-tbm.html'].includes(file) && [390,1057,1280].includes(width)) {
   await evalJS(`document.documentElement.style.scrollBehavior='auto';window.scrollTo(0,0)`);
-  const shot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(root,'docs',file.replace('.html','')+'-hero-'+width+'.png'),Buffer.from(shot.data,'base64'));
+  const shot=await send('Page.captureScreenshot');fs.writeFileSync(path.join(os.tmpdir(),file.replace('.html','')+'-hero-'+width+'.png'),Buffer.from(shot.data,'base64'));
 }
 report.push({file,...info});
 if(file==='index.html'&&width===390){await evalJS(`document.documentElement.style.scrollBehavior='auto'; document.querySelector('.selected-work').scrollIntoView({behavior:'instant'})`);const shot=await send('Page.captureScreenshot');fs.writeFileSync('/tmp/section-gap-home.png',Buffer.from(shot.data,'base64'));}

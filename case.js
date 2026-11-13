@@ -2,7 +2,7 @@ const projects = {
   "intranet": {
     "stage": "팀 프로젝트 · 미배포 · 팀 내부 설계·구현 확인",
     "summary": "회의실 현황에서 예약으로, 문서 상태에서 근태 신청으로",
-    "no": "05",
+    "no": "08",
     "type": "TEAM PROJECT · MOBILE WORKFLOW",
     "title": "회의실 예약·근태 신청 모바일 인트라넷",
     "domain": "Mobile Intranet Concept",
@@ -43,7 +43,7 @@ const projects = {
   "dashboard": {
     "stage": "업무 프로젝트 · 웹 설계안 최종 미사용",
     "summary": "전사·프로젝트·개인 조회 범위와 대시보드 설계",
-    "no": "03",
+    "no": "07",
     "type": "B2B DASHBOARD · DECISION SUPPORT",
     "title": "조회 목적에 맞춘 비용·인원 ERP 대시보드",
     "domain": "Project Cost & Workforce ERP Analysis Dashboard",
@@ -78,17 +78,17 @@ const projects = {
     "images": 6,
     "next": [
       "designsystem",
-      "컬러 토큰과 공통 UI 기준·웹 가이드"
+      "공통 UI 기준과 웹 가이드"
     ]
   },
   "platform": {
-    "stage": "업무 프로젝트 · 배포 후 실사용",
+    "stage": "업무 프로젝트 · 지도 기반 업무 UI",
     "summary": "기획의 메뉴 구분을 지도 위에서 읽히는 UI로 구현",
-    "no": "01",
+    "no": "06",
     "type": "MULTI-USER PLATFORM · INFORMATION ARCHITECTURE",
     "title": "지도와 업무 자료를 연결한 통합 관리 플랫폼",
     "domain": "Construction Integrated Platform",
-    "lead": "기획에서 제안한 ‘현장 설명 / 사업 관리’ 구분을 메뉴 UI에 반영했습니다. 지도 탐색 화면과 HTML·CSS·SCSS 퍼블리싱을 담당했으며, 플랫폼은 배포 후 실제 사용자가 이용했습니다.",
+    "lead": "기획에서 정한 ‘현장 설명 / 사업 관리’를 지도 메뉴에 반영했습니다. 메뉴의 선택 상태와 시뮬레이션 자료 패널을 설계하고 퍼블리싱했습니다.",
     "period": "2023.01 — 2023.12",
     "role": "메뉴·지도 탐색 UI 설계 · 퍼블리싱",
     "contribution": "메뉴 UI · 지도 탐색 UI · 퍼블리싱",
@@ -115,7 +115,7 @@ const projects = {
         "현재 상태·주요 정보·상세 구분"
       ]
     ],
-    "deliverySummary": "메뉴·지도 탐색 UI와 퍼블리싱을 담당한 플랫폼이 배포되어 실제 사용자가 이용했습니다.",
+    "deliverySummary": "메뉴·지도 탐색 UI와 퍼블리싱을 담당했습니다. 세 메뉴안의 최종 선택은 여러 직군이 함께한 회의에서 투표로 결정했습니다.",
     "images": 8,
     "next": [
       "tbm",
@@ -125,13 +125,13 @@ const projects = {
   "tbm": {
     "stage": "업무 프로젝트 · 배포 후 실사용",
     "summary": "종이 일지를 웹·모바일 입력으로 전환 · 배포 후 실사용",
-    "no": "02",
+    "no": "01",
     "type": "B2B WORKFLOW · WEB / MOBILE",
     "title": "현장 안전 기록(TBM)의 웹·모바일 전환",
     "domain": "TBM Safety Record System",
-    "lead": "모바일 일지·서명 화면의 기획·디자인과 웹 UI에 참여했습니다. 담당자 요청으로 추가한 파일 열람 기능의 디자인·퍼블리싱도 맡았습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
-    "period": "2025.11.20 — 2026.04",
-    "role": "모바일 기획·디자인 · 웹 UI·퍼블리싱",
+    "lead": "PC UI 디자인·퍼블리싱과 모바일 UI 디자인을 맡았습니다. 팀장을 통해 전달된 자료 열람 요청을 바탕으로 파일 열람 UI를 설계했습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
+    "period": "2025.07 — 2026.02",
+    "role": "PC UI 디자인·퍼블리싱 · 모바일 UI 디자인",
     "contribution": "모바일 일지·서명 기획·디자인 · 웹 파일 열람 UI·퍼블리싱",
     "team": "개발자",
     "cover": 1,
@@ -141,7 +141,7 @@ const projects = {
     "textAccent": "#3b389f",
     "muted": "#c9cbd2",
     "problem": "종이 일지의 보관과 판독 문제를 설계 과제로 삼았습니다.",
-    "detail": "웹의 기록 입력·보관과 모바일 현장 작성을 함께 다뤘습니다. 이후 담당자 요청으로 사이트 내 PDF·HWP 파일 열람까지 제작 범위가 확장됐습니다.",
+    "detail": "웹의 기록 입력·보관과 모바일 현장 작성을 함께 다뤘습니다. 이후 현장의 열람 개선 요청을 팀장을 통해 전달받고, 서비스 안에서 관련 파일을 확인하도록 설계했습니다.",
     "outcomes": [
       [
         "일지 화면",
@@ -153,10 +153,10 @@ const projects = {
       ],
       [
         "배포 후 실사용",
-        "개발자를 통한 의견 전달"
+        "파일 분류 아이콘·PDF 편집 진입 반영"
       ]
     ],
-    "deliverySummary": "모바일 기획·디자인과 웹 UI에 참여하고, 추가된 파일 열람 기능의 디자인·퍼블리싱을 담당했습니다. 서비스는 배포 후 실제 사용자가 이용했습니다.",
+    "deliverySummary": "PC UI 디자인·퍼블리싱과 모바일 UI 디자인을 담당했습니다. 파일 분류 아이콘과 PDF 편집 진입 UI는 운영 서비스에 반영됐습니다.",
     "images": 6,
     "next": [
       "dashboard",
@@ -166,7 +166,7 @@ const projects = {
   "pet": {
     "stage": "개인 프로젝트 · 2026.08.17 iOS 앱 출시",
     "summary": "공동 기획·UX/UI 디자인부터 iOS 앱 출시까지",
-    "no": "10",
+    "no": "03",
     "type": "B2C · HABIT UX",
     "title": "댕냥실록 | 반려동물 건강 기록·일정 관리 앱",
     "domain": "Dangnyangsilrok · Personal Product Project",
@@ -207,7 +207,7 @@ const projects = {
   "responsive": {
     "stage": "업무 프로젝트 · 반응형 웹 설계",
     "summary": "디바이스별로 일관된 제품 탐색 구조 설계",
-    "no": "07",
+    "no": "04",
     "type": "RESPONSIVE WEB · UI RENEWAL",
     "title": "반응형 웹 전면 리뉴얼",
     "domain": "5G Testing Solutions Website",
@@ -246,7 +246,7 @@ const projects = {
   "psc": {
     "stage": "업무 프로젝트 · 웹·앱 설계·퍼블리싱",
     "summary": "현장 측정과 사무실 관리를 웹·앱으로 연결",
-    "no": "08",
+    "no": "09",
     "type": "B2B PLATFORM · FIELD DATA",
     "title": "PSC 거더 관리 플랫폼",
     "domain": "PSC Girder Measurement & Management Platform",
@@ -283,15 +283,15 @@ const projects = {
     ]
   },
   "designsystem": {
-    "stage": "업무 프로젝트 · 디자이너의 디자인·프론트 작업에 재사용",
-    "summary": "컬러 토큰·SCSS와 일부 UI 요소를 디자인·퍼블리싱에 재사용",
-    "no": "04",
-    "type": "COMMON UI · SCSS TOKENS · WEB GUIDE",
-    "title": "컬러 토큰과 공통 UI 기준·웹 가이드",
+    "stage": "업무 프로젝트 · 12개 프로젝트에서 컬러·일부 UI 재사용",
+    "summary": "컬러와 일부 UI 요소를 후속 프로젝트에 재사용",
+    "no": "02",
+    "type": "COMMON UI · WEB GUIDE",
+    "title": "공통 UI 기준과 웹 가이드",
     "domain": "Common UI Guidelines",
-    "lead": "공통 컬러를 SCSS 변수로 관리하고 입력·검색 UI의 상태를 웹 가이드로 정리했습니다. 컬러와 일부 UI 요소를 디자이너의 작업에서 재사용했습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
+    "lead": "컬러와 입력·검색 UI의 공통 기준을 기획하고 Figma로 웹 가이드를 디자인했습니다. 선임 디자이너가 재사용 컴포넌트를 구현했습니다. 공개 이미지는 설명용으로 재구성한 화면과 가상 데이터를 사용합니다.",
     "period": "2024.05 — 2024.10",
-    "role": "공통 UI 기준 · 가이드 설계 · SCSS 컬러 토큰 관리",
+    "role": "가이드 기획 · Figma UI 디자인",
     "contribution": "컬러 변수 정의 · 입력·검색 상태 가이드 · 일부 UI 요소 재사용",
     "team": "",
     "bg": "#EFE6DF",
@@ -300,7 +300,7 @@ const projects = {
     "textAccent": "#863C23",
     "muted": "#62564D",
     "problem": "반복 사용하는 컬러와 입력 UI의 기준을 정리했습니다.",
-    "detail": "공통 컬러 값을 SCSS 변수로 정의하고 웹 가이드에 같은 색상 기준을 정리했습니다. 입력·검색 UI의 상태와 배치 예시를 정리해 디자이너의 디자인·프론트 작업에서 참고하고 재사용했습니다.",
+    "detail": "컬러의 사용 역할과 입력·검색 상태를 정리했습니다. 선임이 구현해 Git에 공유한 요소를 후속 작업에서 가져다 썼습니다.",
     "outcomes": [
       [
         "컬러 토큰",
@@ -315,7 +315,7 @@ const projects = {
         "기본·포커스·입력 중·비활성"
       ]
     ],
-    "outcomeBasis": "공통 컬러를 SCSS 변수와 웹 가이드로 정리하고, 컬러와 일부 UI를 프로젝트에 재사용했습니다.",
+    "outcomeBasis": "BCMF·CFS 등 12개 프로젝트에서 컬러와 일부 UI 요소를 재사용했습니다.",
     "next": [
       "intranet",
       "회의실 예약·근태 신청 모바일 인트라넷"
@@ -324,7 +324,7 @@ const projects = {
   "kanvan": {
     "stage": "개인 프로젝트 · 프로토타입",
     "summary": "이미지·제목으로 작업을 구분하고 카드 이동·작업 생성을 구현",
-    "no": "06",
+    "no": "10",
     "type": "PERSONAL PROJECT · AI-ASSISTED PROTOTYPE",
     "title": "카드 이동·작업 생성 개인 칸반 프로토타입",
     "domain": "Kanban Workflow Management",
@@ -363,7 +363,7 @@ const projects = {
   "skyautonet": {
     "stage": "업무 프로젝트 · 반응형 웹 설계",
     "summary": "기술 적용 장면과 목적별 탐색 구조 연결",
-    "no": "09",
+    "no": "05",
     "type": "WEB UX · BRAND UX · RESPONSIVE",
     "title": "자율주행 기술을 이해시키는 반응형 웹 리디자인",
     "domain": "SkyAutoNet Website Renewal",
@@ -410,11 +410,11 @@ const caseStudies = {
       ],
       [
         "내가 정리한 부분",
-        "SCSS 컬러 변수와 웹 가이드의 색상 기준을 연결하고, 입력·검색 UI의 상태와 배치를 정리했습니다."
+        "Figma 웹 가이드에 컬러의 사용 역할과 입력·검색 UI의 상태·배치를 정리했습니다."
       ],
       [
         "실제 활용",
-        "컬러와 일부 UI 요소를 디자이너의 디자인·프론트 작업에서 참고하고 재사용했습니다."
+        "BCMF·CFS 등 12개 프로젝트에서 컬러와 일부 UI 요소를 재사용했습니다."
       ]
     ],
     "evidenceLabel": "컬러 변수와 웹 가이드",
@@ -435,7 +435,7 @@ const caseStudies = {
       ],
       [
         "담당",
-        "공통 UI 기준 · 웹 가이드 · SCSS 컬러 토큰"
+        "가이드 기획 · Figma UI 디자인"
       ]
     ],
     "pains": [
@@ -455,8 +455,8 @@ const caseStudies = {
     "strategies": [
       [
         "01",
-        "SCSS 컬러 변수",
-        "공통 컬러 값을 변수로 정의하고 Primary·Secondary 색상 단계를 웹 가이드에 정리했습니다."
+        "공통 컬러 기준",
+        "반복해서 쓰는 색상 단계와 강조·배경·테두리·본문의 사용 역할을 정리했습니다."
       ],
       [
         "02",
@@ -493,7 +493,7 @@ const caseStudies = {
       ]
     ],
     "reflection": {
-      "learned": "컬러 값은 변수로 공유하고, 입력 UI는 사용 맥락에 따라 크기와 배치를 조정했습니다. 공통 기준을 유지할 부분과 화면마다 달라질 부분을 나누어 관리했습니다.",
+      "learned": "공통 컬러 기준을 공유하고, 입력 UI는 화면에 맞게 크기와 배치를 조정했습니다. 공통 기준을 유지할 부분과 화면마다 달라질 부분을 나누어 관리했습니다.",
       "next": "프로젝트의 토큰 참조 코드와 기본·변형 UI를 함께 모아 실제 적용 범위를 더 구체적으로 보여주고 싶습니다."
     },
     "heroVisual": [
@@ -826,11 +826,11 @@ const caseStudies = {
       ],
       [
         "내가 판단한 부분",
-        "기획의 메뉴 분리 요청을 반영하면서, 메뉴의 구분과 지도 배경의 연속성을 함께 고려해 반투명 검정안을 선택했습니다."
+        "기획의 업무 분류를 반영해 세 가지 메뉴안을 만들고, 메뉴 구분과 지도 배경의 연속성을 기준으로 비교했습니다. 최종안은 회의 투표로 결정했습니다."
       ],
       [
         "확인된 결과",
-        "배포 후 실제 사용으로 이어졌고, 메뉴 구분이 명확해 사용하기 좋다는 내부 동료의 의견을 받았습니다."
+        "메뉴 선택 상태와 자료 패널을 구현하고, 회의에서 세 가지 메뉴안을 비교했습니다."
       ]
     ],
     "evidenceLabel": "업무 배경과 설계 과제",
@@ -880,7 +880,7 @@ const caseStudies = {
       ],
       [
         "상태",
-        "배포 후 실사용 · 시연·내부 소통 활용"
+        "메뉴·지도 탐색 UI 및 퍼블리싱"
       ]
     ],
     "pains": [
@@ -911,7 +911,7 @@ const caseStudies = {
       [
         "03",
         "메뉴 대안 선택",
-        "흰색·검정·반투명 검정을 비교했습니다. 메뉴를 구분하면서 지도 맥락을 유지하기 위해 반투명 검정안을 선택했습니다."
+        "제가 만든 흰색·검정·반투명 검정안을 비교했습니다. 메뉴를 구분하면서 지도 맥락을 유지하는 반투명 검정안을 팀 회의에서 투표로 선택했습니다."
       ]
     ],
     "ui": "map",
@@ -955,7 +955,7 @@ const caseStudies = {
     },
     "impact": {
       "type": "depth",
-      "label": "배포 결과와 협업",
+      "label": "최종안과 협업",
       "title": "설계·퍼블리싱한 플랫폼이 실제 사용으로 이어졌습니다.",
       "before": "파일·프로그램별 자료 확인",
       "after": "공통 메뉴·지도에서 관련 자료 탐색",
@@ -970,8 +970,8 @@ const caseStudies = {
           "기획의 메뉴 분리 요청을 UI에 반영하고 지도 탐색 화면과 퍼블리싱을 담당"
         ],
         [
-          "배포와 사용",
-          "배포 후 실제 사용자 이용"
+          "설계 범위",
+          "메뉴·지도 탐색 UI 및 퍼블리싱"
         ],
         [
           "협업과 활용",
@@ -1114,7 +1114,7 @@ const caseStudies = {
       ],
       [
         "확인된 결과",
-        "서비스가 배포되어 실제 사용자가 이용했습니다. 담당자 요청으로 PDF·HWP 파일 열람 기능의 디자인·퍼블리싱도 추가 진행했습니다."
+        "서비스가 배포되어 실제 사용자가 이용했습니다. 파일 분류 아이콘과 PDF 내용 편집 화면으로 이동하는 UI가 반영됐습니다."
       ]
     ],
     "evidenceLabel": "수기 기록에서 찾은 설계 과제",
@@ -1241,19 +1241,19 @@ const caseStudies = {
       "facts": [
         [
           "추가 요청의 배경",
-          "담당자는 파일을 각자의 PC에서 따로 열기보다, 사이트 안에서 한 번에 확인하기를 원했습니다."
+          "외부 프로그램으로 파일을 열던 업무를 서비스 안에서 처리해 달라는 요청을 팀장을 통해 전달받았습니다."
         ],
         [
           "직접 담당",
-          "추가된 파일 열람 기능의 디자인·퍼블리싱 · 모바일 일지·서명 화면 기획·디자인 · 웹 UI 참여"
+          "PC 파일 열람 UI 디자인·퍼블리싱 · 모바일 일지·서명 UI 디자인"
         ],
         [
           "배포와 사용",
           "서비스 배포 후 실제 사용자 이용"
         ],
         [
-          "의견 전달 경로",
-          "개발자를 통해 사용자 의견을 전달받음"
+          "추가 반영 범위",
+          "파일 분류 아이콘과 PDF 편집 진입 UI를 최종 서비스에 반영"
         ]
       ],
       "note": "배포·실사용 사실과 초기 기획 대비 추가 제작 범위를 정리했습니다. 파일 열람 기능의 이용률이나 업무 시간 변화는 측정하지 않았습니다."
@@ -1362,7 +1362,7 @@ const caseStudies = {
       ],
       [
         "입력 부담",
-        "자주 남기는 기록의 입력 항목과 순서를 줄이는 방향으로 설계했습니다."
+        "일지와 반려동물 등록은 여러 화면에서 ‘다음’을 누르는 방식에서 한 화면을 스크롤하며 선택·입력하는 방식으로 바꿨습니다."
       ],
       [
         "기록 확인",
@@ -1388,7 +1388,7 @@ const caseStudies = {
     ],
     "iteration": {
       "initial": "캐릭터와 기록 결과를 중심으로 한 정보 밀도가 낮은 홈",
-      "feedback": "캐릭터 중심 초기안에서 진행률·빠른 기록·오늘의 일정이 먼저 보이도록 정보 우선순위를 조정했습니다.",
+      "feedback": "초기 시안에서 캐릭터가 기록 버튼보다 먼저 눈에 들어와, 제가 홈 우선순위 변경을 제안했습니다. 수정한 홈으로 출시했습니다.",
       "final": "진행률·빠른 기록·오늘의 일정을 우선 배치한 행동 중심 홈",
       "initialImage": "assets/cases/before-pet.png",
       "finalImage": "assets/cases/after-pet.png"
@@ -1424,7 +1424,7 @@ const caseStudies = {
   }
 };
 
-const projectOrder = ["platform", "tbm", "dashboard", "designsystem", "intranet", "kanvan", "responsive", "psc", "skyautonet", "pet"];
+const projectOrder = ["tbm", "designsystem", "pet", "responsive", "skyautonet", "platform", "dashboard", "intranet", "psc", "kanvan"];
 
 const icon = (name) => {
   const paths = {
@@ -1503,8 +1503,8 @@ const renderVisuals = (items, label = "설계 자료", title = "실제 화면과
 // Existing project decisions, with explicit follow-up questions rather than invented test results.
 const decisionNotes = {
   "designsystem": [
-    ["공유한 기준", "컬러는 SCSS 변수와 웹 가이드로 연결하고, 검색 입력은 기본·포커스·입력 중·비활성으로 구분했습니다."],
-    ["재사용 범위", "디자이너의 디자인·프론트 작업에서 컬러와 일부 UI를 재사용했습니다. 조직 전체의 도입률이나 개발 시간 단축은 측정하지 않았습니다."],
+    ["공유한 기준", "웹 가이드에 컬러의 사용 역할을 정리하고, 검색 입력은 기본·포커스·입력 중·비활성으로 구분했습니다."],
+    ["재사용 범위", "BCMF·CFS 등 12개 프로젝트에서 컬러와 일부 UI 요소를 재사용했습니다. 프로젝트마다 필요한 요소를 골라 적용했습니다."],
     ["공개 자료의 성격", "아래 화면은 설명용 재구성입니다. 당시 Figma 라이브러리나 실제 서비스 코드의 증빙을 대체하지 않습니다."]
   ],
   "dashboard": [
@@ -1602,7 +1602,7 @@ if (p) {
     p.textAccent || p.accent,
   );
   document.documentElement.style.setProperty("--case-muted", p.muted);
-  document.title = `${p.title} | 이한울 · Product Designer`;
+  document.title = `${p.title} | 이한울 · UX/UI 디자이너`;
   document.querySelector(".case-eyebrow").textContent =
     `PROJECT ${p.no} · ${p.type}`;
   document.querySelector(".case-title").textContent = p.title;
