@@ -2534,11 +2534,37 @@ body {
 }
 
 /* 2026-11-07: 배포 사례와 추가 역량으로 바로 이동 */
-.portfolio-home .intro-actions { gap: 12px; }
-.portfolio-home .intro-link { gap: 12px; }
-.portfolio-home .intro-link-secondary { background: transparent; color: var(--white); border-color: #687382; }
-.portfolio-home .intro-link-secondary:hover { background: #25303d; border-color: var(--cyan); }
-.portfolio-home .intro-pdf { flex-basis: 100%; }
-.work-shortcuts { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 0 0 24px; }
-.work-shortcuts a { color: #c0c8d2; font-size: 14px; padding: 12px 0; text-decoration: underline; text-underline-offset: 5px; }
-.work-shortcuts a:hover { color: #fff; }
+.portfolio-home .intro-actions {
+  gap: 12px;
+}
+.portfolio-home .intro-link {
+  gap: 12px;
+}
+.portfolio-home .intro-link-secondary {
+  background: transparent;
+  color: var(--white);
+  border-color: #687382;
+}
+.portfolio-home .intro-link-secondary:hover {
+  background: #25303d;
+  border-color: var(--cyan);
+}
+.portfolio-home .intro-pdf {
+  flex-basis: 100%;
+}
+.work-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 0 0 24px;
+}
+.work-shortcuts a {
+  color: #c0c8d2;
+  font-size: 14px;
+  padding: 12px 0;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.work-shortcuts a:hover {
+  color: #fff;
+}

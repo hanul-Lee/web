@@ -3254,20 +3254,32 @@ body[data-project="intranet"] .project-visuals figure.portrait .visual-frame {
 
 /* Consistent compact evidence images; preserve full artwork without cropping. */
 body[data-project="dashboard"] .project-visuals figure .visual-frame {
-  height: 280px; max-height: none; aspect-ratio: auto;
+  height: 280px;
+  max-height: none;
+  aspect-ratio: auto;
 }
 body[data-project="intranet"] .project-visuals figure .visual-frame,
 body[data-project="psc"] .project-visuals figure .visual-frame {
-  height: 440px; max-height: none; aspect-ratio: auto;
+  height: 440px;
+  max-height: none;
+  aspect-ratio: auto;
 }
-.project-visuals .project-visual-grid { gap: 24px; grid-auto-rows: auto; }
-.project-visuals figcaption { padding-top: 12px; }
+.project-visuals .project-visual-grid {
+  gap: 24px;
+  grid-auto-rows: auto;
+}
+.project-visuals figcaption {
+  padding-top: 12px;
+}
 @media (max-width: 600px) {
-  body[data-project="dashboard"] .project-visuals figure .visual-frame { height: 220px; }
+  body[data-project="dashboard"] .project-visuals figure .visual-frame {
+    height: 220px;
+  }
   body[data-project="intranet"] .project-visuals figure .visual-frame,
-  body[data-project="psc"] .project-visuals figure .visual-frame { height: 380px; }
+  body[data-project="psc"] .project-visuals figure .visual-frame {
+    height: 380px;
+  }
 }
-
 
 /* Keep the overview cover compact so participation details stay near the fold. */
 .case-main > .case-hero .case-cover {
