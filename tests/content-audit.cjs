@@ -1,6 +1,6 @@
 // Run template validation without a browser; browser layout QA remains separate.
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const s=fs.readFileSync('case.js','utf8');
+const s=fs.readFileSync('tools/render-case.js','utf8');
 const prefix=s.slice(0,s.indexOf('const slug = document.body.dataset.project;'));
 const keys=['platform','tbm','dashboard','designsystem','intranet','kanvan','responsive','psc','skyautonet','pet'];
 const images=new Set();
@@ -55,3 +55,20 @@ assert.deepEqual(events.map(e=>e[1]),['project_click','next_project_click','cont
 assert.equal(events[0][2].project_id,'platform');assert.equal(events[1][2].source_project,'tbm');
 assert.ok(!JSON.stringify(events).includes('example@'));
 console.log('PASS: project, next-project and contact analytics events');
+
+const home=fs.readFileSync('index.html','utf8');
+assert.equal((home.match(/fetchpriority="high"/g)||[]).length,1,'only the hero image should have high priority');
+assert.match(home,/<a class="work-visual[^>]*>[\s\S]*?<img[^>]*loading="lazy"/,'project cards should be lazy loaded');
+for(const key of keys){const html=fs.readFileSync('project-'+key+'.html','utf8');assert.ok(!html.includes('render-case.js'),'build-only data must never be delivered');assert.ok(html.includes('case.js?v='),'runtime enhancements missing');}
+assert.ok(fs.statSync('case.js').size<10000,'project runtime should stay small');
+console.log('PASS: hero priority, lazy project images and build-only project data');
+
+const protectedStyles=require('./fixtures/impact-strong.json');
+for(const [file,blocks]of Object.entries(protectedStyles))assert.deepEqual(fs.readFileSync(file,'utf8').match(/\.impact-flow strong\s*\{[^}]*\}/g),blocks,file+' protected impact styles changed');
+assert.ok(!/@import\b/.test(fs.readFileSync('case.css','utf8')),'case CSS must not chain-load the home stylesheet');
+for(const file of ['index.html',...keys.map(k=>'project-'+k+'.html')]){
+ const html=fs.readFileSync(file,'utf8');
+ assert.ok(html.indexOf('shared.css?')<html.indexOf(file==='index.html'?'portfolio.css?':'case.css?'),'shared CSS must load before page CSS');
+ if(file!=='index.html')assert.ok(!html.includes('portfolio.css?'),'detail pages must not load home CSS');
+}
+console.log('PASS: protected impact styles and direct shared/page CSS loading');

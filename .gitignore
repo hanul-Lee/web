@@ -11,3 +11,7 @@ portfolio_review_*/
 
 # Local original images and unused backup assets
 /tools/image-sources/
+
+# Local Python environment for font subsetting
+/.venv-fonts/
+__pycache__/

@@ -1,0 +1,14 @@
+{
+  "case.scss": [
+    ".impact-flow strong {\n  display: block;\n}",
+    ".impact-flow strong {\n  font-size: clamp(28px, 2vw, 50px);\n  line-height: 1.1;\n}",
+    ".impact-flow strong {\n    overflow-wrap: anywhere;\n  }",
+    ".impact-flow strong {\n    font-size: var(--type-title-md);\n    line-height: 1.4;\n  }"
+  ],
+  "case.css": [
+    ".impact-flow strong {\n  display: block;\n}",
+    ".impact-flow strong {\n  font-size: clamp(28px, 2vw, 50px);\n  line-height: 1.1;\n}",
+    ".impact-flow strong {\n    overflow-wrap: anywhere;\n  }",
+    ".impact-flow strong {\n    font-size: var(--type-title-md);\n    line-height: 1.4;\n  }"
+  ]
+}

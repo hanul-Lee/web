@@ -19,7 +19,8 @@ function metadata(html,file){
  const title=html.match(/<title>(.*?)<\/title>/s)[1];
  return html.replace('</head>',`    <link rel="canonical" href="${url}">\n    <meta property="og:url" content="${url}">\n    <meta property="og:image" content="${image}">\n    <meta property="og:image:width" content="1200">\n    <meta property="og:image:height" content="630">\n    <meta property="og:image:alt" content="이한울 UX/UI 포트폴리오 · B2B 업무 서비스의 정보 구조와 UI 설계">\n    <meta name="twitter:card" content="summary_large_image">\n    <meta name="twitter:title" content="${title}">\n    <meta name="twitter:image" content="${image}">\n  </head>`).replace(/[ \t]+$/gm,'');
 }
-(async()=>{const files=fs.readdirSync('tools/templates').filter(f=>/^project-.*\.html$/.test(f));
+(async()=>{require('./build-styles.cjs');
+ const files=fs.readdirSync('tools/templates').filter(f=>/^project-.*\.html$/.test(f));
  await withChrome(async({send,evaluate})=>{
  for(const file of files){
   const template=fs.readFileSync('tools/templates/'+file,'utf8');
@@ -28,7 +29,7 @@ function metadata(html,file){
   const scripts=[...template.matchAll(/<script\b[^>]*>[\s\S]*?<\/script>/g)].map(m=>m[0]).join('\n');
   const html=template.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,'').replace('<head>',`<head><base href="${pathToFileURL(root+path.sep).href}">`);
   await send('Page.setDocumentContent',{frameId:frameTree.frame.id,html});
-  await evaluate('window.__BUILD_STATIC__=true;\n'+fs.readFileSync('case.js','utf8'));
+  await evaluate(fs.readFileSync('tools/render-case.js','utf8'));
   await evaluate(fs.readFileSync('components.js','utf8'));
   const output=await evaluate(`document.querySelector('base').remove();'<!doctype html>\\n'+document.documentElement.outerHTML`);
   fs.writeFileSync(file,responsive(metadata(output.replace('</body>',scripts+'\n</body>'),file))+'\n');
@@ -40,5 +41,6 @@ function metadata(html,file){
  fs.writeFileSync('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${['index.html',...files].map(f=>`  <url><loc>${escape(new URL(f==='index.html'?'':f,site).href)}</loc></url>`).join('\n')}\n</urlset>\n`);
  const notFound=`<!doctype html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>페이지를 찾을 수 없습니다 | 이한울</title><style>body{margin:0;background:#0c0f14;color:#fff;font-family:system-ui,sans-serif;display:grid;min-height:100vh;place-items:center}main{padding:32px;max-width:640px}a{color:#a9c5ff}h1{font-size:clamp(28px,5vw,48px)}</style></head><body><main><p>404</p><h1>페이지를 찾을 수 없습니다.</h1><p>주소가 바뀌었거나 존재하지 않는 페이지입니다.</p><a href="${site.href}">포트폴리오 홈으로 돌아가기 →</a></main></body></html>`;
  fs.writeFileSync('404.html',metadata(notFound,'404.html'));
+ require('./build-fonts.cjs');
  console.log('Built 10 static project pages, responsive images, sharing metadata, sitemap, robots and 404.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

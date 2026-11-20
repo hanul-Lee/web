@@ -5,7 +5,13 @@
   "scripts": {
     "build": "node tools/build-site.cjs",
     "optimize:images": "node tools/optimize-images.cjs",
-    "test": "node tests/content-audit.cjs",
-    "test:layout": "node tests/section-spacing.cjs"
+    "test": "node tests/content-audit.cjs && node tests/font-audit.cjs",
+    "test:layout": "node tests/section-spacing.cjs",
+    "build:styles": "node tools/build-styles.cjs",
+    "test:static": "node tests/static-site.cjs",
+    "fonts": "node tools/build-fonts.cjs"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

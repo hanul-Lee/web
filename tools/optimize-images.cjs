@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path');
 const {pathToFileURL}=require('node:url');
 const withChrome=require('./chrome.cjs');
 const root=path.resolve(__dirname,'..');process.chdir(root);
-const sources=['index.html','case.js','portfolio.scss'].map(f=>fs.readFileSync(f,'utf8')).join('\n');
+const sources=['index.html','tools/render-case.js','portfolio.scss'].map(f=>fs.readFileSync(f,'utf8')).join('\n');
 const discovered=[...new Set([...sources.matchAll(/assets\/[\w/.-]+\.(?:png|jpe?g|webp)/g)].map(m=>m[0]))].sort();
 const paths=fs.existsSync('tools/image-manifest.json') ? Object.keys(JSON.parse(fs.readFileSync('tools/image-manifest.json','utf8'))) : discovered;
 (async()=>{await withChrome(async({send,evaluate})=>{
