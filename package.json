@@ -1,5 +1,11 @@
 {
   "devDependencies": {
     "sass": "^1.105.1"
+  },
+  "scripts": {
+    "build": "node tools/build-site.cjs",
+    "optimize:images": "node tools/optimize-images.cjs",
+    "test": "node tests/content-audit.cjs",
+    "test:layout": "node tests/section-spacing.cjs"
   }
 }

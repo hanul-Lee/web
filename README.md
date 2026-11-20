@@ -74,3 +74,27 @@ node tests/section-spacing.cjs
 ## 디자인 기준
 
 현재 브랜드·컬러·타입·반응형 그리드 기준은 [docs/design-direction.md](docs/design-direction.md)에 정리했습니다.
+
+## 정적 페이지 빌드 및 이미지 관리
+
+`case.js`의 프로젝트 내용을 변경한 뒤 `npm run build`를 실행합니다. `tools/templates/project-*.html`을 바탕으로 본문·테마·공통 헤더와 푸터·다음 프로젝트 링크가 포함된 HTML 10개를 생성합니다. 생성된 상세 HTML은 JavaScript 없이도 읽을 수 있으며, `case.js`는 브라우저에서 이미지 확대와 진행 표시를 연결합니다. 공통 헤더·푸터를 수정할 때도 다시 빌드합니다.
+
+빌드는 Node.js 22 이상과 로컬 Google Chrome을 사용합니다. 다른 위치에 설치한 경우 `CHROME_PATH`를 지정합니다. 빌드에는 네트워크나 추가 npm 패키지가 필요하지 않습니다. 배포 주소 기본값은 `https://hanul-lee.github.io/web/`이며, 변경할 때 `SITE_URL=https://example.com/ npm run build`로 canonical·공유 이미지 URL·사이트맵·404 홈 링크를 함께 갱신합니다. `robots.txt`는 도메인 루트에서 적용되므로 `/web/robots.txt`를 사용하는 GitHub Pages 프로젝트 배포에서는 루트 robots 정책도 별도로 확인합니다.
+
+이미지는 WebP의 480·960·1920·2560px 너비 변형(원본보다 확대하지 않음)을 사용합니다. HTML에는 `srcset`, `sizes`, 원본 비율의 `width`와 `height`를 빌드 시 넣습니다. 추가 프로젝트의 작은 목록 썸네일은 `sizes="64px"`로 지정합니다. 확대 보기는 가장 큰 파일을 사용합니다. `tools/image-manifest.json`은 원본과 변형 파일의 대응표입니다.
+
+최적화 전 원본과 사용하지 않는 이미지 16개, `assets/__portfolio.pdf` 백업은 로컬의 `tools/image-sources/`로 옮겨 Git에서 제외했습니다. 현재 PDF인 `assets/portfolio.pdf`는 유지합니다. 원본을 재인코딩하려면 이 로컬 폴더를 보관하고 `npm run optimize:images`와 `npm run build`를 실행합니다. 새 체크아웃은 이미 생성된 WebP만으로 빌드할 수 있습니다. 원본 재인코딩에는 별도 보관한 원본 폴더가 필요합니다. `node_modules`도 추적에서 제외했으며 `npm ci`로 복원할 수 있습니다. 과거 Git 커밋의 파일은 그대로 남아 있습니다.
+
+공유 이미지는 `assets/og-image.png`(1200×630)이며, 모든 HTML에 Open Graph와 Twitter 큰 이미지 메타데이터를 넣습니다. `sitemap.xml`에는 메인과 상세 10개를 포함하고 404는 제외합니다.
+
+GA4의 `project_click`과 `next_project_click`은 `project_id`, `source_project`, `link_location`으로 클릭한 사례와 위치를 구분합니다. 연락처 클릭과 PDF enhanced measurement는 기존대로 유지합니다.
+
+추가 검증:
+
+```sh
+npm test
+node tests/static-site.cjs
+npm run test:layout
+```
+
+정적 페이지 검사는 10개 상세의 JavaScript 비활성화 시 본문·탐색·반응형 이미지와, 활성화 시 중복 삽입 방지·이미지 확대·포커스 복귀를 확인합니다.

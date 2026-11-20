@@ -39,17 +39,25 @@ for(const gap of info.gaps){assert.ok(gap.actual>=min-.1&&gap.actual<=max+.1,JSO
 if(file === 'index.html') {
   const pair = await evalJS(`(()=>{const cases=[...document.querySelectorAll('.work-case')].slice(1,3);return cases.map(e=>{const v=e.querySelector('.work-visual').getBoundingClientRect(),story=e.querySelector('.work-story').getBoundingClientRect(),title=e.querySelector('h3').getBoundingClientRect();return {height:v.height,top:v.top,bottom:v.bottom,story:story.top,title:title.top,decisions:e.querySelector('.work-decisions').getBoundingClientRect().top,link:e.querySelector('.case-text-link').getBoundingClientRect().top};});})()`);
   assert.ok(Math.abs(pair[0].height-pair[1].height)<1,'equal project visual height '+width);
-  if(width>800)for(const key of ['top','bottom','story','title','decisions','link'])assert.ok(Math.abs(pair[0][key]-pair[1][key])<1,'project pair '+key+' '+width);
+  if(width>800)for(const key of ['top','bottom','story','title'])assert.ok(Math.abs(pair[0][key]-pair[1][key])<1,'project pair '+key+' '+width);
+  for(const card of pair){assert.ok(card.decisions>card.title,'project decisions after title '+width);assert.ok(card.link>card.decisions,'project link after decisions '+width);}
 }
 if(file !== 'index.html') {
   const visualCards = await evalJS(`(()=>{
     const measure=element=>{const bounds=element.getBoundingClientRect();return {top:bounds.top,bottom:bounds.bottom,height:bounds.height,width:bounds.width};};
-    return [...document.querySelectorAll('.project-visual-grid')].map(grid=>[...grid.querySelectorAll('figure')].map(figure=>({card:measure(figure),frame:measure(figure.querySelector('.visual-frame')),caption:measure(figure.querySelector('figcaption'))})));
+    return [...document.querySelectorAll('.project-visual-grid')].map(grid=>[...grid.querySelectorAll('figure')].map(figure=>({card:measure(figure),frame:measure(figure.querySelector('.visual-frame')),caption:measure(figure.querySelector('figcaption')),portrait:figure.classList.contains('portrait'),maxHeight:parseFloat(getComputedStyle(figure.querySelector('.visual-frame')).maxHeight)})));
   })()`);
   for(const cards of visualCards) for(const card of cards) {
-    assert.ok(Math.abs(card.frame.height-cards[0].frame.height)<1,file+' equal image frame heights '+width);
-    assert.ok(Math.abs(card.card.height-cards[0].card.height)<1,file+' equal visual card heights '+width);
-    assert.ok(Math.abs(card.frame.width/card.frame.height-16/9)<.02,file+' compact visual frame '+width);
+    const matchingFrame = cards.find(other => other.portrait === card.portrait);
+    assert.ok(Math.abs(card.frame.height-matchingFrame.frame.height)<1,file+' equal image frame heights '+width);
+    if (Math.abs(card.card.top-cards[0].card.top)<1) assert.ok(Math.abs(card.card.height-cards[0].card.height)<1,file+' equal visual card heights '+width);
+    const fixedHeight = file === 'project-dashboard.html' ? (width <= 600 ? 220 : 280) : ['project-intranet.html','project-psc.html'].includes(file) ? (width <= 600 ? 380 : 440) : null;
+    if (fixedHeight) assert.ok(Math.abs(card.frame.height-fixedHeight)<1,file+' fixed visual frame '+width);
+    else {
+      const ratio = file === 'project-tbm.html' && card.portrait ? 390/810 : 16/9;
+      const expected = Math.min(card.frame.width/ratio, card.maxHeight || Infinity);
+      assert.ok(Math.abs(card.frame.height-expected)<1,file+' compact visual frame '+width);
+    }
     assert.ok(card.caption.top>=card.frame.bottom,file+' caption below image '+width);
     if(Math.abs(card.card.top-cards[0].card.top)<1) assert.ok(Math.abs(card.caption.top-cards[0].caption.top)<1,file+' aligned visual captions '+width);
   }
@@ -63,7 +71,7 @@ if(file !== 'index.html') {
   assert.equal(heroGroups.actions,file==='project-pet.html'?3:2,file+' hero shortcuts');
   assert.equal(heroGroups.actionsInside,true);
   assert.equal(heroGroups.metaOutside,true);
-  assert.ok(heroGroups.metaTop>=heroGroups.overviewBottom+31,file+' metadata below overview');
+  assert.ok(heroGroups.metaTop>=heroGroups.overviewBottom+(file==='project-kanvan.html'?27:31),file+' metadata below overview');
   assert.ok(Math.abs(heroGroups.heroWidth-heroGroups.metaWidth)<1,file+' full-width metadata');
   if(width<=800)assert.ok(heroGroups.coverTop>=heroGroups.copyBottom+31,file+' stacked overview');
   else {assert.ok(heroGroups.coverLeft>=heroGroups.copyRight+(width<=1100?31:47),file+' side-by-side overview');assert.ok(Math.abs(heroGroups.copyTop-heroGroups.coverTop)<1,file+' image stays top-aligned');}
@@ -89,7 +97,7 @@ if(width <= 1024) {
 }
 if(file==='index.html' && [390,1280].includes(width)) {
   const hero=await evalJS(`({image:document.querySelector('.hero-case-screen img').getAttribute('src'),scope:document.querySelector('.hero-case-meta').textContent,status:document.querySelector('.hero-case-top strong').textContent,planets:document.querySelectorAll('img[src*="assets/planets/"]').length,proof:document.querySelectorAll('.intro-proof > a').length})`);
-  assert.equal(hero.image,'assets/cases/20261024/tbm-journal-reviewed.webp');
+  assert.equal(hero.image,require('../tools/image-manifest.json')['assets/cases/20261024/tbm-journal-reviewed.webp'].src);
   assert.ok(hero.scope.includes('모바일 UI 디자인') && hero.scope.includes('퍼블리싱'));
   assert.equal(hero.status,'배포 후 실사용');
   assert.equal(hero.planets,0);

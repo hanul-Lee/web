@@ -6,7 +6,7 @@
   const pdfLink = 'assets/portfolio.pdf?v=20261117-links';
   const logo = `<a class="logo" href="${homeLink}">HANUL<span>●</span></a>`;
 
-  document.querySelector('[data-site-header]')?.insertAdjacentHTML('afterbegin', `
+  document.querySelector('[data-site-header]:empty')?.insertAdjacentHTML('afterbegin', `
     ${logo}
     <nav id="primary-nav" aria-label="주요 메뉴">
       <a href="${sectionLink('work')}">프로젝트</a>
@@ -20,7 +20,7 @@
     </button>
   `);
 
-  document.querySelector('[data-site-footer]')?.insertAdjacentHTML('afterbegin', `
+  document.querySelector('[data-site-footer]:empty')?.insertAdjacentHTML('afterbegin', `
     ${logo}
     <p>© 2026 이한울</p>
     ${isHome ? '<a href="#top">맨 위로 ↑</a>' : ''}

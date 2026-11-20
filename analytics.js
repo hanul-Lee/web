@@ -50,5 +50,14 @@
     const href = link.getAttribute('href');
     const method = href.startsWith('mailto:') ? 'email' : href.startsWith('tel:') ? 'phone' : '';
     if (method) window.gtag('event', 'contact_click', { contact_method: method });
+    const project = href.match(/^project-([a-z]+)\.html(?:[?#]|$)/)?.[1];
+    if (project) {
+      const next = Boolean(link.closest('.next'));
+      window.gtag('event', next ? 'next_project_click' : 'project_click', {
+        project_id: project,
+        source_project: document.body.dataset.project || 'home',
+        link_location: next ? 'next_project' : link.closest('.work-case, .more-project') ? 'project_card' : 'featured_link'
+      });
+    }
   });
 })();

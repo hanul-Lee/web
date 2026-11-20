@@ -1,0 +1,851 @@
+{
+  "assets/cases/1017/platform-menu-options.png": {
+    "src": "assets/cases/1017/platform-menu-options-2560w.webp",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      {
+        "src": "assets/cases/1017/platform-menu-options-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/cases/1017/platform-menu-options-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/cases/1017/platform-menu-options-1920w.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "assets/cases/1017/platform-menu-options-2560w.webp",
+        "width": 2560,
+        "height": 1440
+      }
+    ]
+  },
+  "assets/cases/1017/platform-menu.png": {
+    "src": "assets/cases/1017/platform-menu-2560w.webp",
+    "width": 2560,
+    "height": 815,
+    "variants": [
+      {
+        "src": "assets/cases/1017/platform-menu-480w.webp",
+        "width": 480,
+        "height": 153
+      },
+      {
+        "src": "assets/cases/1017/platform-menu-960w.webp",
+        "width": 960,
+        "height": 306
+      },
+      {
+        "src": "assets/cases/1017/platform-menu-1920w.webp",
+        "width": 1920,
+        "height": 611
+      },
+      {
+        "src": "assets/cases/1017/platform-menu-2560w.webp",
+        "width": 2560,
+        "height": 815
+      }
+    ]
+  },
+  "assets/cases/1017/platform-video.png": {
+    "src": "assets/cases/1017/platform-video-2294w.webp",
+    "width": 2294,
+    "height": 1072,
+    "variants": [
+      {
+        "src": "assets/cases/1017/platform-video-480w.webp",
+        "width": 480,
+        "height": 224
+      },
+      {
+        "src": "assets/cases/1017/platform-video-960w.webp",
+        "width": 960,
+        "height": 449
+      },
+      {
+        "src": "assets/cases/1017/platform-video-1920w.webp",
+        "width": 1920,
+        "height": 897
+      },
+      {
+        "src": "assets/cases/1017/platform-video-2294w.webp",
+        "width": 2294,
+        "height": 1072
+      }
+    ]
+  },
+  "assets/cases/20261024/erp-dashboard-updated.webp": {
+    "src": "assets/cases/20261024/erp-dashboard-updated-1900w.webp",
+    "width": 1900,
+    "height": 1069,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/erp-dashboard-updated-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/cases/20261024/erp-dashboard-updated-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/cases/20261024/erp-dashboard-updated-1900w.webp",
+        "width": 1900,
+        "height": 1069
+      }
+    ]
+  },
+  "assets/cases/20261024/erp-detail-updated.webp": {
+    "src": "assets/cases/20261024/erp-detail-updated-1900w.webp",
+    "width": 1900,
+    "height": 1069,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/erp-detail-updated-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/cases/20261024/erp-detail-updated-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/cases/20261024/erp-detail-updated-1900w.webp",
+        "width": 1900,
+        "height": 1069
+      }
+    ]
+  },
+  "assets/cases/20261024/erp-flat-cover.webp": {
+    "src": "assets/cases/20261024/erp-flat-cover-2560w.webp",
+    "width": 2560,
+    "height": 1506,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/erp-flat-cover-480w.webp",
+        "width": 480,
+        "height": 282
+      },
+      {
+        "src": "assets/cases/20261024/erp-flat-cover-960w.webp",
+        "width": 960,
+        "height": 565
+      },
+      {
+        "src": "assets/cases/20261024/erp-flat-cover-1920w.webp",
+        "width": 1920,
+        "height": 1129
+      },
+      {
+        "src": "assets/cases/20261024/erp-flat-cover-2560w.webp",
+        "width": 2560,
+        "height": 1506
+      }
+    ]
+  },
+  "assets/cases/20261024/erp-menu-updated.webp": {
+    "src": "assets/cases/20261024/erp-menu-updated-866w.webp",
+    "width": 866,
+    "height": 882,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/erp-menu-updated-480w.webp",
+        "width": 480,
+        "height": 489
+      },
+      {
+        "src": "assets/cases/20261024/erp-menu-updated-866w.webp",
+        "width": 866,
+        "height": 882
+      }
+    ]
+  },
+  "assets/cases/20261024/erp-overtime-updated.webp": {
+    "src": "assets/cases/20261024/erp-overtime-updated-1026w.webp",
+    "width": 1026,
+    "height": 618,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/erp-overtime-updated-480w.webp",
+        "width": 480,
+        "height": 289
+      },
+      {
+        "src": "assets/cases/20261024/erp-overtime-updated-960w.webp",
+        "width": 960,
+        "height": 578
+      },
+      {
+        "src": "assets/cases/20261024/erp-overtime-updated-1026w.webp",
+        "width": 1026,
+        "height": 618
+      }
+    ]
+  },
+  "assets/cases/20261024/erp-structure-updated.webp": {
+    "src": "assets/cases/20261024/erp-structure-updated-1824w.webp",
+    "width": 1824,
+    "height": 1140,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/erp-structure-updated-480w.webp",
+        "width": 480,
+        "height": 300
+      },
+      {
+        "src": "assets/cases/20261024/erp-structure-updated-960w.webp",
+        "width": 960,
+        "height": 600
+      },
+      {
+        "src": "assets/cases/20261024/erp-structure-updated-1824w.webp",
+        "width": 1824,
+        "height": 1140
+      }
+    ]
+  },
+  "assets/cases/20261024/psc-desktop.webp": {
+    "src": "assets/cases/20261024/psc-desktop-2560w.webp",
+    "width": 2560,
+    "height": 1522,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/psc-desktop-480w.webp",
+        "width": 480,
+        "height": 285
+      },
+      {
+        "src": "assets/cases/20261024/psc-desktop-960w.webp",
+        "width": 960,
+        "height": 571
+      },
+      {
+        "src": "assets/cases/20261024/psc-desktop-1920w.webp",
+        "width": 1920,
+        "height": 1141
+      },
+      {
+        "src": "assets/cases/20261024/psc-desktop-2560w.webp",
+        "width": 2560,
+        "height": 1522
+      }
+    ]
+  },
+  "assets/cases/20261024/psc-mobile.webp": {
+    "src": "assets/cases/20261024/psc-mobile-1162w.webp",
+    "width": 1162,
+    "height": 2436,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/psc-mobile-480w.webp",
+        "width": 480,
+        "height": 1006
+      },
+      {
+        "src": "assets/cases/20261024/psc-mobile-960w.webp",
+        "width": 960,
+        "height": 2013
+      },
+      {
+        "src": "assets/cases/20261024/psc-mobile-1162w.webp",
+        "width": 1162,
+        "height": 2436
+      }
+    ]
+  },
+  "assets/cases/20261024/psc-start.webp": {
+    "src": "assets/cases/20261024/psc-start-1162w.webp",
+    "width": 1162,
+    "height": 2436,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/psc-start-480w.webp",
+        "width": 480,
+        "height": 1006
+      },
+      {
+        "src": "assets/cases/20261024/psc-start-960w.webp",
+        "width": 960,
+        "height": 2013
+      },
+      {
+        "src": "assets/cases/20261024/psc-start-1162w.webp",
+        "width": 1162,
+        "height": 2436
+      }
+    ]
+  },
+  "assets/cases/20261024/tbm-documents-reviewed.webp": {
+    "src": "assets/cases/20261024/tbm-documents-reviewed-2293w.webp",
+    "width": 2293,
+    "height": 1290,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/tbm-documents-reviewed-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/cases/20261024/tbm-documents-reviewed-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/cases/20261024/tbm-documents-reviewed-1920w.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "assets/cases/20261024/tbm-documents-reviewed-2293w.webp",
+        "width": 2293,
+        "height": 1290
+      }
+    ]
+  },
+  "assets/cases/20261024/tbm-home-reviewed.webp": {
+    "src": "assets/cases/20261024/tbm-home-reviewed-675w.webp",
+    "width": 675,
+    "height": 1254,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/tbm-home-reviewed-480w.webp",
+        "width": 480,
+        "height": 892
+      },
+      {
+        "src": "assets/cases/20261024/tbm-home-reviewed-675w.webp",
+        "width": 675,
+        "height": 1254
+      }
+    ]
+  },
+  "assets/cases/20261024/tbm-journal-reviewed.webp": {
+    "src": "assets/cases/20261024/tbm-journal-reviewed-2067w.webp",
+    "width": 2067,
+    "height": 1206,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/tbm-journal-reviewed-480w.webp",
+        "width": 480,
+        "height": 280
+      },
+      {
+        "src": "assets/cases/20261024/tbm-journal-reviewed-960w.webp",
+        "width": 960,
+        "height": 560
+      },
+      {
+        "src": "assets/cases/20261024/tbm-journal-reviewed-1920w.webp",
+        "width": 1920,
+        "height": 1120
+      },
+      {
+        "src": "assets/cases/20261024/tbm-journal-reviewed-2067w.webp",
+        "width": 2067,
+        "height": 1206
+      }
+    ]
+  },
+  "assets/cases/20261024/tbm-profile-reviewed.webp": {
+    "src": "assets/cases/20261024/tbm-profile-reviewed-625w.webp",
+    "width": 625,
+    "height": 1300,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/tbm-profile-reviewed-480w.webp",
+        "width": 480,
+        "height": 998
+      },
+      {
+        "src": "assets/cases/20261024/tbm-profile-reviewed-625w.webp",
+        "width": 625,
+        "height": 1300
+      }
+    ]
+  },
+  "assets/cases/20261024/tbm-record-reviewed.webp": {
+    "src": "assets/cases/20261024/tbm-record-reviewed-625w.webp",
+    "width": 625,
+    "height": 1300,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/tbm-record-reviewed-480w.webp",
+        "width": 480,
+        "height": 998
+      },
+      {
+        "src": "assets/cases/20261024/tbm-record-reviewed-625w.webp",
+        "width": 625,
+        "height": 1300
+      }
+    ]
+  },
+  "assets/cases/20261024/tbm-saved-reviewed.webp": {
+    "src": "assets/cases/20261024/tbm-saved-reviewed-625w.webp",
+    "width": 625,
+    "height": 1300,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/tbm-saved-reviewed-480w.webp",
+        "width": 480,
+        "height": 998
+      },
+      {
+        "src": "assets/cases/20261024/tbm-saved-reviewed-625w.webp",
+        "width": 625,
+        "height": 1300
+      }
+    ]
+  },
+  "assets/cases/20261024/ui-colors-reviewed.webp": {
+    "src": "assets/cases/20261024/ui-colors-reviewed-2560w.webp",
+    "width": 2560,
+    "height": 1600,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/ui-colors-reviewed-480w.webp",
+        "width": 480,
+        "height": 300
+      },
+      {
+        "src": "assets/cases/20261024/ui-colors-reviewed-960w.webp",
+        "width": 960,
+        "height": 600
+      },
+      {
+        "src": "assets/cases/20261024/ui-colors-reviewed-1920w.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "assets/cases/20261024/ui-colors-reviewed-2560w.webp",
+        "width": 2560,
+        "height": 1600
+      }
+    ]
+  },
+  "assets/cases/20261024/ui-desktop-cover.webp": {
+    "src": "assets/cases/20261024/ui-desktop-cover-2528w.webp",
+    "width": 2528,
+    "height": 1684,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/ui-desktop-cover-480w.webp",
+        "width": 480,
+        "height": 320
+      },
+      {
+        "src": "assets/cases/20261024/ui-desktop-cover-960w.webp",
+        "width": 960,
+        "height": 639
+      },
+      {
+        "src": "assets/cases/20261024/ui-desktop-cover-1920w.webp",
+        "width": 1920,
+        "height": 1279
+      },
+      {
+        "src": "assets/cases/20261024/ui-desktop-cover-2528w.webp",
+        "width": 2528,
+        "height": 1684
+      }
+    ]
+  },
+  "assets/cases/20261024/ui-input-reviewed.webp": {
+    "src": "assets/cases/20261024/ui-input-reviewed-2560w.webp",
+    "width": 2560,
+    "height": 1600,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/ui-input-reviewed-480w.webp",
+        "width": 480,
+        "height": 300
+      },
+      {
+        "src": "assets/cases/20261024/ui-input-reviewed-960w.webp",
+        "width": 960,
+        "height": 600
+      },
+      {
+        "src": "assets/cases/20261024/ui-input-reviewed-1920w.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "assets/cases/20261024/ui-input-reviewed-2560w.webp",
+        "width": 2560,
+        "height": 1600
+      }
+    ]
+  },
+  "assets/cases/20261024/ui-search-reviewed.webp": {
+    "src": "assets/cases/20261024/ui-search-reviewed-2560w.webp",
+    "width": 2560,
+    "height": 1600,
+    "variants": [
+      {
+        "src": "assets/cases/20261024/ui-search-reviewed-480w.webp",
+        "width": 480,
+        "height": 300
+      },
+      {
+        "src": "assets/cases/20261024/ui-search-reviewed-960w.webp",
+        "width": 960,
+        "height": 600
+      },
+      {
+        "src": "assets/cases/20261024/ui-search-reviewed-1920w.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "assets/cases/20261024/ui-search-reviewed-2560w.webp",
+        "width": 2560,
+        "height": 1600
+      }
+    ]
+  },
+  "assets/cases/after-pet.png": {
+    "src": "assets/cases/after-pet-657w.webp",
+    "width": 657,
+    "height": 1366,
+    "variants": [
+      {
+        "src": "assets/cases/after-pet-480w.webp",
+        "width": 480,
+        "height": 998
+      },
+      {
+        "src": "assets/cases/after-pet-657w.webp",
+        "width": 657,
+        "height": 1366
+      }
+    ]
+  },
+  "assets/cases/before-pet.png": {
+    "src": "assets/cases/before-pet-657w.webp",
+    "width": 657,
+    "height": 1366,
+    "variants": [
+      {
+        "src": "assets/cases/before-pet-480w.webp",
+        "width": 480,
+        "height": 998
+      },
+      {
+        "src": "assets/cases/before-pet-657w.webp",
+        "width": 657,
+        "height": 1366
+      }
+    ]
+  },
+  "assets/cases/final/intranet-booking.png": {
+    "src": "assets/cases/final/intranet-booking-1145w.webp",
+    "width": 1145,
+    "height": 1813,
+    "variants": [
+      {
+        "src": "assets/cases/final/intranet-booking-480w.webp",
+        "width": 480,
+        "height": 760
+      },
+      {
+        "src": "assets/cases/final/intranet-booking-960w.webp",
+        "width": 960,
+        "height": 1520
+      },
+      {
+        "src": "assets/cases/final/intranet-booking-1145w.webp",
+        "width": 1145,
+        "height": 1813
+      }
+    ]
+  },
+  "assets/cases/final/intranet-request.png": {
+    "src": "assets/cases/final/intranet-request-1145w.webp",
+    "width": 1145,
+    "height": 1813,
+    "variants": [
+      {
+        "src": "assets/cases/final/intranet-request-480w.webp",
+        "width": 480,
+        "height": 760
+      },
+      {
+        "src": "assets/cases/final/intranet-request-960w.webp",
+        "width": 960,
+        "height": 1520
+      },
+      {
+        "src": "assets/cases/final/intranet-request-1145w.webp",
+        "width": 1145,
+        "height": 1813
+      }
+    ]
+  },
+  "assets/cases/final/kanban-create.png": {
+    "src": "assets/cases/final/kanban-create-414w.webp",
+    "width": 414,
+    "height": 774,
+    "variants": [
+      {
+        "src": "assets/cases/final/kanban-create-414w.webp",
+        "width": 414,
+        "height": 774
+      }
+    ]
+  },
+  "assets/cases/intranet-7.png": {
+    "src": "assets/cases/intranet-7-1088w.webp",
+    "width": 1088,
+    "height": 2082,
+    "variants": [
+      {
+        "src": "assets/cases/intranet-7-480w.webp",
+        "width": 480,
+        "height": 919
+      },
+      {
+        "src": "assets/cases/intranet-7-960w.webp",
+        "width": 960,
+        "height": 1837
+      },
+      {
+        "src": "assets/cases/intranet-7-1088w.webp",
+        "width": 1088,
+        "height": 2082
+      }
+    ]
+  },
+  "assets/cases/kanban-board-source.png": {
+    "src": "assets/cases/kanban-board-source-1524w.webp",
+    "width": 1524,
+    "height": 840,
+    "variants": [
+      {
+        "src": "assets/cases/kanban-board-source-480w.webp",
+        "width": 480,
+        "height": 265
+      },
+      {
+        "src": "assets/cases/kanban-board-source-960w.webp",
+        "width": 960,
+        "height": 529
+      },
+      {
+        "src": "assets/cases/kanban-board-source-1524w.webp",
+        "width": 1524,
+        "height": 840
+      }
+    ]
+  },
+  "assets/cases/pet-6.jpg": {
+    "src": "assets/cases/pet-6-2560w.webp",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      {
+        "src": "assets/cases/pet-6-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/cases/pet-6-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/cases/pet-6-1920w.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "assets/cases/pet-6-2560w.webp",
+        "width": 2560,
+        "height": 1440
+      }
+    ]
+  },
+  "assets/cases/pet-9.png": {
+    "src": "assets/cases/pet-9-646w.webp",
+    "width": 646,
+    "height": 1344,
+    "variants": [
+      {
+        "src": "assets/cases/pet-9-480w.webp",
+        "width": 480,
+        "height": 999
+      },
+      {
+        "src": "assets/cases/pet-9-646w.webp",
+        "width": 646,
+        "height": 1344
+      }
+    ]
+  },
+  "assets/cases/platform-9.png": {
+    "src": "assets/cases/platform-9-2560w.webp",
+    "width": 2560,
+    "height": 1309,
+    "variants": [
+      {
+        "src": "assets/cases/platform-9-480w.webp",
+        "width": 480,
+        "height": 245
+      },
+      {
+        "src": "assets/cases/platform-9-960w.webp",
+        "width": 960,
+        "height": 491
+      },
+      {
+        "src": "assets/cases/platform-9-1920w.webp",
+        "width": 1920,
+        "height": 982
+      },
+      {
+        "src": "assets/cases/platform-9-2560w.webp",
+        "width": 2560,
+        "height": 1309
+      }
+    ]
+  },
+  "assets/hero-data-flow-v2.png": {
+    "src": "assets/hero-data-flow-v2-1672w.webp",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "assets/hero-data-flow-v2-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/hero-data-flow-v2-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/hero-data-flow-v2-1672w.webp",
+        "width": 1672,
+        "height": 941
+      }
+    ]
+  },
+  "assets/pp/skyautonet/skyautonet05.jpg": {
+    "src": "assets/pp/skyautonet/skyautonet05-2560w.webp",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      {
+        "src": "assets/pp/skyautonet/skyautonet05-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/pp/skyautonet/skyautonet05-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/pp/skyautonet/skyautonet05-1920w.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "assets/pp/skyautonet/skyautonet05-2560w.webp",
+        "width": 2560,
+        "height": 1440
+      }
+    ]
+  },
+  "assets/pp/skyautonet/skyautonet06.jpg": {
+    "src": "assets/pp/skyautonet/skyautonet06-2560w.webp",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      {
+        "src": "assets/pp/skyautonet/skyautonet06-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/pp/skyautonet/skyautonet06-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/pp/skyautonet/skyautonet06-1920w.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "assets/pp/skyautonet/skyautonet06-2560w.webp",
+        "width": 2560,
+        "height": 1440
+      }
+    ]
+  },
+  "assets/pp/tescom/38.jpg": {
+    "src": "assets/pp/tescom/38-2560w.webp",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      {
+        "src": "assets/pp/tescom/38-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/pp/tescom/38-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/pp/tescom/38-1920w.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "assets/pp/tescom/38-2560w.webp",
+        "width": 2560,
+        "height": 1440
+      }
+    ]
+  },
+  "assets/pp/tescom/39.jpg": {
+    "src": "assets/pp/tescom/39-2560w.webp",
+    "width": 2560,
+    "height": 1440,
+    "variants": [
+      {
+        "src": "assets/pp/tescom/39-480w.webp",
+        "width": 480,
+        "height": 270
+      },
+      {
+        "src": "assets/pp/tescom/39-960w.webp",
+        "width": 960,
+        "height": 540
+      },
+      {
+        "src": "assets/pp/tescom/39-1920w.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "assets/pp/tescom/39-2560w.webp",
+        "width": 2560,
+        "height": 1440
+      }
+    ]
+  }
+}

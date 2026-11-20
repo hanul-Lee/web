@@ -473,20 +473,20 @@ const caseStudies = {
     "uiTitle": "컬러 토큰과 입력·검색 UI의 기준",
     "uiText": "공통 컬러 관리와 입력·검색 상태를 설명하기 위해 새로 구성한 예시입니다. 실제 업무 화면과 소스코드는 포함하지 않았습니다.",
     "finalVisual": [
-      "assets/cases/20261024/ui-colors-reviewed.webp",
+      "assets/cases/20261024/ui-colors-reviewed-2560w.webp",
       "컬러 기준과 적용 방식",
       "실제 컬러 값과 코드를 사용하지 않은 새 팔레트 예시",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/cases/20261024/ui-input-reviewed.webp",
+        "assets/cases/20261024/ui-input-reviewed-2560w.webp",
         "읽기 전용·편집·입력 상태",
         "기존 SCSS 발췌 대신 새로 구성한 입력 상태 예시",
         "landscape"
       ],
       [
-        "assets/cases/20261024/ui-search-reviewed.webp",
+        "assets/cases/20261024/ui-search-reviewed-2560w.webp",
         "검색 상태와 배치",
         "기본·포커스·입력 중·비활성 상태와 가상 자료실 예시",
         "landscape"
@@ -497,7 +497,7 @@ const caseStudies = {
       "next": "프로젝트의 토큰 참조 코드와 기본·변형 UI를 함께 모아 실제 적용 범위를 더 구체적으로 보여주고 싶습니다."
     },
     "heroVisual": [
-      "assets/cases/20261024/ui-desktop-cover.webp",
+      "assets/cases/20261024/ui-desktop-cover-2528w.webp",
       "공통 UI 목업",
       "공통 UI의 구성 요소를 표현한 텍스트 없는 목업",
       "landscape"
@@ -557,14 +557,14 @@ const caseStudies = {
     "uiTitle": "이미지 카드와 작업 생성 프로토타입",
     "uiText": "보드 시연 화면과 작업 생성 항목을 보여드립니다. 컬럼에는 작업 분야와 진행 상태가 함께 포함되어 있습니다.",
     "finalVisual": [
-      "assets/cases/kanban-board-source.png",
+      "assets/cases/kanban-board-source-1524w.webp",
       "개인 칸반 보드 시연 화면",
       "이미지·제목으로 작업을 구분하는 개인 프로토타입",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/cases/final/kanban-create.png",
+        "assets/cases/final/kanban-create-414w.webp",
         "작업 생성 화면",
         "실제 프로토타입 발췌 · 제목·설명·담당자·상태·일정 입력",
         "portrait"
@@ -627,14 +627,14 @@ const caseStudies = {
     "uiTitle": "사업 소개에서 기술 적용 장면과 상세 정보로",
     "uiText": "기술 적용 장면과 핵심 메시지를 연결하고 데스크톱과 모바일의 정보 우선순위를 통합했습니다.",
     "finalVisual": [
-      "assets/pp/skyautonet/skyautonet06.jpg",
+      "assets/pp/skyautonet/skyautonet06-2560w.webp",
       "스카이오토넷 웹 리디자인",
       "자율주행 기술과 브랜드 메시지를 연결한 반응형 웹 경험입니다.",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/pp/skyautonet/skyautonet05.jpg",
+        "assets/pp/skyautonet/skyautonet05-2560w.webp",
         "정보 위계",
         "제목·수치·CTA를 재정렬해 핵심 정보를 먼저 읽도록 설계"
       ]
@@ -709,14 +709,14 @@ const caseStudies = {
     "uiTitle": "어떤 화면에서도 이어지는 솔루션 탐색",
     "uiText": "제품·적용 분야·기술 정보를 재구성하고 데스크톱부터 모바일까지 같은 우선순위로 전달했습니다.",
     "finalVisual": [
-      "assets/pp/tescom/38.jpg",
+      "assets/pp/tescom/38-2560w.webp",
       "반응형 웹 리뉴얼 핵심 화면",
       "제품 목록과 분류를 디바이스별로 배치한 반응형 UI입니다.",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/pp/tescom/39.jpg",
+        "assets/pp/tescom/39-2560w.webp",
         "메인 배너의 탐색 진입점",
         "브랜드 노출 영역을 제품·솔루션 탐색을 시작하는 진입점으로 전환"
       ]
@@ -786,20 +786,20 @@ const caseStudies = {
     "uiTitle": "측정과 분석이 한 흐름으로 이어지는 현장 데이터 플랫폼",
     "uiText": "센서 상태, 거더별 곡률, 측정 이력을 웹과 모바일에서 같은 데이터 기준으로 확인합니다. 보안을 위해 이미지와 디자인을 재구성한 화면이며, 가상 데이터를 사용합니다.",
     "finalVisual": [
-      "assets/cases/20261024/psc-desktop.webp",
+      "assets/cases/20261024/psc-desktop-2560w.webp",
       "PSC 거더 관리 플랫폼 핵심 화면",
       "측정·분석 흐름을 설명하기 위해 재구성한 가상 화면",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/cases/20261024/psc-start.webp",
+        "assets/cases/20261024/psc-start-1162w.webp",
         "모바일 시작 화면",
         "거더 관리 서비스의 설명용 재구성",
         "portrait"
       ],
       [
-        "assets/cases/20261024/psc-mobile.webp",
+        "assets/cases/20261024/psc-mobile-1162w.webp",
         "모바일 측정 화면",
         "가상 프로젝트·측정 정보로 구성한 재구성 예시",
         "portrait"
@@ -847,7 +847,7 @@ const caseStudies = {
       "eyebrow": "메뉴 대안 선택",
       "title": "메뉴는 구분하되, 지도는 끊지 않기",
       "intro": "지도 위에서 메뉴를 사용하는 화면이라, 메뉴 영역의 구분과 지도 배경의 연속성을 함께 고려했습니다.",
-      "image": "assets/cases/1017/platform-menu-options.png",
+      "image": "assets/cases/1017/platform-menu-options-2560w.webp",
       "alt": "흰색·검정·반투명 검정 메뉴 대안과 반투명 검정 선택안",
       "options": [
         [
@@ -924,26 +924,26 @@ const caseStudies = {
       ["03 자료 유형 탐색", "공정·주행·일조·배수 등 시뮬레이션 자료 유형으로 진입합니다."]
     ],
     "finalVisual": [
-      "assets/cases/platform-9.png",
+      "assets/cases/platform-9-2560w.webp",
       "지도와 업무 메뉴가 연결된 실제 설계 화면",
       "지도와 공통 메뉴, 시뮬레이션 유형 선택 화면",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/cases/1017/platform-menu.png",
+        "assets/cases/1017/platform-menu-2560w.webp",
         "기획의 메뉴 구분을 반영한 UI",
         "현장 설명·사업 관리의 구분과 메뉴 선택 상태",
         "landscape"
       ],
       [
-        "assets/cases/platform-9.png",
+        "assets/cases/platform-9-2560w.webp",
         "시뮬레이션 유형 선택 화면",
         "공정·주행·일조·배수 시뮬레이션을 선택하는 메뉴",
         "landscape"
       ],
       [
-        "assets/cases/1017/platform-video.png",
+        "assets/cases/1017/platform-video-2294w.webp",
         "실감형 영상·시뮬레이션 영상",
         "주행 영상과 시설별 영상 탐색 화면",
         "landscape"
@@ -1052,32 +1052,32 @@ const caseStudies = {
     "uiTitle": "조건을 정한 뒤, 주요 수치와 상세 내역을 확인합니다.",
     "uiText": "조회 조건 → 주요 수치 → 프로젝트·인원별 상세 순서의 설계 의도를 재구성했습니다. 아래 화면은 실제 납품 화면이 아니며 모든 이름·금액·시간은 가상 예시입니다.",
     "finalVisual": [
-      "assets/cases/20261024/erp-dashboard-updated.webp",
+      "assets/cases/20261024/erp-dashboard-updated-1900w.webp",
       "비용·인원 대시보드 · 설명용 재구성",
       "PDF 보고서에 반영된 조회 구조를 새 UI와 가상 데이터로 설명합니다.",
       "landscape"
     ],
     "visuals": [
       [
-        "assets/cases/20261024/erp-structure-updated.webp",
+        "assets/cases/20261024/erp-structure-updated-1824w.webp",
         "조회 범위와 정보 위계",
         "조건·주요 수치·상세의 관계를 새로 구성한 설명도",
         "landscape"
       ],
       [
-        "assets/cases/20261024/erp-detail-updated.webp",
+        "assets/cases/20261024/erp-detail-updated-1900w.webp",
         "프로젝트별 비용과 투입 시간",
         "전체 현황과 같은 데이터·스타일을 사용하는 상세 예시",
         "landscape"
       ],
       [
-        "assets/cases/20261024/erp-menu-updated.webp",
+        "assets/cases/20261024/erp-menu-updated-866w.webp",
         "활성 메뉴와 비용 합계",
         "선택 상태와 합계 강조를 설명하는 가상 요소",
         "portrait"
       ],
       [
-        "assets/cases/20261024/erp-overtime-updated.webp",
+        "assets/cases/20261024/erp-overtime-updated-1026w.webp",
         "기준을 넘긴 투입 시간",
         "9시간 / 기준 8시간의 상태 예시 · 실제 근태 기록이 아닙니다.",
         "landscape"
@@ -1096,7 +1096,7 @@ const caseStudies = {
       "note": "조회 범위·대시보드 UI·웹 퍼블리싱을 수행했습니다. 보안상 웹 대신 PDF 보고서로 제공됐고, 조건 → 요약 → 상세 구조가 그대로 반영됐습니다. 9시간 / 기준 8시간은 상태 표시 예시이며 효과 측정값이 아닙니다."
     },
     "heroVisual": [
-      "assets/cases/20261024/erp-flat-cover.webp",
+      "assets/cases/20261024/erp-flat-cover-2560w.webp",
       "비용·인원 ERP 목업 · 설명용 재구성",
       "가상 서비스 예산노트",
       "landscape"
@@ -1178,13 +1178,13 @@ const caseStudies = {
     "uiTitle": "작성 맥락과 확인 상태를 보고, 일지 작성으로 진입합니다.",
     "uiText": "일지의 작성일·출역 인원·담당자 확인 항목과 작성 버튼을 구분했습니다. 아래 이미지는 실제 운영 화면을 대체한 설명용 재구성입니다.",
     "heroVisual": [
-      "assets/cases/20261024/tbm-home-reviewed.webp",
+      "assets/cases/20261024/tbm-home-reviewed-675w.webp",
       "오늘안전 모바일 홈 · 재구성 예시",
       "사용자가 수정한 작업 준비와 확인 상태의 가상 화면",
       "portrait"
     ],
     "finalVisual": [
-      "assets/cases/20261024/tbm-record-reviewed.webp",
+      "assets/cases/20261024/tbm-record-reviewed-625w.webp",
       "모바일 TBM 일지 · 재구성 예시",
       "작성일·출역 인원·확인 상태를 설명하는 가상 화면",
       "portrait"
@@ -1205,19 +1205,19 @@ const caseStudies = {
     ],
     "visuals": [
       [
-        "assets/cases/20261024/tbm-profile-reviewed.webp",
+        "assets/cases/20261024/tbm-profile-reviewed-625w.webp",
         "마이페이지 서명 입력",
         "개인정보와 실제 서명을 제외한 설명용 재구성",
         "portrait"
       ],
       [
-        "assets/cases/20261024/tbm-saved-reviewed.webp",
+        "assets/cases/20261024/tbm-saved-reviewed-625w.webp",
         "서명 저장 완료",
         "서명 저장 결과를 구분한 재구성 예시",
         "portrait"
       ],
       [
-        "assets/cases/20261024/tbm-journal-reviewed.webp",
+        "assets/cases/20261024/tbm-journal-reviewed-2067w.webp",
         "웹 TBM 일지와 사진대장",
         "회사·현장·사용자 정보를 가상 데이터로 치환한 재구성 예시",
         "landscape"
@@ -1234,7 +1234,7 @@ const caseStudies = {
       "before": "프로젝트 선택·TBM 일지 작성 및 업로드",
       "after": "사이트 안에서 관련 파일 열람",
       "visual": [
-        "assets/cases/20261024/tbm-documents-reviewed.webp",
+        "assets/cases/20261024/tbm-documents-reviewed-2293w.webp",
         "파일 목록과 문서 열람 · 재구성 예시",
         "파일 열람 흐름을 설명하는 가상 문서와 화면입니다."
       ],
@@ -1313,20 +1313,20 @@ const caseStudies = {
     "uiTitle": "회의실 예약과 근태 신청의 모바일 설계",
     "uiText": "모바일 홈과 회의실 예약·근태 신청의 당시 설계 화면입니다. 디자이너 팀 내부 작업이며 미배포 상태입니다.",
     "finalVisual": [
-      "assets/cases/intranet-7.png",
+      "assets/cases/intranet-7-1088w.webp",
       "모바일 인트라넷 홈 설계 화면",
       "디자이너 팀 내부 설계 · 미배포",
       "portrait"
     ],
     "visuals": [
       [
-        "assets/cases/final/intranet-booking.png",
+        "assets/cases/final/intranet-booking-1145w.webp",
         "회의실 현황에서 예약 입력으로",
         "회의실 현황 확인 → 예약일·시간·목적 입력",
         "portrait"
       ],
       [
-        "assets/cases/final/intranet-request.png",
+        "assets/cases/final/intranet-request-1145w.webp",
         "문서 선택에서 근태 신청으로",
         "문서 선택 → 근태 종류·일자·사유 입력",
         "portrait"
@@ -1390,21 +1390,21 @@ const caseStudies = {
       "initial": "캐릭터와 기록 결과를 중심으로 한 정보 밀도가 낮은 홈",
       "feedback": "초기 시안에서 캐릭터가 기록 버튼보다 먼저 눈에 들어와, 제가 홈 우선순위 변경을 제안했습니다. 수정한 홈으로 출시했습니다.",
       "final": "진행률·빠른 기록·오늘의 일정을 우선 배치한 행동 중심 홈",
-      "initialImage": "assets/cases/before-pet.png",
-      "finalImage": "assets/cases/after-pet.png"
+      "initialImage": "assets/cases/before-pet-657w.webp",
+      "finalImage": "assets/cases/after-pet-657w.webp"
     },
     "ui": "pet",
     "uiTitle": "기록을 의무가 아닌 일상의 보상으로",
     "uiText": "오늘의 돌봄 진행률·빠른 기록·일정을 홈에 배치했습니다.",
     "finalVisual": [
-      "assets/cases/pet-9.png",
+      "assets/cases/pet-9-646w.webp",
       "오늘의 돌봄 최종 화면",
       "진행률·빠른 기록·오늘의 일정을 배치한 모바일 홈입니다.",
       "portrait"
     ],
     "visuals": [
       [
-        "assets/cases/pet-6.jpg",
+        "assets/cases/pet-6-2560w.webp",
         "Visual System",
         "브랜드 컬러와 카드 레이아웃을 적용한 주요 모바일 UI"
       ]
@@ -1594,119 +1594,122 @@ const renderImpact = (impact, number) => `
 const slug = document.body.dataset.project;
 const p = projects[slug];
 if (p) {
-  document.documentElement.style.setProperty("--case-bg", p.bg);
-  document.documentElement.style.setProperty("--case-ink", p.ink);
-  document.documentElement.style.setProperty("--case-accent", p.accent);
-  document.documentElement.style.setProperty(
-    "--case-text-accent",
-    p.textAccent || p.accent,
-  );
-  document.documentElement.style.setProperty("--case-muted", p.muted);
-  document.title = `${p.title} | 이한울 · UX/UI 디자이너`;
-  document.querySelector(".case-eyebrow").textContent =
-    `PROJECT ${p.no} · ${p.type}`;
-  document.querySelector(".case-title").textContent = p.title;
-  document.querySelector(".case-lead").textContent = p.lead;
-  document.querySelector(".period").textContent = p.period;
-  document.querySelector(".role").textContent = p.role;
-  document.querySelector(".contribution").textContent = p.contribution;
-  if (p.team) document.querySelector(".team").textContent = p.team;
-  else document.querySelector(".team").parentElement.remove();
-  document.querySelector(".stage").textContent = p.stage;
-  const resultText = document.createElement("span");
-  resultText.textContent = `"${p.summary}"`;
-  document.querySelector(".case-result").replaceChildren(resultText);
-  document.querySelector(".case-cover").innerHTML = renderMockup(
-    caseStudies[slug].ui,
-    caseStudies[slug].heroVisual || caseStudies[slug].finalVisual,
-  );
-  document.querySelector(".problem").textContent = p.problem;
-  document.querySelector(".detail").textContent = p.detail;
-  document.querySelector(".context-facts").innerHTML = caseStudies[slug].context
-    .map((x) => `<div><small>${x[0]}</small><span>${x[1]}</span></div>`)
-    .join("");
-  document.querySelector(".outcomes").innerHTML = p.outcomes
-    .map(
-      (x) =>
-        `<div class="outcome"><strong>${x[0]}</strong><span>${x[1]}</span></div>`,
-    )
-    .join("");
-  document.querySelector(".gallery").innerHTML = renderStudy(caseStudies[slug]);
-  const study = caseStudies[slug];
-  document.querySelector(".case-hero").insertAdjacentHTML("afterend", `
-    <section class="case-brief" id="brief" aria-labelledby="brief-title">
-      <div class="brief-heading">
-        <div class="brief-title-group"><p>CASE AT A GLANCE</p><h2 id="brief-title">이 사례의 핵심</h2></div>
-        <a href="#solution">설계 화면 보기 <span aria-hidden="true">↓</span></a>
-      </div>
-      <dl class="brief-facts">
-        ${(study.briefFacts || [["설계 과제", study.pains[0][1]], ["핵심 설계 결정", study.strategyHeadline], ["직접 담당한 범위", p.contribution]]).map(([label, text], index) => `<div${index === 1 ? ' class="brief-decision"' : ""}><dt><span aria-hidden="true">0${index + 1}</span> ${label}</dt><dd>${text}</dd></div>`).join("")}
-      </dl>
-      <div class="brief-scope"><strong>${p.deliverySummary && study.briefFacts ? "직접 담당" : "결과의 범위"}</strong><p>${p.deliverySummary && study.briefFacts ? p.contribution : p.deliverySummary || p.outcomeBasis}</p></div>
-    </section>`);
-  // 배경·결과 요약은 한 영역으로 묶어 외부 간격을 중복하지 않는다.
-  const context = document.createElement("section");
-  context.className = "case-context";
-  context.setAttribute("aria-label", "프로젝트 배경과 결과 요약");
-  const summary = document.querySelector(".case-summary");
-  summary.before(context);
-  context.append(summary, document.querySelector(".outcomes"));
-  installImageViewer();
-  const progressItems = [
-    ["overview", "개요"],
-    ["brief", "핵심"],
-    ["context", "배경"],
-    ["evidence", "근거"],
-    ["reframe", "재정의"],
-    ["decision", "결정"],
-    ["iteration", "조정"],
-    ["solution", "경험"],
-    ["impact", "결과"],
-    ["reflection", "회고"],
-  ].filter(([id]) => document.getElementById(id)).sort(([a], [b]) =>
-    document.getElementById(a).compareDocumentPosition(document.getElementById(b)) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1
-  );
-  if (progressItems.length) {
-    const progressMarkup = progressItems
-      .map(([id, label]) => `<a href="#${id}">${label}</a>`)
+  if (!document.body.hasAttribute("data-prerendered")) {
+    document.documentElement.style.setProperty("--case-bg", p.bg);
+    document.documentElement.style.setProperty("--case-ink", p.ink);
+    document.documentElement.style.setProperty("--case-accent", p.accent);
+    document.documentElement.style.setProperty(
+      "--case-text-accent",
+      p.textAccent || p.accent,
+    );
+    document.documentElement.style.setProperty("--case-muted", p.muted);
+    document.title = `${p.title} | 이한울 · UX/UI 디자이너`;
+    document.querySelector(".case-eyebrow").textContent =
+      `PROJECT ${p.no} · ${p.type}`;
+    document.querySelector(".case-title").textContent = p.title;
+    document.querySelector(".case-lead").textContent = p.lead;
+    document.querySelector(".period").textContent = p.period;
+    document.querySelector(".role").textContent = p.role;
+    document.querySelector(".contribution").textContent = p.contribution;
+    if (p.team) document.querySelector(".team").textContent = p.team;
+    else document.querySelector(".team").parentElement.remove();
+    document.querySelector(".stage").textContent = p.stage;
+    const resultText = document.createElement("span");
+    resultText.textContent = `"${p.summary}"`;
+    document.querySelector(".case-result").replaceChildren(resultText);
+    document.querySelector(".case-cover").innerHTML = renderMockup(
+      caseStudies[slug].ui,
+      caseStudies[slug].heroVisual || caseStudies[slug].finalVisual,
+    );
+    document.querySelector(".problem").textContent = p.problem;
+    document.querySelector(".detail").textContent = p.detail;
+    document.querySelector(".context-facts").innerHTML = caseStudies[slug].context
+      .map((x) => `<div><small>${x[0]}</small><span>${x[1]}</span></div>`)
       .join("");
-    document
-      .querySelector(".case-main")
-      .insertAdjacentHTML(
-        "beforeend",
-        `<nav class="case-progress" aria-label="사례 진행 순서">${progressMarkup}</nav>`,
-      );
-    const progressLinks = [...document.querySelectorAll(".case-progress a")];
-    const progressSections = progressLinks
-      .map((link) => document.querySelector(link.getAttribute("href")))
-      .filter(Boolean);
-    const setActiveSection = (id) => {
-      progressLinks.forEach((link) => {
-        const active = link.getAttribute("href") === `#${id}`;
-        link.classList.toggle("active", active);
-        if (active) link.setAttribute("aria-current", "location");
-        else link.removeAttribute("aria-current");
-      });
-    };
-    setActiveSection("overview");
-    if ("IntersectionObserver" in window) {
-      const progressObserver = new IntersectionObserver(
-        (entries) => {
-          const visible = entries
-            .filter((entry) => entry.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-          if (visible) setActiveSection(visible.target.id);
-        },
-        { rootMargin: "-28% 0px -58% 0px", threshold: [0, 0.15, 0.35, 0.6] },
-      );
-      progressSections.forEach((section) => progressObserver.observe(section));
+    document.querySelector(".outcomes").innerHTML = p.outcomes
+      .map(
+        (x) =>
+          `<div class="outcome"><strong>${x[0]}</strong><span>${x[1]}</span></div>`,
+      )
+      .join("");
+    document.querySelector(".gallery").innerHTML = renderStudy(caseStudies[slug]);
+    const study = caseStudies[slug];
+    document.querySelector(".case-hero").insertAdjacentHTML("afterend", `
+      <section class="case-brief" id="brief" aria-labelledby="brief-title">
+        <div class="brief-heading">
+          <div class="brief-title-group"><p>CASE AT A GLANCE</p><h2 id="brief-title">이 사례의 핵심</h2></div>
+          <a href="#solution">설계 화면 보기 <span aria-hidden="true">↓</span></a>
+        </div>
+        <dl class="brief-facts">
+          ${(study.briefFacts || [["설계 과제", study.pains[0][1]], ["핵심 설계 결정", study.strategyHeadline], ["직접 담당한 범위", p.contribution]]).map(([label, text], index) => `<div${index === 1 ? ' class="brief-decision"' : ""}><dt><span aria-hidden="true">0${index + 1}</span> ${label}</dt><dd>${text}</dd></div>`).join("")}
+        </dl>
+        <div class="brief-scope"><strong>${p.deliverySummary && study.briefFacts ? "직접 담당" : "결과의 범위"}</strong><p>${p.deliverySummary && study.briefFacts ? p.contribution : p.deliverySummary || p.outcomeBasis}</p></div>
+      </section>`);
+    // 배경·결과 요약은 한 영역으로 묶어 외부 간격을 중복하지 않는다.
+    const context = document.createElement("section");
+    context.className = "case-context";
+    context.setAttribute("aria-label", "프로젝트 배경과 결과 요약");
+    const summary = document.querySelector(".case-summary");
+    summary.before(context);
+    context.append(summary, document.querySelector(".outcomes"));
+    const nextSlug = projectOrder[(projectOrder.indexOf(slug) + 1) % projectOrder.length];
+    document.querySelector(".next a").href = `project-${nextSlug}.html`;
+    document.querySelector(".next h3").textContent = projects[nextSlug].title;
+    document.body.setAttribute("data-prerendered", "true");
+  }
+  if (!window.__BUILD_STATIC__) {
+    installImageViewer();
+    const progressItems = [
+      ["overview", "개요"],
+      ["brief", "핵심"],
+      ["context", "배경"],
+      ["evidence", "근거"],
+      ["reframe", "재정의"],
+      ["decision", "결정"],
+      ["iteration", "조정"],
+      ["solution", "경험"],
+      ["impact", "결과"],
+      ["reflection", "회고"],
+    ].filter(([id]) => document.getElementById(id)).sort(([a], [b]) =>
+      document.getElementById(a).compareDocumentPosition(document.getElementById(b)) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1
+    );
+    if (progressItems.length) {
+      const progressMarkup = progressItems
+        .map(([id, label]) => `<a href="#${id}">${label}</a>`)
+        .join("");
+      document
+        .querySelector(".case-main")
+        .insertAdjacentHTML(
+          "beforeend",
+          `<nav class="case-progress" aria-label="사례 진행 순서">${progressMarkup}</nav>`,
+        );
+      const progressLinks = [...document.querySelectorAll(".case-progress a")];
+      const progressSections = progressLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+      const setActiveSection = (id) => {
+        progressLinks.forEach((link) => {
+          const active = link.getAttribute("href") === `#${id}`;
+          link.classList.toggle("active", active);
+          if (active) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      };
+      setActiveSection("overview");
+      if ("IntersectionObserver" in window) {
+        const progressObserver = new IntersectionObserver(
+          (entries) => {
+            const visible = entries
+              .filter((entry) => entry.isIntersecting)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (visible) setActiveSection(visible.target.id);
+          },
+          { rootMargin: "-28% 0px -58% 0px", threshold: [0, 0.15, 0.35, 0.6] },
+        );
+        progressSections.forEach((section) => progressObserver.observe(section));
+      }
     }
   }
-  const currentProjectIndex = projectOrder.indexOf(slug);
-  const nextSlug =
-    projectOrder[(currentProjectIndex + 1) % projectOrder.length];
-  document.querySelector(".next a").href = `project-${nextSlug}.html`;
-  document.querySelector(".next h3").textContent = projects[nextSlug].title;
 }
 
 
