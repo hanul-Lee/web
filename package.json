@@ -6,7 +6,7 @@
     "playwright": "^1.63.0",
     "postcss": "^8.5.33",
     "postcss-scss": "^4.0.9",
-    "sass": "^1.105.1"
+    "sass": "^1.108.2"
   },
   "scripts": {
     "build": "node scripts/build-site.cjs",
