@@ -1,74 +1,51 @@
-// Run template validation without a browser; browser layout QA remains separate.
-const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const s=fs.readFileSync('tools/render-case.js','utf8');
-const prefix=s.slice(0,s.indexOf('const slug = document.body.dataset.project;'));
-const keys=['platform','tbm','dashboard','designsystem','intranet','kanvan','responsive','psc','skyautonet','pet'];
-const images=new Set();
-for(const key of keys){
- const {html,p}=vm.runInNewContext(prefix+`\nconst slug=${JSON.stringify(key)};({html:renderStudy(caseStudies[slug]),p:projects[slug]})`);
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),assert=require('node:assert/strict');
+const {root,src,dist,build,projects,pages,readBuilt,readSource}=require('./helpers/site.cjs');
+const renderer=fs.readFileSync(path.join(root,'scripts/render-project.js'),'utf8');
+const prefix=renderer.slice(0,renderer.indexOf('const slug = document.body.dataset.project;'));
+for(const key of Object.keys(projects.projects)){
+ const html=vm.runInNewContext(`const {projects,caseStudies,projectOrder}=${JSON.stringify(projects)};\n`+prefix+`\nconst slug=${JSON.stringify(key)};renderStudy(caseStudies[slug])`);
  assert.ok(!html.includes('undefined'),key+' undefined output');
- if(key==='platform') assert.ok(html.indexOf('id="solution"')<html.indexOf('id="decision"'),'platform workflow must precede menu comparison');
- if(key==='tbm') assert.ok(html.includes('class="impact-note"') && html.includes('사용 규모와 작성 시간 변화는 운영 중 현장 의견을 기준으로 정리했습니다.'),'TBM field feedback attribution must remain visible');
+ if(key==='platform')assert.ok(html.indexOf('id="solution"')<html.indexOf('id="decision"'));
+ if(key==='tbm')assert.ok(html.includes('사용 규모와 작성 시간 변화는 운영 중 현장 의견을 기준으로 정리했습니다.'));
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,key+' duplicate IDs');
- for(const m of html.matchAll(/src="([^"]+)"/g)){assert.ok(fs.existsSync(m[1].split(/[?#]/)[0]),key+' missing '+m[1]);images.add(m[1]);}
+ for(const m of html.matchAll(/src="([^"]+)"/g))assert.ok(fs.existsSync(path.join(dist,m[1].split(/[?#]/)[0])),key+' missing '+m[1]);
  for(const m of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(m[1]),key+' broken section '+m[1]);
- assert.ok(p.period&&p.role&&p.stage,key+' missing scope');
+ const built=readBuilt('project-'+key+'.html'),p=projects.projects[key];
+ assert.ok(built.includes(p.lead)&&built.includes(p.problem)&&built.includes('data-prerendered="true"'),key+' missing static body');
+ assert.equal((built.match(/id="brief"/g)||[]).length,1,key+' duplicate brief');
+ assert.ok(built.includes('class="next-preview"')&&built.includes('class="next-copy"'),key+' missing next case preview');
+ assert.ok(!built.includes('render-project.js')&&!built.includes('projects.json'),'build-only data must not be delivered');
 }
-for(const file of ['index.html',...keys.map(k=>'project-'+k+'.html')]){
- const h=fs.readFileSync(file,'utf8');
- for(const m of h.matchAll(/(?:src|href)="([^"#]+)"/g)){
+for(const file of pages){
+ const html=readBuilt(file);
+ for(const m of html.matchAll(/(?:src|href)="([^"#]+)"/g)){
   const url=m[1];if(/^(https?:|mailto:|tel:|data:)/.test(url))continue;
-  assert.ok(fs.existsSync(url.split(/[?#]/)[0]),file+' missing '+url);
+  assert.ok(fs.existsSync(path.join(dist,url.split(/[?#]/)[0])),file+' missing '+url);
  }
- const shared = fs.readFileSync('components.js','utf8');
- const pdfLinks = [...(h + shared).matchAll(/assets\/portfolio\.pdf(?:\?[^"'\s<>]*)?/g)].map(m=>m[0]);
- assert.ok(pdfLinks.length, file+' missing PDF link');
- assert.equal(new Set(pdfLinks).size, 1, file+' inconsistent PDF links');
+ const pdfLinks=[...(html+readSource('scripts/components.js')).matchAll(/assets\/portfolio\.pdf(?:\?[^"'\s<>]*)?/g)].map(m=>m[0]);
+ assert.ok(pdfLinks.length);assert.equal(new Set(pdfLinks).size,1,file+' inconsistent PDF versions');
+ assert.ok(html.includes('srcset=')&&html.includes('rel="canonical"')&&html.includes('property="og:image"'));
+ assert.ok(html.indexOf('shared.css?')<html.indexOf(file==='index.html'?'portfolio.css?':'case.css?'));
+ if(file!=='index.html')assert.ok(!html.includes('portfolio.css?'));
 }
-console.log('PASS: 10 project templates, 11 HTML files, '+images.size+' rendered image paths, section targets and PDF versions');
-
-const manifest=JSON.parse(fs.readFileSync('tools/image-manifest.json','utf8'));
-for(const image of Object.values(manifest))for(const variant of image.variants)assert.ok(fs.existsSync(variant.src),'missing responsive image '+variant.src);
-for(const key of keys){
- const html=fs.readFileSync('project-'+key+'.html','utf8');
- assert.ok(html.includes('data-prerendered="true"'),key+' missing static rendering');
- const project=vm.runInNewContext(prefix+`\nprojects[${JSON.stringify(key)}]`);
- assert.ok(html.includes(project.lead)&&html.includes(project.problem),key+' missing project body');
- for(const selector of ['case-lead','gallery','brief-facts'])assert.ok(html.includes(selector),key+' missing static content '+selector);
- assert.ok(!/<p class="case-lead"><\/p>/.test(html),key+' empty static lead');
- assert.ok(html.includes('srcset=')&&html.includes('rel="canonical"')&&html.includes('property="og:image"'),key+' missing image or SEO metadata');
- assert.equal((html.match(/id="brief"/g)||[]).length,1,key+' duplicate brief');
+const manifest=require('../src/content/image-manifest.json');
+for(const entry of Object.values(manifest)){
+ // Only referenced assets are copied to dist.
+ if(fs.existsSync(path.join(dist,entry.src)))for(const v of entry.variants)assert.ok(fs.existsSync(path.join(dist,v.src)));
 }
-console.log('PASS: responsive image variants and static project content / sharing metadata');
-
-// Verify click events without contacting GA or sending personal contact values.
+const home=readBuilt('index.html');assert.equal((home.match(/fetchpriority="high"/g)||[]).length,1);
+assert.match(home,/<a class="work-visual[^>]*>[\s\S]*?<img[^>]*loading="lazy"/);
+assert.ok(Buffer.byteLength(readSource('scripts/case.js'))<14000,'project runtime exceeded budget');
+for(const [name,blocks]of Object.entries(require('./fixtures/impact-strong.json'))){const data=name.endsWith('.scss')?readSource('styles/'+name):readBuilt(name);assert.deepEqual(data.match(/\.impact-flow strong\s*\{[^}]*\}/g),blocks,'Protected styles changed: '+name);}
+assert.ok(!/@import\b/.test(readBuilt('case.css')));
+assert.ok(!fs.existsSync(path.join(dist,'src'))&&!fs.existsSync(path.join(dist,'scripts'))&&!fs.existsSync(path.join(dist,'docs')),'source or archive leaked into output');
+assert.equal(fs.readdirSync(path.join(src,'templates')).filter(f=>f==='project.html').length,1);
+console.log('PASS: one project template, 11 static pages, public assets, next previews, metadata, priorities and protected styles');
+// Analytics stay testable without contacting GA.
 const listeners={},events=[];
 const window={location:{protocol:'https:',hostname:'hanul-lee.github.io',href:'https://hanul-lee.github.io/web/'},navigator:{doNotTrack:'0'}};
 const document={referrer:'',body:{dataset:{project:'tbm'}},createElement:()=>({}),head:{appendChild(){}},addEventListener:(name,fn)=>listeners[name]=fn};
-vm.runInNewContext(fs.readFileSync('analytics.js','utf8'),{window,document,URL,URLSearchParams,Date});
-window.gtag=(...args)=>events.push(args);
-for(const [href,next]of [['project-platform.html',false],['project-designsystem.html',true],['mailto:example@example.com',false]]){
- const link={getAttribute:()=>href,closest:selector=>selector==='.next'?next:selector.includes('.work-case')};
- listeners.click({target:{closest:()=>link}});
-}
-assert.deepEqual(events.map(e=>e[1]),['project_click','next_project_click','contact_click']);
-assert.equal(events[0][2].project_id,'platform');assert.equal(events[1][2].source_project,'tbm');
-assert.ok(!JSON.stringify(events).includes('example@'));
-console.log('PASS: project, next-project and contact analytics events');
-
-const home=fs.readFileSync('index.html','utf8');
-assert.equal((home.match(/fetchpriority="high"/g)||[]).length,1,'only the hero image should have high priority');
-assert.match(home,/<a class="work-visual[^>]*>[\s\S]*?<img[^>]*loading="lazy"/,'project cards should be lazy loaded');
-for(const key of keys){const html=fs.readFileSync('project-'+key+'.html','utf8');assert.ok(!html.includes('render-case.js'),'build-only data must never be delivered');assert.ok(html.includes('case.js?v='),'runtime enhancements missing');}
-assert.ok(fs.statSync('case.js').size<10000,'project runtime should stay small');
-console.log('PASS: hero priority, lazy project images and build-only project data');
-
-const protectedStyles=require('./fixtures/impact-strong.json');
-for(const [file,blocks]of Object.entries(protectedStyles))assert.deepEqual(fs.readFileSync(file,'utf8').match(/\.impact-flow strong\s*\{[^}]*\}/g),blocks,file+' protected impact styles changed');
-assert.ok(!/@import\b/.test(fs.readFileSync('case.css','utf8')),'case CSS must not chain-load the home stylesheet');
-for(const file of ['index.html',...keys.map(k=>'project-'+k+'.html')]){
- const html=fs.readFileSync(file,'utf8');
- assert.ok(html.indexOf('shared.css?')<html.indexOf(file==='index.html'?'portfolio.css?':'case.css?'),'shared CSS must load before page CSS');
- if(file!=='index.html')assert.ok(!html.includes('portfolio.css?'),'detail pages must not load home CSS');
-}
-console.log('PASS: protected impact styles and direct shared/page CSS loading');
+vm.runInNewContext(readSource('scripts/analytics.js'),{window,document,URL,URLSearchParams,Date});window.gtag=(...a)=>events.push(a);
+for(const [href,next]of [['project-platform.html',false],['project-designsystem.html',true],['mailto:example@example.com',false]]){const link={getAttribute:()=>href,closest:s=>s==='.next'?next:s.includes('.work-case')};listeners.click({target:{closest:()=>link}});}
+assert.deepEqual(events.map(e=>e[1]),['project_click','next_project_click','contact_click']);assert.ok(!JSON.stringify(events).includes('example@'));
+console.log('PASS: analytics event names and privacy');

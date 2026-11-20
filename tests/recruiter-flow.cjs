@@ -1,10 +1,9 @@
 /* Uses the same server and Playwright setup as browser-audit.cjs. */
-const { chromium, webkit, firefox } = require('playwright');
 const assert = require('node:assert/strict');
-const base = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:4173';
+const {withSite,withBrowsers}=require('./helpers/browser.cjs');
+let base;
 (async () => {
-  for (const [engine, type] of Object.entries({chromium, webkit, firefox})) {
-    const browser = await type.launch();
+  await withSite(async url=>{base=url;await withBrowsers(async(engine,browser)=>{
     const page = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
     await page.goto(base);
     assert.equal(await page.locator('.work-case').count(), 3);
@@ -29,7 +28,7 @@ const base = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:4173';
       assert.equal(await trigger.evaluate(el => el === document.activeElement), true);
       await page.waitForFunction(() => !document.body.classList.contains('viewer-open'));
       await trigger.click();
-      await page.locator('dialog button').click();
+      await page.locator('dialog .viewer-close').click();
       assert.equal(await page.locator('dialog').evaluate(el => el.open), false);
     }
     const noJS = await browser.newContext({javaScriptEnabled:false});
@@ -37,7 +36,6 @@ const base = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:4173';
     await staticPage.goto(base);
     assert.equal(await staticPage.locator('.more-project:visible').count(), 7);
     await noJS.close();
-    await browser.close();
     console.log(`${engine}: project discovery, detail summary, image dialog, focus restoration, no-JS project visibility passed`);
-  }
+  });});
 })().catch(error => { console.error(error); process.exit(1); });

@@ -1,0 +1,208 @@
+{
+  "pet": {
+    "description": "개발자 1명과 공동 기획·UX/UI 디자인을 진행한 반려동물 앱, 2026.08.17 iOS 출시",
+    "ogDescription": "개발자 1명과 공동 기획·UX/UI 디자인을 진행한 반려동물 앱, 2026.08.17 iOS 출시",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "실제 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      },
+      {
+        "href": "https://apps.apple.com/kr/app/id6774541678",
+        "label": "App Store에서 보기",
+        "arrow": "↗",
+        "newTab": true
+      }
+    ],
+    "outcomesStyle": "border-top:none;border-bottom:none",
+    "ogTitle": "댕냥실록 | 반려동물 건강 기록·일정 관리 앱 | 이한울 · UX/UI 디자이너"
+  },
+  "tbm": {
+    "description": "종이 일지를 웹·모바일 입력으로 전환 · 배포 후 실사용",
+    "ogDescription": "종이 일지를 웹·모바일 입력으로 전환 · 배포 후 실사용",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "재구성 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "",
+    "ogTitle": "현장 안전 기록(TBM)의 웹·모바일 전환 | 이한울 · UX/UI 디자이너"
+  },
+  "skyautonet": {
+    "description": "자율주행 기술을 이해시키는 스카이오토넷 반응형 웹 리디자인 사례",
+    "ogDescription": "기술 적용 장면과 목적별 탐색 구조 연결",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "실제 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "border-top: none; border-bottom: none",
+    "ogTitle": "자율주행 기술을 이해시키는 반응형 웹 리디자인 | 이한울 · UX/UI 디자이너"
+  },
+  "kanvan": {
+    "description": "이미지 카드·카드 이동·작업 생성을 설계하고 AI의 도움으로 구현한 개인 칸반 프로토타입. 실제 사용자 평가 미실시.",
+    "ogDescription": "이미지·제목으로 작업을 구분하고 카드 이동·작업 생성을 구현",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "실제 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "border-top: none; border-bottom: none",
+    "ogTitle": "카드 이동·작업 생성 개인 칸반 프로토타입 | 이한울 · UX/UI 디자이너"
+  },
+  "psc": {
+    "description": "현장 측정과 사무실 관리를 웹·앱으로 연결",
+    "ogDescription": "현장 측정과 사무실 관리를 웹·앱으로 연결",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "재구성 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "border-top:none;border-bottom:none",
+    "ogTitle": "PSC 거더 관리 플랫폼 | 이한울 · UX/UI 디자이너"
+  },
+  "intranet": {
+    "description": "회의실 현황에서 예약으로, 문서 상태에서 근태 신청으로",
+    "ogDescription": "회의실 현황에서 예약으로, 문서 상태에서 근태 신청으로",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "재구성 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "",
+    "ogTitle": "회의실 예약·근태 신청 모바일 인트라넷 | 이한울 · UX/UI 디자이너"
+  },
+  "responsive": {
+    "description": "디바이스별로 일관된 제품 탐색 구조 설계",
+    "ogDescription": "디바이스별로 일관된 제품 탐색 구조 설계",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "실제 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "border-top:none;border-bottom:none",
+    "ogTitle": "반응형 웹 전면 리뉴얼 | 이한울 · UX/UI 디자이너"
+  },
+  "designsystem": {
+    "description": "공통 컬러와 입력·검색 기준을 정리한 웹 가이드 · BCMF·CFS 등 12개 프로젝트에서 재사용",
+    "ogDescription": "컬러와 일부 UI 요소를 후속 프로젝트에 재사용",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "재구성 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "border-top: none; border-bottom: none",
+    "ogTitle": "공통 UI 기준과 웹 가이드 | 이한울 · UX/UI 디자이너"
+  },
+  "dashboard": {
+    "description": "전사·프로젝트·개인 조회 범위와 대시보드 설계",
+    "ogDescription": "전사·프로젝트·개인 조회 범위와 대시보드 설계",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "설계 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "    border-top: none;\n    border-bottom: none",
+    "ogTitle": "조회 목적에 맞춘 비용·인원 ERP 대시보드 | 이한울 · UX/UI 디자이너"
+  },
+  "platform": {
+    "description": "공통 메뉴와 지도 탐색으로 분산된 현장 정보를 연결",
+    "ogDescription": "공통 메뉴와 지도 탐색으로 분산된 현장 정보를 연결",
+    "actions": [
+      {
+        "href": "#decision",
+        "label": "왜 이렇게 설계했는가",
+        "arrow": "↓",
+        "newTab": false
+      },
+      {
+        "href": "#solution",
+        "label": "실제 화면 보기",
+        "arrow": "↗",
+        "newTab": false
+      }
+    ],
+    "outcomesStyle": "",
+    "ogTitle": "지도와 업무 자료를 연결한 통합 관리 플랫폼 | 이한울 · UX/UI 디자이너"
+  }
+}

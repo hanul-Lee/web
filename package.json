@@ -1,15 +1,29 @@
 {
+  "name": "hanul-portfolio",
+  "version": "1.0.0",
+  "private": true,
   "devDependencies": {
+    "playwright": "^1.63.0",
+    "postcss": "^8.5.33",
+    "postcss-scss": "^4.0.9",
     "sass": "^1.105.1"
   },
   "scripts": {
-    "build": "node tools/build-site.cjs",
-    "optimize:images": "node tools/optimize-images.cjs",
+    "build": "node scripts/build-site.cjs",
+    "preview": "node scripts/serve.cjs",
+    "optimize:images": "node scripts/optimize-images.cjs",
+    "build:styles": "node scripts/build-styles.cjs",
+    "fonts": "node scripts/build-fonts.cjs",
+    "prune:styles": "node scripts/maintenance/prune-styles.cjs",
     "test": "node tests/content-audit.cjs && node tests/font-audit.cjs",
-    "test:layout": "node tests/section-spacing.cjs",
-    "build:styles": "node tools/build-styles.cjs",
     "test:static": "node tests/static-site.cjs",
-    "fonts": "node tools/build-fonts.cjs"
+    "test:layout": "node tests/section-spacing.cjs",
+    "test:browsers": "node tests/browser-audit.cjs",
+    "test:flow": "node tests/recruiter-flow.cjs",
+    "test:viewer": "node tests/viewer.cjs",
+    "test:overlap": "node tests/overlap-detector.cjs",
+    "check:build": "node scripts/check-build.cjs",
+    "test:security": "node scripts/security-audit.cjs && node tests/server-security.cjs && node tests/browser-security.cjs"
   },
   "engines": {
     "node": ">=22"

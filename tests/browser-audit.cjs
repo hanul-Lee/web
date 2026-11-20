@@ -1,60 +1,19 @@
 /* Run with Playwright installed; see tests/README.md. */
-const {chromium, webkit, firefox, devices} = require('playwright');
+const {devices}=require('playwright');
 const fs = require('node:fs');
 const path = require('node:path');
-const root = path.resolve(__dirname, '..');
-const base = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:4173';
-const allFiles = ['index.html', ...fs.readdirSync(root).filter(f => /^project-.*\.html$/.test(f))];
+const {pages:allFiles}=require('./helpers/site.cjs');
+const {withSite,withBrowsers,preparePage}=require('./helpers/browser.cjs');
+const inspectLayout=require('./helpers/inspect-layout.cjs');
+let base;
 const files = process.env.AUDIT_PAGES ? allFiles.filter(f => process.env.AUDIT_PAGES.split(',').includes(f)) : allFiles;
 if (!files.length) throw new Error('AUDIT_PAGES did not match any portfolio page');
 const widths = [320, 360, 375, 390, 412, 430, 640, 768, 800, 801, 844, 1024, 1100, 1101, 1280, 1366, 1440, 1920, 2560];
 const report = {pages:files.length, widths, pageChecks:0, errors:[], failures:[]};
 async function audit(page, label, file, width) {
   await page.goto(`${base}/${file}`, {waitUntil:'load'});
-  await page.evaluate(async () => {
-    document.querySelectorAll('details').forEach(d => d.open = true);
-    document.querySelectorAll('img').forEach(i => i.loading = 'eager');
-    await Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(() => {}))]);
-  });
-  const issues = await page.evaluate(() => {
-    const issues = [];
-    if(document.documentElement.scrollWidth > innerWidth + 1) issues.push('horizontal overflow');
-    if(!document.querySelector('h1')?.textContent.trim()) issues.push('missing heading');
-    if(document.body.dataset.project && !document.querySelector('.gallery .story-section')) issues.push('missing case content');
-    for(const img of document.images) {
-      if(!img.naturalWidth) issues.push(`broken image: ${img.getAttribute('src')}`);
-      const s=getComputedStyle(img), r=img.getBoundingClientRect();
-      if(s.objectFit==='fill' && r.height && Math.abs(r.width/r.height-img.naturalWidth/img.naturalHeight) > .04) issues.push(`distorted image: ${img.getAttribute('src')}`);
-    }
-    const loaded=[...document.fonts].filter(f => f.status==='loaded').map(f=>f.family.replaceAll('"',''));
-    for(const font of ['Manrope','Noto Sans KR']) if(!loaded.includes(font)) issues.push(`font not loaded: ${font}`);
-    const hero=document.querySelector('.case-hero'), body=document.querySelector('.case-body');
-    if(hero && body) {
-      const edge=e=>e.getBoundingClientRect().left+parseFloat(getComputedStyle(e).paddingLeft);
-      if(Math.abs(edge(hero)-edge(body))>1) issues.push('case hero/body misaligned');
-    }
-    const texts=[], canvas=document.createElement('canvas').getContext('2d'), walker=document.createTreeWalker(document.querySelector('main'),NodeFilter.SHOW_TEXT);
-    while(walker.nextNode()) {
-      const n=walker.currentNode, p=n.parentElement;
-      if(!n.textContent.trim() || p.closest('script,style,svg,.case-progress')) continue;
-      const range=document.createRange(); range.selectNodeContents(n);
-      // Range bounds include font leading; use ink bounds when Chrome exposes matching font metrics.
-      const style=getComputedStyle(p);
-      canvas.font=`${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
-      const metrics=canvas.measureText(n.textContent);
-      for(const r of range.getClientRects()) if(r.width && r.height) {
-        const useInk=Number.isFinite(metrics.fontBoundingBoxAscent) && Math.abs(r.height-metrics.fontBoundingBoxAscent-metrics.fontBoundingBoxDescent)<2 && metrics.actualBoundingBoxAscent+metrics.actualBoundingBoxDescent>0;
-        const baseline=r.top+metrics.fontBoundingBoxAscent;
-        texts.push({p,x:r.x,y:useInk?baseline-metrics.actualBoundingBoxAscent:r.y,right:r.right,bottom:useInk?baseline+metrics.actualBoundingBoxDescent:r.bottom,text:n.textContent.trim().slice(0,45)});
-      }
-    }
-    for(let i=0;i<texts.length;i++) for(let j=i+1;j<texts.length;j++) {
-      const a=texts[i],b=texts[j];
-      if(a.p===b.p) continue;
-      if(Math.min(a.right,b.right)-Math.max(a.x,b.x)>3 && Math.min(a.bottom,b.bottom)-Math.max(a.y,b.y)>3) issues.push(`text overlap: ${a.text} / ${b.text}`);
-    }
-    return issues;
-  });
+  await preparePage(page,{openDetails:true});
+  const issues = await page.evaluate(inspectLayout);
   await page.evaluate(() => window.scrollTo({top:1600,behavior:'instant'}));
   const header=await page.locator('.nav').boundingBox();
   if(Math.abs(header.y)>1 || header.height!==(width<=800?68:82)) issues.push('header position/height');
@@ -69,8 +28,7 @@ async function audit(page, label, file, width) {
   if(issues.length) report.failures.push({label,file,width,issues:[...new Set(issues)]});
 }
 (async () => {
-  for(const [name,type] of Object.entries({chromium,webkit,firefox})) {
-    const browser=await type.launch(name==='chromium'&&process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{});
+  await withSite(async url=>{base=url;await withBrowsers(async(name,browser)=>{
     const context=await browser.newContext({reducedMotion:'reduce',colorScheme:'dark'});
     const page=await context.newPage();
     page.on('pageerror',e=>report.errors.push({engine:name,error:e.message}));
@@ -100,9 +58,8 @@ async function audit(page, label, file, width) {
     await page.setViewportSize({width:390,height:844});
     await page.goto(`${base}/project-dashboard.html`);
     if(!(await page.locator('.next a').first().getAttribute('href'))?.endsWith('.html')) report.failures.push({label:name,issues:['legacy API fallback failed']});
-    await browser.close();
     console.log(`${name}: completed`);
-  }
+  });});
   fs.writeFileSync(process.env.AUDIT_REPORT || path.join(require('node:os').tmpdir(), 'portfolio-browser-audit.json'), JSON.stringify(report,null,2));
   console.log(JSON.stringify(report,null,2));
   if(report.errors.length || report.failures.length) process.exitCode=1;

@@ -1,34 +1,13 @@
-const {spawn}=require('node:child_process');
-const fs=require('node:fs');
-const path=require('node:path');
-const os=require('node:os');
-const {pathToFileURL}=require('node:url');
-const root=path.resolve(__dirname,'..');
-const assert=require('node:assert/strict');
-(async()=>{
-const profile=fs.mkdtempSync(path.join(os.tmpdir(),'hanul-layout-check-'));
-const chrome=spawn(process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',['--headless','--disable-gpu','--no-sandbox','--disable-component-update','--remote-debugging-port=0','--user-data-dir='+profile,'--allow-file-access-from-files','about:blank'],{stdio:'ignore'});
-let ws;
-try{
-let tabs;
-for(let n=0;n<200;n++){try{const port=fs.readFileSync(path.join(profile,'DevToolsActivePort'),'utf8').split('\n')[0];tabs=await(await fetch('http://127.0.0.1:'+port+'/json')).json();if(tabs.some(t=>t.type==='page'))break;}catch{}await new Promise(r=>setTimeout(r,100));}
-if(!tabs?.some(t=>t.type==='page'))throw Error('Chrome did not expose a test page');
-ws=new WebSocket(tabs.find(t=>t.type==='page').webSocketDebuggerUrl);await new Promise(r=>ws.onopen=r);
-let id=0;const pending=new Map();ws.onmessage=e=>{const x=JSON.parse(e.data);if(x.id){const p=pending.get(x.id);pending.delete(x.id);x.error?p.reject(x.error):p.resolve(x.result);}};
-function send(method,params={}){return new Promise((resolve,reject)=>{const n=++id;pending.set(n,{resolve,reject});ws.send(JSON.stringify({id:n,method,params}));});}
-async function evalJS(expression){const x=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(x.exceptionDetails)throw Error(JSON.stringify(x.exceptionDetails));return x.result.value;}
-await send('Page.enable');
-const base=pathToFileURL(root+path.sep).href;
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict');
+const {withChrome,navigate,pages:allPages}=require('./helpers/site.cjs');
+(async()=>{await withChrome(async({send,evaluate:evalJS})=>{
 const report=[];
-const pages=process.env.AUDIT_PAGES?.split(',') || ['index.html',...['dashboard','platform','intranet','kanvan','tbm','responsive','psc','designsystem','skyautonet','pet'].map(x=>'project-'+x+'.html')];
+const pages=process.env.AUDIT_PAGES?.split(',') || allPages;
 const widths=process.env.AUDIT_WIDTHS?.split(',').map(Number) || [320,390,600,800,801,989,1010,1024,1057,1100,1101,1280,1440,1920,2560];
 for(const width of widths){
 await send('Emulation.setDeviceMetricsOverride',{width,height:1000,deviceScaleFactor:1,mobile:false});
 for(const file of pages){
-await send('Page.navigate',{url:base+file});
-await new Promise(r=>setTimeout(r,100));
-await evalJS(`new Promise(resolve=>{const ready=()=>document.readyState==='complete'&&(!document.body.dataset.project||document.querySelector('.case-context'));if(ready())resolve();else{const timer=setInterval(()=>{if(ready()){clearInterval(timer);resolve()}},20)}})`);
-await evalJS(`(async()=>{for(const image of document.images) image.loading='eager';await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));})()`);
+await navigate({send,evaluate:evalJS},file);
 const info=await evalJS(`(()=>{
 const stacks=document.body.classList.contains('portfolio-home')?[[document.querySelector('main'),':scope > section'],[document.querySelector('.featured-projects'),':scope > .work-case']]:[[document.querySelector('.case-main'),':scope > section'],[document.querySelector('.case-body'),':scope > .case-context, :scope > .gallery, :scope > .next'],[document.querySelector('.gallery'),':scope > .story-section']];
 const gaps=[];for(const [parent,selector]of stacks){const nodes=[...parent.querySelectorAll(selector)];for(let i=1;i<nodes.length;i++){const a=nodes[i-1],b=nodes[i];const as=getComputedStyle(a),bs=getComputedStyle(b);if(parent.className==='featured-projects') continue;gaps.push({stack:parent.className||'main',from:a.id||a.className,to:b.id||b.className,actual:+(b.getBoundingClientRect().top-a.getBoundingClientRect().bottom).toFixed(2),previousMargin:as.marginBottom,nextMargin:bs.marginTop});}}
@@ -82,6 +61,12 @@ if(file !== 'index.html') {
   if(width<=1100){assert.equal(solution.direction,'column');assert.ok(solution.stageTop>=solution.copyBottom,'text before solution image');assert.ok(solution.topSpace<=29,'compact solution padding');}
   const arrow = await evalJS(`({old:getComputedStyle(document.querySelector('.next > a:first-child'),'::after').content,margin:getComputedStyle(document.querySelector('.next h3'),'::after').marginLeft,position:getComputedStyle(document.querySelector('.next h3'),'::after').position})`);
   assert.equal(arrow.old,'none');assert.equal(arrow.margin,'8px');assert.equal(arrow.position,'static');
+  const nextPreview=await evalJS(`(()=>{const link=document.querySelector('.next-project'),preview=link.querySelector('.next-preview').getBoundingClientRect(),copy=link.querySelector('.next-copy').getBoundingClientRect();return {cardWidth:link.getBoundingClientRect().width,containerWidth:link.parentElement.getBoundingClientRect().width,display:getComputedStyle(link).display,width:preview.width,right:preview.right,copyLeft:copy.left,summary:link.querySelector('p').textContent};})()`);
+  assert.equal(nextPreview.display,'grid',file+' next preview grid '+width);
+  assert.ok(Math.abs(nextPreview.cardWidth-nextPreview.containerWidth)<1,file+' full-width next preview '+width);
+  assert.ok(Math.abs(nextPreview.width-(width<=600?96:160))<1,file+' next preview width '+width);
+  assert.ok(nextPreview.right<nextPreview.copyLeft&&nextPreview.summary.length>0,file+' next preview beside summary '+width);
+
 
   const numbers = await evalJS(`Array.from(document.querySelectorAll('.gallery > .story-section > header > p, .gallery > .story-section > .solution-copy > p')).map(x => x.textContent.match(/^([0-9]{2}) /)?.[1]).filter(Boolean).map(Number)`);
   assert.deepEqual(numbers, numbers.map((_, i) => i + 2), file + ' section sequence');
@@ -97,7 +82,7 @@ if(width <= 1024) {
 }
 if(file==='index.html' && [390,1280].includes(width)) {
   const hero=await evalJS(`({image:document.querySelector('.hero-case-screen img').getAttribute('src'),scope:document.querySelector('.hero-case-meta').textContent,status:document.querySelector('.hero-case-top strong').textContent,planets:document.querySelectorAll('img[src*="assets/planets/"]').length,proof:document.querySelectorAll('.intro-proof > a').length})`);
-  assert.equal(hero.image,require('../tools/image-manifest.json')['assets/cases/20261024/tbm-journal-reviewed.webp'].src);
+  assert.equal(hero.image,require('../src/content/image-manifest.json')['assets/cases/20261024/tbm-journal-reviewed.webp'].src);
   assert.ok(hero.scope.includes('모바일 UI 디자인') && hero.scope.includes('퍼블리싱'));
   assert.equal(hero.status,'배포 후 실사용');
   assert.equal(hero.planets,0);
@@ -125,6 +110,4 @@ if(file==='project-dashboard.html'&&width===1280){await evalJS(`document.documen
 console.log('PASS',width+'px',pages.length+' pages: all outer gaps within '+(width<=800?'72':'140')+'px, zero adjacent margins, no overflow or missing images');
 }
 fs.writeFileSync(process.env.AUDIT_REPORT || path.join(os.tmpdir(),'section-spacing-validation.json'),JSON.stringify({date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),method:'Chrome DevTools Protocol + getBoundingClientRect + computed styles',results:report},null,2));
-await send('Browser.close');
-}finally{if(ws)ws.close();chrome.kill();}
-})().catch(e=>{console.error(e);process.exit(1)});
+});})().catch(e=>{console.error(e);process.exitCode=1;});

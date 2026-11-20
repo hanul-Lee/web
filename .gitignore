@@ -10,8 +10,23 @@ portfolio_review_*/
 /docs/portfolio-1017-final-proofread.md
 
 # Local original images and unused backup assets
-/tools/image-sources/
+/.local/
 
 # Local Python environment for font subsetting
 /.venv-fonts/
 __pycache__/
+
+# Generated build and deployment output
+/dist/
+/.build/
+
+# Local credentials and signing keys
+.env
+.env.*
+!.env.example
+!.env.sample
+/secrets/
+*.pem
+*.key
+*.p12
+*.pfx
