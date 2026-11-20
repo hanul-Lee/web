@@ -19,8 +19,6 @@ jobs:
     timeout-minutes: 25
     env:
       CHROME_PATH: /usr/bin/google-chrome
-      FONT_PYTHON: ${{ runner.temp }}/portfolio-fonts/bin/python
-      AUDIT_REPORT: ${{ runner.temp }}/portfolio-browser-audit.json
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -33,7 +31,8 @@ jobs:
         run: |
           npm ci --ignore-scripts
           python3 -m venv "$RUNNER_TEMP/portfolio-fonts"
-          "$FONT_PYTHON" -m pip install -r scripts/font-requirements.txt
+          "$RUNNER_TEMP/portfolio-fonts/bin/python" -m pip install -r scripts/font-requirements.txt
+          echo "FONT_PYTHON=$RUNNER_TEMP/portfolio-fonts/bin/python" >> "$GITHUB_ENV"
           npx playwright install --with-deps chromium webkit firefox
       - name: Audit locked dependencies
         run: |
